@@ -4,7 +4,7 @@
       "sys": { "id": "01" },
       "fields": {
         "title": "Damkläder",
-        "image": { "fields": { "file": { "url": "img/women-clothing-banner.png" } } },
+        "image": { "fields": { "file": { "url": "styles/sass/img/women-clothing-banner.png" } } },
         "description": "Ekologiska och handgjorda damkläder för dig som vill vara hållbart modemedveten."
       }
     },
@@ -13,7 +13,7 @@
       "fields": {
         "title": "Herrkläder",
         "description": "Ekologiska och handgjorda herrkläder för dig som vill visa din hållbara sida.",
-        "image": { "fields": { "file": { "url": "img/men-clothing-banner.png" } } }
+        "image": { "fields": { "file": { "url": "styles/sass/img/men-clothing-banner.png" } } }
       }
     },
     {
@@ -21,7 +21,7 @@
       "fields": {
         "title": "Baby",
         "description": "Sköna och hållbara kläder till för de allra minsta.",
-        "image": { "fields": { "file": { "url": "img/baby-clothing.png" } } }
+        "image": { "fields": { "file": { "url": "styles/sass/img/baby-clothing.png" } } }
       }
     }
   ]
