@@ -1,0 +1,37 @@
+header{
+  background-color: $color-sand;
+}
+
+nav{
+  position: sticky;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: $color-white;
+  z-index: 1;
+}
+
+.nav{
+  position: relative;
+  cursor: pointer;  
+  &__top{
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  }
+
+  &__button{
+  max-height:40px;
+}
+  &__logotype{
+  max-height:90px;
+}
+ &__logotype:hover{
+  transform: rotate(-50deg);
+  transition: $mainTransition;
+ }
+}

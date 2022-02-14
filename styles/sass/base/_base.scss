@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: $color-sand;
+  color:$color-black;
+}
+
+$mainSpacing: 0.1rem;
+$mainTransition: all 0.3s linear;

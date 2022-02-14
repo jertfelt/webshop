@@ -1,0 +1,39 @@
+.drop-down{
+  display:none;
+}
+
+//menu
+.mainmenu__mobile{
+  background-color: $color-yellow;
+  color: $color-green;
+  width: 100%;
+  display: block;
+  position: absolute;
+  z-index: 99;
+  right: 0;
+  top: 74px;
+  padding: 30px 20px;    
+li {
+  display: block;
+  margin-bottom: 20px;
+  color: $color-black;
+}
+a {
+ font-size: 38px;
+ font-weight:bold;
+  display: block;
+  text-transform: capitalize;
+  padding: 0px 0;
+  text-align: center;
+  
+}
+
+a:hover{
+  color: $color-blue;
+  text-transform: uppercase;
+}
+
+}
+.active{
+  color: $color-yellow;
+}

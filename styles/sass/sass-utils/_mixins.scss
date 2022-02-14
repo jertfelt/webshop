@@ -1,0 +1,72 @@
+// Em output with px fallback
+@mixin font-size($size-value: 1) {
+  font-size: $size-value * 1px;
+  font-size: $size-value / 16 * 1rem;
+}
+
+//Flex mixin
+@mixin flexBox($direction, $align, $content) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $content;
+}
+
+//Media queries
+$screen-xxs: 300px;
+$screen-xs: 600px;
+$screen-small: 768px;
+$screen-small-max: 768px;
+$screen-tablet: 991px;
+$screen-med: 1070px;
+$screen-med-max: 1279px;
+$screen-lg: 1290px;
+$screen-xl: 1450px;
+
+@mixin breakpoint($canvas) {
+
+  @if $canvas==xxsmall-max {
+    @media only screen and (max-width: $screen-xs) {
+      @content;
+    }
+  }
+  @if $canvas==xsmall-max {
+    @media only screen and (min-width: $screen-xs) {
+      @content;
+    }
+  } @else if $canvas==small-max {
+    @media only screen and (min-width: $screen-small) {
+      @content;
+    }
+  } @else if $canvas==small-max-m {
+    @media only screen and (max-width: $screen-small-max) {
+      @content;
+    }
+  } @else if $canvas==medium-tablet-max {
+    @media only screen and (min-width: $screen-tablet) {
+      @content;
+    }
+  } @else if $canvas==medium-max {
+    @media only screen and (max-width: $screen-med) {
+      @content;
+    }
+  } @else if $canvas==medium-max-2 {
+    @media only screen and (max-width: $screen-med-max) {
+      @content;
+    }
+  } @else if $canvas==large-max {
+    @media only screen and (max-width: $screen-lg) {
+      @content;
+    }
+  }
+  @else if $canvas==large-min {
+    @media only screen and (min-width: $screen-lg){
+      @content;
+    }
+  }
+  @else if $canvas==extra-large-max {
+    @media only screen and (max-width: $screen-xl) {
+      @content;
+    }
+  }
+}

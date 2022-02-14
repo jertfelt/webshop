@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+
+//-------font main
+$font-primary: "Nunito", Verdana, sans-serif;
+$font-secondary: "Roboto", Arial, sans-serif;
+
+
+//paragraph texts
+.text {
+  font-family: $font-secondary;
+  &--bold{
+    font-weight:bold;
+  }
+
+  &--cursive {
+    font-style: italic;
+  }
+
+  &--xl {
+    @include font-size(72);
+  }
+
+  &--l {
+    @include font-size(34);
+    @include breakpoint(small-max) {
+      @include font-size(54);
+      line-height: 60px;
+    }
+  }
+  &--m {
+    @include font-size(48);
+  }
+  &--s {
+    @include font-size(36);
+    line-height: 42px;
+    @include breakpoint(small-max) {
+      @include font-size(22);
+      line-height: 28px;
+
+    }
+  }
+
+  &--xs {
+    @include font-size(24);
+    line-height: 30px;
+    @include breakpoint(small-max) {
+      @include font-size(18);
+      line-height: 22px;
+    }
+  }
+
+  &--xxs {
+    @include font-size(16);
+    line-height: 25px;
+  }
+}
+
+//--headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-secondary;
+  }
+
+  h1 {
+      @include font-size(50);
+      line-height: 55px;
+      @include breakpoint(small-max){
+          @include font-size(72);
+      line-height: 72px;
+      }
+  }
+  
+  h2 {
+      @include font-size(40);
+    line-height: 48px;
+      @include breakpoint(small-max){
+          @include font-size(64);
+      line-height: 74px;
+      }
+  }
+  
+  h3 {
+      @include font-size(48);
+  }
+  
+  h4 {
+      @include font-size(22);
+      line-height: 28px;
+      @include breakpoint(small-max) {
+        @include font-size(36);
+        line-height: 42px;
+      }
+  }
+  
+  h5 {
+       @include font-size(24);
+  }
+  
+  h6 {
+      @include font-size(16);
+  }
+
+  .heading{
+    &--white{
+      color: $color-white;
+      font-weight:bold;
+    }
+
+    &--alt{
+      font-family:$font-primary;
+    }
+  }

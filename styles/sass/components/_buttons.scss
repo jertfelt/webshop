@@ -1,0 +1,16 @@
+//buttons
+
+
+.button__hero{
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: $mainSpacing;
+  font-size: 1rem;
+  font-weight: bold;
+  background: $color-green;
+  color: $color-white;
+  border: none;
+  transition: $mainTransition;
+  cursor: pointer;
+  margin-top:2rem;
+}

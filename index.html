@@ -6,10 +6,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ekoline Clothing</title>
   <link rel="shortcut icon" type="image/jpg" href="styles\img\favicon-32x32.png"/>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles\sass\style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!--Jag har lagt in lite html här för att föra in klasser jättesnabbt, allt detta kan flyttas runt och så-->
+
+  <header>
+    <nav class="nav__top">
+        <span class="nav__mobile-menu">
+          <img src="styles\sass\img\Hamburger_icon.svg.png" 
+          alt="Mobile menu" 
+          id="menuToggle"
+          class="nav__button">
+        </span>
+
+<!--dropdown meny-->
+  <ul id="dropDownMenu"  
+      class="drop-down">
+     <div class="mainmenu__mobile">
+    <li>
+      <a href="index.html" 
+         class="active">
+        Hem
+      </a>
+    </li>
+    <li>
+      <a href="index.html">Varukorg</a> 
+    </li>
+    <li>Kategori
+    <ul class="list__nested"> <!--start of nested category-->
+      <li>
+        <a href="index.html">Dam</a> 
+      </li>
+      <li>
+        <a href="index.html">Herr</a> 
+      </li>
+      <li>
+       <a href="index.html">Baby</a> 
+      </li>
+    </ul>
+  </li>
+    <li>
+      <a href="index.html">Logga in/Registrera dig</a> 
+    </li>
+  </div>
+  </ul>
+
+  <!--logotyp-->
+        <a href="index.html">
+        <img src="styles/sass/img/Logga.png" 
+        alt="logotype Ekoline" 
+        class="nav__logotype"/>
+        </a>
+
+  <!--varukorg klickbar-->
+        <span class="nav-icon">
+          <img src="styles/sass/img/shop-cart.png" 
+          alt="Shopping cart" 
+          class="nav__button button__cart">
+          <!--antal i varukorg (siffra som räknar upp)-->
+          <span class="cart-items cart-btn">0</span>
+        </span>
+      </div>
+    </nav>
+
+    <!--välkommen-->
+  <section class="hero">
+    <div class="hero__content">
+      <h1 class="hero__heading">Välkommen till Ekoline</h1>
+      <p class="text--bold text--m"> Genvägen till en mer hållbar shopping. </p>
+      <a href="#products">
+        <button class="button__hero">
+          Se våra produkter</button></a>
+        </div>
+  </section>
+  </header>
   
+  <main>
+  <section class="products__section" 
+          id="products">
+    <span>
+      <h2> Våra produkter:</h2>
+      <p class="text--s">Vi är en ekologisk, hållbar butik som fokuserar på det handgjorda, naturvänliga och unika.</p>
+    </span>
+    <div class="products__grid">
+      <!--hit ska den dynamiska HTML:en-->
+      <!-- den ska klistras in i javascripten men som placeholder så man ser: (saknas länk till produktlista)-->
+
+      <!-- <article class="product">
+        <div class="product__img--container">
+          <img src= ${product.image} 
+          alt="produkt ${product.title}" 
+          class="product__img">
+          </a> -->
+        <!-- </div>
+    
+        <div class="products__items">
+        <div class="products-items--row">
+          <h3> ${product.title} </h3> 
+          <h4> Annan info </h4>
+        </div>
+        </div>
+      
+      </article>  --> 
+    </div>
+  </section>
+
+  </main>
+<!-- 
+  <aside>  
+  <section class="cart__overlay">
+    <div class="cart">
+      <span class="cart--close">
+        <img src="styles/sass/img/closing.png" alt="Close"/>
+      </span>
+      <h2>Din kundvagn:</h2>
+      <div class="cart__content">
+     
+      </div>
+      <div class="cart__footer">
+        <h3>Totalt: <span class="cart-total">0</span> SEK</h3>
+        <button class="cart--clear banner-btn">Rensa kundvagn</button>
+      </div>
+    </div>
+  </section>
+  </aside> -->
+
+<footer>
+
+</footer>
+
+<!--javascripts-->
+<script type="text/javascript" 
+src="js/utilities.js"></script>
 </body>
 </html>
