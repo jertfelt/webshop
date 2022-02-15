@@ -40,9 +40,7 @@
     <li>
       <a href="index.html">Varukorg</a> 
     </li>
-    <li>Kategori
-    <ul class="list__nested"> <!--start of nested category-->
-      <li>
+    <li> <!--nested-->
         <a href="index.html">Dam</a> 
       </li>
       <li>
@@ -51,7 +49,7 @@
       <li>
        <a href="index.html">Baby</a> 
       </li>
-    </ul>
+ 
   </li>
     <li>
       <a href="index.html">Logga in/Registrera dig</a> 
@@ -80,18 +78,18 @@
   
   <main>
     <!--välkommen-->
-    <section class="hero homepage">
+    <section class="section hero homepage">
       <div class="hero__content">
         <h1 class="hero__heading">Välkommen till Ekoline</h1>
         <p class="text--bold text--m"> Genvägen till en mer hållbar shopping. </p>
         <a href="#categories">
-          <button class="button__hero">
+          <button class="button__hero" id="buttonHero">
             Se våra produkter</button></a>
           </div>
     </section>
 
 
-  <section class="categories__section" 
+  <section class="section categories__section" 
           id="categoriesSection">
     <span>
       <h2> Våra produkter:</h2>
@@ -123,29 +121,33 @@
   </section>
 
   <section id="productListSection" 
-  class="">
+  class="section">
 
   </section>
 
   <section id="individualProductSection" 
-  class="">
+  class="section">
   </section>
 
 <!--varor + logga in/skriv in på formulär-->
-  <section id="orderConfirmationSection">
+  <section id="orderConfirmationSection"
+  class="section">
 
   </section>
 
   <!--kvitto dropdown-->
-  <section id="receiptSection">
+  <section id="receiptSection"
+  class="section">
     
   </section>
 
-  <section id="loginSection">
+  <section id="loginSection"
+  class="section">
 
   </section>
 
-  <section id="createUserSection">
+  <section id="createUserSection"
+  class="section">
     
   </section>
 
@@ -169,13 +171,14 @@
     </div>
   </section>
   </aside> -->
-  
+
 <footer>
 
 </footer>
 
 <!--javascripts-->
-<script type="text/javascript" 
-src="js/utilities.js"></script>
+<script 
+src="/js/utilities.js"></script>
+<script src="/js/views/main.js"></script>
 </body>
 </html>
