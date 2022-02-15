@@ -1,8 +1,10 @@
 .hero {
   min-height: calc(100vh - 100px);
   background-color: transparent;
-  background: url("./img/concrete-cracking.png")center/cover no-repeat;;
+  background: url("./img/concrete-cracking.png")center/cover no-repeat;
+  
   @include flexBox(column, flex-start, center); 
+
 &__content{
   text-align: center;
   // background: transparent;
