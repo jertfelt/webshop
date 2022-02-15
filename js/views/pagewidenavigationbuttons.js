@@ -7,17 +7,12 @@
 
 
 
-//links for nav
+//links for nav (except varukorg)
 
 document.getElementById("homeLinkNav").addEventListener("click", (e) => {
   e.preventDefault();
 changeActivePage("homepageSection");
 })
-
-// document.getElementById("cartLinkNav").addEventListener("click", (e) => {
-//   e.preventDefault();
-// changeActivePage("cartLinkNav");
-// })
 
 document.getElementById("damLinkNav").addEventListener("click", (e) => {
   e.preventDefault();
@@ -28,3 +23,36 @@ document.getElementById("herrLinkNav").addEventListener("click", (e) => {
   e.preventDefault();
 changeActivePage("categoriesSection");
 })
+
+document.getElementById("babyLinkNav").addEventListener("click", (e) => {
+  e.preventDefault();
+changeActivePage("categoriesSection");
+})
+
+document.getElementById("loginLinkNav").addEventListener("click", (e) => {
+  e.preventDefault();
+changeActivePage("loginSection");
+})
+
+document.getElementById("logoLinkNav").addEventListener("click", (e) => {
+  e.preventDefault();
+changeActivePage("homepageSection");
+})
+
+//-----links for footer
+
+//------homepage
+
+//------cart (go to product shown in cart)
+
+//------categories
+
+//-----product individual site
+
+//------orderconfirmation (beställning)
+
+//-------receipt section
+
+//-------register
+
+//-------login 
