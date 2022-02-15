@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
   <!--Jag har lagt in lite html här för att föra in klasser jättesnabbt, allt detta kan flyttas runt och så-->
@@ -75,27 +76,30 @@
         </span>
       </div>
     </nav>
-
-    <!--välkommen-->
-  <section class="hero">
-    <div class="hero__content">
-      <h1 class="hero__heading">Välkommen till Ekoline</h1>
-      <p class="text--bold text--m"> Genvägen till en mer hållbar shopping. </p>
-      <a href="#products">
-        <button class="button__hero">
-          Se våra produkter</button></a>
-        </div>
-  </section>
   </header>
   
   <main>
-  <section class="products__section" 
-          id="products">
+    <!--välkommen-->
+    <section class="hero homepage">
+      <div class="hero__content">
+        <h1 class="hero__heading">Välkommen till Ekoline</h1>
+        <p class="text--bold text--m"> Genvägen till en mer hållbar shopping. </p>
+        <a href="#categories">
+          <button class="button__hero">
+            Se våra produkter</button></a>
+          </div>
+    </section>
+
+
+  <section class="categories__section" 
+          id="categoriesSection">
     <span>
       <h2> Våra produkter:</h2>
       <p class="text--s">Vi är en ekologisk, hållbar butik som fokuserar på det handgjorda, naturvänliga och unika.</p>
     </span>
+
     <div class="products__grid">
+
       <!--hit ska den dynamiska HTML:en-->
       <!-- den ska klistras in i javascripten men som placeholder så man ser: (saknas länk till produktlista)-->
 
@@ -104,8 +108,8 @@
           <img src= ${product.image} 
           alt="produkt ${product.title}" 
           class="product__img">
-          </a> -->
-        <!-- </div>
+          </a> 
+         </div>
     
         <div class="products__items">
         <div class="products-items--row">
@@ -118,9 +122,37 @@
     </div>
   </section>
 
+  <section id="productListSection" 
+  class="">
+
+  </section>
+
+  <section id="individualProductSection" 
+  class="">
+  </section>
+
+<!--varor + logga in/skriv in på formulär-->
+  <section id="orderConfirmationSection">
+
+  </section>
+
+  <!--kvitto dropdown-->
+  <section id="receiptSection">
+    
+  </section>
+
+  <section id="loginSection">
+
+  </section>
+
+  <section id="createUserSection">
+    
+  </section>
+
+
   </main>
-<!-- 
-  <aside>  
+<!--
+  <aside id="cartSection">  
   <section class="cart__overlay">
     <div class="cart">
       <span class="cart--close">
@@ -137,7 +169,7 @@
     </div>
   </section>
   </aside> -->
-
+  
 <footer>
 
 </footer>
