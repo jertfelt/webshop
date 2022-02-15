@@ -9,9 +9,15 @@ const orderConfirmationSection = document.getElementById("orderConfirmationSecti
 const receiptSection = document.getElementById("receiptSection");
 const loginSection = document.getElementById("loginSection");
 const createUserSection = document.getElementById("createUserSection");
+
+//dropdown
 const cartSection = document.getElementById("cartSection"); 
+
+//knapp i hero:
 const buttonHero = document.getElementById("buttonHero");
 const sections = document.querySelectorAll(".section");
+
+
 
 //-addevent function som tooglar hidden/show + byter query string NAVBAR
 
