@@ -2,6 +2,7 @@
 
 //-variables
 
+const homepageSection = document.getElementById("homepageSection");
 const categoriesSection = document.getElementById("categoriesSection");
 const productListSection = document.getElementById("productListSection");
 const individualProductSection = document.getElementById("individualProductSection");
@@ -10,8 +11,7 @@ const receiptSection = document.getElementById("receiptSection");
 const loginSection = document.getElementById("loginSection");
 const createUserSection = document.getElementById("createUserSection");
 
-//dropdown
-const cartSection = document.getElementById("cartSection"); 
+
 
 //knapp i hero:
 const buttonHero = document.getElementById("buttonHero");
@@ -40,10 +40,4 @@ const changeActivePage = (sectionName) => {
      }
   })
 };
-
-//sample for links
-buttonHero.addEventListener("click", () => {
-  changeActivePage("productListSection");
-});
-
 
