@@ -1,5 +1,5 @@
 // This should work after fixing URL in changepage.js
-// It should get this URL: http://127.0.0.1:5500/index.html?section=categoriesSection&category=Dam
+// It should get this URL: http://127.0.0.1:5500/index.html?section=productListSection&category=Dam
 const queryString = new URLSearchParams(location.search);
 const qsCategory = queryString.get('category');
 
@@ -10,7 +10,7 @@ function drawProducts() {
     if(product.category === qsCategory) {
     const article = document.createElement("article");
     article.innerHTML = `
-      <a href="">
+      <a href="/index.html?section=individualProductSection&id=${product.sys.id}">
         <img style="width:100%" src="/${product.fields.image.fields.file.url}"></img>
         <h3>${product.fields.title}</h3>
         <p>${product.fields.price} kr</p>
