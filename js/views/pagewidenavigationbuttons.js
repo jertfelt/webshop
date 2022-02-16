@@ -1,7 +1,7 @@
 //! sample for links 
 // buttonHero.addEventListener("click", () => {
-//include this if a link:
-// e.preventDefault();
+//?include this if a link:
+//? e.preventDefault();
 //   changeActivePage("productListSection");
 // });
 
@@ -16,17 +16,17 @@ changeActivePage("homepageSection");
 
 document.getElementById("damLinkNav").addEventListener("click", (e) => {
   e.preventDefault();
-changeActivePage("categoriesSection");
+changeActivePage("productListSection");
 })
 
 document.getElementById("herrLinkNav").addEventListener("click", (e) => {
   e.preventDefault();
-changeActivePage("categoriesSection");
+changeActivePage("productListSection");
 })
 
 document.getElementById("babyLinkNav").addEventListener("click", (e) => {
   e.preventDefault();
-changeActivePage("categoriesSection");
+changeActivePage("productListSection");
 })
 
 document.getElementById("loginLinkNav").addEventListener("click", (e) => {
@@ -38,6 +38,7 @@ document.getElementById("logoLinkNav").addEventListener("click", (e) => {
   e.preventDefault();
 changeActivePage("homepageSection");
 })
+
 
 //-----links for footer
 
