@@ -67,6 +67,14 @@ const setCartValue = (cart) => {
     cartMenu.classList.remove("showCart");
   }
 
+  //closing cart with escape button
+document.addEventListener('keydown', function(event){
+	if(event.key === "Escape"){
+		cartOpacity.classList.remove("transparentBcg");
+    cartMenu.classList.remove("showCart");
+	}
+});
+
   closeCartButt.addEventListener("click", hideCart);
 
   };
