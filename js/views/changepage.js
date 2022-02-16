@@ -11,8 +11,6 @@ const receiptSection = document.getElementById("receiptSection");
 const loginSection = document.getElementById("loginSection");
 const createUserSection = document.getElementById("createUserSection");
 
-
-
 //knapp i hero:
 const buttonHero = document.getElementById("buttonHero");
 
@@ -23,21 +21,32 @@ const sections = document.querySelectorAll(".section");
 
 //Ändrar URL samt visar rätt sektion
 const changeActivePage = (sectionName) => {
-
-  const url = new URL(window.location.href);
+  console.log(sectionName)
+  let url = new URL(window.location.href);
   const search_params = url.searchParams;
   search_params.set('section', sectionName);
   url.search = search_params.toString();
 
+  console.log(url.search)
+  window.location.href = url;
+
+};
+
+const setActivePage = () => {
+  let url = new URL(window.location.href);
+  const search_params = url.searchParams;
   const currentSection = search_params.get("section");
 
   //döljer och visar rätt sektion
+  if (currentSection){
   sections.forEach(section => {
     section.classList.add("hidden");
 
-     if (section.id === currentSection ){
+    if (section.id === currentSection){
      section.classList.remove("hidden");
-     }
-  })
+   }
+  }
+  )}
 };
 
+setActivePage();
