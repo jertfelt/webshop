@@ -16,17 +16,17 @@ changeActivePage("homepageSection");
 
 document.getElementById("damLinkNav").addEventListener("click", (e) => {
   e.preventDefault();
-changeActivePage("categoriesSection");
+changeActivePage("productListSection");
 })
 
 document.getElementById("herrLinkNav").addEventListener("click", (e) => {
   e.preventDefault();
-changeActivePage("categoriesSection");
+changeActivePage("productListSection");
 })
 
 document.getElementById("babyLinkNav").addEventListener("click", (e) => {
   e.preventDefault();
-changeActivePage("categoriesSection");
+changeActivePage("productListSection");
 })
 
 document.getElementById("loginLinkNav").addEventListener("click", (e) => {
