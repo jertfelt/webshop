@@ -35,8 +35,7 @@ const changeActivePage = (sectionName, categoryName, prodID) => {
   }
   
   url.search = search_params.toString();
-  var new_url = url;
-  location.href = new_url;
+  location.href = url;
 };
 
 const setActivePage = () => {
