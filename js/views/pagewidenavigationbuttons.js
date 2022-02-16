@@ -63,5 +63,12 @@ changeActivePage("homepageSection");
 //-------receipt section
 
 //-------register
+document.getElementById("submitBtnCreateUser").addEventListener("click", (e) => {
+  e.preventDefault();
+changeActivePage("homepageSection");
+})
 
+document.getElementById("cancelButtonCreateUser").addEventListener("click", () => {
+  changeActivePage("homepageSection");
+  })
 //-------login 
