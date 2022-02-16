@@ -1,3 +1,10 @@
+//Gets users key in local stroage or creates empty array
+
+let usersArr = JSON.parse(localStorage.getItem("users"));
+if (usersArr === null) {
+  usersArr = [];
+}
+
 //Creates user and saves it in local storage
 
 const createUser = (userName, password, street, postalCode, town, email, tel) => {
@@ -10,7 +17,7 @@ const createUser = (userName, password, street, postalCode, town, email, tel) =>
     email: email,
     tel: tel
   }
-  localStorage.setItem(`user-${userName}`, JSON.stringify(userObj));
+  usersArr.push(userObj);
 }
 
 
@@ -27,14 +34,24 @@ document.querySelector("#submitBtnCreateUser").addEventListener("click", (e) => 
   const emailCreateAccount = document.querySelector("#emailCreateUser").value;
   const telCreateAccount = document.querySelector("#phoneNumberCreateUser").value;
 
-  if (localStorage.getItem(`user-${userNameCreateAccount}`)) {
-    alert("username is already in use"); //Maybe chnage this to something better?
-    return;
-  } else {
+  //Checks if user already exists
+
+  let userAlreadyExist = false;
+
+  usersArr.forEach(user => {
+    if (user.userName == userNameCreateAccount) {
+      alert(`The username ${userNameCreateAccount} already exists`); //Maybe chnage this to something better?
+      userAlreadyExist = true;
+    };
+  });
+
+  //Creates user and saves it in local storage and takes you back to the home page
+  
+  if (userAlreadyExist == false) {
+    createUser(userNameCreateAccount, passWordCreateAccount, streetCreateAccount, 
+      postalCodeCreateAccount, townCreateAccount, emailCreateAccount, telCreateAccount);
+  
+    localStorage.setItem("users", JSON.stringify(usersArr));  
     confirmAndExitCreateUser();
   }
-
-  createUser(userNameCreateAccount, passWordCreateAccount, streetCreateAccount, 
-    postalCodeCreateAccount, townCreateAccount, emailCreateAccount, telCreateAccount);
-
 });
