@@ -1,12 +1,6 @@
 //show products
 
-  /* 
-  create product element
-  grab information from local storage
-  print element on page
-  show total price
-  */
-
+    //Creates product element
   const createProductElementOrderConfirmation = (img, name, price, amount) => {
     const productOrderConfirmation = document.createElement("article");
     const productInformationDivOrderConfirmation = document.createElement("div");
@@ -34,9 +28,26 @@
 
     document.querySelector("#orderProductsSummation").appendChild(productOrderConfirmation);
   }
+    
+    //Prints All products
+        /* PRODUCTINCART.forEach(product => {
+          const productInCartImg = product local storage img;
+          const productInCartName = product local storage name;
+          const productInCartPrice = product local storage price;
+          const productInCartAmount = product local storage aamount;
 
-        /*
+          createProductElementOrderConfirmation(productInCartImg, productInCartName, productInCartPrice, productInCartAmount);
+        });
         */
+
+    //Adds total price
+        /*
+          const totalPriceOrderConfirmation = document.createElement("p");
+          totalPriceOrderConfirmation.innerText = `Total: ${total price locat storage}`;
+          document.querySelector("#orderProductsSummation").appendChild(totalPriceOrderConfirmation);
+        */
+
+
 
 //your details
 

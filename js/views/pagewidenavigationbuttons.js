@@ -57,8 +57,7 @@ document.getElementById("submitBtnOrderConfirmation").addEventListener("click", 
 changeActivePage("receiptSection");
 })
 
-document.getElementById("cancelBtnOrderConfirmation").addEventListener("click", (e) => {
-  e.preventDefault();
+document.getElementById("cancelBtnOrderConfirmation").addEventListener("click", () => {
 changeActivePage("homepageSection");
 })
 //-------receipt section
