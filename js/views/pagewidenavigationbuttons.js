@@ -1,7 +1,7 @@
 //! sample for links 
 // buttonHero.addEventListener("click", () => {
-//include this if a link:
-// e.preventDefault();
+//?include this if a link:
+//? e.preventDefault();
 //   changeActivePage("productListSection");
 // });
 
@@ -38,6 +38,7 @@ document.getElementById("logoLinkNav").addEventListener("click", (e) => {
   e.preventDefault();
 changeActivePage("homepageSection");
 })
+
 
 //-----links for footer
 
