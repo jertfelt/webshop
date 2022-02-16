@@ -32,35 +32,40 @@
       class="drop-down">
      <div class="mainmenu__mobile">
     <li>
-      <a href="index.html" 
-         class="active">
+      <a href="index.html" id="homeLinkNav"> <!--eventuellt lägg in klassen "active", men gör då js så den kan ändras sen-->
         Hem
       </a>
     </li>
     <li>
-      <a href="index.html">Varukorg</a> 
+      <a href="index.html">
+        Varukorg</a> 
     </li>
-    <li>Kategori
-    <ul class="list__nested"> <!--start of nested category-->
-      <li>
-        <a href="index.html">Dam</a> 
+    <li> <!--nested-->
+        <a href="index.html" id="damLinkNav"
+        >Dam</a> 
       </li>
       <li>
-        <a href="index.html">Herr</a> 
+        <a href="index.html" id="herrLinkNav"
+        >Herr</a> 
       </li>
       <li>
-       <a href="index.html">Baby</a> 
+       <a href="index.html" id="babyLinkNav"
+       >Baby</a> 
       </li>
-    </ul>
+ 
   </li>
     <li>
-      <a href="index.html">Logga in/Registrera dig</a> 
+      <a href="index.html" 
+      id="loginLinkNav"
+     >Logga in/Registrera dig</a> 
     </li>
   </div>
   </ul>
 
   <!--logotyp-->
-        <a href="index.html">
+        <a href="index.html"
+        class="event__link"
+        id="logoLinkNav">
         <img src="styles/sass/img/Logga.png" 
         alt="logotype Ekoline" 
         class="nav__logotype"/>
@@ -80,18 +85,18 @@
   
   <main>
     <!--välkommen-->
-    <section class="hero homepage">
+    <section class="hero section" id="homepageSection">
       <div class="hero__content">
         <h1 class="hero__heading">Välkommen till Ekoline</h1>
         <p class="text--bold text--m"> Genvägen till en mer hållbar shopping. </p>
-        <a href="#categories">
-          <button class="button__hero">
-            Se våra produkter</button></a>
+          <button class="button__hero" id="buttonHero">
+            Se våra produkter
+          </button>
           </div>
     </section>
 
 
-  <section class="categories__section" 
+  <section class="section categories__section" 
           id="categoriesSection">
     <span>
       <h2> Våra produkter:</h2>
@@ -123,24 +128,27 @@
   </section>
 
   <section id="productListSection" 
-  class="">
+  class="section">
 
   </section>
 
   <section id="individualProductSection" 
-  class="">
+  class="section">
   </section>
 
 <!--varor + logga in/skriv in på formulär-->
-  <section id="orderConfirmationSection">
+  <section id="orderConfirmationSection"
+  class="section">
 
   </section>
 
   <!--kvitto dropdown-->
-  <section id="receiptSection">
+  <section id="receiptSection"
+  class="section">
     
   </section>
 
+<<<<<<< HEAD
   <section id="loginSection">
     <div class="login">
       <div class="heading">
@@ -163,6 +171,15 @@
          </div>
      </div>
    
+=======
+  <section id="loginSection"
+  class="section">
+
+  </section>
+
+  <section id="createUserSection"
+  class="section">
+>>>>>>> main
     
   </section>
 
@@ -186,13 +203,16 @@
     </div>
   </section>
   </aside> -->
-  
+
 <footer>
 
 </footer>
 
 <!--javascripts-->
-<script type="text/javascript" 
-src="js/utilities.js"></script>
+<script 
+src="/js/utilities.js"></script>
+<script src="/js/views/main.js"></script>
+<script src="/js/views/changepage.js"></script>
+<script src="/js/views/pagewidenavigationbuttons.js"></script>
 </body>
 </html>
