@@ -4,15 +4,13 @@
   const createProductElementOrderConfirmation = (img, name, price, amount) => {
     const productOrderConfirmation = document.createElement("article");
     const productInformationDivOrderConfirmation = document.createElement("div");
-    const ImgOrderConfirmation = document.createElement("img");
-    const test = document.createElement("img")
+    const imgOrderConfirmation = document.createElement("img");
 
     const productNameOrderConfirmation = document.createElement("h3");
     const priceOrderConfirmation = document.createElement("p");
     const amountOrderConfirmation = document.createElement("p");
 
-    ImgOrderConfirmation.src = img;
-
+    imgOrderConfirmation.src = img;
     productNameOrderConfirmation.innerText = name;
     priceOrderConfirmation.innerText = price;
     amountOrderConfirmation.innerText = `${amount} st`;
@@ -20,7 +18,7 @@
     productInformationDivOrderConfirmation.appendChild(productNameOrderConfirmation);
     productInformationDivOrderConfirmation.appendChild(priceOrderConfirmation);
 
-    productOrderConfirmation.appendChild(ImgOrderConfirmation);
+    productOrderConfirmation.appendChild(imgOrderConfirmation);
     productOrderConfirmation.appendChild(productInformationDivOrderConfirmation);
     productOrderConfirmation.appendChild(amountOrderConfirmation);
 
@@ -51,10 +49,20 @@
 
 //your details
 
-  /* 
-  check if logged in
-  if logged in check who is logged in
-  grab information from user and fill in form
-  
-  if not logged in do nothing
-  */
+
+    //Check if logged in and fill information
+        /*
+          if (user is logged in) {
+            check who is logged in
+
+            document.querySelector("#nameOrderConfirmation").value = local storage name;
+            document.querySelector("#streetOrderConfirmation").value = local storage street;
+            document.querySelector("#postalCodeOrderConfirmation").value = local storage postal code;
+            document.querySelector("#townOrderConfirmation").value = local storage town;
+            document.querySelector("#emailOrderConfirmation").value = local storage e-mail;
+
+            if (tel exists) {
+              document.querySelector("#phoneNumberOrderConfirmation").value = local storage name;
+            }
+          }
+        */
