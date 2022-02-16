@@ -52,6 +52,15 @@ changeActivePage("homepageSection");
 
 //------orderconfirmation (beställning)
 
+document.getElementById("submitBtnOrderConfirmation").addEventListener("click", (e) => {
+  e.preventDefault();
+changeActivePage("receiptSection");
+})
+
+document.getElementById("cancelBtnOrderConfirmation").addEventListener("click", (e) => {
+  e.preventDefault();
+changeActivePage("homepageSection");
+})
 //-------receipt section
 
 //-------register
