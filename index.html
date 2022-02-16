@@ -145,28 +145,27 @@
     <article id="yourOrderInformation">
       <h2>Dina Detaljer:</h2>
       <form>
-        <label for="nameOrderConfirmation">Namn</label>
-        <input type="text" name="nameOrderConfirmation" id="nameOrderConfirmation" required>
+        <label for="nameOrderConfirmation" class="hidden">Namn</label>
+        <input type="text" name="nameOrderConfirmation" id="nameOrderConfirmation" required placeholder="Namn">
         
-        <label for="streetOrderConfirmation">Gatuadress</label>
-        <input type="text" name="streetOrderConfirmation" id="streetOrderConfirmation" required>
+        <label for="streetOrderConfirmation" class="hidden">Gatuadress</label>
+        <input type="text" name="streetOrderConfirmation" id="streetOrderConfirmation" required placeholder="Gatuadress">
 
-        <label for="postalCodeOrderConfirmation">Postnummer</label>
-        <input type="number" name="postalCodeOrderConfirmation" id="postalCodeOrderConfirmation" required>
+        <label for="postalCodeOrderConfirmation" class="hidden">Postnummer</label>
+        <input type="number" name="postalCodeOrderConfirmation" id="postalCodeOrderConfirmation" required placeholder="Postnummer">
       
-        <label for="townOrderConfirmation">Ort</label>
-        <input type="text" name="townOrderConfirmation" id="townOrderConfirmation" required>
+        <label for="townOrderConfirmation" class="hidden">Ort</label>
+        <input type="text" name="townOrderConfirmation" id="townOrderConfirmation" required placeholder="Ord">
 
-        <label for="emailOrderConfirmation">E-post</label>
-        <input type="email" name="emailOrderConfirmation" id="emailOrderConfirmation" required>
+        <label for="emailOrderConfirmation" class="hidden">E-post</label>
+        <input type="email" name="emailOrderConfirmation" id="emailOrderConfirmation" required placeholder="E-post">
         
-        <label for="phoneNumberOrderConfirmation">Telefonnummer</label>
-        <input type="tel" name="phoneNumberOrderConfirmation" id="phoneNumberOrderConfirmation">
+        <label for="phoneNumberOrderConfirmation" class="hidden">Telefonnummer</label>
+        <input type="tel" name="phoneNumberOrderConfirmation" id="phoneNumberOrderConfirmation" placeholder="Telefonnummer">
       
-        <label for="commentsOrderConfirmation">Övriga kommentarer</label>
-        <textarea name="commentsOrderConfirmation" id="commentsOrderConfirmation" cols="30" rows="10">
-        </textarea>
-        <button type="submit" id="submitBtnOrderConfirmation">Nästa</button>
+        <label for="commentsOrderConfirmation" class="hidden">Övriga kommentarer</label>
+        <textarea name="commentsOrderConfirmation" id="commentsOrderConfirmation" cols="30" rows="10" placeholder="Övriga kommentarer"></textarea>
+        <button type="submit" id="submitBtnOrderConfirmation" class="hidden">Nästa</button>
         <button id="cancelBtnOrderConfirmation">Avbryt</button>
       </form>
     </article>
