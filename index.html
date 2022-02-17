@@ -139,7 +139,36 @@
 <!--varor + logga in/skriv in på formulär-->
   <section id="orderConfirmationSection"
   class="section">
+    <article id="orderProductsSummation">
+      <h2>Dina Produkter:</h2>
+    </article>
+    <article id="yourOrderInformation">
+      <h2>Dina Detaljer:</h2>
+      <form>
+        <label for="nameOrderConfirmation" class="hidden">Namn</label>
+        <input type="text" name="nameOrderConfirmation" id="nameOrderConfirmation" required placeholder="Namn">
+        
+        <label for="streetOrderConfirmation" class="hidden">Gatuadress</label>
+        <input type="text" name="streetOrderConfirmation" id="streetOrderConfirmation" required placeholder="Gatuadress">
 
+        <label for="postalCodeOrderConfirmation" class="hidden">Postnummer</label>
+        <input type="number" name="postalCodeOrderConfirmation" id="postalCodeOrderConfirmation" required placeholder="Postnummer">
+      
+        <label for="townOrderConfirmation" class="hidden">Ort</label>
+        <input type="text" name="townOrderConfirmation" id="townOrderConfirmation" required placeholder="Ord">
+
+        <label for="emailOrderConfirmation" class="hidden">E-post</label>
+        <input type="email" name="emailOrderConfirmation" id="emailOrderConfirmation" required placeholder="E-post">
+        
+        <label for="phoneNumberOrderConfirmation" class="hidden">Telefonnummer</label>
+        <input type="tel" name="phoneNumberOrderConfirmation" id="phoneNumberOrderConfirmation" placeholder="Telefonnummer">
+      
+        <label for="commentsOrderConfirmation" class="hidden">Övriga kommentarer</label>
+        <textarea name="commentsOrderConfirmation" id="commentsOrderConfirmation" cols="30" rows="10" placeholder="Övriga kommentarer"></textarea>
+        <button type="submit" id="submitBtnOrderConfirmation" class="hidden">Nästa</button>
+        <button id="cancelBtnOrderConfirmation">Avbryt</button>
+      </form>
+    </article>
   </section>
 
  
@@ -208,6 +237,6 @@ src="/js/utilities.js"></script>
 <script src="./js/views/changepage.js"></script>
 <script src="./js/views/shoppingcart.js"></script>
 <script src="./js/views/pagewidenavigationbuttons.js"></script>
-
+<script src="./js/views/orderConfirmation.js"></script>
 </body>
 </html>

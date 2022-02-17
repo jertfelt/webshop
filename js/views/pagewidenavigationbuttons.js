@@ -14,17 +14,17 @@ changeActivePage("homepageSection");
 
 document.getElementById("damLinkNav").addEventListener("click", (e) => {
   e.preventDefault();
-changeActivePage("productListSection");
+changeActivePage("productListSection", "Dam");
 })
 
 document.getElementById("herrLinkNav").addEventListener("click", (e) => {
   e.preventDefault();
-changeActivePage("productListSection");
+changeActivePage("productListSection", "Herr");
 })
 
 document.getElementById("babyLinkNav").addEventListener("click", (e) => {
   e.preventDefault();
-changeActivePage("productListSection");
+changeActivePage("productListSection", "Baby");
 })
 
 document.getElementById("loginLinkNav").addEventListener("click", (e) => {
@@ -56,6 +56,14 @@ setupCart();
 
 //------orderconfirmation (beställning)
 
+document.getElementById("submitBtnOrderConfirmation").addEventListener("click", (e) => {
+  e.preventDefault();
+changeActivePage("receiptSection");
+})
+
+document.getElementById("cancelBtnOrderConfirmation").addEventListener("click", () => {
+changeActivePage("homepageSection");
+})
 //-------receipt section
 
 //-------register

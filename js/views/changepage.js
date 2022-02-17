@@ -19,17 +19,23 @@ const sections = document.querySelectorAll(".section");
 
 //addevent function som tooglar hidden/show + byter query string NAVBAR
 
-//Ändrar URL samt visar rätt sektion
-const changeActivePage = (sectionName) => {
-  console.log(sectionName)
+//Ändrar URL med valda parametrar. Funkar även om man bara ger en eller två parametrar så att vi kan återanvända funktionen. 
+const changeActivePage = (sectionName, categoryName, prodID) => {
   let url = new URL(window.location.href);
   const search_params = url.searchParams;
+  //Lägg till section parameter
   search_params.set('section', sectionName);
+  // Lägg till kategori om angiven
+  if (typeof categoryName !== "undefined") {
+    search_params.set('category', categoryName);
+  }
+  // Lägg till produkt ID om angiven
+  if (typeof prodID !== "undefined") {
+    search_params.set('prod', prodID);
+  }
+  
   url.search = search_params.toString();
-
-  console.log(url.search)
-  window.location.href = url;
-
+  location.href = url;
 };
 
 const setActivePage = () => {

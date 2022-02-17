@@ -1,9 +1,21 @@
+
+Vår trello:
+https://trello.com/b/XVyVhXlq/kanban-grupp-tre
+
+Vår figma: 
+https://www.figma.com/file/bIcYUoAzHiwllVAUTerVmw/Ekoline?node-id=0%3A1
+
+
+
+INSTRUKTIONER:
 Webshop
 Bakgrund
 En webshop är en vanligt förekommande typ av webbprojekt, som kräver ett samspel mellan HTML, CSS och JavaScript för att ge användaren en tillfredställande upplevelse. Flera vanliga tekniker som återkommer i andra projekttyper krävs, samt förmåga att organisera såväl kod som arbete. 
+
 Shopens namn och innehåll
 Ni får själva välja vilken typ av butik det är, och vad som skall finnas till salu. 
 Det blir enklare för er om ni väljer t.ex. produktnamn och bilder som är begripliga för er, men produktbeskrivningar och dylikt kan ni använda lorem ipsum-text till om ni vill. 
+
 Formgivning och UX
 Det kommer att finnas några krav som påverkar UX och design något, men i övrigt är ni helt fria att formge på vilket sätt ni vill. 
 Leverabler (vad som skall lämnas in)
@@ -122,8 +134,3 @@ Responsiv CSS (VG)
 
 
 
-Vår trello:
-https://trello.com/b/XVyVhXlq/kanban-grupp-tre
-
-Vår figma: 
-https://www.figma.com/file/bIcYUoAzHiwllVAUTerVmw/Ekoline?node-id=0%3A1
