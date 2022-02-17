@@ -77,9 +77,10 @@
         <span class="nav-icon">
           <img src="styles/sass/img/shop-cart.png" 
           alt="Shopping cart" 
-          class="headercart headercart__button">
+          class="headercart headercart__imgfix">
           <!--antal i varukorg (siffra som räknar upp)-->
-          <span class="cart-items cart-btn">0</span>
+          <span class="headercart headercart__showAmount"
+          id="headerCartAmount">0</span>
         </span>
       </div>
     </nav>
@@ -98,7 +99,6 @@
             Se våra produkter</button></a>
           </div>
     </section>
-
 
   <section class="section categories__section" 
           id="categoriesSection">
@@ -255,23 +255,27 @@ class="section">
 
   </main>
 
-<aside id="cartSection">  
-<section class="cart__overlay">
-  <div class="cart__main">
-    <span class="cart--close">
-      <img src="styles/sass/img/closing.png" alt="Stäng Varukorg"/>
-    </span>
-    <h2>Din kundvagn:</h2>
-    <div class="cart__content">
-   
-    </div>
-    <div class="cart__footer">
-      <h3>Totalt: <span class="cart__totalitems">0</span> SEK</h3>
-      <button class="cart--clear">Rensa kundvagn</button>
-    </div>
-  </div>
-</section>
-</aside> -->
+  <aside>  
+    <section class="cart__container">
+      <div class="cart__content">
+        <span class="cart--close">
+          <img src="styles/img/..." 
+          alt="Stäng varukorg"/>
+        </span>
+        <h2>Din kundvagn:</h2>
+        <div id="cartDynamicContent">
+          <!--tidigare cart-content-->
+       
+        </div>
+        <div class="cart__footer">
+          <h3>Totalt: <span id="cartTotal">0</span> SEK</h3> <!--tidigare class cart-total-->
+          <button id="clearCart" 
+          class="button__cart--clear">Rensa kundvagn</button>
+          <!--tidigare class clear-cart-->
+        </div>
+      </div>
+    </section>
+  </aside>
 
 <footer>
 
