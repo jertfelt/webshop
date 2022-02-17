@@ -29,8 +29,9 @@
   <ul id="dropDownMenu"  
       class="drop-down">
      <div class="mainmenu__mobile">
+       <!--lägg in ett X här och en JS-script (TOVA)-->
     <li>
-      <a href="index.html" id="homeLinkNav"> <!--eventuellt lägg in klassen "active", men gör då js så den kan ändras sen-->
+      <a href="index.html" id="homeLinkNav"> 
         Hem
       </a>
     </li>
@@ -38,25 +39,27 @@
       <a href="index.html"
       id="cartLinkNav">Varukorg</a> 
     </li>
-    <li>Kategori
-    <ul class="list__nested"> <!--start of nested category-->
-      <li>
+    <li class="list__nested--mother">
+      Kategorier
+      <!--start of nested category-->
+      <ul class="list__nested hidden"> 
+        <li>
+          <a href="index.html"
+          id="damLinkNav">
+          Dam</a> 
+        </li>
+        <li>
+          <a href="index.html"
+          id="herrLinkNav">
+          Herr</a> 
+        </li>
+        <li>
         <a href="index.html"
-        id="damLinkNav">
-        Dam</a> 
-      </li>
-      <li>
-        <a href="index.html"
-        id="herrLinkNav">
-        Herr</a> 
-      </li>
-      <li>
-       <a href="index.html"
-       id="babyLinkNav">
-       Baby</a> 
-      </li>
-    </ul>
-  </li>
+        id="babyLinkNav">
+        Baby</a> 
+        </li>
+      </ul>
+    </li>
     <li>
       <a href="index.html"
       id="loginLinkNav"

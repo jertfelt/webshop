@@ -164,7 +164,7 @@ h6 {
   letter-spacing: 0.1rem;
   font-size: 1rem;
   font-weight: bold;
-  background: #225E39;
+  background: #225e39;
   color: #fbfbfb;
   border: none;
   -webkit-transition: all 0.3s linear;
@@ -206,7 +206,7 @@ h6 {
   z-index: 7;
   top: -30px;
   left: -30px;
-  background: #225E39;
+  background: #225e39;
   padding: 0 5px;
   border-radius: 30%;
   color: #fbfbfb;
@@ -218,30 +218,33 @@ h6 {
 }
 
 .mainmenu__mobile {
-  background-color: #f2ea03;
-  color: #225E39;
+  background-color: #fbfbfb;
   width: 100%;
   display: block;
   position: absolute;
   z-index: 99;
   right: 0;
-  top: 74px;
+  top: 0;
   padding: 30px 20px;
 }
 
 .mainmenu__mobile li {
   display: block;
-  margin-bottom: 20px;
-  color: #1b1b1b;
+  margin-bottom: 10px;
+  padding: 0.2rem;
 }
 
 .mainmenu__mobile a {
-  font-size: 38px;
+  font-size: 22px;
   font-weight: bold;
   display: block;
-  text-transform: capitalize;
   padding: 0px 0;
   text-align: center;
+  text-decoration: none;
+}
+
+.mainmenu__mobile a:visited {
+  color: #225e39;
 }
 
 .mainmenu__mobile a:hover {
@@ -249,8 +252,51 @@ h6 {
   text-transform: uppercase;
 }
 
-.active {
-  color: #f2ea03;
+.list__nested {
+  background-color: #ece6d2;
+  padding: 0.4rem;
+}
+
+@media only screen and (min-width: 991px) {
+  .list__nested {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.list__nested li {
+  margin: 20px;
+}
+
+.list__nested--mother {
+  font-size: 22px;
+  color: #225e39;
+  font-weight: bold;
+  display: block;
+  padding: 0px 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.list__nested--mother:hover {
+  color: #2798d8;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.list__nested--mother:visited {
+  color: #225e39;
 }
 
 .hidden {
@@ -557,7 +603,7 @@ nav {
 
 .cart__content h2 {
   text-align: center;
-  color: #225E39;
+  color: #225e39;
 }
 
 .cart__item {
