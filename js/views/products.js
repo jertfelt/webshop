@@ -1,5 +1,4 @@
-// This should work after fixing URL in changepage.js
-// It should get this URL: http://127.0.0.1:5500/index.html?section=productListSection&category=Dam
+// URL: http://127.0.0.1:5500/index.html?section=productListSection&category=Dam
 const queryString = new URLSearchParams(location.search);
 const qsCategory = queryString.get('category');
 
@@ -12,16 +11,20 @@ function drawProducts() {
   productListSection.appendChild(categoryHeader);
 
   productList.forEach(product => {
+    // Filter products for selected category.
     if(product.category === qsCategory) {
-    const article = document.createElement("article");
-    article.innerHTML = `
-      <a href="/index.html?section=individualProductSection&id=${product.sys.id}">
-        <img style="width:100%" src="/${product.fields.image.fields.file.url}"></img>
+    const articleElem = document.createElement("article");
+    // Creates direct link to individual product
+    const productLink = createURL("individualProductSection", `${product.category}` , `${product.sys.id}`);
+
+    articleElem.innerHTML = `
+      <a href="${productLink}">
+        <img style="width:100%" alt="Produkt ${product.title}" class="product-img" src="/${product.fields.image.fields.file.url}"></img>
         <h3>${product.fields.title}</h3>
         <p>${product.fields.price} kr</p>
       </a>
-        <button>Köp</button>`
-    productListSection.appendChild(article);
+      <button>Köp</button>`
+    productListSection.appendChild(articleElem);
     }
   })
 }
