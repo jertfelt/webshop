@@ -37,10 +37,10 @@
       </a>
     </li>
     <li>
-      <a href="index.html">
+      <a href="index.html" id="varukorgNav">
         Varukorg</a> 
     </li>
-    <li> <!--nested-->
+    <li> <!--nested, behöver fixas med css och js-->
         <a href="index.html" id="damLinkNav"
         >Dam</a> 
       </li>
@@ -72,12 +72,12 @@
         </a>
 
   <!--varukorg klickbar-->
-        <span class="nav-icon">
+        <span class="nav--icon">
           <img src="styles/sass/img/shop-cart.png" 
           alt="Shopping cart" 
           class="nav__button button__cart">
           <!--antal i varukorg (siffra som räknar upp)-->
-          <span class="cart-items cart-btn">0</span>
+          <span class="cart__totalitems cart__btn">0</span>
         </span>
       </div>
     </nav>
@@ -142,18 +142,13 @@
 
   </section>
 
-  <!--kvitto dropdown-->
-  <section id="receiptSection"
-  class="section">
-    
-  </section>
+ 
 
-  <section id="loginSection">
+  <section id="loginSection" class="section">
     <div class="login">
       <div class="heading">
         <h6>Logga in</h6>
         <form action="#">
-    
           <div class="input-group input-group-lg">
             <span class="input-group-addon"><i class="fa fa-user"></i></span>
             <input type="text" class="form-control" placeholder="Användarnamn">
@@ -169,37 +164,38 @@
            </form>
          </div>
      </div>
-   
-  <section id="loginSection"
-  class="section">
 
-  </section>
 
   <section id="createUserSection"
   class="section">
-    
   </section>
+
+  
+   <!--kvitto dropdown-->
+   <section id="receiptSection"
+   class="section">
+   </section>
 
 
   </main>
-<!--
+
   <aside id="cartSection">  
   <section class="cart__overlay">
-    <div class="cart">
+    <div class="cart__main">
       <span class="cart--close">
-        <img src="styles/sass/img/closing.png" alt="Close"/>
+        <img src="styles/sass/img/closing.png" alt="Stäng kundvagn"/>
       </span>
       <h2>Din kundvagn:</h2>
       <div class="cart__content">
      
       </div>
       <div class="cart__footer">
-        <h3>Totalt: <span class="cart-total">0</span> SEK</h3>
+        <h3>Totalt: <span class="cart__total">0</span> SEK</h3>
         <button class="cart--clear banner-btn">Rensa kundvagn</button>
       </div>
     </div>
   </section>
-  </aside> -->
+  </aside> 
 
 <footer>
 
@@ -210,6 +206,8 @@
 src="/js/utilities.js"></script>
 <script src="./js/views/main.js"></script>
 <script src="./js/views/changepage.js"></script>
+<script src="./js/views/shoppingcart.js"></script>
 <script src="./js/views/pagewidenavigationbuttons.js"></script>
+
 </body>
 </html>
