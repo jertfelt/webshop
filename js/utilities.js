@@ -29,22 +29,20 @@ const showCart =() => {
 
 cartHeaderBtn.addEventListener("click", showCart);
 
+//bugg: syns inte något tar över
 cartNavBtn.addEventListener("click", showCart);
 
 const hideCart =() => {
-  cartContainer.classList.remove("cart__transparentBack");
+  cartContainer.classList.add("cart__hidden");
   cartMenu.classList.remove("cart__show");
-  console.log("hellu")
 }
 
 closeCartWindow.addEventListener("click", hideCart);
 
 
-// document.addEventListener('keydown', function(event){
-//   if(event.key === "Escape")
-//   {
-//     // if (cartMenu.classList.contains("cart__show"))
-//     cartContainer.classList.remove("cart__transparentBack");
-//     cartMenu.classList.remove("cart__show");
-//   }
-// });
+document.addEventListener('keydown', function(event){
+  if(event.key === "Escape")
+  {
+  hideCart();
+  }
+});
