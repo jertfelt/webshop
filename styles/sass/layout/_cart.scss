@@ -1,23 +1,41 @@
 .cart{
 
 //*visa och dölja
-&__show{
+  &__show{
+    transform: translateX(0);
+  }
 
-}
-
-&__transparentBack{
-  
-}
+  &__transparentBack{
+    visibility: visible;
+  }
 
 //*varukorginnehåll
   &__item--new{
 
   }
   &__item{
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 1.5rem;
+    margin: 1.5rem 0;
 
-    .fa-chevron-up, .fa-chevron-down{
-
+    img {
+      width: 75px;
+      height: 75px;
     }
+
+    h4{
+      font-size: 0.85rem;
+    text-transform: capitalize;
+    letter-spacing: $mainspacing;
+    }
+
+    h5{
+      margin: 0.5rem 0;
+    letter-spacing: $mainspacing;
+    }
+  
 
   }
   &__item--remove{
@@ -26,7 +44,6 @@
   &__item--amount{
 
   }
-
 
   &__main{
   position: fixed;
@@ -50,13 +67,9 @@
   h2 {
     text-transform: capitalize;
     text-align: center;
-    letter-spacing: var(--mainSpacing);
+    letter-spacing: $mainSpacing;
     margin-bottom: 2rem;
   }
-
-  // &__total{
-
-  // }
 
   &__overlay{
     position: fixed;
@@ -70,6 +83,16 @@
     visibility: hidden; 
   }
 
+  &__footer{
+  margin-top: 2rem;
+  letter-spacing: $mainSpacing;
+  text-align: center;
+    h3 {
+      text-transform: capitalize;
+      margin-bottom: 1rem;
+      }
+  }
+
   &--close{
     font-size: 1.7rem;
     cursor: pointer;
@@ -79,7 +102,11 @@
     
   }
 }
-
+.fa-chevron-up, 
+.fa-chevron-down {
+  color: $color-black; 
+  cursor: pointer;
+}
 
 
 

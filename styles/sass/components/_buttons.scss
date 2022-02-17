@@ -1,7 +1,9 @@
 //buttons
 
 
-.button__hero{
+.button{
+
+  &__hero{
   padding: 1rem 2rem;
   text-transform: uppercase;
   letter-spacing: $mainSpacing;
@@ -13,4 +15,23 @@
   transition: $mainTransition;
   cursor: pointer;
   margin-top:2rem;
+  }
+
+}
+
+.headercart {
+  position:relative;
+  z-index:7;
+  top:-30px;
+  left:-50px;
+  background: $color-green;
+  padding: 0 5px;
+  border-radius: 30%;
+  color:  $color-white;
+  text-align: center;
+}
+
+.headercart__button {
+  position: relative;
+  cursor: pointer;
 }
