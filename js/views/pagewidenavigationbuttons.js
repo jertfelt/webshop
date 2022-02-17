@@ -67,5 +67,12 @@ changeActivePage("homepageSection");
 //-------receipt section
 
 //-------register
+const confirmAndExitCreateUser = () => {
+  changeActivePage("homepageSection");
+}
+
+document.getElementById("cancelButtonCreateUser").addEventListener("click", () => {
+  changeActivePage("homepageSection");
+  })
 
 //-------login 

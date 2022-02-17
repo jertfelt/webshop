@@ -157,8 +157,7 @@
   </section>
 
   <section id="productListSection" 
-  class="">
-
+  class="section">
   </section>
 
   <section id="individualProductSection" 
@@ -166,7 +165,7 @@
   </section>
 
 <!--varor + logga in/skriv in på formulär-->
-<section id="orderConfirmationSection"
+  <section id="orderConfirmationSection"
 class="section">
   <article id="orderProductsSummation">
     <h2>Dina Produkter:</h2>
@@ -198,62 +197,77 @@ class="section">
       <button id="cancelBtnOrderConfirmation">Avbryt</button>
     </form>
   </article>
-</section>
+  </section>
 
 <!--kvitto dropdown-->
-<section id="receiptSection"
-class="section">
-  
-</section>
+  <section id="receiptSection"
+  class="section">
+    
+  </section>
 
-<section id="loginSection">
-  <div class="login">
-    <div class="heading">
-      <h6>Logga in</h6>
-      <form action="#">
+  <section id="loginSection" 
+  class="section">
   
-        <div class="input-group input-group-lg">
-          <span class="input-group-addon"><i class="fa fa-user"></i></span>
-          <input type="text" class="form-control" placeholder="Användarnamn">
-            </div>
-  
+      
+        <h6>Logga in</h6>
+        <form action="#">
+    
           <div class="input-group input-group-lg">
-            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-            <input type="password" class="form-control" placeholder="Lösenord">
-          </div>
-  
-          <button type="submit" >Logga in</button>
-          <button type="submit" >Registrera dig</button>
-         </form>
-       </div>
-   </div>
+            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+            <input type="text" class="form-control" placeholder="Användarnamn">
+              </div>
+    
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+              <input type="password" class="form-control" placeholder="Lösenord">
+            </div>
+    
+            <button type="submit" >Logga in</button>
+            <button type="submit" >Registrera dig</button>
+          </form>
+        </div>
+    </div>
+    </section>
  
-<section id="loginSection"
-class="section">
+  <section id="createUserSection"
+  class="section">
+    <h2>Skapa användare</h2>
+    <p>Fyll i din information här:</p>
+    <form id="createUserForm">
+      <label for="usernameCreateUser" class="hidden">Användarnamn</label>
+      <input type="text" name="usernameCreateUser" id="usernameCreateUser" required placeholder="Användarnamn">
+      <label for="passwordCreateUser" class="hidden">Lösenord</label>
+      <input type="password" name="passwordCreateUser" id="passwordCreateUser" required placeholder="Lösenord">
+      <label for="streetCreateUser" class="hidden">Gatuadress</label>
+      <input type="text" name="streetCreateUser" id="streetCreateUser" required placeholder="Gatuadress">
+      <label for="postalCodeCreateUser" class="hidden">Postnummer</label>
+      <input type="number" name="postalCodeCreateUser" id="postalCodeCreateUser" required placeholder="Postnummer">
+      <label for="townCreateUser" class="hidden">Ort</label>
+      <input type="text" name="townCreateUser" id="townCreateUser" required placeholder="Ort">
+      <label for="emailCreateUser" class="hidden">E-post</label>
+      <input type="email" name="emailCreateUser" id="emailCreateUser" required placeholder="E-post">
+      <label for="phoneNumberCreateUser" class="hidden">Telefonnummer</label>
+      <input type="text" name="phoneNumberCreateUser" id="phoneNumberCreateUser" placeholder="Telefonnummer">
+      <button type="submit" id="submitBtnCreateUser">Registrera</button>
+      <button id="cancelButtonCreateUser">Avbryt</button>
+    </form>
+  </section>
 
-</section>
+  </main>
 
-<section id="createUserSection"
-class="section">
-  
-</section>
-
-
-</main>
-<!--
 <aside id="cartSection">  
 <section class="cart__overlay">
-  <div class="cart">
+  <div class="cart__main">
     <span class="cart--close">
-      <img src="styles/sass/img/closing.png" alt="Close"/>
+      <img src="styles/sass/img/closing.png" alt="Stäng Varukorg"/>
     </span>
     <h2>Din kundvagn:</h2>
     <div class="cart__content">
    
     </div>
     <div class="cart__footer">
-      <h3>Totalt: <span class="cart-total">0</span> SEK</h3>
-      <button class="cart--clear banner-btn">Rensa kundvagn</button>
+      <h3>Totalt: <span class="cart__totalitems">0</span> SEK</h3>
+      <button class="cart--clear">Rensa kundvagn</button>
     </div>
   </div>
 </section>
@@ -263,14 +277,22 @@ class="section">
 
 </footer>
 
-<!--javascripts-->
-<script 
-src=".js/utilities.js"></script>
+
+
+<!-----------------------------------javascripts-->
+
+
 <script src=".js/views/categorys.js"></script>
+<script src="./js/utilities.js"></script>
+<script src="./js/views/main.js"></script>
+<script src="./js/views/changepage.js"></script>
+<script src="./js/views/pagewidenavigationbuttons.js"></script>
+<script src="./js/views/products.js"></script>
 <script src="./js/views/main.js"></script>
 <script src="./js/views/changepage.js"></script>
 <script src="./js/views/pagewidenavigationbuttons.js"></script>
 <script src="./js/views/orderConfirmation.js"></script>
+<script src="./js/views/createAccount.js"></script>
 
 </body>
 </html>
