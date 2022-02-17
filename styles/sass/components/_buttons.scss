@@ -2,7 +2,6 @@
 
 
 .button{
-
   &__hero{
   padding: 1rem 2rem;
   text-transform: uppercase;
@@ -29,14 +28,11 @@
       transition: $mainTransition;
       cursor: pointer;
       margin-top:2rem;
-      
     }
     &:hover{
       background: transparent;
     }
-
   }
-
 }
 
 .headercart{
