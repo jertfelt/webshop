@@ -1,17 +1,28 @@
-function validate()
-{
-let username=document.getElementById("username").value;
-let password=document.getElementById("password").value;
-if(username=="admin"&& password=="admin")
-{
-    alert("Inloggning lyckades");
-    return false;
+/* först vill vi ta emot från våra inputs
+vi vill loopa igenom datan i local storage o se om vi kan hitta matchning för username
+om vi inte hittar det så vill vi skicka ut en alert. 
+sen om det finns en användare så vill vi kolla om lösenordet matchar
+och om det gör det så vill vi visa vem som är inloggad
+*/
+let userDoesExist = false;
+let getUser = "";
+let loginEmail = "";
+let loginPassword = "";
+const lookForUser = () => {
+    const currentUsers = JSON.parse(localStorage.getItem("users"))
 
-}
-else
-{
-    alert("Fel användarnamn eller lösenord");
+    currentUsers.forEach(user => {
+        if(loginEmail==user.email){
+            userDoesExist = true;
+            getUser = user;
+        }
+        
+    });
 }
 
-
-}
+document.getElementById("loginButton").addEventListener("click", (e) => {
+    e.preventDefault();
+loginEmail = document.getElementById("emailLogin").value;
+loginPassword = document.getElementById("password").value;
+console.log(loginEmail);
+}) 
