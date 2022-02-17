@@ -1,9 +1,9 @@
 //*-----------variabler:
-  //varukorg knappar
-  const cartHeaderBtn = document.querySelector("headercart");
-  const cartNavBtn = document.getElementById(cartLinkNav);
-  const closeCartWindow = document.querySelector("cart--close");
-  const clearCartBtn = document.getElementById("clearCart");
+  // //varukorg knappar
+  // const cartHeaderBtn = document.querySelector(".headercart");
+  // const cartNavBtn = document.getElementById("cartLinkNav");
+  // const closeCartWindow = document.querySelector(".cart--close");
+  // const clearCartBtn = document.getElementById("clearCart");
 
     //räknaren i headern
 let cartCounterHeader = document.querySelector(".headercart__showAmount");
@@ -12,8 +12,8 @@ let cartCounterFooter = document.querySelector("#cartTotal");
 
 
   //kundkorgen
-  const cartMenu = document.querySelector("c.cart__content");
-  const cartContainer = document.querySelector("cart__container");
+  const cartMenu = document.querySelector(".cart__content");
+  const cartContainer = document.querySelector(".cart__container");
   //det som renderas
   const cartContent = document.querySelector("#cartDynamicContent");
 
@@ -70,89 +70,94 @@ let cartCounterFooter = document.querySelector("#cartTotal");
 
 //?----------visa totala varor 
 
-const setCartAmountValue = (cart) => {
-  let temporaryTotal = 0;
-  let itemsTotal = 0;
-  cart.map(item =>{
-  //antal varor multiplicerat med pris
-    temporaryTotal += item.price * item.amount;
-    itemsTotal += item.amount;
-  });
-  //visar antal i varukorgen (i header)
-  cartCounterHeader.innerText = itemsTotal; 
-  //plus tar bort decimaler pga who needs them right:
-  cartCounterFooter.innerText = parseFloat(temporaryTotal.toFixed(2));
-}   
+// const setCartAmountValue = (cart) => {
+//   let temporaryTotal = 0;
+//   let itemsTotal = 0;
+//   cart.map(item =>{
+//   //antal varor multiplicerat med pris
+//     temporaryTotal += item.price * item.amount;
+//     itemsTotal += item.amount;
+//   });
+//   //visar antal i varukorgen (i header)
+//   cartCounterHeader.innerText = itemsTotal; 
+//   //plus tar bort decimaler pga who needs them right:
+//   cartCounterFooter.innerText = parseFloat(temporaryTotal.toFixed(2));
+// }   
 
 //?----------rendera ut varukorginnehåll:
 
 
-const addCartItemsToCart = (item) => {
-  let cartdiv = document.createElement("div");
-  cartdiv.classList.add("cart__new--item");
-  cartdiv.innerHTML = `
-  <article class="cart__item" 
-  data-id=${item.id}>
-      <img src=${item.image}
-  alt="product" />
-  <div>
-     <h4>${item.title}</h4>
-    <h5>${item.price}SEK</h5>
-    <span class="cart--remove"
-    data-id=${item.id}>Ta bort</span>
-  </div>
-  <div>
-    <i class="fas fa-chevron-up" 
-    data-id=${item.id}>
-    </i>
-    <p class="cart--amount">${item.amount}</p>
-    <i class="fas fa-chevron-down"
-    data-id=${item.id}></i>
+// const addCartItemsToCart = (item) => {
+//   let cartdiv = document.createElement("div");
+//   cartdiv.classList.add("cart__new--item");
+//   cartdiv.innerHTML = `
+//   <article class="cart__item" 
+//   data-id=${item.id}>
+//       <img src=${item.image}
+//   alt="product" />
+//   <div>
+//      <h4>${item.title}</h4>
+//     <h5>${item.price}SEK</h5>
+//     <span class="cart--remove"
+//     data-id=${item.id}>Ta bort</span>
+//   </div>
+//   <div>
+//     <i class="fas fa-chevron-up" 
+//     data-id=${item.id}>
+//     </i>
+//     <p class="cart--amount">${item.amount}</p>
+//     <i class="fas fa-chevron-down"
+//     data-id=${item.id}></i>
   
-  </div> 
-  </article>
-  `
-  cartContent.appendChild(cartdiv);
+//   </div> 
+//   </article>
+//   `
+//   cartContent.appendChild(cartdiv);
 
 
   
-}
-
-
+// }
 
 //?------skapa kundvagn, visa och dölja
 
-const showCart =() => {
-  cartOpacity.classList.add("transparentBack");
-  cartMenu.classList.add("cart__show");
-};
+// const showCart =() => {
+//   cartContainer.classList.add("cart__transparentBack");
+//   cartContainer.classList.remove("cart__hidden")
+//   cartMenu.classList.add("cart__show");
+  
+// };
 
-const hideCart =() => {
-  cartOpacity.classList.remove("transparentBack");
-  cartMenu.classList.remove("cart__show");
-}
+// cartHeaderBtn.addEventListener("click", showCart);
+
+// cartNavBtn.addEventListener("click", showCart);
+
+// const hideCart =() => {
+//   cartContainer.classList.remove("cart__transparentBack");
+//   cartMenu.classList.remove("cart__show");
+// }
+
+// closeCartWindow.addEventListener("click", hideCart);
+
+
+// document.addEventListener('keydown', function(event){
+//   if(event.key === "Escape")
+//   {
+//     if (cartMenu.classList.contains("cart__show"))
+//     cartContainer.classList.remove("cart__transparentBack");
+//     cartMenu.classList.remove("cart__show");
+//   }
+// });
 
 
 const setupCart = () => {
-  cart = getCartStart();
-  setCartAmountValue(cart);
-  fillCartArray(cart);
+  // cart = getCartStart();
+  // setCartAmountValue(cart);
+  // fillCartArray(cart);
   
-  cartHeaderBtn.addEventListener("click", showCart);
-  cartNavBtn.addEventListener("click", showCart);
-
-  closeCartWindow.addEventListener("click", hideCart);
-
-  document.addEventListener('keydown', function(event){
-    if(event.key === "Escape")
-    {
-      if (cartMenu.classList.contains("cart__show"))
-      cartOpacity.classList.remove("transparentBack");
-      cartMenu.classList.remove("cart__show");
-    }
-  });
+ 
+  };
   
-}
+
 
 
 // const cartLogic =()=> {

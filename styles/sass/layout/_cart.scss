@@ -1,12 +1,16 @@
 .cart{
-
 //*visa och dölja
+
+&__transparentBack{
+  visibility: visible;
+  
+}
   &__show{
   transform: translateX(0);
   }
 
-  &__transparentBack{
-    visibility: visible;
+  &__hidden{
+    visibility:hidden;
   }
 
 //*varukorginnehåll
@@ -18,22 +22,27 @@
   width: 100%;
   height: 100%;
   transition: $mainTransition;
-  background: $color-white;
+  background: rgba(34, 94, 57, .7);
   z-index: 2;
-  visibility: hidden;
   } 
+
   &__content{
   position: fixed;
   top: 0;
   right: 0;
-  width: 100%;
+  width: 60%;
   height: 100%;
   overflow: scroll;
   z-index: 10;
-  background: var(--mainBlack);
+  background: $color-sand;
   padding: 1.5rem;
-  transition: var(--mainTransition);
-  transform: translateX(100%);
+  transition: $mainTransition;
+  
+  h2{
+    text-align: center;
+    color:$color-green;
+  }
+
   }
 
   &__item{
@@ -66,13 +75,10 @@
   }
 
   &--close{
-    font-size: 1.7rem;
     cursor: pointer;
-    height: 30px;
-  }
-
-  h2{
-    color:$color-green;
+    img {
+      height: 30px;
+    }
   }
 
   &__footer{

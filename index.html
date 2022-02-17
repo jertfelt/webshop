@@ -257,23 +257,24 @@ class="section">
   </main>
 
   <aside>  
-    <section class="cart__container">
+    <section class="cart__container cart__hidden">
       <div class="cart__content">
         <span class="cart--close">
-          <img src="styles/img/..." 
-          alt="Stäng varukorg"/>
+          <img src="styles/sass/img/closing.png" 
+          alt="Stäng varukorg"
+          class="fix"/>
         </span>
         <h2>Din kundvagn:</h2>
-        <div id="cartDynamicContent">
+        Här kommer dynamisk kontent, ta bort detta sen
+        <article id="cartDynamicContent">
           <!--tidigare cart-content-->
-       
-        </div>
-        <div class="cart__footer">
+        </article>
+        <article class="cart__footer">
           <h3>Totalt: <span id="cartTotal">0</span> SEK</h3> <!--tidigare class cart-total-->
           <button id="clearCart" 
           class="button__cart--clear">Rensa kundvagn</button>
           <!--tidigare class clear-cart-->
-        </div>
+        </article>
       </div>
     </section>
   </aside>

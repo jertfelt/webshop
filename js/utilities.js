@@ -1,7 +1,5 @@
-
-
-///-----Menu button mobile
-let menuButton = document.getElementById("menuToggle");
+///*-----Hamburgermeny dropdown
+const menuButton = document.getElementById("menuToggle");
 let menuMobile = document.querySelector("#dropDownMenu");
 
 menuButton.addEventListener("click", dropdown);
@@ -13,3 +11,40 @@ function dropdown(){
 else 
 menuMobile.classList.add("drop-down");
 }
+
+//*------visa/dölja VARUKORG
+
+ //varukorg knappar
+ const cartHeaderBtn = document.querySelector(".headercart");
+ const cartNavBtn = document.getElementById("cartLinkNav");
+ const closeCartWindow = document.querySelector(".cart--close");
+ const clearCartBtn = document.getElementById("clearCart");
+
+ //visa och dölj 
+const showCart =() => {
+  cartContainer.classList.add("cart__transparentBack");
+  cartContainer.classList.remove("cart__hidden")
+  cartMenu.classList.add("cart__show");
+};
+
+cartHeaderBtn.addEventListener("click", showCart);
+
+cartNavBtn.addEventListener("click", showCart);
+
+const hideCart =() => {
+  cartContainer.classList.remove("cart__transparentBack");
+  cartMenu.classList.remove("cart__show");
+  console.log("hellu")
+}
+
+closeCartWindow.addEventListener("click", hideCart);
+
+
+// document.addEventListener('keydown', function(event){
+//   if(event.key === "Escape")
+//   {
+//     // if (cartMenu.classList.contains("cart__show"))
+//     cartContainer.classList.remove("cart__transparentBack");
+//     cartMenu.classList.remove("cart__show");
+//   }
+// });
