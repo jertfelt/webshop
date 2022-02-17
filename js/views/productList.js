@@ -23,7 +23,7 @@ function drawProducts() {
         <h3>${product.fields.title}</h3>
         <p>${product.fields.price} kr</p>
       </a>
-      <button>Köp</button>`
+      <button onClick="addToCart(${product.sys.id})">Köp</button>`
     productListSection.appendChild(articleElem);
     }
   })
