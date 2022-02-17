@@ -76,6 +76,6 @@ document.getElementById("goToRegisterUserButton").addEventListener("click", (e) 
   e.preventDefault();
 changeActivePage("createUserSection");
 })
-const = confirmAndLogin = () => {
+const confirmAndLogin = () => {
   changeActivePage("homepageSection")
 }
