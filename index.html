@@ -103,22 +103,29 @@
       <!--hit ska den dynamiska HTML:en-->
       <!-- den ska klistras in i javascripten men som placeholder så man ser: (saknas länk till produktlista)-->
 
-      <!-- <article class="product">
+      <article class="product">
+
         <div class="product__img--container">
-          <img src= ${product.image} 
+
+          <img id="categoryImg" src= ${product.image} 
           alt="produkt ${product.title}" 
           class="product__img">
+
           </a> 
-         </div>
+          <div class="products__items">
+
+            <div class="products-items--row">
+              <h3 id="categoryTitle"></h3> 
+              <h4 id="categoryInfo"></h4>
+            </div>
+  
+          </div>
+
+        </div>
     
-        <div class="products__items">
-        <div class="products-items--row">
-          <h3> ${product.title} </h3> 
-          <h4> Annan info </h4>
-        </div>
-        </div>
+
       
-      </article>  --> 
+      </article>  
     </div>
   </section>
 
@@ -177,5 +184,9 @@
 <!--javascripts-->
 <script type="text/javascript" 
 src="js/utilities.js"></script>
+
+
+<script src="js/views/categorys.js"></script>
+<!-- -----------------------------------------------------------------------------------------------------------------c -->
 </body>
 </html>
