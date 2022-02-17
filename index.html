@@ -32,35 +32,40 @@
       class="drop-down">
      <div class="mainmenu__mobile">
     <li>
-      <a href="index.html" 
-         class="active">
+      <a href="index.html" id="homeLinkNav"> <!--eventuellt lägg in klassen "active", men gör då js så den kan ändras sen-->
         Hem
       </a>
     </li>
     <li>
-      <a href="index.html">Varukorg</a> 
+      <a href="index.html">
+        Varukorg</a> 
     </li>
-    <li>Kategori
-    <ul class="list__nested"> <!--start of nested category-->
-      <li>
-        <a href="index.html">Dam</a> 
+    <li> <!--nested-->
+        <a href="index.html" id="damLinkNav"
+        >Dam</a> 
       </li>
       <li>
-        <a href="index.html">Herr</a> 
+        <a href="index.html" id="herrLinkNav"
+        >Herr</a> 
       </li>
       <li>
-       <a href="index.html">Baby</a> 
+       <a href="index.html" id="babyLinkNav"
+       >Baby</a> 
       </li>
-    </ul>
+ 
   </li>
     <li>
-      <a href="index.html">Logga in/Registrera dig</a> 
+      <a href="index.html" 
+      id="loginLinkNav"
+     >Logga in/Registrera dig</a> 
     </li>
   </div>
   </ul>
 
   <!--logotyp-->
-        <a href="index.html">
+        <a href="index.html"
+        class="event__link"
+        id="logoLinkNav">
         <img src="styles/sass/img/Logga.png" 
         alt="logotype Ekoline" 
         class="nav__logotype"/>
@@ -80,18 +85,18 @@
   
   <main>
     <!--välkommen-->
-    <section class="hero homepage">
+    <section class="hero section" id="homepageSection">
       <div class="hero__content">
         <h1 class="hero__heading">Välkommen till Ekoline</h1>
         <p class="text--bold text--m"> Genvägen till en mer hållbar shopping. </p>
-        <a href="#categories">
-          <button class="button__hero">
-            Se våra produkter</button></a>
+          <button class="button__hero" id="buttonHero">
+            Se våra produkter
+          </button>
           </div>
     </section>
 
 
-  <section class="categories__section" 
+  <section class="section categories__section" 
           id="categoriesSection">
     <span>
       <h2> Våra produkter:</h2>
@@ -156,29 +161,84 @@
   </section>
 
   <section id="productListSection" 
-  class="">
+  class="section">
 
   </section>
 
   <section id="individualProductSection" 
-  class="">
+  class="section">
   </section>
 
 <!--varor + logga in/skriv in på formulär-->
-  <section id="orderConfirmationSection">
+  <section id="orderConfirmationSection"
+  class="section">
+    <article id="orderProductsSummation">
+      <h2>Dina Produkter:</h2>
+    </article>
+    <article id="yourOrderInformation">
+      <h2>Dina Detaljer:</h2>
+      <form>
+        <label for="nameOrderConfirmation" class="hidden">Namn</label>
+        <input type="text" name="nameOrderConfirmation" id="nameOrderConfirmation" required placeholder="Namn">
+        
+        <label for="streetOrderConfirmation" class="hidden">Gatuadress</label>
+        <input type="text" name="streetOrderConfirmation" id="streetOrderConfirmation" required placeholder="Gatuadress">
 
+        <label for="postalCodeOrderConfirmation" class="hidden">Postnummer</label>
+        <input type="number" name="postalCodeOrderConfirmation" id="postalCodeOrderConfirmation" required placeholder="Postnummer">
+      
+        <label for="townOrderConfirmation" class="hidden">Ort</label>
+        <input type="text" name="townOrderConfirmation" id="townOrderConfirmation" required placeholder="Ord">
+
+        <label for="emailOrderConfirmation" class="hidden">E-post</label>
+        <input type="email" name="emailOrderConfirmation" id="emailOrderConfirmation" required placeholder="E-post">
+        
+        <label for="phoneNumberOrderConfirmation" class="hidden">Telefonnummer</label>
+        <input type="tel" name="phoneNumberOrderConfirmation" id="phoneNumberOrderConfirmation" placeholder="Telefonnummer">
+      
+        <label for="commentsOrderConfirmation" class="hidden">Övriga kommentarer</label>
+        <textarea name="commentsOrderConfirmation" id="commentsOrderConfirmation" cols="30" rows="10" placeholder="Övriga kommentarer"></textarea>
+        <button type="submit" id="submitBtnOrderConfirmation" class="hidden">Nästa</button>
+        <button id="cancelBtnOrderConfirmation">Avbryt</button>
+      </form>
+    </article>
   </section>
 
   <!--kvitto dropdown-->
-  <section id="receiptSection">
+  <section id="receiptSection"
+  class="section">
     
   </section>
 
   <section id="loginSection">
+    <div class="login">
+      <div class="heading">
+        <h6>Logga in</h6>
+        <form action="#">
+    
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+            <input type="text" class="form-control" placeholder="Användarnamn">
+              </div>
+    
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+              <input type="password" class="form-control" placeholder="Lösenord">
+            </div>
+    
+            <button type="submit" >Logga in</button>
+            <button type="submit" >Registrera dig</button>
+           </form>
+         </div>
+     </div>
+   
+  <section id="loginSection"
+  class="section">
 
   </section>
 
-  <section id="createUserSection">
+  <section id="createUserSection"
+  class="section">
     
   </section>
 
@@ -202,17 +262,26 @@
     </div>
   </section>
   </aside> -->
-  
+
 <footer>
 
 </footer>
 
 <!--javascripts-->
+<<<<<<< HEAD
 <script type="text/javascript" 
 src="js/utilities.js"></script>
 
 
 <script src="js/views/categorys.js"></script>
 <!-- -----------------------------------------------------------------------------------------------------------------c -->
+=======
+<script 
+src="/js/utilities.js"></script>
+<script src="./js/views/main.js"></script>
+<script src="./js/views/changepage.js"></script>
+<script src="./js/views/pagewidenavigationbuttons.js"></script>
+<script src="./js/views/orderConfirmation.js"></script>
+>>>>>>> 971572bd4a5e8dd96f3e51f216bf4f7ad324e01c
 </body>
 </html>
