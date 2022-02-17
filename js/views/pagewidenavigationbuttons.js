@@ -57,3 +57,10 @@ changeActivePage("homepageSection");
 //-------register
 
 //-------login 
+document.getElementById("goToRegisterUserButton").addEventListener("click", (e) => {
+  e.preventDefault();
+changeActivePage("createUserSection");
+})
+const = confirmAndLogin = () => {
+  changeActivePage("homepageSection")
+}

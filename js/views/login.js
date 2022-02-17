@@ -18,11 +18,24 @@ const lookForUser = () => {
         }
         
     });
+    if(userDoesExist){
+        if(loginPassword == getUser.password){
+            localStorage.setItem("loggedInUser", JSON.stringify(getUser))
+
+        }else{
+            alert("Fel lösenord");
+        }
+
+        
+    }else{
+        alert("Användaren existerar inte")
+    }
 }
 
 document.getElementById("loginButton").addEventListener("click", (e) => {
     e.preventDefault();
 loginEmail = document.getElementById("emailLogin").value;
 loginPassword = document.getElementById("password").value;
-console.log(loginEmail);
+lookForUser();
+
 }) 
