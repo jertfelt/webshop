@@ -32,13 +32,12 @@ cartHeaderBtn.addEventListener("click", showCart);
 //bugg: syns inte något tar över
 cartNavBtn.addEventListener("click", showCart);
 
+//dölja varukorg
 const hideCart =() => {
   cartContainer.classList.add("cart__hidden");
   cartMenu.classList.remove("cart__show");
 }
-
 closeCartWindow.addEventListener("click", hideCart);
-
 
 document.addEventListener('keydown', function(event){
   if(event.key === "Escape")
