@@ -46,23 +46,17 @@
         */
 
 
+//Checks if anyone is logged in, if they are they get your details and fills out the form
 
-//your details
+  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+  if (loggedInUser !== null) {
+    document.querySelector("#nameOrderConfirmation").value = loggedInUser.name;
+            document.querySelector("#streetOrderConfirmation").value = loggedInUser.street;
+            document.querySelector("#postalCodeOrderConfirmation").value = loggedInUser.postalCode;
+            document.querySelector("#townOrderConfirmation").value = loggedInUser.town;
+            document.querySelector("#emailOrderConfirmation").value = loggedInUser.email;
 
-
-    //Check if logged in and fill information
-        /*
-          if (user is logged in) {
-            check who is logged in
-
-            document.querySelector("#nameOrderConfirmation").value = local storage name;
-            document.querySelector("#streetOrderConfirmation").value = local storage street;
-            document.querySelector("#postalCodeOrderConfirmation").value = local storage postal code;
-            document.querySelector("#townOrderConfirmation").value = local storage town;
-            document.querySelector("#emailOrderConfirmation").value = local storage e-mail;
-
-            if (tel exists) {
-              document.querySelector("#phoneNumberOrderConfirmation").value = local storage name;
+            if (loggedInUser.tel !== null) {
+              document.querySelector("#phoneNumberOrderConfirmation").value = loggedInUser.tel;
             }
-          }
-        */
+  }
