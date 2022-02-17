@@ -45,9 +45,8 @@
           document.querySelector("#orderProductsSummation").appendChild(totalPriceOrderConfirmation);
         */
 
-
-//Checks if anyone is logged in, if they are they get your details and fills out the form
-
+    
+    //Checks if anyone is logged in, if they are they get your details and fills out the form
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
   if (loggedInUser !== null) {
     document.querySelector("#nameOrderConfirmation").value = loggedInUser.name;
@@ -60,3 +59,34 @@
               document.querySelector("#phoneNumberOrderConfirmation").value = loggedInUser.tel;
             }
   }
+let orderInformation = [];
+let orderProducts = [];
+
+//Saves information about products in local storage for recipt
+const saveOrderProducts = () => {
+
+}
+
+//Saves form information in local storage recipt
+const saveOrderDetails = () => {
+  let orderFormDetails = {
+    name: document.querySelector("#nameOrderConfirmation").value,
+    street: document.querySelector("#streetOrderConfirmation").value,
+    postalCode: document.querySelector("#postalCodeOrderConfirmation").value,
+    town: document.querySelector("#townOrderConfirmation").value,
+    email: document.querySelector("#emailOrderConfirmation"),
+    tel: document.querySelector("#phoneNumberOrderConfirmation").value,
+    comment: document.querySelector("#commentsOrderConfirmation").value
+  };
+  orderInformation.push(orderFormDetails);
+}
+
+//Saves recipt information in local storage
+  const saveOrderInformation = () => {
+    saveOrderDetails();
+    saveOrderProducts();
+    localStorage.setItem("orderInformation", orderInformation);
+
+  }
+
+//Submit button
