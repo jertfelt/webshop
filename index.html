@@ -129,7 +129,6 @@
 
   <section id="productListSection" 
   class="section">
-
   </section>
 
   <section id="individualProductSection" 
@@ -139,7 +138,36 @@
 <!--varor + logga in/skriv in på formulär-->
   <section id="orderConfirmationSection"
   class="section">
+    <article id="orderProductsSummation">
+      <h2>Dina Produkter:</h2>
+    </article>
+    <article id="yourOrderInformation">
+      <h2>Dina Detaljer:</h2>
+      <form>
+        <label for="nameOrderConfirmation" class="hidden">Namn</label>
+        <input type="text" name="nameOrderConfirmation" id="nameOrderConfirmation" required placeholder="Namn">
+        
+        <label for="streetOrderConfirmation" class="hidden">Gatuadress</label>
+        <input type="text" name="streetOrderConfirmation" id="streetOrderConfirmation" required placeholder="Gatuadress">
 
+        <label for="postalCodeOrderConfirmation" class="hidden">Postnummer</label>
+        <input type="number" name="postalCodeOrderConfirmation" id="postalCodeOrderConfirmation" required placeholder="Postnummer">
+      
+        <label for="townOrderConfirmation" class="hidden">Ort</label>
+        <input type="text" name="townOrderConfirmation" id="townOrderConfirmation" required placeholder="Ord">
+
+        <label for="emailOrderConfirmation" class="hidden">E-post</label>
+        <input type="email" name="emailOrderConfirmation" id="emailOrderConfirmation" required placeholder="E-post">
+        
+        <label for="phoneNumberOrderConfirmation" class="hidden">Telefonnummer</label>
+        <input type="tel" name="phoneNumberOrderConfirmation" id="phoneNumberOrderConfirmation" placeholder="Telefonnummer">
+      
+        <label for="commentsOrderConfirmation" class="hidden">Övriga kommentarer</label>
+        <textarea name="commentsOrderConfirmation" id="commentsOrderConfirmation" cols="30" rows="10" placeholder="Övriga kommentarer"></textarea>
+        <button type="submit" id="submitBtnOrderConfirmation" class="hidden">Nästa</button>
+        <button id="cancelBtnOrderConfirmation">Avbryt</button>
+      </form>
+    </article>
   </section>
 
   <!--kvitto dropdown-->
@@ -147,43 +175,61 @@
   class="section">
     
   </section>
- <section id="loginSection">
-   <div class="login">
-     <div class="heading">
-       <h2>Logga in</h2>
 
-       <form id="loginForm">
+<section id="loginSection">
+  <div class="login">
+    <div class="heading">
+      <h2>Logga in</h2>
 
-        <!--divs are for aesthetic reasons-->
-        <div class="input-group1">
-          <span class="input-group-addon"><i class="fa fa-user"></i></span>
-          <label for="emailLogin">E-postaddress</label><br>
-          <input type="text" class="form-control" id="emailLogin" placeholder="E-postaddress" required>
+      <form id="loginForm">
 
-        </div>
-      <!--divs are for aesthetic reasons-->
-        <div class="input-group1">
-          <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-          <label for="password">password</label><br>
-          <input type="password" class="form-control" id="password" placeholder="Lösenord" required>
-          </div>
-        
-          <button type="submit" id="loginButton">login</button> 
-          <button id="goToRegisterUserButton">register</button> 
+       <!--divs are for aesthetic reasons-->
+       <div class="input-group1">
+         <span class="input-group-addon"><i class="fa fa-user"></i></span>
+         <label for="emailLogin">E-postaddress</label><br>
+         <input type="text" class="form-control" id="emailLogin" placeholder="E-postaddress" required>
 
-       </form>
+       </div>
+     <!--divs are for aesthetic reasons-->
+       <div class="input-group1">
+         <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+         <label for="password">password</label><br>
+         <input type="password" class="form-control" id="password" placeholder="Lösenord" required>
+         </div>
+       
+         <button type="submit" id="loginButton">login</button> 
+         <button id="goToRegisterUserButton">register</button> 
+
+      </form>
 
   
       
 
 
-  </section>
 
   <section id="createUserSection"
   class="section">
-    
+    <h2>Skapa användare</h2>
+    <p>Fyll i din information här:</p>
+    <form id="createUserForm">
+      <label for="usernameCreateUser" class="hidden">Användarnamn</label>
+      <input type="text" name="usernameCreateUser" id="usernameCreateUser" required placeholder="Användarnamn">
+      <label for="passwordCreateUser" class="hidden">Lösenord</label>
+      <input type="password" name="passwordCreateUser" id="passwordCreateUser" required placeholder="Lösenord">
+      <label for="streetCreateUser" class="hidden">Gatuadress</label>
+      <input type="text" name="streetCreateUser" id="streetCreateUser" required placeholder="Gatuadress">
+      <label for="postalCodeCreateUser" class="hidden">Postnummer</label>
+      <input type="number" name="postalCodeCreateUser" id="postalCodeCreateUser" required placeholder="Postnummer">
+      <label for="townCreateUser" class="hidden">Ort</label>
+      <input type="text" name="townCreateUser" id="townCreateUser" required placeholder="Ort">
+      <label for="emailCreateUser" class="hidden">E-post</label>
+      <input type="email" name="emailCreateUser" id="emailCreateUser" required placeholder="E-post">
+      <label for="phoneNumberCreateUser" class="hidden">Telefonnummer</label>
+      <input type="text" name="phoneNumberCreateUser" id="phoneNumberCreateUser" placeholder="Telefonnummer">
+      <button type="submit" id="submitBtnCreateUser">Registrera</button>
+      <button id="cancelButtonCreateUser">Avbryt</button>
+    </form>
   </section>
-
 
   </main>
 <!--
@@ -210,11 +256,18 @@
 </footer>
 
 <!--javascripts-->
-<script 
-src="/js/utilities.js"></script>
+<script src="/js/utilities.js"></script>
+
 <script src="/js/views/main.js"></script>
 <script src="/js/views/changepage.js"></script>
 <script src="/js/views/pagewidenavigationbuttons.js"></script>
 <script src="/js/views/login.js"></script>
+<script src="/js/views/productList.js"></script>
+<script src="./js/views/main.js"></script>
+<script src="./js/views/changepage.js"></script>
+<script src="./js/views/pagewidenavigationbuttons.js"></script>
+<script src="./js/views/orderConfirmation.js"></script>
+<script src="./js/views/createAccount.js"></script>
+
 </body>
 </html>

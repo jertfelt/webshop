@@ -52,9 +52,24 @@ changeActivePage("homepageSection");
 
 //------orderconfirmation (beställning)
 
+document.getElementById("submitBtnOrderConfirmation").addEventListener("click", (e) => {
+  e.preventDefault();
+changeActivePage("receiptSection");
+})
+
+document.getElementById("cancelBtnOrderConfirmation").addEventListener("click", () => {
+changeActivePage("homepageSection");
+})
 //-------receipt section
 
 //-------register
+const confirmAndExitCreateUser = () => {
+  changeActivePage("homepageSection");
+}
+
+document.getElementById("cancelButtonCreateUser").addEventListener("click", () => {
+  changeActivePage("homepageSection");
+  })
 
 //-------login 
 document.getElementById("goToRegisterUserButton").addEventListener("click", (e) => {

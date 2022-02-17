@@ -17,26 +17,33 @@ const buttonHero = document.getElementById("buttonHero");
 //nodelist
 const sections = document.querySelectorAll(".section");
 
-//addevent function som tooglar hidden/show + byter query string NAVBAR
+//addevent function som togglar hidden/show + byter query string NAVBAR
 
-//Ändrar URL med valda parametrar. Funkar även om man bara ger en eller två parametrar så att vi kan återanvända funktionen. 
+// Uppdaterar sidan med angivna parametrar. Funkar även om man bara ger en eller två parametrar. 
 const changeActivePage = (sectionName, categoryName, prodID) => {
-  let url = new URL(window.location.href);
+  // Skapar URL
+  const urlWithSearchParams = createURL(sectionName, categoryName, prodID);
+  // Uppdaterar sidan
+  location.href = urlWithSearchParams;
+};
+
+// Skapar URL med angivna parametrar. Funkar även om man bara ger en eller två parametrar
+const createURL  = (sectionName, categoryName, prodID) => {
+  const url = new URL(window.location.href);
   const search_params = url.searchParams;
-  //Lägg till section parameter
+  // Lägger till section parameter
   search_params.set('section', sectionName);
-  // Lägg till kategori om angiven
-  if (typeof categoryName !== "undefined") {
+  // Lägger till kategori om angiven
+  if (categoryName) {
     search_params.set('category', categoryName);
   }
-  // Lägg till produkt ID om angiven
-  if (typeof prodID !== "undefined") {
+  // Lägger till produkt ID om angiven
+  if (prodID) {
     search_params.set('prod', prodID);
   }
-  
-  url.search = search_params.toString();
-  location.href = url;
-};
+  // Ger en sträng med komplett URL
+  return url.toString();
+}
 
 const setActivePage = () => {
   let url = new URL(window.location.href);

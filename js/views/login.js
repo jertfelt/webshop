@@ -21,7 +21,7 @@ const lookForUser = () => {
     if(userDoesExist){
         if(loginPassword == getUser.password){
             localStorage.setItem("loggedInUser", JSON.stringify(getUser))
-
+            confirmAndLogin()
         }else{
             alert("Fel lösenord");
         }
