@@ -44,12 +44,6 @@ changeActivePage("homepageSection");
 
 //------cart (go to product shown in cart)
 
-// document.getElementById("varukorgNav").addEventListener("click", (e) => {
-//   e.preventDefault();
-// //! håller på här
-// setupCart();
-// })
-
 //------categories
 
 //-----product individual site
