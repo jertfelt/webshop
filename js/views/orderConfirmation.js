@@ -39,6 +39,8 @@
         });
         */
 
+    
+
     //Adds total price
         /*
           const totalPriceOrderConfirmation = document.createElement("p");
@@ -60,15 +62,8 @@
               document.querySelector("#phoneNumberOrderConfirmation").value = loggedInUser.tel;
             }
   }
-let orderInformation = [];
-let orderProducts = [];
 
-//Saves information about products in local storage for recipt
-const saveOrderProducts = () => {
-
-}
-
-//Saves form information in local storage recipt
+//Saves form information in local storage
 const saveOrderDetails = () => {
   let orderFormDetails = {
     name: document.querySelector("#nameOrderConfirmation").value,
@@ -79,15 +74,7 @@ const saveOrderDetails = () => {
     tel: document.querySelector("#phoneNumberOrderConfirmation").value,
     comment: document.querySelector("#commentsOrderConfirmation").value
   };
-  orderInformation.push(orderFormDetails);
+  localStorage.setItem("orderInformation", orderFormDetails);
 }
-
-//Saves recipt information in local storage
-  const saveOrderInformation = () => {
-    saveOrderDetails();
-    saveOrderProducts();
-    localStorage.setItem("orderInformation", orderInformation);
-
-  }
 
 //Submit button
