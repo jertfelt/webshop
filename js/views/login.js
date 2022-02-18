@@ -12,7 +12,7 @@ const lookForUser = () => {
     const currentUsers = JSON.parse(localStorage.getItem("users"))
 
     currentUsers.forEach(user => {
-        if(loginEmail==user.email){
+        if(loginEmail.toUpperCase()==user.email.toUpperCase()){
             userDoesExist = true;
             getUser = user;
         }
