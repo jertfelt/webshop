@@ -1,6 +1,9 @@
-  const buyProduct = () => {
+// Wrapper funktion för att köra den efter HTML har ritats
+const buyProduct = () => {
+  // Hämtar alla köp-knappar
   const addToCartButtons = document.querySelectorAll(".addToCartBtn");
 
+  // Sparar/uppdaterar varukorgen i local storage
   const addToCart = (prodID) => {
   const existingProduct = localStorage.getItem("cart");
   let cart = [];
@@ -30,15 +33,13 @@
 
   // Uppdaterar varukorgen i local storage
   localStorage.setItem("cart", stringifyCart);
-}
+  }
+
+  // Hämtar ID på klickat produkt och lägger till den i varukorgen
   addToCartButtons.forEach(button => {
     button.addEventListener("click", () => {
       const prodID = button.dataset.id;
       addToCart(prodID);
     })
   });
-  }
-// const buyProduct = (prodID) => {
-//   addToCart(prodID);
-//   // showCart();
-// }
+}
