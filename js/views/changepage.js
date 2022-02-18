@@ -47,20 +47,35 @@ const createURL  = (sectionName, categoryName, prodID) => {
 
 const setActivePage = () => {
   let url = new URL(window.location.href);
+  console.log(url);
+  
   let search_params = url.searchParams;
+  console.log(search_params); ///blir tom
   const currentSection = search_params.get("section");
+  console.log(currentSection) // blir null 
 
-  console.log(url)
-  console.log(search_params);
-  console.log(currentSection)
+  //!problem: blir null när sidan laddas
+
+  // const currentSection = url.searchParams.toString();
+  // console.log("visar hela adressen:" + currentSection)
+ 
 
   //döljer och visar rätt sektion
   if (currentSection){
   sections.forEach(section => {
+
+    if (section.classList.contains("hero")){
+      section.classList.remove("hero")
+    }
     section.classList.add("hidden");
 
     if (section.id === currentSection){
      section.classList.remove("hidden");
+
+     if (section.id === "homepageSection"){
+      //  categoriesSection.classList.remove("hidden");
+       section.classList.add("hero");
+     }
    }
   }
   )}
