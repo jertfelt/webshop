@@ -79,6 +79,7 @@ cartNavBtn.addEventListener("click", showCart);
 // </div>
 
 //*-----------------ADD TO CART FUNCTION
+
 // Wrapper funktion för att köra den efter HTML har ritats
 const buyProduct = () => {
   // Hämtar alla köp-knappar
@@ -123,7 +124,6 @@ const buyProduct = () => {
       return;
     }
   }
-
   const setCartinLocalStorage = (cart) => {
     const stringifyCart = JSON.stringify(cart);
     localStorage.setItem("cart", stringifyCart);
