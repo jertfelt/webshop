@@ -47,8 +47,12 @@ const createURL  = (sectionName, categoryName, prodID) => {
 
 const setActivePage = () => {
   let url = new URL(window.location.href);
-  const search_params = url.searchParams;
+  let search_params = url.searchParams;
   const currentSection = search_params.get("section");
+
+  console.log(url)
+  console.log(search_params);
+  console.log(currentSection)
 
   //döljer och visar rätt sektion
   if (currentSection){

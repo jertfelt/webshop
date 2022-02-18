@@ -69,24 +69,6 @@ const createCart = (item) => {
 
 
 
-  addToCartButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      const prodID = button.dataset.id;
-      addToCart(prodID);
-      // setCartValue(prodID);
-      // createCart(prodID);
-      console.log("Lagd i cart")
-
-    })
-  });
-  
-
-//*-----------
-    // //method for cart array
-    // populateCart(cart){
-    //   //adding cart items to the cart
-    //   cart.forEach(item => this.addCartItem(item));
-    // }
 
 
   //*----------funktioner i varukorgen
