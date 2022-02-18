@@ -5,8 +5,11 @@ const qsCategory = queryString.get('category');
 let productList = [];
 
 function drawProducts() {
+  
+
   //Draw title for current category.
   const categoryHeader = document.createElement("h2");
+  
   categoryHeader.innerText = qsCategory;
   productListSection.appendChild(categoryHeader);
 
@@ -36,7 +39,7 @@ async function getProductList() {
   
   productList = [...data.products];
   drawProducts();  
-  buyProduct();
+  addToCart();  //bytte namn här pga referensproblem (T)
 }
 
 getProductList();

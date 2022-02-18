@@ -5,8 +5,6 @@
 //   changeActivePage("productListSection");
 // });
 
-
-
 //links for nav (except varukorg)
 
 document.getElementById("homeLinkNav").addEventListener("click", (e) => {
