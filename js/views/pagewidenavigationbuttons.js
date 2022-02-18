@@ -42,6 +42,12 @@ changeActivePage("homepageSection");
 
 //------homepage
 
+//------user nav
+
+const userNavLogInRegister = () => {
+  changeActivePage("loginSection");
+}
+
 //------cart (go to product shown in cart)
 
 // document.getElementById("varukorgNav").addEventListener("click", (e) => {

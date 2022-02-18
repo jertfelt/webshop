@@ -268,10 +268,11 @@ class="section">
   </main>
 
   <aside>
-    <scetion id="userNavDropdown">
+    <scetion id="userNavDropdown" class="hidden">
       <p id="closeUserNavDropdown">X</p> <!--"close dropdown", Change this to a better symbol-->
       <h2 id="userNavName" class="hidden"></h2>
-      <button id="userNavLogInLogOutBtn">Logga in/Registrera</button>
+      <button id="userNavLogInRegisterBtn">Logga in/Registrera</button>
+      <button id="userNavLogOutBtn" class="hidden">Logga ut</button>
     </scetion>
   </aside>
 
@@ -306,7 +307,7 @@ class="section">
 <!-----------------------------------javascripts-->
 
 
-<script src="/js/views/product.js"></script>
+<script src="./js/views/product.js"></script>
 
 <script src="./js/utilities.js"></script>
 <script src="./js/views/main.js"></script>
@@ -316,6 +317,7 @@ class="section">
 <script src="./js/views/orderConfirmation.js"></script>
 <script src="./js/views/createAccount.js"></script> 
 <script src="./js/views/shoppingcart.js"></script>
+<script src="./js/views/userNavDropdown.js"></script>
 
 
 </body>
