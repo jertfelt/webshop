@@ -16,8 +16,12 @@
   margin-top:2rem;
   }
 
+  &__hero:hover{
+    border-radius: 19px;
+    background-color: $color-blue;
+  }
+
   &__cart{
- 
       padding: 1rem 2rem;
       text-transform: uppercase;
       font-size: 1rem;
@@ -27,13 +31,18 @@
       border: none;
       transition: $mainTransition;
       cursor: pointer;
-      margin-top:2rem;
-
-   
+      margin-top:1rem;
+      border-radius: 19px;
+      
   }
- &__cart:hover{
-    background: transparent;
-    color: $color-green;
+
+  &__cart:hover{
+    background: $color-green;
+ 
+  }
+
+  &__span{
+    @include flexBox(column,center,center)
   }
 }
 
@@ -57,4 +66,18 @@
     color: $color-white;
     text-align: center;
   }
+}
+
+.addToCartBtn{
+  padding: 1rem;
+  background-color: $color-black;
+  color: $color-white;
+  text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      transition: $mainTransition;
+      cursor: pointer;
+      margin-top:1rem;
+      border-radius: 19px;
 }

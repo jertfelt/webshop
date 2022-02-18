@@ -74,7 +74,7 @@ const setCartValue = (cart) => {
       // saveCart(cart);
     }
 
-  }
+
 // }
 // const buyProduct = (prodID) => {
 //   addToCart(prodID);
@@ -115,7 +115,7 @@ const setCartValue = (cart) => {
 
     })
   });
-  }
+  
 
 //*-----------
     // //method for cart array
