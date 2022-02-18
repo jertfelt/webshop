@@ -173,7 +173,7 @@ h6 {
   margin-top: 2rem;
 }
 
-.button__cart--clear {
+.button__cart {
   padding: 1rem 2rem;
   text-transform: uppercase;
   font-size: 1rem;
@@ -189,6 +189,7 @@ h6 {
 
 .button__cart:hover {
   background: transparent;
+  color: #225e39;
 }
 
 .headercart {
