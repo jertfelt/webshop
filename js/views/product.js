@@ -4,10 +4,13 @@ const productId = queryParams.get('id');
 let productsArray = [];
 
 const productCreator = (product)=>{
+
     const h2 = document.createElement("h2");
     h2.innerText = product.fields.title;
     individualProductSection.appendChild(h2);
+   
     const article = document.createElement("article");
+
     article.innerHTML = `
       <a href="/index.html?section=individualProductSection&id=${product.sys.id}">
         <img style="width:100%" src="/${product.fields.image.fields.file.url}"></img>
@@ -21,7 +24,9 @@ const productCreator = (product)=>{
 }
 
 async function getProduct() {
+
     const response = await fetch("/js/data/products.json");
+    
     const data = await response.json();
     
     productsArray = [...data.products];

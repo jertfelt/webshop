@@ -1,6 +1,6 @@
-///------------Query strings function (show different sections) 
+//?------------Query strings function (show different sections) 
 
-//-variables
+//*---------------------variables
 
 const homepageSection = document.getElementById("homepageSection");
 const categoriesSection = document.getElementById("categoriesSection");
