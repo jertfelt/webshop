@@ -2,6 +2,7 @@
 
     //Creates product element
   const createProductElementOrderConfirmation = (img, name, price, amount) => {
+    
     const productOrderConfirmation = document.createElement("article");
     const productInformationDivOrderConfirmation = document.createElement("div");
     const imgOrderConfirmation = document.createElement("img");

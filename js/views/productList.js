@@ -5,8 +5,11 @@ const qsCategory = queryString.get('category');
 let productList = [];
 
 function drawProducts() {
+  
+
   //Draw title for current category.
   const categoryHeader = document.createElement("h2");
+  
   categoryHeader.innerText = qsCategory;
   productListSection.appendChild(categoryHeader);
 
@@ -23,10 +26,11 @@ function drawProducts() {
         <h3>${product.fields.title}</h3>
         <p>${product.fields.price} kr</p>
       </a>
-      <button>Köp</button>`
+      <button class="addToCartBtn" data-id="${product.sys.id}">Köp</button>`
     productListSection.appendChild(articleElem);
     }
   })
+  // onClick="buyProduct(${product.sys.id})"
 }
 
 async function getProductList() {
@@ -35,6 +39,7 @@ async function getProductList() {
   
   productList = [...data.products];
   drawProducts();  
+  buyProduct();  
 }
 
 getProductList();

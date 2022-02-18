@@ -1,31 +1,42 @@
-.drop-down{
+.dropdown{
   display:none;
+  
+  &--close{
+    cursor: pointer;
+    img {
+      height: 30px;
+    }
+  }
 }
 
 //menu
 .mainmenu__mobile{
-  background-color: $color-yellow;
-  color: $color-green;
+  background-color: $color-white;
   width: 100%;
   display: block;
   position: absolute;
   z-index: 99;
   right: 0;
-  top: 74px;
+  top: 0;
   padding: 30px 20px;    
+
 li {
   display: block;
-  margin-bottom: 20px;
-  color: $color-black;
+  margin-bottom: 10px;
+  padding:0.2rem;
 }
+
 a {
- font-size: 38px;
- font-weight:bold;
+  font-size: 22px;
+  font-weight:bold;
   display: block;
-  text-transform: capitalize;
   padding: 0px 0;
   text-align: center;
-  
+  text-decoration: none;
+}
+
+a:visited{
+  color:$color-green;
 }
 
 a:hover{
@@ -34,6 +45,37 @@ a:hover{
 }
 
 }
-.active{
-  color: $color-yellow;
+
+.list__nested{
+  background-color: $color-sand;
+  padding:0.4rem;
+
+  @include breakpoint(medium-tablet-min){
+    @include flexBox(row,center,center)
+  }
+
+  li {
+  margin:20px;
+  }
+
+  &--mother{
+    font-size: 22px;
+    color: $color-green;
+    font-weight:bold;
+    display: block;
+    padding: 0px 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &--mother:hover{
+    color: $color-blue;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  &--mother:visited{
+    color:$color-green;
+  }
 }
+

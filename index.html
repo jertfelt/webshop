@@ -16,8 +16,6 @@
 
 <body>
 
-  <!--Jag har lagt in lite html här för att föra in klasser jättesnabbt, allt detta kan flyttas runt och så-->
-
   <header>
     <nav class="nav__top">
         <span class="nav__mobile-menu">
@@ -29,44 +27,57 @@
 
 <!--dropdown meny-->
   <ul id="dropDownMenu"  
-      class="drop-down">
+      class="dropdown">
      <div class="mainmenu__mobile">
+      <span class="dropdown--close">
+        <img src="styles/sass/img/closing.png" 
+        alt="Stäng meny"
+        class="dropdown--close"
+        id="closeDropDown"/>
+      </span>
     <li>
-      <a href="index.html" id="homeLinkNav"> <!--eventuellt lägg in klassen "active", men gör då js så den kan ändras sen-->
+      <a href="index.html" id="homeLinkNav"> 
         Hem
       </a>
     </li>
     <li>
-      <a href="index.html">
-        Varukorg</a> 
+      <a href="index.html"
+      id="cartLinkNav">Varukorg</a> 
     </li>
-    <li> <!--nested-->
-        <a href="index.html" id="damLinkNav"
-        >Dam</a> 
-      </li>
-      <li>
-        <a href="index.html" id="herrLinkNav"
-        >Herr</a> 
-      </li>
-      <li>
-       <a href="index.html" id="babyLinkNav"
-       >Baby</a> 
-      </li>
- 
-  </li>
+    <li class="list__nested--mother">
+      Kategorier
+      <!--start of nested category-->
+      <ul class="list__nested hidden"> 
+        <li>
+          <a href="index.html"
+          id="damLinkNav">
+          Dam</a> 
+        </li>
+        <li>
+          <a href="index.html"
+          id="herrLinkNav">
+          Herr</a> 
+        </li>
+        <li>
+        <a href="index.html"
+        id="babyLinkNav">
+        Baby</a> 
+        </li>
+      </ul>
+    </li>
     <li>
-      <a href="index.html" 
+      <a href="index.html"
       id="loginLinkNav"
-     >Logga in/Registrera dig</a> 
+      >Logga in/Registrera dig</a> 
     </li>
   </div>
   </ul>
 
   <!--logotyp-->
-        <a href="index.html"
-        class="event__link"
-        id="logoLinkNav">
-        <img src="styles/sass/img/Logga.png" 
+  <a href="index.html"
+  class="event__link"
+  id="logoLinkNav">
+          <img src="styles/sass/img/Logga.png" 
         alt="logotype Ekoline" 
         class="nav__logotype"/>
         </a>
@@ -75,9 +86,10 @@
         <span class="nav-icon">
           <img src="styles/sass/img/shop-cart.png" 
           alt="Shopping cart" 
-          class="nav__button button__cart">
-          <!--antal i varukorg (siffra som räknar upp)-->
-          <span class="cart-items cart-btn">0</span>
+          class="headercart headercart__imgfix">
+          <!--antal i varukorg -->
+          <span class="headercart headercart__showAmount"
+          id="headerCartAmount">0</span>
         </span>
       </div>
     </nav>
@@ -85,16 +97,17 @@
   
   <main>
     <!--välkommen-->
-    <section class="hero section" id="homepageSection">
+    <section class="hero section"
+    id="homepageSection">
       <div class="hero__content">
         <h1 class="hero__heading">Välkommen till Ekoline</h1>
         <p class="text--bold text--m"> Genvägen till en mer hållbar shopping. </p>
-          <button class="button__hero" id="buttonHero">
-            Se våra produkter
-          </button>
+        <a href="#categories">
+          <button class="button__hero"
+          id="buttonHero">
+            Se våra produkter</button></a>
           </div>
     </section>
-
 
   <section class="section categories__section" 
           id="categoriesSection">
@@ -103,27 +116,52 @@
       <p class="text--s">Vi är en ekologisk, hållbar butik som fokuserar på det handgjorda, naturvänliga och unika.</p>
     </span>
 
-    <div class="products__grid">
+    <div class="categorieshomepage__grid">
 
       <!--hit ska den dynamiska HTML:en-->
-      <!-- den ska klistras in i javascripten men som placeholder så man ser: (saknas länk till produktlista)-->
-
-      <!-- <article class="product">
-        <div class="product__img--container">
-          <img src= ${product.image} 
+      <!--@Celina, fungerar category.image? Annars byt till product.title-->
+      <article class="category">
+        <div class="category__img--container">
+          <img id="categoryImgDam" src= ${category.image} 
           alt="produkt ${product.title}" 
-          class="product__img">
-          </a> 
-         </div>
-    
-        <div class="products__items">
-        <div class="products-items--row">
-          <h3> ${product.title} </h3> 
-          <h4> Annan info </h4>
+          class="category__img">
+          
+
+          <div class="products__items">
+            <div id="categoryTitelInfoDam" class="products-items--row">
+            </div>
+          </div>
         </div>
+
+
+        <div class="category__img--container">
+
+          <img id="categoryImgHerr" src= ${category.image} 
+          alt="produkt ${product.title}" 
+          class="category__img">
+
+          
+          
+          <div class="category__items">
+            <div id="categoryTitelInfoHerr" class="category-items--row">
+            </div>
+          </div>
         </div>
-      
-      </article>  --> 
+
+
+        <div class="category__img--container">
+
+          <img id="categoryImgBaby" src= ${category.image} 
+          alt="produkt ${product.title}" 
+          class="category__img">
+
+         
+          <div class="category__items">
+            <div id="categoryTitelInfoBaby" class="category-items--row">
+            </div>
+          </div>
+        </div>
+      </article>  
     </div>
   </section>
 
@@ -132,53 +170,54 @@
   </section>
 
   <section id="individualProductSection" 
-  class="section">
+  class="">
   </section>
 
 <!--varor + logga in/skriv in på formulär-->
   <section id="orderConfirmationSection"
-  class="section">
-    <article id="orderProductsSummation">
-      <h2>Dina Produkter:</h2>
-    </article>
-    <article id="yourOrderInformation">
-      <h2>Dina Detaljer:</h2>
-      <form>
-        <label for="nameOrderConfirmation" class="hidden">Namn</label>
-        <input type="text" name="nameOrderConfirmation" id="nameOrderConfirmation" required placeholder="Namn">
-        
-        <label for="streetOrderConfirmation" class="hidden">Gatuadress</label>
-        <input type="text" name="streetOrderConfirmation" id="streetOrderConfirmation" required placeholder="Gatuadress">
-
-        <label for="postalCodeOrderConfirmation" class="hidden">Postnummer</label>
-        <input type="number" name="postalCodeOrderConfirmation" id="postalCodeOrderConfirmation" required placeholder="Postnummer">
+class="section">
+  <article id="orderProductsSummation">
+    <h2>Dina Produkter:</h2>
+  </article>
+  <article id="yourOrderInformation">
+    <h2>Dina Detaljer:</h2>
+    <form>
+      <label for="nameOrderConfirmation" class="hidden">Namn</label>
+      <input type="text" name="nameOrderConfirmation" id="nameOrderConfirmation" required placeholder="Namn">
       
-        <label for="townOrderConfirmation" class="hidden">Ort</label>
-        <input type="text" name="townOrderConfirmation" id="townOrderConfirmation" required placeholder="Ord">
+      <label for="streetOrderConfirmation" class="hidden">Gatuadress</label>
+      <input type="text" name="streetOrderConfirmation" id="streetOrderConfirmation" required placeholder="Gatuadress">
 
-        <label for="emailOrderConfirmation" class="hidden">E-post</label>
-        <input type="email" name="emailOrderConfirmation" id="emailOrderConfirmation" required placeholder="E-post">
-        
-        <label for="phoneNumberOrderConfirmation" class="hidden">Telefonnummer</label>
-        <input type="tel" name="phoneNumberOrderConfirmation" id="phoneNumberOrderConfirmation" placeholder="Telefonnummer">
+      <label for="postalCodeOrderConfirmation" class="hidden">Postnummer</label>
+      <input type="number" name="postalCodeOrderConfirmation" id="postalCodeOrderConfirmation" required placeholder="Postnummer">
+    
+      <label for="townOrderConfirmation" class="hidden">Ort</label>
+      <input type="text" name="townOrderConfirmation" id="townOrderConfirmation" required placeholder="Ord">
+
+      <label for="emailOrderConfirmation" class="hidden">E-post</label>
+      <input type="email" name="emailOrderConfirmation" id="emailOrderConfirmation" required placeholder="E-post">
       
-        <label for="commentsOrderConfirmation" class="hidden">Övriga kommentarer</label>
-        <textarea name="commentsOrderConfirmation" id="commentsOrderConfirmation" cols="30" rows="10" placeholder="Övriga kommentarer"></textarea>
-        <button type="submit" id="submitBtnOrderConfirmation" class="hidden">Nästa</button>
-        <button id="cancelBtnOrderConfirmation">Avbryt</button>
-      </form>
-    </article>
+      <label for="phoneNumberOrderConfirmation" class="hidden">Telefonnummer</label>
+      <input type="tel" name="phoneNumberOrderConfirmation" id="phoneNumberOrderConfirmation" placeholder="Telefonnummer">
+    
+      <label for="commentsOrderConfirmation" class="hidden">Övriga kommentarer</label>
+      <textarea name="commentsOrderConfirmation" id="commentsOrderConfirmation" cols="30" rows="10" placeholder="Övriga kommentarer"></textarea>
+      <button type="submit" id="submitBtnOrderConfirmation" class="hidden">Nästa</button>
+      <button id="cancelBtnOrderConfirmation">Avbryt</button>
+    </form>
+  </article>
   </section>
 
-  <!--kvitto dropdown-->
+<!--kvitto dropdown-->
   <section id="receiptSection"
   class="section">
     
   </section>
 
-  <section id="loginSection">
-    <div class="login">
-      <div class="heading">
+  <section id="loginSection" 
+  class="section">
+  
+      
         <h6>Logga in</h6>
         <form action="#">
     
@@ -194,13 +233,11 @@
     
             <button type="submit" >Logga in</button>
             <button type="submit" >Registrera dig</button>
-           </form>
-         </div>
-     </div>
-
-
-  </section>
-
+          </form>
+        </div>
+    </div>
+    </section>
+ 
   <section id="createUserSection"
   class="section">
     <h2>Skapa användare</h2>
@@ -226,36 +263,54 @@
   </section>
 
   </main>
-<!--
-  <aside id="cartSection">  
-  <section class="cart__overlay">
-    <div class="cart">
-      <span class="cart--close">
-        <img src="styles/sass/img/closing.png" alt="Close"/>
-      </span>
-      <h2>Din kundvagn:</h2>
+
+  <aside>  
+    <section class="cart__container cart__hidden">
       <div class="cart__content">
-     
+        <span class="cart--close">
+          <img src="styles/sass/img/closing.png" 
+          alt="Stäng varukorg"
+          class="cart--close"/>
+        </span>
+        <h2>Din kundvagn:</h2>
+        <article id="cartDynamicContent">
+      
+        </article>
+        <article class="cart__footer">
+          <h3>Totalt: <span id="cartTotal">0</span> SEK</h3> 
+          <button id="clearCart" 
+          class="button__cart">Rensa kundvagn</button>
+          <button id="toConfirmation" class="button__cart">Bekräfta ditt köp</button>
+        </article>
       </div>
-      <div class="cart__footer">
-        <h3>Totalt: <span class="cart-total">0</span> SEK</h3>
-        <button class="cart--clear banner-btn">Rensa kundvagn</button>
-      </div>
-    </div>
-  </section>
-  </aside> -->
+    </section>
+  </aside>
 
 <footer>
 
 </footer>
 
-<!--javascripts-->
-<script src="./js/utilities.js"></script>
-<script src="./js/views/main.js"></script>
+
+
+<!-----------------------------------javascripts-->
+
+<!---buttons, querystring and nav:-->
 <script src="./js/views/changepage.js"></script>
 <script src="./js/views/pagewidenavigationbuttons.js"></script>
+<script src="./js/utilities.js"></script>
+<script src="./js/views/main.js"></script>
+  
+<!--product and shopping cart functionality--->
+
 <script src="./js/views/productList.js"></script>
+<script src="./js/views/product.js"></script>
+<script src="./js/views/shoppingcart.js"></script>
 <script src="./js/views/orderConfirmation.js"></script>
-<script src="./js/views/createAccount.js"></script>
+
+<!--create account and log in--->
+<script src="./js/views/createAccount.js"></script> 
+
+
+
 </body>
 </html>

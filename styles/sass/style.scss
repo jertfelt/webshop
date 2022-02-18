@@ -20,6 +20,10 @@
 @import "components/buttons";
 @import "components/dropdown";
 
+//Function
+//---------
+@import "function/functions";
+
 // Layouts
 // --------------------
 @import "layout/footer";
@@ -29,6 +33,3 @@
 @import "layout/homepage";
 @import "layout/cart";
 
-//Function
-//---------
-@import "sass-utils/functions";
