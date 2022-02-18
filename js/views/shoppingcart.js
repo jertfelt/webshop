@@ -80,6 +80,30 @@ const setCartValue = (cart) => {
 //   addToCart(prodID);
 
 
+//  //for each cart item:
+//  addCartItem(item){
+//   let cartdiv = document.createElement("div");
+//   cartdiv.classList.add("cart-item-new");
+//   cartdiv.innerHTML = `
+//   <div class="cart__item" data-id=${item.id}>
+//       <img src=${item.image}
+//   alt="product" />
+//   <div>
+//     <h4>${item.title}</h4>
+//     <h5>${item.price}SEK</h5>
+//     <span class="cart__item--remove" data-id=${item.id} >Remove</span>
+//   </div>
+//   <div>
+//     <i class="fas fa-chevron-up" data-id=${item.id}></i>
+//     <p class="cart__item--amount">${item.amount}</p>
+//     <i class="fas fa-chevron-down"data-id=${item.id} ></i>
+  
+//   </div> 
+//   </div>
+//   `
+//   cartContent.appendChild(cartdiv);
+// }
+
 
   addToCartButtons.forEach(button => {
     button.addEventListener("click", () => {
@@ -128,7 +152,7 @@ const cartFunctions =() => {
         // saveCart(cart);
       }
 
-      cartMenu.addEventListener("click",event => {
+  cartMenu.addEventListener("click", event => {
 
         if(event.target.classList.contains("cart__item--remove")){
           let removeItem = event.target;
