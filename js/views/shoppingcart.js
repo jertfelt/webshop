@@ -1,6 +1,5 @@
   const buyProduct = () => {
   const addToCartButtons = document.querySelectorAll(".addToCartBtn");
-  console.log(addToCartButtons);
   const addToCart = (prodID) => {
   const existingProduct = localStorage.getItem("cart");
   let cart = [];
@@ -35,7 +34,6 @@
     button.addEventListener("click", () => {
       const prodID = button.dataset.id;
       addToCart(prodID);
-      console.log("click");
     })
   });
   }
