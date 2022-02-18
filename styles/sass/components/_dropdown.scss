@@ -1,5 +1,12 @@
-.drop-down{
+.dropdown{
   display:none;
+  
+  &--close{
+    cursor: pointer;
+    img {
+      height: 30px;
+    }
+  }
 }
 
 //menu

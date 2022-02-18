@@ -213,8 +213,16 @@ h6 {
   text-align: center;
 }
 
-.drop-down {
+.dropdown {
   display: none;
+}
+
+.dropdown--close {
+  cursor: pointer;
+}
+
+.dropdown--close img {
+  height: 30px;
 }
 
 .mainmenu__mobile {
