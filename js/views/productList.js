@@ -6,8 +6,10 @@ let productList = [];
 
 function drawProducts() {
   
+
   //Draw title for current category.
   const categoryHeader = document.createElement("h2");
+  
   categoryHeader.innerText = qsCategory;
   productListSection.appendChild(categoryHeader);
 
