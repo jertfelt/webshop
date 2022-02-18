@@ -5,34 +5,43 @@ const buyProduct = () => {
 
   // Sparar/uppdaterar varukorgen i local storage
   const addToCart = (prodID) => {
-  const existingProduct = localStorage.getItem("cart");
-  let cart = [];
+    const existingProducts = localStorage.getItem("cart");
+    let cart = [];
 
-  // Kollar om det redan finns något i local storage
-  if(existingProduct) {
-    // Lägger till produkterna från local storage 
-    cart = JSON.parse(existingProduct);
-  }
-  // Kolla om obj redan finns i varukorgen, om det gör lägg till +1 i quantity.
-  // cart.forEach(element => {
-  //   if(product.sys.id === prodID) {
-  //     let quantity;
-    // Skapar objekt för vald produkt
-    const product = {
-      quantity: 1,
-      sys: { id: prodID }
-    };
-  // }});
+    const createNewProduct = () => {
+      const newProduct = {
+        quantity: 1,
+        sys: { id: prodID }
+      };
+      // Uppdaterar array med ny produkt
+      cart.push(newProduct);
+    }
 
-  // Uppdaterar array med ny produkt
-  cart.push(product);
+    // Kollar om det redan finns något i local storage
+    if(existingProducts) {
+      // Lägger till produkterna från local storage till array
+      cart = JSON.parse(existingProducts);
+      // Kollar antal av varje produkt och addar 
+      cart.forEach(product => {
+        let quantity = product.quantity;
+        // Om det är samma produkt, lägger en till
+        if(product.sys.id === prodID) {
+          quantity++;
+          // Uppdaterar antal för vald produkt
+          product.quantity = quantity;
+        } else { // Skapa ny produkt i varukorgen
+          createNewProduct();
+        }
+      });
+    } else {
+      createNewProduct();
+    }
 
+    // Konvertera array till string
+    const stringifyCart = JSON.stringify(cart);
 
-  // Konvertera array till string
-  const stringifyCart = JSON.stringify(cart);
-
-  // Uppdaterar varukorgen i local storage
-  localStorage.setItem("cart", stringifyCart);
+    // Uppdaterar varukorgen i local storage
+    localStorage.setItem("cart", stringifyCart);
   }
 
   // Hämtar ID på klickat produkt och lägger till den i varukorgen
