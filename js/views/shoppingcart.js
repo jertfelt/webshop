@@ -83,7 +83,7 @@ cartNavBtn.addEventListener("click", showCart);
 const addToCart = (prodID) => {
   // const buyProduct = () => {
   const addToCartButtons = document.querySelectorAll(".addToCartBtn");
-  console.log(addToCartButtons);
+
   const addToCart = (prodID) => {
   const existingProduct = localStorage.getItem("cart");
   let cart = [];
@@ -94,7 +94,6 @@ const addToCart = (prodID) => {
     cart = JSON.parse(existingProduct);
   }
   // Kolla om obj redan finns i varukorgen, om det gör lägg till +1 i quantity.
-
   // cart.forEach(element => {
   //   if(product.sys.id === prodID) {
   //     let quantity;
@@ -108,6 +107,7 @@ const addToCart = (prodID) => {
   // Uppdaterar array med ny produkt
   cart.push(product);
 
+
   // Konvertera array till string
   const stringifyCart = JSON.stringify(cart);
 
@@ -118,7 +118,6 @@ const addToCart = (prodID) => {
     button.addEventListener("click", () => {
       const prodID = button.dataset.id;
       addToCart(prodID);
-      console.log("click");
     })
   });
   }
