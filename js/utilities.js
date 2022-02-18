@@ -13,7 +13,8 @@ menuMobile.classList.add("dropdown");
 }
 menuButton.addEventListener("click", openDropdown);
 document.addEventListener('keydown', function(event){
-  if(event.key === "ArrowDown"){
+
+  if(event.key == "ArrowDown"){
    openDropdown();
   }
 })
@@ -28,9 +29,9 @@ document.getElementById("closeDropDown").addEventListener("click", closeDropDown
 document.addEventListener('keydown', function(event){
   if(event.key === "Escape")
   {
-  if (menuMobile.classList.contains("dropdown") === false){
-    closeDropDown();
-  }
+    if (menuMobile.classList.contains("dropdown") === false){
+      closeDropDown();
+    }
   }
 });
 
@@ -47,3 +48,4 @@ document.querySelector(".list__nested--mother").addEventListener("click", () =>{
   }
 
 })
+

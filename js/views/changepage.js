@@ -39,7 +39,7 @@ const createURL  = (sectionName, categoryName, prodID) => {
   }
   // Lägger till produkt ID om angiven
   if (prodID) {
-    search_params.set('prod', prodID);
+    search_params.set('id', prodID);
   }
   // Ger en sträng med komplett URL
   return url.toString();
