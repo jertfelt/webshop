@@ -1,3 +1,44 @@
+//test code
+const tester2 = [{
+  "sys": { "id": "4" },
+  "category": "Dam",
+  "fields": {
+    "title": "Pants",
+    "price": 219,
+    "description": "Byxor gjord på återvunnen bomull, perfekt för myset hemma i covidtider",
+    "image": { "fields": { "file": { "url": "styles/sass/img/womens-traveller-pants.png" } } }
+  }
+},
+{
+  "sys": { "id": "5" },
+  "category": "Dam",
+  "fields": {
+    "title": "I am hat",
+    "price": 500,
+    "description": "En varm och mysig handgjord virkad mössa, gjord av hantverkare på Gotland.",
+    "image": { "fields": { "file": { "url": "styles/sass/img/women-hat.png" } } }
+  }
+}];
+localStorage.setItem("cart", JSON.stringify(tester2));
+localStorage.setItem("totalPriceOrder", JSON.stringify(100));
+/*let XXX = [];
+
+async function yyy() {
+  const response = await fetch("./js/data/products.json");
+  const data = await response.json();
+  
+  XXX = [...data.products];
+  console.log(XXX)
+}
+yyy();*/
+
+//Variable
+//let productsListX = [];   //Change name later
+
+
+    //Get cart from local storage
+    const productsOrder = JSON.parse(localStorage.getItem("cart"));
+
 //show products
 
     //Creates product element
@@ -23,30 +64,34 @@
     productOrderConfirmation.appendChild(productInformationDivOrderConfirmation);
     productOrderConfirmation.appendChild(amountOrderConfirmation);
 
-    console.log(productOrderConfirmation)
-
     document.querySelector("#orderProductsSummation").appendChild(productOrderConfirmation);
   }
-    
-    //Prints All products
-        /* PRODUCTINCART.forEach(product => {
-          const productInCartImg = product local storage img;
-          const productInCartName = product local storage name;
-          const productInCartPrice = product local storage price;
-          const productInCartAmount = product local storage aamount;
 
-          createProductElementOrderConfirmation(productInCartImg, productInCartName, productInCartPrice, productInCartAmount);
-        });
-        */
+    //Go through each product in cart and send it to print
+    productsOrder.forEach(product => {
+      createProductElementOrderConfirmation(
+        product.fields.image, product.fields.title, 
+        product.fields.price, product.amount);
+    });
 
-    
+    //Gets productList from JSON ((Bör dela kod med product list får det bara inte att funka))
+    /*{async function getProductListX() {
+      const response = await fetch("./js/data/products.json");
+      const data = await response.json();
+      
+      productsListX = [...data.products];
+      return productsListX;
+    }*/
 
     //Adds total price
-        /*
-          const totalPriceOrderConfirmation = document.createElement("p");
-          totalPriceOrderConfirmation.innerText = `Total: ${total price locat storage}`;
-          document.querySelector("#orderProductsSummation").appendChild(totalPriceOrderConfirmation);
-        */
+    const addTotalPriceOrderConfirmation = () => {
+      const totalPriceText = document.createElement("p");
+      const totalPrice = JSON.parse(localStorage.getItem("totalPriceOrder"));
+      totalPriceText.innerText = `Total kostnad: ${totalPrice}kr`;
+      document.querySelector("#orderProductsSummation").appendChild(totalPriceText);
+    }
+    addTotalPriceOrderConfirmation();
+
 
     
     //Checks if anyone is logged in, if they are they get your details and fills out the form
