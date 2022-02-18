@@ -13,7 +13,7 @@ menuMobile.classList.add("dropdown");
 }
 menuButton.addEventListener("click", openDropdown);
 document.addEventListener('keydown', function(event){
-  if(event.key === "Enter"){
+  if(event.key === "ArrowDown"){
    openDropdown();
   }
 })
