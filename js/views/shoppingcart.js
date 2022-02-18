@@ -13,10 +13,11 @@
 
  //det som renderas ut 
  const cartContent = document.querySelector("#cartDynamicContent");
-//     //räknaren i headern
-// let cartCounterHeader = document.querySelector(".headercart__showAmount");
-// //räknare i varukorgens footer
-// let cartCounterFooter = document.querySelector("#cartTotal");
+
+//räknaren i headern
+let cartCounterHeader = document.querySelector(".headercart__showAmount");
+//räknare i varukorgens footer
+let cartCounterFooter = document.querySelector("#cartTotal");
 
 
 //*------visa/dölja VARUKORG
@@ -45,7 +46,6 @@ document.addEventListener('keydown', function(event){
 //*-----------varukorgen
 
 const createCart=(item)=>{
-  console.log("test")
   let cartDiv = document.createElement("div");
   cartDiv.innerHTML = `<p>TEST</p>
 `
@@ -79,14 +79,14 @@ cartNavBtn.addEventListener("click", showCart);
   // </div>
 
 //*-----------------ADD TO CART FUNCTION
-
+let cart = [];
+console.log(cart);
 const addToCart = (prodID) => {
   // const buyProduct = () => {
   const addToCartButtons = document.querySelectorAll(".addToCartBtn");
 
   const addToCart = (prodID) => {
   const existingProduct = localStorage.getItem("cart");
-  let cart = [];
 
   // Kollar om det redan finns något i local storage
   if(existingProduct) {
