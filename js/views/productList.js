@@ -24,13 +24,19 @@ function drawProducts() {
     const productLink = createURL("individualProductSection", `${product.category}` , `${product.sys.id}`);
 
     articleElem.innerHTML = `
-      <a href="${productLink}" class="onimage__link">
-        <img alt="Produkt ${product.title}" class="product__img" src="/${product.fields.image.fields.file.url}"></img>
+    <a href="${productLink}">
+      <img alt="Produkt ${product.title}"         class="product__img" 
+      src="/${product.fields.image.fields.file.url}">
+      </img>
+    </a>
+    <span class="onimage__items">
         <h3>${product.fields.title}</h3>
         <p>${product.fields.price} kr</p>
-      </a>
-      <button class="onimage__button addToCartBtn" 
-      data-id="${product.sys.id}">Köp</button>`
+      <button 
+      class="onimage__button addToCartBtn" 
+      data-id="${product.sys.id}">
+      Köp</button>
+      </span>`
     productListSection.appendChild(articleElem);
     }
   })
