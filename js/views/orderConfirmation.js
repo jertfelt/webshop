@@ -108,18 +108,24 @@ yyy();*/
             }
   }
 
-//Saves form information in local storage
-const saveOrderDetails = () => {
-  let orderFormDetails = {
-    name: document.querySelector("#nameOrderConfirmation").value,
-    street: document.querySelector("#streetOrderConfirmation").value,
-    postalCode: document.querySelector("#postalCodeOrderConfirmation").value,
-    town: document.querySelector("#townOrderConfirmation").value,
-    email: document.querySelector("#emailOrderConfirmation"),
-    tel: document.querySelector("#phoneNumberOrderConfirmation").value,
-    comment: document.querySelector("#commentsOrderConfirmation").value
-  };
-  localStorage.setItem("orderInformation", orderFormDetails);
-}
+  //Saves form information in local storage
+  const saveOrderDetails = () => {
+    let orderFormDetails = {
+      name: document.querySelector("#nameOrderConfirmation").value,
+      street: document.querySelector("#streetOrderConfirmation").value,
+      postalCode: document.querySelector("#postalCodeOrderConfirmation").value,
+      town: document.querySelector("#townOrderConfirmation").value,
+      email: document.querySelector("#emailOrderConfirmation"),
+      tel: document.querySelector("#phoneNumberOrderConfirmation").value,
+      comment: document.querySelector("#commentsOrderConfirmation").value
+    };
+    localStorage.setItem("orderInformation", JSON.stringify(orderFormDetails));
+  }
 
-//Submit button
+  //Submit button
+
+  document.getElementById("submitBtnOrderConfirmation").addEventListener("click", (e) => {
+    e.preventDefault();
+    saveOrderDetails();
+    confirmOrderConfirmationBtn();
+  });
