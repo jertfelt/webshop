@@ -29,10 +29,11 @@ document.getElementById("closeDropDown").addEventListener("click", closeDropDown
 document.addEventListener('keydown', function(event){
   if(event.key === "Escape")
   {
-   
+
   if (menuMobile.classList.contains("dropdown") === false){
     closeDropDown();
   }
+
   }
 });
 
