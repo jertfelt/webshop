@@ -39,11 +39,7 @@ async function getProductList() {
   
   productList = [...data.products];
   drawProducts();  
-<<<<<<< HEAD
   buyProduct();
-=======
-  buyProduct();  
->>>>>>> main
 }
 
 getProductList();
