@@ -64,7 +64,7 @@ console.log(cart, "<--cart", buttonsArray, "<--buttons");
 let temporaryTotal = 0;
 let itemsTotal = 0;
 
-const = saveCart =(cart) => {
+
 const saveCart =(cart) => {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
