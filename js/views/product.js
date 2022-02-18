@@ -22,6 +22,7 @@ const productCreator = (product)=>{
 
 async function getProduct() {
     const response = await fetch("/js/data/products.json");
+    
     const data = await response.json();
     
     productsArray = [...data.products];
