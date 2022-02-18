@@ -39,7 +39,7 @@ async function getProductList() {
   
   productList = [...data.products];
   drawProducts();  
-  addToCart();  //bytte namn här pga referensproblem (T)
+  buyProduct();  
 }
 
 getProductList();
