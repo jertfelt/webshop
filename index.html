@@ -19,86 +19,115 @@
   <header>
     <nav class="nav__top">
         <span class="nav__mobile-menu">
-          <img src="styles\sass\img\Hamburger_icon.svg.png" 
+          <img 
+          src="styles\sass\img\Hamburger_icon.svg.png" 
           alt="Mobile menu" 
           id="menuToggle"
           class="nav__button">
         </span>
 
 <!--dropdown meny-->
-  <ul id="dropDownMenu"  
-      class="dropdown">
-     <div class="mainmenu__mobile">
-      <span class="dropdown--close">
-        <img src="styles/sass/img/closing.png" 
-        alt="Stäng meny"
-        class="dropdown--close"
-        id="closeDropDown"/>
-      </span>
-    <li>
-      <a href="index.html" id="homeLinkNav"> 
-        Hem
-      </a>
-    </li>
-    <li>
-      <a href="index.html"
-      id="cartLinkNav">Varukorg</a> 
-    </li>
-    <li class="list__nested--mother">
-      Kategorier
-      <!--start of nested category-->
-      <ul class="list__nested hidden"> 
+      <ul id="dropDownMenu"  
+          class="dropdown">
+        <div class="mainmenu__mobile">
+          <span class="dropdown--close">
+            <img 
+            src="styles/sass/img/closing.png" 
+            alt="Stäng meny"
+            class="dropdown--close"
+            id="closeDropDown"/>
+          </span>
         <li>
-          <a href="index.html"
-          id="damLinkNav">
-          Dam</a> 
+          <a 
+          href="index.html" 
+          id="homeLinkNav"> 
+            Hem
+          </a>
         </li>
         <li>
-          <a href="index.html"
-          id="herrLinkNav">
-          Herr</a> 
+          <a 
+          href="index.html"
+          id="cartLinkNav">
+          Varukorg
+          </a> 
+        </li>
+        <li class="list__nested--mother">
+          Kategorier
+          <!--start of nested category-->
+          <ul class="list__nested hidden"> 
+
+            <li>
+              <a 
+              href="index.html"
+              id="damLinkNav">
+              Dam
+              </a> 
+            </li>
+
+            <li>
+              <a href="index.html"
+              id="herrLinkNav">
+              Herr</a> 
+            </li>
+
+            <li>
+            <a 
+            href="index.html"
+            id="babyLinkNav">
+            Baby
+            </a> 
+            </li>
+
+          </ul>
         </li>
         <li>
-        <a href="index.html"
-        id="babyLinkNav">
-        Baby</a> 
+          <a 
+          href="index.html"
+          id="loginLinkNav"
+          >Logga in/Registrera dig
+          </a> 
         </li>
+      </div>
       </ul>
-    </li>
-    <li>
-      <a href="index.html"
-      id="loginLinkNav"
-      >Logga in/Registrera dig</a> 
-    </li>
-  </div>
-  </ul>
 
   <!--logotyp-->
-  <a href="index.html"
-  class="event__link"
-  id="logoLinkNav">
-          <img src="styles/sass/img/Logga.png" 
+      <a 
+      href="index.html"
+      class="event__link"
+      id="logoLinkNav">
+        <img 
+        src="styles/sass/img/Logga.png" 
         alt="logotype Ekoline" 
         class="nav__logotype"/>
-        </a>
+      </a>
 
-  <span class="nav__span">
-
+      <span 
+      class="nav__span">
   <!--varukorg klickbar-->
-  <span class="nav__cart--icon">
-    <img src="styles/sass/img/shop-cart.png" 
-    alt="Shopping cart" 
-    class="headercart headercart__imgfix">
-    <!--antal i varukorg -->
-    <span class="headercart headercart__showAmount"
-    id="headerCartAmount">0</span>
-  </span>
+        <span 
+        class="nav__cart--icon">
+            <img 
+            src="styles/sass/img/shop-cart.png" 
+            alt="Shopping cart" 
+            class="headercart headercart__imgfix">
 
-  <!--Användare klickbar-->
-  <span class="nav__user input-group-addon" id="userNavIcon"><i class="fa fa-user"></i></span>
+            <!--antal i varukorg -->
+            <span 
+            class="headercart headercart__showAmount"
+            id="headerCartAmount">
+            0
+            </span>
+          </span>
 
-      </span>
-    
+          <!--Användare klickbar-->
+          <span 
+          class="nav__user input-group-addon" 
+          id="userNavIcon">
+            <i 
+            class="fa fa-user">
+            </i>
+          </span>
+        </span>
       </div>
     </nav>
   </header>
@@ -108,14 +137,19 @@
     <section class="homepage section"
     id="homepageSection">
     <div class="hero">
-      <div class="hero__content">
-        <h1 class="hero__heading">Välkommen till Ekoline</h1>
-        <p class="text--bold text--m"> Genvägen till en mer hållbar shopping. </p>
-        <a href="#categories">
-          <button class="button__hero"
-          id="buttonHero">
-            Se våra produkter</button></a>
-          </div>
+      <div class="hero__transparentBack">
+        <div class="hero__content">
+          <h1 class="hero__heading">
+            Välkommen till Ekoline</h1>
+          <p class="text--bold text--m"> 
+            Genvägen till en mer hållbar shopping. </p>
+          <button 
+            class="button__hero"
+            id="buttonHero">
+            Se våra produkter
+          </button>
+        </div>
+      </div>
     </div>
 
       <section id="categoriesSection">
@@ -284,11 +318,10 @@ class="section hidden">
   <aside>  
     <section class="cart__container cart__hidden">
       <div class="cart__content">
-        <span class="cart--close">
           <img src="styles/sass/img/closing.png" 
           alt="Stäng varukorg"
-          class="cart--close"/>
-        </span>
+          class="cart--close dropdown--close"/>
+       
         <h2>Din kundvagn:</h2>
         <article id="cartDynamicContent">
       
@@ -300,8 +333,8 @@ class="section hidden">
             </h3>
           <span class="button__span">
           <button id="clearCart" 
-          class="button__cart">Rensa kundvagn</button>
-          <button id="toConfirmation" class="button__cart">Bekräfta ditt köp</button>
+          class="button__dropdown">Rensa kundvagn</button>
+          <button id="toConfirmation" class="button__dropdown">Bekräfta ditt köp</button>
         </span>   
         </article>
       </div>
@@ -315,13 +348,12 @@ class="section hidden">
           <img src="styles/sass/img/closing.png" 
           id="closeUserNavDropdown"
           alt="Stäng varukorg"
-          class="login--close"/>
-      <span class="login__dropdown--content">
-      <!--"close dropdown", Change this to a better symbol-->
-       <h2 id="userNavName" class="hidden login--name"></h2>
-       <button id="userNavLogInRegisterBtn">Logga in/Registrera</button>
-       <button id="userNavLogOutBtn" class="hidden">Logga ut</button>
-      </span>
+          class="dropdown--close"/>
+        <span class="login__dropdown--content">
+        <h2 id="userNavName" class="hidden login--name"></h2>
+        <button id="userNavLogInRegisterBtn" class="button__dropdown">Logga in/Registrera</button>
+        <button id="userNavLogOutBtn" class="hidden button__dropdown">Logga ut</button>
+        </span>
      </div>
    </aside>
 

@@ -4,13 +4,17 @@
   background-color: transparent;
   background: url("./img/concrete-cracking.png")center/cover no-repeat;
   
-  @include flexBox(column, flex-start, center); 
+  @include flexBox(column, center, center); 
+
+  &__transparentBack{
+    background-color: rgba(236, 230, 210, .6);
+  }
 
 &__content{
   text-align: center;
-  // background: transparent;
-  @include flexBox(column, flex-start, space-between);
+  @include flexBox(column, center, space-between);
   padding: 2rem;
+ 
 } 
 
 &__heading{

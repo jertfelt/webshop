@@ -186,7 +186,7 @@ h6 {
   background-color: #2798d8;
 }
 
-.button__cart {
+.button__dropdown {
   padding: 1rem 2rem;
   text-transform: uppercase;
   font-size: 1rem;
@@ -201,7 +201,7 @@ h6 {
   border-radius: 19px;
 }
 
-.button__cart:hover {
+.button__dropdown:hover {
   background: #225e39;
 }
 
@@ -219,6 +219,11 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.dropdown--close {
+  cursor: pointer;
+  height: 30px;
 }
 
 .addToCartBtn {
@@ -474,6 +479,10 @@ h6 {
   grid-row-gap: 0.1rem;
 }
 
+.login--name {
+  color: #225e39;
+}
+
 .login__container {
   position: fixed;
   top: 0;
@@ -521,28 +530,6 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.login__dropdown--content button {
-  margin-top: 2rem;
-  padding: 0.4rem;
-  border: none;
-  background-color: #2798d8;
-  color: #fbfbfb;
-  font-weight: bold;
-}
-
-.login__dropdown--content button:hover {
-  background-color: #225e39;
-}
-
-.login--close {
-  cursor: pointer;
-  height: 30px;
-}
-
-.login--name {
-  color: #225e39;
 }
 
 header {
@@ -683,7 +670,7 @@ nav {
   position: fixed;
   top: 0;
   right: 0;
-  width: 60%;
+  width: 100%;
   height: 100%;
   overflow: scroll;
   z-index: 10;
@@ -691,6 +678,12 @@ nav {
   padding: 1.5rem;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
+}
+
+@media only screen and (min-width: 991px) {
+  .cart__content {
+    width: 60%;
+  }
 }
 
 .cart__content h2 {
@@ -771,12 +764,16 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.hero__transparentBack {
+  background-color: rgba(236, 230, 210, 0.6);
 }
 
 .hero__content {
@@ -788,9 +785,9 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;

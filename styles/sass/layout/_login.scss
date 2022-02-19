@@ -2,6 +2,11 @@
 
 .login{
 
+ 
+  &--name{
+    color:$color-green;
+  }
+
   &__container{
     position: fixed;
     top: 0;
@@ -30,34 +35,12 @@
       width:30%;
     }
 
-    &--close{
-      cursor: pointer;
-        height: 30px;
-    }
 
     &--content{
-      @include flexBox(column,center,center)
+      @include flexBox(column,center,center);
 
-      &--name{
-        color:$color-green;
-      }
-
-      button{
-        margin-top:2rem;
-        padding:0.4rem;
-        border:none;
-        background-color: $color-blue;
-        color:$color-white;
-        font-weight: bold;
-      }
-      button:hover{
-        background-color: $color-green;
-      }
     }
   }
-
-  
- 
     
 }
 
