@@ -409,6 +409,16 @@ h6 {
   border-radius: 59px;
 }
 
+.product__box a {
+  text-decoration: none;
+  color: #1b1b1b;
+  text-align: center;
+}
+
+.product__box a:hover {
+  text-decoration: underline;
+}
+
 .product__box:hover {
   -webkit-transition: all 100ms ease-in;
   transition: all 100ms ease-in;
