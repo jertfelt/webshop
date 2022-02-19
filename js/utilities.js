@@ -1,15 +1,56 @@
-
-
-///-----Menu button mobile
-let menuButton = document.getElementById("menuToggle");
+///*-----Hamburgermeny dropdown
+const menuButton = document.getElementById("menuToggle");
 let menuMobile = document.querySelector("#dropDownMenu");
 
-menuButton.addEventListener("click", dropdown);
+//*---open dropdown (by click or pushing enter)
 
-function dropdown(){
- if (menuMobile.classList.contains("drop-down"))
- {menuMobile.classList.remove("drop-down");
+const openDropdown = () => {
+ if (menuMobile.classList.contains("dropdown"))
+ {menuMobile.classList.remove("dropdown");
 }
 else 
-menuMobile.classList.add("drop-down");
+menuMobile.classList.add("dropdown");
 }
+menuButton.addEventListener("click", openDropdown);
+document.addEventListener('keydown', function(event){
+
+  if(event.key == "ArrowDown"){
+   openDropdown();
+  }
+})
+
+//*----close dropdown (by click or keydown)
+const closeDropDown = () => {
+ menuMobile.classList.add("dropdown");
+}
+
+document.getElementById("closeDropDown").addEventListener("click", closeDropDown);
+
+document.addEventListener('keydown', function(event){
+  if(event.key === "Escape")
+  {
+
+  if (menuMobile.classList.contains("dropdown") === false){
+    closeDropDown();
+  }
+
+  }
+});
+
+//*--------Toggle kategori i dropdown
+
+document.querySelector(".list__nested--mother").addEventListener("click", () =>{
+  const categoryMenuNav = document.querySelector(".list__nested");
+
+  if(categoryMenuNav.classList.contains("hidden") === true){
+    categoryMenuNav.classList.remove("hidden");
+  }
+  else{
+    categoryMenuNav.classList.add("hidden");
+  }
+
+})
+
+//*-------Get logged in user info
+
+const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));

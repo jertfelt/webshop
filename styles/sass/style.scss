@@ -20,15 +20,15 @@
 @import "components/buttons";
 @import "components/dropdown";
 
+//Function
+//---------
+@import "function/functions";
+
 // Layouts
 // --------------------
-@import "layout/footer";
 @import "layout/forms";
 @import "layout/grid";
 @import "layout/header";
 @import "layout/homepage";
 @import "layout/cart";
-
-//Function
-//---------
-@import "sass-utils/functions";
+@import "layout/products";

@@ -5,8 +5,6 @@
 //   changeActivePage("productListSection");
 // });
 
-
-
 //links for nav (except varukorg)
 
 document.getElementById("homeLinkNav").addEventListener("click", (e) => {
@@ -43,6 +41,12 @@ changeActivePage("homepageSection");
 //-----links for footer
 
 //------homepage
+
+//------user nav
+
+const userNavLogInRegister = () => {
+  changeActivePage("loginSection");
+}
 
 //------cart (go to product shown in cart)
 
