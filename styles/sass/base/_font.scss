@@ -20,6 +20,13 @@ $font-secondary: "Roboto", Arial, sans-serif;
   &--green{
     color:$color-green;
   }
+  &--uppercase{
+    text-transform: uppercase;
+  }
+  
+  &--centered{
+    text-align: center;
+  }
 
   &--bold{
     font-weight:bold;

@@ -11,36 +11,46 @@ function drawProducts() {
   categoryHeader.innerText = qsCategory +"kläder";
   productListSection.appendChild(categoryHeader);
 
+  const sectionElem = document.createElement("section");
+  sectionElem.classList.add("products__grid")
+  productListSection.appendChild(sectionElem);
+
   productList.forEach(product => {
     // Filter products for selected category.
     if(product.category === qsCategory) {
     const articleElem = document.createElement("article");
-    //adding css-classes
-    articleElem.classList.add("products__grid", `products__griditem--${product.sys.id}`);
-    console.log(articleElem.classList)
+  
     // Creates direct link to individual product
     const productLink = createURL("individualProductSection", `${product.category}` , `${product.sys.id}`);
 
     articleElem.innerHTML = `
-    <a href="${productLink}">
-      <img alt ="Produkt ${product.title}"   
-        class ="product__img" 
-        src="/${product.fields.image.fields.file.url}">
-      </img>
-    </a>
-    <span class="onimage__items">
-        <h3>${product.fields.title}</h3>
-        <p>${product.fields.price} kr</p>
-      <button 
-      class="onimage__button addToCartBtn" 
-      data-id="${product.sys.id}">
-      Köp</button>
-      </span>`
-    productListSection.appendChild(articleElem);
+    <div class="outer">
+    <div class="inner">
+        <div class="product__listofitems">
+        <span class="product__box">
+            <h3 class="text--centered text--s text--uppercase">${product.fields.title}</h3>
+            <h4 class="text--s text--green text--bold">${product.fields.price} kr</h4>
+          <button 
+          class="addToCartBtn" 
+          data-id="${product.sys.id}">
+          Köp</button>
+        </span>
+        </div>
+     </div>
+      <div class="product__img--container">
+        <a href="${productLink}">
+            <img alt =Produkt ${product.title}"   
+              class ="product__img" 
+              src="/${product.fields.image.fields.file.url}">
+            </img>
+        </a>
+      </div>
+    </div>
+    `
+    sectionElem.appendChild(articleElem);
     }
   })
 
-  // onClick="buyProduct(${product.sys.id})"
 }
 
 async function getProductList() {
