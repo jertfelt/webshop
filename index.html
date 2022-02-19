@@ -81,6 +81,18 @@
         alt="logotype Ekoline" 
         class="nav__logotype"/>
         </a>
+      
+      <!--logga in --> 
+    <scetion id="userNavDropdown" class="hidden">
+      <p id="closeUserNavDropdown">X</p> <!--"close dropdown", Change this to a better symbol-->
+      <h2 id="userNavName" class="hidden"></h2>
+      <button id="userNavLogInRegisterBtn">Logga in/Registrera</button>
+      <button id="userNavLogOutBtn" class="hidden">Logga ut</button>
+    </scetion>
+  
+
+  <!--Användare klickbar-->
+  <span class="input-group-addon" id="userNavIcon"><i class="fa fa-user"></i></span>
 
   <!--varukorg klickbar-->
         <span class="nav-icon">
@@ -267,6 +279,7 @@ class="section">
 
   </main>
 
+
   <aside>  
     <section class="cart__container cart__hidden">
       <div class="cart__content">
@@ -293,6 +306,7 @@ class="section">
       </div>
     </section>
   </aside>
+  
 
 <footer>
 
@@ -302,10 +316,19 @@ class="section">
 
 <!-----------------------------------javascripts-->
 
+
+
+
+<script src="./js/utilities.js"></script>
+<script src="./js/views/main.js"></script>
+
 <!---buttons, querystring and nav:-->
+
 <script src="./js/views/changepage.js"></script>
 <script src="./js/views/pagewidenavigationbuttons.js"></script>
 <script src="./js/utilities.js"></script>
+<script src="./js/views/userNavDropdown.js"></script>
+
 <script src="./js/views/main.js"></script>
   
 <!--product and shopping cart functionality--->
@@ -314,6 +337,7 @@ class="section">
 <script src="./js/views/product.js"></script>
 <script src="./js/views/shoppingcart.js"></script>
 <script src="./js/views/orderConfirmation.js"></script>
+
 
 <!--create account and log in--->
 <script src="./js/views/createAccount.js"></script> 
