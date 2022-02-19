@@ -81,20 +81,13 @@
         alt="logotype Ekoline" 
         class="nav__logotype"/>
         </a>
-    
-  <!--Användare klickbar-->
-  <span class="input-group-addon" id="userNavIcon"><i class="fa fa-user"></i></span>
 
-   <!--logga in --> 
-   <div id="userNavDropdown" class="hidden">
-    <p id="closeUserNavDropdown">X</p> <!--"close dropdown", Change this to a better symbol-->
-    <h2 id="userNavName" class="hidden"></h2>
-    <button id="userNavLogInRegisterBtn">Logga in/Registrera</button>
-    <button id="userNavLogOutBtn" class="hidden">Logga ut</button>
-  </div>
+  <span class="nav__span">
+  <!--Användare klickbar-->
+  <span class="nav__user" id="userNavIcon"><i class="fa fa-user"></i></span>
 
   <!--varukorg klickbar-->
-        <span class="nav-icon">
+        <span class="nav__cart--icon">
           <img src="styles/sass/img/shop-cart.png" 
           alt="Shopping cart" 
           class="headercart headercart__imgfix">
@@ -102,6 +95,8 @@
           <span class="headercart headercart__showAmount"
           id="headerCartAmount">0</span>
         </span>
+      </span>
+    
       </div>
     </nav>
   </header>
@@ -283,7 +278,7 @@ class="section hidden">
 
   </main>
 
-
+<!--varukorgen-->
   <aside>  
     <section class="cart__container cart__hidden">
       <div class="cart__content">
@@ -310,7 +305,16 @@ class="section hidden">
       </div>
     </section>
   </aside>
-  
+
+     <!--logga in --> 
+     <aside>
+      <div id="userNavDropdown" class="hidden">
+       <p id="closeUserNavDropdown">X</p> <!--"close dropdown", Change this to a better symbol-->
+       <h2 id="userNavName" class="hidden"></h2>
+       <button id="userNavLogInRegisterBtn">Logga in/Registrera</button>
+       <button id="userNavLogOutBtn" class="hidden">Logga ut</button>
+     </div>
+   </aside>
 
 <footer>
 
@@ -323,8 +327,6 @@ class="section hidden">
 <script src="./js/views/pagewidenavigationbuttons.js"></script>
 <script src="./js/utilities.js"></script>
 <script src="./js/views/userLoginNavDropdown.js"></script>
-
-<script src="./js/views/main.js"></script>
   
 <!--product and shopping cart functionality--->
 

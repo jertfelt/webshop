@@ -34,4 +34,59 @@ nav{
   transform: rotate(-50deg);
   transition: $mainTransition;
  }
+ &__span{
+  width:15%;
+  @include flexBox(row,center,space-between)
+ }
+ &__user{
+   background-color: $color-green;
+   border-radius: 50%;
+   padding:0.5rem;
+   height:40px;
+   width: 40px;
+   text-align: center;
+   align-items: center;
+
+   .fa-user {
+     color: $color-sand;
+     margin:3px;
+   }
+ }
+
+ &__user:hover{
+  background-color: $color-black;
+  .fa-user {
+    color: $color-white;
+  }
+ }
+
+}
+
+
+.headercart{
+  position: relative;
+  cursor: pointer;
+
+  &__imgfix{
+    height:40px;
+   margin-top:20px;
+    @include breakpoint(medium-tablet-min){
+      margin-top: 4px;}
+  }
+
+  &__showAmount{
+    position:relative;
+    z-index:7;
+    left: 40px;
+    bottom:40px;
+    background: $color-green;
+    padding: 0 5px;
+    border-radius: 30%;
+    color: $color-white;
+    text-align: center;
+    @include breakpoint(medium-tablet-min){
+      left:-2px;
+      bottom:20px;
+    }
+  }
 }

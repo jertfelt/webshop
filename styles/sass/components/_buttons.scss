@@ -1,5 +1,4 @@
-//buttons
-
+//buttons (except for navigation bar in header)
 
 .button{
   &__hero{
@@ -46,27 +45,6 @@
   }
 }
 
-.headercart{
-  position: relative;
-  cursor: pointer;
-
-  &__imgfix{
-    height:40px;
-    margin-top: 10px;
-  }
-
-  &__showAmount{
-    position:relative;
-    z-index:7;
-    top:-30px;
-    left:-30px;
-    background: $color-green;
-    padding: 0 5px;
-    border-radius: 30%;
-    color: $color-white;
-    text-align: center;
-  }
-}
 
 .addToCartBtn{
   padding: 1rem;
