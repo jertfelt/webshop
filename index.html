@@ -81,6 +81,15 @@
         alt="logotype Ekoline" 
         class="nav__logotype"/>
         </a>
+      
+      <!--logga in --> 
+    <scetion id="userNavDropdown" class="hidden">
+      <p id="closeUserNavDropdown">X</p> <!--"close dropdown", Change this to a better symbol-->
+      <h2 id="userNavName" class="hidden"></h2>
+      <button id="userNavLogInRegisterBtn">Logga in/Registrera</button>
+      <button id="userNavLogOutBtn" class="hidden">Logga ut</button>
+    </scetion>
+  
 
   <!--Användare klickbar-->
   <span class="input-group-addon" id="userNavIcon"><i class="fa fa-user"></i></span>
@@ -90,7 +99,7 @@
           <img src="styles/sass/img/shop-cart.png" 
           alt="Shopping cart" 
           class="headercart headercart__imgfix">
-          <!--antal i varukorg (siffra som räknar upp)-->
+          <!--antal i varukorg -->
           <span class="headercart headercart__showAmount"
           id="headerCartAmount">0</span>
         </span>
@@ -110,62 +119,65 @@
           id="buttonHero">
             Se våra produkter</button></a>
           </div>
+    
     </section>
 
-  <section class="section categories__section" 
-          id="categoriesSection">
-    <span>
-      <h2> Våra produkter:</h2>
-      <p class="text--s">Vi är en ekologisk, hållbar butik som fokuserar på det handgjorda, naturvänliga och unika.</p>
-    </span>
 
-    <div class="categorieshomepage__grid">
-
-      <!--hit ska den dynamiska HTML:en-->
-      <!--@Celina, fungerar category.image? Annars byt till product.title-->
-      <article class="category">
-        <div class="category__img--container">
-          <img id="categoryImgDam" src= ${category.image} 
-          alt="produkt ${product.title}" 
-          class="category__img">
-          
-
-          <div class="products__items">
-            <div id="categoryTitelInfoDam" class="products-items--row">
+          <!----Får det inte att fungera, antingen syns inte categoriesSection på homepage, eller så syns categoriesSection på ALLA sidor-->
+     <section id="categoriesSection" class="section">
+            <span>
+              <h2> Våra produkter:</h2>
+              <p class="text--s">Vi är en ekologisk, hållbar butik som fokuserar på det handgjorda, naturvänliga och unika.</p>
+            </span>
+        
+            <div class="categorieshomepage__grid">
+        
+              <!--hit ska den dynamiska HTML:en-->
+              <!--@Celina, fungerar category.image? Annars byt till product.title-->
+        
+              <article class="category">
+                <div class="category__img--container">
+                  <img id="categoryImgDam" src= ${product.image} 
+                  alt="produkt ${product.title}" 
+                  class="category__img">
+                  
+        
+                  <div class="products__items">
+                    <div id="categoryTitelInfoDam" class="products-items--row">
+                    </div>
+                  </div>
+                </div>
+        
+        
+                <div class="category__img--container">
+        
+                  <img id="categoryImgHerr" 
+                  src="styles\sass\img\men-clothing-banner.png"
+                  alt="produkt ${product.title}" 
+                  class="category__img">
+        
+        
+                  <div class="category__items">
+                    <div id="categoryTitelInfoHerr" class="category-items--row">
+                    </div>
+                  </div>
+                </div>
+        
+        
+                <div class="category__img--container">
+        
+                  <img id="categoryImgBaby" src= ${category.image} 
+                  alt="produkt ${product.title}" 
+                  class="category__img">
+        
+                 
+                  <div class="category__items">
+                    <div id="categoryTitelInfoBaby" class="category-items--row">
+                    </div>
+                  </div>
+                </div>
+              </article>  
             </div>
-          </div>
-        </div>
-
-
-        <div class="category__img--container">
-
-          <img id="categoryImgHerr" src= ${category.image} 
-          alt="produkt ${product.title}" 
-          class="category__img">
-
-          
-          
-          <div class="category__items">
-            <div id="categoryTitelInfoHerr" class="category-items--row">
-            </div>
-          </div>
-        </div>
-
-
-        <div class="category__img--container">
-
-          <img id="categoryImgBaby" src= ${category.image} 
-          alt="produkt ${product.title}" 
-          class="category__img">
-
-         
-          <div class="category__items">
-            <div id="categoryTitelInfoBaby" class="category-items--row">
-            </div>
-          </div>
-        </div>
-      </article>  
-    </div>
   </section>
 
   <section id="productListSection" 
@@ -267,14 +279,6 @@ class="section">
 
   </main>
 
-  <aside>
-    <scetion id="userNavDropdown" class="hidden">
-      <p id="closeUserNavDropdown">X</p> <!--"close dropdown", Change this to a better symbol-->
-      <h2 id="userNavName" class="hidden"></h2>
-      <button id="userNavLogInRegisterBtn">Logga in/Registrera</button>
-      <button id="userNavLogOutBtn" class="hidden">Logga ut</button>
-    </scetion>
-  </aside>
 
   <aside>  
     <section class="cart__container cart__hidden">
@@ -289,9 +293,15 @@ class="section">
       
         </article>
         <article class="cart__footer">
-          <h3>Totalt: <span id="cartTotal">0</span> SEK</h3> 
+          <h3>Totalt: 
+            <span id="cartTotal">
+              0</span> SEK
+            </h3>
+          <span class="button__span">
           <button id="clearCart" 
-          class="button__cart--clear">Rensa kundvagn</button>
+          class="button__cart">Rensa kundvagn</button>
+          <button id="toConfirmation" class="button__cart">Bekräfta ditt köp</button>
+        </span>   
         </article>
       </div>
     </section>
@@ -307,18 +317,30 @@ class="section">
 <!-----------------------------------javascripts-->
 
 
-<script src="./js/views/product.js"></script>
+
 
 <script src="./js/utilities.js"></script>
 <script src="./js/views/main.js"></script>
+
+<!---buttons, querystring and nav:-->
+
 <script src="./js/views/changepage.js"></script>
 <script src="./js/views/pagewidenavigationbuttons.js"></script>
-<script src="./js/views/productList.js"></script>
-<script src="./js/views/orderConfirmation.js"></script>
-<script src="./js/views/createAccount.js"></script> 
-<script src="./js/views/shoppingcart.js"></script>
+<script src="./js/utilities.js"></script>
 <script src="./js/views/userNavDropdown.js"></script>
 
+<script src="./js/views/main.js"></script>
+  
+<!--product and shopping cart functionality--->
+
+<script src="./js/views/productList.js"></script>
+<script src="./js/views/product.js"></script>
+<script src="./js/views/shoppingcart.js"></script>
+<script src="./js/views/orderConfirmation.js"></script>
+
+
+<!--create account and log in--->
+<script src="./js/views/createAccount.js"></script> 
 
 </body>
 </html>

@@ -1,6 +1,6 @@
-///------------Query strings function (show different sections) 
+//?------------Query strings function (show different sections) 
 
-//-variables
+//*---------------------variables
 
 const homepageSection = document.getElementById("homepageSection");
 const categoriesSection = document.getElementById("categoriesSection");
@@ -39,7 +39,7 @@ const createURL  = (sectionName, categoryName, prodID) => {
   }
   // Lägger till produkt ID om angiven
   if (prodID) {
-    search_params.set('prod', prodID);
+    search_params.set('id', prodID);
   }
   // Ger en sträng med komplett URL
   return url.toString();
@@ -47,16 +47,35 @@ const createURL  = (sectionName, categoryName, prodID) => {
 
 const setActivePage = () => {
   let url = new URL(window.location.href);
-  const search_params = url.searchParams;
+  console.log(url);
+  
+  let search_params = url.searchParams;
+  console.log(search_params); ///blir tom
   const currentSection = search_params.get("section");
+  console.log(currentSection) // blir null 
+
+  //!problem: blir null när sidan laddas
+
+  // const currentSection = url.searchParams.toString();
+  // console.log("visar hela adressen:" + currentSection)
+ 
 
   //döljer och visar rätt sektion
   if (currentSection){
   sections.forEach(section => {
+
+    if (section.classList.contains("hero")){
+      section.classList.remove("hero")
+    }
     section.classList.add("hidden");
 
     if (section.id === currentSection){
      section.classList.remove("hidden");
+
+     if (section.id === "homepageSection"){
+      //  categoriesSection.classList.remove("hidden");
+       section.classList.add("hero");
+     }
    }
   }
   )}
