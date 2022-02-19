@@ -552,7 +552,8 @@ nav {
 }
 
 .hero {
-  min-height: calc(100vh - 100px);
+  min-width: 100%;
+  min-height: 600px;
   background-color: transparent;
   background: url("./img/concrete-cracking.png") center/cover no-repeat;
   display: -webkit-box;
@@ -714,10 +715,12 @@ nav {
 
 .onimage {
   width: 100%;
-  height: 500px;
   padding: 2em;
   position: relative;
   background-color: #ece6d2;
+}
+
+.onimage__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -733,9 +736,9 @@ nav {
           justify-content: center;
 }
 
-.onimage__link {
-  position: relative;
-  cursor: pointer;
+.onimage__items p {
+  text-align: center;
+  font-size: 28px;
 }
 
 .onimage__button {
