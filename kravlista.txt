@@ -1,9 +1,4 @@
 
-Vår trello:
-https://trello.com/b/XVyVhXlq/kanban-grupp-tre
-
-Vår figma: 
-https://www.figma.com/file/bIcYUoAzHiwllVAUTerVmw/Ekoline?node-id=0%3A1
 
 
 INSTRUKTIONER:
@@ -130,6 +125,3 @@ Koden skall vara uppdelad på ett metodiskt vis som ni diskuterat med varandra
 Produkterna skall vara lagrade som JSON (VG)
 Även kategorierna skall vara lagrade som JSON (VG)
 Responsiv CSS (VG)
-
-
-
