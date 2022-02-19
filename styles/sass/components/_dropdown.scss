@@ -53,10 +53,18 @@ a:hover{
   }
 
   li {
-  margin:10px;
+ 
+  margin-bottom:-3px;
+  }
+  li:hover{
+    background-color: $color-sand;
+   border-radius: 40px;
+    font-size:1.4rem;
+    padding: 0rem 1rem;
   }
 
   &--mother{
+    
     font-size: 22px;
     color: $color-green;
     font-weight:bold;
@@ -70,6 +78,7 @@ a:hover{
     color: $color-blue;
     cursor: pointer;
     text-transform: uppercase;
+  
   }
 
   &--mother:visited{

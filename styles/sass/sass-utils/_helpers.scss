@@ -1,5 +1,4 @@
 
-
 .hidden {
   display: none;
 }
@@ -18,4 +17,10 @@
 .centered{
   text-align: center;
   padding:2rem;
+}
+
+.container{
+  &--margin{
+    margin-top:3rem;
+  }
 }

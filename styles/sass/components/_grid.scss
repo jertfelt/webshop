@@ -8,6 +8,12 @@
   grid-column-gap: 1.5rem;
   grid-row-gap: 2rem;
   margin-bottom:8rem;
+
+  &--individual{
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+  }
   
   // &--list{
   // width: 90vw;
@@ -22,6 +28,7 @@
 }
 
 .product{
+ 
   &__img {
   border-radius: 29px;
   width: 100%;
@@ -31,6 +38,11 @@
   &--container{
     position: relative;
     overflow: hidden;
+    
+    img{
+      border-radius: 29px;
+      width:100%;
+    }
   }
 } 
   &__listofitems{
@@ -51,13 +63,19 @@
     a:hover{
       text-decoration:underline;
     }
-    
   }
   &__box:hover{
     transition: all 100ms ease-in;
     background-color: $color-white;
   }
   
+  &__individual{
+  
+    &--text{
+    @include flexBox(column,center,space-between);
+    margin-bottom:3rem;
+  }
+  }
 }
 
 .outer{
