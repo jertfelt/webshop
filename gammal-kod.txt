@@ -13,3 +13,9 @@ changepage.js
   //    section.classList.remove("hidden");
   
   //  }
+
+  
+  //!BUGGproblem: blir null när sidan laddas
+
+  // const currentSection = url.searchParams.toString();
+  // console.log("visar hela adressen:" + currentSection)
