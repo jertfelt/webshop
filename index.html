@@ -81,6 +81,18 @@
         alt="logotype Ekoline" 
         class="nav__logotype"/>
         </a>
+      
+      <!--logga in --> 
+    <scetion id="userNavDropdown" class="hidden">
+      <p id="closeUserNavDropdown">X</p> <!--"close dropdown", Change this to a better symbol-->
+      <h2 id="userNavName" class="hidden"></h2>
+      <button id="userNavLogInRegisterBtn">Logga in/Registrera</button>
+      <button id="userNavLogOutBtn" class="hidden">Logga ut</button>
+    </scetion>
+  
+
+  <!--Användare klickbar-->
+  <span class="input-group-addon" id="userNavIcon"><i class="fa fa-user"></i></span>
 
   <!--varukorg klickbar-->
         <span class="nav-icon">
@@ -97,8 +109,9 @@
   
   <main>
     <!--välkommen-->
-    <section class="hero section"
+    <section class="homepage section"
     id="homepageSection">
+    <div class="hero">
       <div class="hero__content">
         <h1 class="hero__heading">Välkommen till Ekoline</h1>
         <p class="text--bold text--m"> Genvägen till en mer hållbar shopping. </p>
@@ -107,78 +120,80 @@
           id="buttonHero">
             Se våra produkter</button></a>
           </div>
+    </div>
+
+      <section id="categoriesSection">
+        <article>
+          <h2> Våra produkter:</h2>
+          <p class="text--s">Vi är en ekologisk, hållbar butik som fokuserar på det handgjorda, naturvänliga och unika.</p>
+        </article>
     
-    </section>
-
-
-          <!----Får det inte att fungera, antingen syns inte categoriesSection på homepage, eller så syns categoriesSection på ALLA sidor-->
-     <section id="categoriesSection" class="section">
-            <span>
-              <h2> Våra produkter:</h2>
-              <p class="text--s">Vi är en ekologisk, hållbar butik som fokuserar på det handgjorda, naturvänliga och unika.</p>
-            </span>
-        
-            <div class="categorieshomepage__grid">
-        
-              <!--hit ska den dynamiska HTML:en-->
-              <!--@Celina, fungerar category.image? Annars byt till product.title-->
-        
-              <article class="category">
-                <div class="category__img--container">
-                  <img id="categoryImgDam" src= ${product.image} 
-                  alt="produkt ${product.title}" 
-                  class="category__img">
-                  
-        
-                  <div class="products__items">
-                    <div id="categoryTitelInfoDam" class="products-items--row">
-                    </div>
-                  </div>
+    <section class="categorieshomepage__grid">
+    <!--hit ska den dynamiska HTML:en-->
+          <!--@Celina, fungerar category.image? Annars byt till product.title-->
+    
+          <article class="category">
+            <div class="category__img--container">
+              <img id="categoryImgDam" src= ${product.image} 
+              alt="produkt ${product.title}" 
+              class="category__img">
+              
+    
+              <div class="products__items">
+                <div id="categoryTitelInfoDam" class="products-items--row">
                 </div>
-        
-        
-                <div class="category__img--container">
-        
-                  <img id="categoryImgHerr" 
-                  src="styles\sass\img\men-clothing-banner.png"
-                  alt="produkt ${product.title}" 
-                  class="category__img">
-        
-        
-                  <div class="category__items">
-                    <div id="categoryTitelInfoHerr" class="category-items--row">
-                    </div>
-                  </div>
-                </div>
-        
-        
-                <div class="category__img--container">
-        
-                  <img id="categoryImgBaby" src= ${category.image} 
-                  alt="produkt ${product.title}" 
-                  class="category__img">
-        
-                 
-                  <div class="category__items">
-                    <div id="categoryTitelInfoBaby" class="category-items--row">
-                    </div>
-                  </div>
-                </div>
-              </article>  
+              </div>
             </div>
+    
+    
+            <div class="category__img--container">
+    
+              <img id="categoryImgHerr" 
+              src="styles\sass\img\men-clothing-banner.png"
+              alt="produkt ${product.title}" 
+              class="category__img">
+    
+    
+              <div class="category__items">
+                <div id="categoryTitelInfoHerr" class="category-items--row">
+                </div>
+              </div>
+            </div>
+    
+    
+            <div class="category__img--container">
+    
+              <img id="categoryImgBaby" src= ${category.image} 
+              alt="produkt ${product.title}" 
+              class="category__img">
+    
+            
+              <div class="category__items">
+                <div id="categoryTitelInfoBaby" class="category-items--row">
+                </div>
+              </div>
+            </div>
+          </article>  
+        </section>
+    </section>
+    
   </section>
 
+
+        
+
   <section id="productListSection" 
-  class="section">
+  class="section hidden">
   </section>
 
   <section id="individualProductSection" 
-  class="">
+  class="section hidden">
   </section>
 
 <!--varor + logga in/skriv in på formulär-->
   <section id="orderConfirmationSection"
-class="section">
+class="section hidden">
+
   <article id="orderProductsSummation">
     <h2>Dina Produkter:</h2>
   </article>
@@ -213,36 +228,38 @@ class="section">
 
 <!--kvitto dropdown-->
   <section id="receiptSection"
-  class="section">
+  class="section hidden">
     
   </section>
 
-  <section id="loginSection" 
-  class="section">
-  
-      
-        <h6>Logga in</h6>
-        <form action="#">
-    
-          <div class="input-group input-group-lg">
-            <span class="input-group-addon"><i class="fa fa-user"></i></span>
-            <input type="text" class="form-control" placeholder="Användarnamn">
-              </div>
-    
-            <div class="input-group input-group-lg">
-              <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-              <input type="password" class="form-control" placeholder="Lösenord">
-            </div>
-    
-            <button type="submit" >Logga in</button>
-            <button type="submit" >Registrera dig</button>
-          </form>
-        </div>
-    </div>
-    </section>
- 
+<section id="loginSection" class="section hidden">
+  <div class="login__box">
+      <h2>Logga in</h2>
+      <form id="loginForm">
+
+       <!--divs are for aesthetic reasons-->
+       <div class="input-group1">
+         <span class="input-group-addon"><i class="fa fa-user"></i></span>
+         <label for="emailLogin">E-postaddress</label><br>
+         <input type="text" class="form-control" id="emailLogin" placeholder="E-postaddress" required>
+
+       </div>
+     <!--divs are for aesthetic reasons-->
+       <div class="input-group1">
+         <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+         <label for="password">password</label><br>
+         <input type="password" class="form-control" id="password" placeholder="Lösenord" required>
+         </div>
+       
+         <button type="submit" id="loginButton">login</button> 
+         <button id="goToRegisterUserButton">register</button> 
+
+      </form>
+   </div>
+   </section>
+
   <section id="createUserSection"
-  class="section">
+  class="section hidden">
     <h2>Skapa användare</h2>
     <p>Fyll i din information här:</p>
     <form id="createUserForm">
@@ -266,6 +283,7 @@ class="section">
   </section>
 
   </main>
+
 
   <aside>  
     <section class="cart__container cart__hidden">
@@ -293,19 +311,20 @@ class="section">
       </div>
     </section>
   </aside>
+  
 
 <footer>
 
 </footer>
 
 
-
-<!-----------------------------------javascripts-->
-
 <!---buttons, querystring and nav:-->
+
 <script src="./js/views/changepage.js"></script>
 <script src="./js/views/pagewidenavigationbuttons.js"></script>
 <script src="./js/utilities.js"></script>
+<script src="./js/views/userNavDropdown.js"></script>
+
 <script src="./js/views/main.js"></script>
   
 <!--product and shopping cart functionality--->
@@ -314,6 +333,7 @@ class="section">
 <script src="./js/views/product.js"></script>
 <script src="./js/views/shoppingcart.js"></script>
 <script src="./js/views/orderConfirmation.js"></script>
+
 
 <!--create account and log in--->
 <script src="./js/views/createAccount.js"></script> 
