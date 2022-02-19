@@ -47,38 +47,26 @@ const createURL  = (sectionName, categoryName, prodID) => {
 
 const setActivePage = () => {
   let url = new URL(window.location.href);
-  console.log(url);
-  
-  let search_params = url.searchParams;
-  console.log(search_params); ///blir tom
-  const currentSection = search_params.get("section");
-  console.log(currentSection) // blir null 
-
-  //!problem: blir null när sidan laddas
-
-  // const currentSection = url.searchParams.toString();
-  // console.log("visar hela adressen:" + currentSection)
  
+  let search_params = url.searchParams;
+  console.log(search_params); ///blir tom vid start  (första gången)
 
-  //döljer och visar rätt sektion
-  if (currentSection){
+  const currentSection = search_params.get("section");
+  console.log(currentSection) // blir null vid start (första gången)
+
+ //ändrat funktion och for loop - default är att allt utom homepageSection är dolt i början (så om man öppnar fönstret första gången så syns bara homepage, inte allt)
+ 
+ if (currentSection) {
   sections.forEach(section => {
-
-    if (section.classList.contains("hero")){
-      section.classList.remove("hero")
-    }
-    section.classList.add("hidden");
-
+    
     if (section.id === currentSection){
-     section.classList.remove("hidden");
-
-     if (section.id === "homepageSection"){
-      //  categoriesSection.classList.remove("hidden");
-       section.classList.add("hero");
-     }
-   }
+      if (section.id !== "homepageSection"){
+     
+        homepageSection.classList.add("hidden");
+      }
+      section.classList.remove("hidden");
+    }
+  })}
   }
-  )}
-};
-
+ 
 setActivePage();

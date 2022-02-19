@@ -1,0 +1,15 @@
+
+changepage.js
+  // //döljer och visar rätt sektion
+  // if (currentSection){
+  // sections.forEach(section => {
+
+  //   if (section.classList.contains("hero")){
+  //     section.classList.remove("hero")
+  //   }
+  //   section.classList.add("hidden");
+
+  //   if (section.id === currentSection){
+  //    section.classList.remove("hidden");
+  
+  //  }

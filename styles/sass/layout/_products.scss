@@ -1,15 +1,19 @@
+
+
 .onimage{
 width:100%;
-height:500px;
 padding:2em;
 position:relative;
 background-color: $color-sand;
-@include flexBox(column,center,center);
-  
-  &__link{
-    position: relative;
-    cursor: pointer;
+
+&__items{
+  @include flexBox(column,center,center);
+
+  p{
+    text-align: center;
+    font-size:28px;
   }
+}
   &__button{
     position:relative;
     z-index:7;
