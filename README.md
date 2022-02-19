@@ -1,12 +1,7 @@
 Grupp 3 - Frontend projekt NACKADEMIN 2022
 
 Deltagare:
-Blanca 
-Embla  
-Hanif  
-Celina
-Conrad
-Tova 
+Blanca, Embla, Hanif, Celina, Conrad, Tova 
 
 
 Vår trello:
