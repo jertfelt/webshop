@@ -47,15 +47,13 @@ a:hover{
 }
 
 .list__nested{
-  background-color: $color-sand;
-  padding:0.4rem;
 
   @include breakpoint(medium-tablet-min){
     @include flexBox(row,center,center)
   }
 
   li {
-  margin:20px;
+  margin:10px;
   }
 
   &--mother{

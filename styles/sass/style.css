@@ -305,11 +305,6 @@ h6 {
   text-transform: uppercase;
 }
 
-.list__nested {
-  background-color: #ece6d2;
-  padding: 0.4rem;
-}
-
 @media only screen and (min-width: 991px) {
   .list__nested {
     display: -webkit-box;
@@ -329,7 +324,7 @@ h6 {
 }
 
 .list__nested li {
-  margin: 20px;
+  margin: 10px;
 }
 
 .list__nested--mother {
