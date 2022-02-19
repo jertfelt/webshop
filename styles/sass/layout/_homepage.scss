@@ -14,25 +14,32 @@
   text-align: center;
   @include flexBox(column, center, space-between);
   padding: 2rem;
- 
 } 
 
 &__heading{
-  font-size: 3.4rem;
-  text-transform: uppercase;
-  letter-spacing: $mainSpacing;
   margin-bottom:2rem;
 }
 }
 
-.products__section {
-  padding: 4rem 0;
-  h2 {
-    
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 5rem;
-    text-transform: capitalize;
-    letter-spacing: $mainSpacing;
+.categories{
+  @include flexBox(column,center,center);
+
+  article {
+padding:2rem;
+
+    h2 {
+      margin-top:2rem;
+      margin-bottom:2rem;
+    }
+  }
+  img {
+    padding-bottom: 2rem;
+  border-radius:45% 55% 52% 48% / 30% 25% 55% 10%;
+  height:400px;
+  margin:0px 30px;
+  }
+  img:hover{
+    border-radius:100%;
   }
 }
+

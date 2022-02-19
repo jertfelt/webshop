@@ -10,7 +10,17 @@ $font-secondary: "Roboto", Arial, sans-serif;
 
 //paragraph texts
 .text {
-  font-family: $font-secondary;
+  &--primary{
+    font-family: $font-primary;
+  }
+  &--second{
+    font-family: $font-secondary;
+  }
+  
+  &--green{
+    color:$color-green;
+  }
+
   &--bold{
     font-weight:bold;
   }
@@ -24,14 +34,11 @@ $font-secondary: "Roboto", Arial, sans-serif;
   }
 
   &--l {
-    @include font-size(34);
-    @include breakpoint(small-max) {
-      @include font-size(54);
-      line-height: 60px;
-    }
+    @include font-size(50);
+
   }
   &--m {
-    @include font-size(48);
+    @include font-size(42);
   }
   &--s {
     @include font-size(36);

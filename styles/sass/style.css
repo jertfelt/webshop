@@ -15,6 +15,22 @@
   display: block;
 }
 
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -25,10 +41,19 @@
 body {
   background: #ece6d2;
   color: #1b1b1b;
+  font-family: "Nunito", Verdana, sans-serif;
 }
 
-.text {
+.text--primary {
+  font-family: "Nunito", Verdana, sans-serif;
+}
+
+.text--second {
   font-family: "Roboto", Arial, sans-serif;
+}
+
+.text--green {
+  color: #225e39;
 }
 
 .text--bold {
@@ -45,21 +70,13 @@ body {
 }
 
 .text--l {
-  font-size: 34px;
-  font-size: 2.125rem;
-}
-
-@media only screen and (min-width: 768px) {
-  .text--l {
-    font-size: 54px;
-    font-size: 3.375rem;
-    line-height: 60px;
-  }
+  font-size: 50px;
+  font-size: 3.125rem;
 }
 
 .text--m {
-  font-size: 48px;
-  font-size: 3rem;
+  font-size: 42px;
+  font-size: 2.625rem;
 }
 
 .text--s {
@@ -795,22 +812,43 @@ nav {
 }
 
 .hero__heading {
-  font-size: 3.4rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
   margin-bottom: 2rem;
 }
 
-.products__section {
-  padding: 4rem 0;
+.categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.products__section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 5rem;
-  text-transform: capitalize;
-  letter-spacing: 0.1rem;
+.categories article {
+  padding: 2rem;
+}
+
+.categories article h2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.categories img {
+  padding-bottom: 2rem;
+  border-radius: 45% 55% 52% 48% / 30% 25% 55% 10%;
+  height: 400px;
+  margin: 0px 30px;
+}
+
+.categories img:hover {
+  border-radius: 100%;
 }
 
 .onimage {
