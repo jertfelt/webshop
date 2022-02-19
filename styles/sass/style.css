@@ -31,6 +31,11 @@
           justify-content: space-between;
 }
 
+.centered {
+  text-align: center;
+  padding: 2rem;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -844,38 +849,5 @@ nav {
 
 .categories img:hover {
   border-radius: 100%;
-}
-
-.onimage {
-  width: 100%;
-  padding: 2em;
-  position: relative;
-  background-color: #ece6d2;
-}
-
-.onimage__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.onimage__items p {
-  text-align: center;
-  font-size: 28px;
-}
-
-.onimage__button {
-  position: relative;
-  z-index: 7;
 }
 /*# sourceMappingURL=style.css.map */

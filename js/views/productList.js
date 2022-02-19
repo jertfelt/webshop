@@ -4,29 +4,28 @@ const qsCategory = queryString.get('category');
 
 let productList = [];
 
-function drawProducts() {
-  
-
+function drawProducts() {  
   //Draw title for current category.
   const categoryHeader = document.createElement("h2");
-  
-  categoryHeader.innerText = qsCategory;
+  categoryHeader.classList.add("text--green", "text--cursive", "centered");
+  categoryHeader.innerText = qsCategory +"kläder";
   productListSection.appendChild(categoryHeader);
 
   productList.forEach(product => {
     // Filter products for selected category.
     if(product.category === qsCategory) {
     const articleElem = document.createElement("article");
-    articleElem.classList.add("onimage");
-    articleElem.classList.add(`onimage__bg--${product.sys.id}`)
+    //adding css-classes
+    articleElem.classList.add("products__grid", `products__griditem--${product.sys.id}`);
     console.log(articleElem.classList)
     // Creates direct link to individual product
     const productLink = createURL("individualProductSection", `${product.category}` , `${product.sys.id}`);
 
     articleElem.innerHTML = `
     <a href="${productLink}">
-      <img alt="Produkt ${product.title}"         class="product__img" 
-      src="/${product.fields.image.fields.file.url}">
+      <img alt ="Produkt ${product.title}"   
+        class ="product__img" 
+        src="/${product.fields.image.fields.file.url}">
       </img>
     </a>
     <span class="onimage__items">
