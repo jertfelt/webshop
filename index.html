@@ -229,30 +229,36 @@ class="section">
     
   </section>
 
-  <section id="loginSection" 
-  class="section">
+
+<section id="loginSection">
+  <div class="login">
+    <div class="heading">
+      <h2>Logga in</h2>
+
+      <form id="loginForm">
+
+       <!--divs are for aesthetic reasons-->
+       <div class="input-group1">
+         <span class="input-group-addon"><i class="fa fa-user"></i></span>
+         <label for="emailLogin">E-postaddress</label><br>
+         <input type="text" class="form-control" id="emailLogin" placeholder="E-postaddress" required>
+
+       </div>
+     <!--divs are for aesthetic reasons-->
+       <div class="input-group1">
+         <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+         <label for="password">password</label><br>
+         <input type="password" class="form-control" id="password" placeholder="Lösenord" required>
+         </div>
+       
+         <button type="submit" id="loginButton">login</button> 
+         <button id="goToRegisterUserButton">register</button> 
+
+      </form>
+
   
-      
-        <h6>Logga in</h6>
-        <form action="#">
-    
-          <div class="input-group input-group-lg">
-            <span class="input-group-addon"><i class="fa fa-user"></i></span>
-            <input type="text" class="form-control" placeholder="Användarnamn">
-              </div>
-    
-            <div class="input-group input-group-lg">
-              <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-              <input type="password" class="form-control" placeholder="Lösenord">
-            </div>
-    
-            <button type="submit" >Logga in</button>
-            <button type="submit" >Registrera dig</button>
-          </form>
-        </div>
-    </div>
-    </section>
- 
+
+
   <section id="createUserSection"
   class="section">
     <h2>Skapa användare</h2>
@@ -312,15 +318,6 @@ class="section">
 
 </footer>
 
-
-
-<!-----------------------------------javascripts-->
-
-
-
-
-<script src="./js/utilities.js"></script>
-<script src="./js/views/main.js"></script>
 
 <!---buttons, querystring and nav:-->
 
