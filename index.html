@@ -83,18 +83,20 @@
         </a>
 
   <span class="nav__span">
-  <!--Användare klickbar-->
-  <span class="nav__user" id="userNavIcon"><i class="fa fa-user"></i></span>
 
   <!--varukorg klickbar-->
-        <span class="nav__cart--icon">
-          <img src="styles/sass/img/shop-cart.png" 
-          alt="Shopping cart" 
-          class="headercart headercart__imgfix">
-          <!--antal i varukorg -->
-          <span class="headercart headercart__showAmount"
-          id="headerCartAmount">0</span>
-        </span>
+  <span class="nav__cart--icon">
+    <img src="styles/sass/img/shop-cart.png" 
+    alt="Shopping cart" 
+    class="headercart headercart__imgfix">
+    <!--antal i varukorg -->
+    <span class="headercart headercart__showAmount"
+    id="headerCartAmount">0</span>
+  </span>
+
+  <!--Användare klickbar-->
+  <span class="nav__user input-group-addon" id="userNavIcon"><i class="fa fa-user"></i></span>
+
       </span>
     
       </div>
@@ -308,11 +310,18 @@ class="section hidden">
 
      <!--logga in --> 
      <aside>
-      <div id="userNavDropdown" class="hidden">
-       <p id="closeUserNavDropdown">X</p> <!--"close dropdown", Change this to a better symbol-->
-       <h2 id="userNavName" class="hidden"></h2>
+      <div id="userNavDropdown" class="hidden login__container">
+        <div class="login__dropdown">
+          <img src="styles/sass/img/closing.png" 
+          id="closeUserNavDropdown"
+          alt="Stäng varukorg"
+          class="login--close"/>
+      <span class="login__dropdown--content">
+      <!--"close dropdown", Change this to a better symbol-->
+       <h2 id="userNavName" class="hidden login--name"></h2>
        <button id="userNavLogInRegisterBtn">Logga in/Registrera</button>
        <button id="userNavLogOutBtn" class="hidden">Logga ut</button>
+      </span>
      </div>
    </aside>
 
