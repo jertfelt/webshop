@@ -1,5 +1,5 @@
-{ 
-  "products": [ 
+{
+  "products": [
     {
       "sys": { "id": "4" },
       "category": "Dam",
@@ -7,7 +7,11 @@
         "title": "Pants",
         "price": 219,
         "description": "Byxor gjord på återvunnen bomull, perfekt för myset hemma i covidtider",
-        "image": { "fields": { "file": { "url": "styles/sass/img/womens-traveller-pants.png" } } }
+        "image": {
+          "fields": {
+            "file": { "url": "styles/sass/img/womens-traveller-pants.png" }
+          }
+        }
       }
     },
     {
@@ -17,7 +21,9 @@
         "title": "I am hat",
         "price": 500,
         "description": "En varm och mysig handgjord virkad mössa, gjord av hantverkare på Gotland.",
-        "image": { "fields": { "file": { "url": "styles/sass/img/women-hat.png" } } }
+        "image": {
+          "fields": { "file": { "url": "styles/sass/img/women-hat.png" } }
+        }
       }
     },
     {
@@ -27,7 +33,11 @@
         "title": "Helt okej tröja",
         "price": 300,
         "description": "Virkad tröja med återvunnet material",
-        "image": { "fields": { "file": { "url": "styles/sass/img/women-sweater--knit.png" } } }
+        "image": {
+          "fields": {
+            "file": { "url": "styles/sass/img/women-sweater--knit.png" }
+          }
+        }
       }
     },
     {
@@ -37,7 +47,9 @@
         "title": "Pyjamas",
         "price": 700,
         "description": "En pyjamas i mjuk satäng, handvävd i Luleå.",
-        "image": { "fields": { "file": { "url": "styles/sass/img/men-pyjamas.png" } } }
+        "image": {
+          "fields": { "file": { "url": "styles/sass/img/men-pyjamas.png" } }
+        }
       }
     },
     {
@@ -47,7 +59,9 @@
         "title": "Byråkraten",
         "price": 700,
         "description": "En handvävd skjorta i ull, ullen är från Gotland.",
-        "image": { "fields": { "file": { "url": "styles/sass/img/man-shirt.png" } } }
+        "image": {
+          "fields": { "file": { "url": "styles/sass/img/man-shirt.png" } }
+        }
       }
     },
     {
@@ -57,7 +71,9 @@
         "title": "Save the Amazons",
         "price": 300,
         "description": "En hyllning till jordens största lungor. Ekologisk bomull.",
-        "image": { "fields": { "file": { "url": "styles/sass/img/man-tshirt.png" } } }
+        "image": {
+          "fields": { "file": { "url": "styles/sass/img/man-tshirt.png" } }
+        }
       }
     },
     {
@@ -67,7 +83,9 @@
         "title": "Handgjord tröja",
         "price": 600,
         "description": "Skön ylle, virkad för hand av lokala Gävlebor med ull från Gotland.",
-        "image": { "fields": { "file": { "url": "styles/sass/img/women-sweater.png" } } }
+        "image": {
+          "fields": { "file": { "url": "styles/sass/img/women-sweater.png" } }
+        }
       }
     },
     {
@@ -77,7 +95,9 @@
         "title": "Handgjord tröja",
         "price": 600,
         "description": "Skön ylle, virkad för hand av lokala Gävlebor med ull från Gotland.",
-        "image": { "fields": { "file": { "url": "styles/sass/img/baby-leggings.png" } } }
+        "image": {
+          "fields": { "file": { "url": "styles/sass/img/baby-leggings.png" } }
+        }
       }
     },
     {
@@ -87,7 +107,11 @@
         "title": "Regnbågsfärgad tröja",
         "price": 200,
         "description": "Gjord med återvunnen bomull och färgad med naturliga färgmedel.",
-        "image": { "fields": { "file": { "url": "styles/sass/img/baby-rainbow-shirt.png" } } }
+        "image": {
+          "fields": {
+            "file": { "url": "styles/sass/img/baby-rainbow-shirt.png" }
+          }
+        }
       }
     },
     {
@@ -97,7 +121,9 @@
         "title": "Gullig tröja",
         "price": 250,
         "description": "Återvunnen polyester och handritat motiv med inspiration från en barnbok.",
-        "image": { "fields": { "file": { "url": "styles/sass/img/baby-shirt.png" } } }
+        "image": {
+          "fields": { "file": { "url": "styles/sass/img/baby-shirt.png" } }
+        }
       }
     }
   ]
