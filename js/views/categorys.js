@@ -1,4 +1,6 @@
+const categoriesSection = document.querySelector(".products__grid--categories");
 
+//---------fetch from JSON and render:
 fetch("js\data\categories.json")
 .then (response => response.json())
 .then(data =>{
@@ -17,8 +19,10 @@ fetch("js\data\categories.json")
         console.log("image clicked...");
     }
     btnDam.onclick=()=>{
-        console.log("image clicked...");
+        console.log("button clicked...");
     }
+
+    categoriesSection.appendChild(categoryDam);
 
     const categoryHerr = document.getElementById("categoryTitelInfoHerr");
     categoryHerr.innerHTML= `
@@ -35,7 +39,7 @@ fetch("js\data\categories.json")
         console.log("image clicked...");
     }
     btnHerr.onclick=()=>{
-        console.log("image clicked...");
+        console.log("button clicked...");
     }
 
     const categoryBaby = document.getElementById("categoryTitelInfoBaby");
