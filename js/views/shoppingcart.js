@@ -43,9 +43,25 @@ const hideCart = () => {
 
 const createCart = (item) => {
 
+<<<<<<< HEAD
+const setCartValue = (cart) => {
+      setCartValue(cart);
+      // saveCart(cart);
+    }
+// }
+// const buyProduct = (prodID) => {
+//   addToCart(prodID);
+
+
+//  //for each cart item:
+//  addCartItem(item){
+//   let cartdiv = document.createElement("div");
+//   cartdiv.classList.add("cart-item-new");
+=======
   let cartDiv = document.createElement("div");
   cartDiv.innerHTML = `<p>HÄR SKA DET RENDERAS</p>
 `
+>>>>>>> main
 //   cartdiv.innerHTML = `
 //   <div class="cart__item" data-id=${item.id}>
 //       <img src=${item.image}
@@ -70,6 +86,18 @@ const createCart = (item) => {
 
 
 
+<<<<<<< HEAD
+    })
+  });
+
+//*-----------
+    // //method for cart array
+    // populateCart(cart){
+    //   //adding cart items to the cart
+    //   cart.forEach(item => this.addCartItem(item));
+    // }
+=======
+>>>>>>> main
 
 
   //*----------funktioner i varukorgen
