@@ -1,6 +1,26 @@
-//pictures inside borders
-.product__img--container {
-  position: relative;
-  overflow: hidden;
+
+.hidden {
+  display: none;
 }
 
+.show{
+  display: block;
+}
+
+.row{
+ display:flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.centered{
+  text-align: center;
+  padding:2rem;
+}
+
+.container{
+  &--margin{
+    margin-top:3rem;
+  }
+}
