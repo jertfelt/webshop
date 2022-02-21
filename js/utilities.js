@@ -56,4 +56,6 @@ document.querySelector(".list__nested--mother").addEventListener("click", () =>{
 const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
 //*-------Get cart from local storage
-const productsOrder = JSON.parse(localStorage.getItem("cart"));
+const getCart = () => {
+  return JSON.parse(localStorage.getItem("cart"));
+}
