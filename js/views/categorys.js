@@ -8,8 +8,13 @@ fetch(`js/data/categories.json`)
         <h3>${data.categories[0].fields.title}</h3>
         <h4>${data.categories[0].fields.description}</h4>
     `;
-    const imgDam = document.getElementById("categoryImgDam");
-    imgDam.src = data.categories[0].fields.image.fields.file.url;
+    const imgDam = document.getElementById("imgWrapperDam");
+    imgDam.innerHTML= `
+        <img src="${data.categories[0].fields.image.fields.file.url}" class="product__img" alt="produkt ${data.categories[0].fields.title}">
+    `;
+    imgDam.onclick=()=>{
+        console.log("image clicked...");
+    }
 
 
     const categoryHerr = document.getElementById("categoryTitelInfoHerr");
@@ -17,8 +22,13 @@ fetch(`js/data/categories.json`)
         <h3>${data.categories[1].fields.title}</h3>
         <h4>${data.categories[1].fields.description}</h4>
     `;
-    const imgHerr = document.getElementById("categoryImgHerr");
-    imgHerr.src = data.categories[1].fields.image.fields.file.url;
+    const imgHerr = document.getElementById("imgWrapperHerr");
+    imgHerr.innerHTML= `
+        <img src="${data.categories[1].fields.image.fields.file.url}" class="product__img" alt="produkt ${data.categories[1].fields.title}">
+    `;
+    imgHerr.onclick=()=>{
+        console.log("image clicked...");
+    }
 
 
     const categoryBaby = document.getElementById("categoryTitelInfoBaby");
@@ -26,7 +36,12 @@ fetch(`js/data/categories.json`)
         <h3>${data.categories[2].fields.title}</h3>
         <h4>${data.categories[2].fields.description}</h4>
     `;
-    const imgBaby = document.getElementById("categoryImgBaby");
-    imgBaby.src = data.categories[2].fields.image.fields.file.url;
+    const imgBaby = document.getElementById("imgWrapperBaby");
+    imgBaby.innerHTML= `
+        <img src="${data.categories[2].fields.image.fields.file.url}" class="product__img" alt="produkt ${data.categories[2].fields.title}">
+    `;
+    imgBaby.onclick=()=>{
+        console.log("image clicked...");
+    }
 })
 

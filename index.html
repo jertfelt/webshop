@@ -8,6 +8,7 @@
   <link rel="shortcut icon" type="image/jpg" href="styles\img\favicon-32x32.png"/>
   <link rel="stylesheet" href="styles\sass\style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"> 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
@@ -110,14 +111,8 @@
 
       <article class="product">
 
-        <div class="product__img--container">
-
-          <img id="categoryImgDam" src= ${product.image} 
-          alt="produkt ${product.title}" 
-          class="product__img">
-
-          </a> 
-
+        <div id="categoryDam" class="product__img--container">
+          <div id="imgWrapperDam"></div>
           <div class="products__items">
             <div id="categoryTitelInfoDam" class="products-items--row">
             </div>
@@ -126,13 +121,7 @@
 
 
         <div class="product__img--container">
-
-          <img id="categoryImgHerr" src= ${product.image} 
-          alt="produkt ${product.title}" 
-          class="product__img">
-
-          </a> 
-          
+          <div id="imgWrapperHerr"></div>
           <div class="products__items">
             <div id="categoryTitelInfoHerr" class="products-items--row">
             </div>
@@ -141,13 +130,7 @@
 
 
         <div class="product__img--container">
-
-          <img id="categoryImgBaby" src= ${product.image} 
-          alt="produkt ${product.title}" 
-          class="product__img">
-
-          </a> 
-          
+          <div id="imgWrapperBaby"></div>
           <div class="products__items">
             <div id="categoryTitelInfoBaby" class="products-items--row">
             </div>
@@ -263,25 +246,28 @@
   </section>
   </aside> -->
 
-<footer>
+<footer class="footer">
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
 
+      </div>
+    </div>
+  </section>
 </footer>
 
 <!--javascripts-->
-<<<<<<< HEAD
-<script type="text/javascript" 
-src="js/utilities.js"></script>
-
 
 <script src="js/views/categorys.js"></script>
 <!-- -----------------------------------------------------------------------------------------------------------------c -->
-=======
 <script 
 src="/js/utilities.js"></script>
 <script src="./js/views/main.js"></script>
 <script src="./js/views/changepage.js"></script>
 <script src="./js/views/pagewidenavigationbuttons.js"></script>
 <script src="./js/views/orderConfirmation.js"></script>
->>>>>>> 971572bd4a5e8dd96f3e51f216bf4f7ad324e01c
 </body>
 </html>
