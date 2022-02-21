@@ -19,67 +19,114 @@
   <header>
     <nav class="nav__top">
         <span class="nav__mobile-menu">
-          <img src="styles\sass\img\Hamburger_icon.svg.png" 
+          <img 
+          src="styles\sass\img\Hamburger_icon.svg.png" 
           alt="Mobile menu" 
           id="menuToggle"
           class="nav__button">
         </span>
 
 <!--dropdown meny-->
-  <ul id="dropDownMenu"  
-      class="drop-down">
-     <div class="mainmenu__mobile">
-    <li>
-      <a href="index.html" id="homeLinkNav"> <!--eventuellt lägg in klassen "active", men gör då js så den kan ändras sen-->
-        Hem
-      </a>
-    </li>
-    <li>
-      <a href="index.html">Varukorg</a> 
-    </li>
-    <li>Kategori
-    <ul class="list__nested"> <!--start of nested category-->
-      <li>
-        <a href="index.html"
-        id="damLinkNav">
-        Dam</a> 
-      </li>
-      <li>
-        <a href="index.html"
-        id="herrLinkNav">
-        Herr</a> 
-      </li>
-      <li>
-       <a href="index.html"
-       id="babyLinkNav">
-       Baby</a> 
-      </li>
-    </ul>
-  </li>
-    <li>
-      <a href="index.html"
-      id="loginLinkNav"
-      >Logga in/Registrera dig</a> 
-    </li>
-  </div>
-  </ul>
+      <ul id="dropDownMenu"  
+          class="dropdown">
+        <div class="mainmenu__mobile">
+          <span class="dropdown--close">
+            <img 
+            src="styles/sass/img/closing.png" 
+            alt="Stäng meny"
+            class="dropdown--close"
+            id="closeDropDown"/>
+          </span>
+        <li>
+          <a 
+          href="index.html" 
+          id="homeLinkNav"> 
+            Hem
+          </a>
+        </li>
+        <li>
+          <a 
+          href="index.html"
+          id="cartLinkNav">
+          Varukorg
+          </a> 
+        </li>
+        <li class="list__nested--mother">
+          Kategorier
+          <!--start of nested category-->
+          <ul class="list__nested hidden"> 
+
+            <li>
+              <a 
+              href="index.html"
+              id="damLinkNav">
+              Dam
+              </a> 
+            </li>
+
+            <li>
+              <a href="index.html"
+              id="herrLinkNav">
+              Herr</a> 
+            </li>
+
+            <li>
+            <a 
+            href="index.html"
+            id="babyLinkNav">
+            Baby
+            </a> 
+            </li>
+
+          </ul>
+        </li>
+        <li>
+          <a 
+          href="index.html"
+          id="loginLinkNav"
+          >Logga in/ Registrera dig
+          </a> 
+        </li>
+      </div>
+      </ul>
 
   <!--logotyp-->
-  <a href="index.html"
-  class="event__link"
-  id="logoLinkNav">
-          <img src="styles/sass/img/Logga.png" 
+      <a 
+      href="index.html"
+      class="event__link"
+      id="logoLinkNav">
+        <img 
+        src="styles/sass/img/Logga.png" 
         alt="logotype Ekoline" 
         class="nav__logotype"/>
-        </a>
+      </a>
 
+      <span 
+      class="nav__span">
   <!--varukorg klickbar-->
-        <span class="nav-icon">
-          <img src="styles/sass/img/shop-cart.png" 
-          alt="Shopping cart" 
-          class="nav__button button__cart">
-          <!--antal i varukorg (siffra som räknar upp)-->
-          <span class="cart-items cart-btn">0</span>
+        <span 
+        class="nav__cart--icon">
+            <img 
+            src="styles/sass/img/shop-cart.png" 
+            alt="Shopping cart" 
+            class="headercart headercart__imgfix">
+
+            <!--antal i varukorg -->
+            <span 
+            class="headercart headercart__showAmount"
+            id="headerCartAmount">
+            0
+            </span>
+          </span>
+
+          <!--Användare klickbar-->
+          <span 
+          class="nav__user input-group-addon" 
+          id="userNavIcon">
+            <i 
+            class="fa fa-user">
+            </i>
+          </span>
         </span>
       </div>
     </nav>
@@ -87,86 +134,141 @@
   
   <main>
     <!--välkommen-->
-    <section class="hero section"
+    <section class="homepage section"
     id="homepageSection">
-      <div class="hero__content">
-        <h1 class="hero__heading">Välkommen till Ekoline</h1>
-        <p class="text--bold text--m"> Genvägen till en mer hållbar shopping. </p>
-        <a href="#categories">
-          <button class="button__hero"
-          id="buttonHero">
-            Se våra produkter</button></a>
+    <div class="hero">
+      <div class="hero__transparentBack">
+        <div class="hero__content">
+          <h1 class="text--second text--cursive text--green hero__heading">
+            Välkommen till Ekoline</h1>
+          <p class="text--primary text--bold text--m"> 
+            Genvägen till en mer hållbar shopping. </p>
+          <button 
+            class="button__hero"
+            id="buttonHero">
+            Se våra produkter
+          </button>
+        </div>
+      </div>
+    </div>
+
+      <section id="categoriesSection" 
+      class="categories">
+        <article>
+          <h2 class="text--primary text--cursive"> Vårt motto:</h2>
+          <p class="text--m">
+            Vi är en ekologisk, hållbar butik som fokuserar på det handgjorda, naturvänliga och unika.
+          </p>
+        </article>
+        <article class="row">
+        <img src="styles/sass/img/monstrera.png">
+        <img src="styles/sass/img/1024px-Gotlandsk_pelsfaar.jpg">
+      </article>
+        <article>
+          <p class="text--m">
+           Våra produkter är lokalt producerade i Sverige, med återvunna eller lokalproducerat material.
+          </p>
+        </article>
+
+        <div class="products__grid">
+
+        <article class="product">
+
+          <div id="categoryDam" class="product__img--container">
+            <div id="imgWrapperDam"></div>
+            <div class="products__items">
+              <div id="categoryTitelInfoDam" class="products-items--row">
+              </div>
+            </div>
           </div>
+  
+  
+          <div class="product__img--container">
+            <div id="imgWrapperHerr"></div>
+            <div class="products__items">
+              <div id="categoryTitelInfoHerr" class="products-items--row">
+              </div>
+            </div>
+          </div>
+  
+  
+          <div class="product__img--container">
+            <div id="imgWrapperBaby"></div>
+            <div class="products__items">
+              <div id="categoryTitelInfoBaby" class="products-items--row">
+              </div>
+            </div>
+          </div>
+        
+        </article>  
+
+        </div>
+
+      </section>
+    
+      <section class="products__grid">
+    <!--hit ska den dynamiska HTML:en-->
+  
+          <article class="category">
+            <div class="product__img--container">
+              <img id="categoryImgDam" 
+              src= ${product.image} 
+              alt="produkt ${product.title}" 
+              class="category__img">
+              
+    
+              <div class="products__items">
+                <div id="categoryTitelInfoDam" 
+                class="products-items--row">
+                </div>
+              </div>
+            </div>
+    
+    
+            <div class="category__img--container">
+    
+              <img id="categoryImgHerr" 
+              src="styles\sass\img\men-clothing-banner.png"
+              alt="produkt ${product.title}" 
+              class="category__img">
+    
+    
+              <div class="category__items">
+                <div id="categoryTitelInfoHerr" class="category-items--row">
+                </div>
+              </div>
+            </div>
+    
+    
+            <div class="category__img--container">
+    
+              <img id="categoryImgBaby" src= ${category.image} 
+              alt="produkt ${product.title}" 
+              class="category__img">
+    
+            
+              <div class="category__items">
+                <div id="categoryTitelInfoBaby" class="category-items--row">
+                </div>
+              </div>
+            </div>
+          </article>  
+        </section>
     </section>
 
-
-  <section class="section categories__section" 
-          id="categoriesSection">
-    <span>
-      <h2> Våra produkter:</h2>
-      <p class="text--s">Vi är en ekologisk, hållbar butik som fokuserar på det handgjorda, naturvänliga och unika.</p>
-    </span>
-
-    <div class="categorieshomepage__grid">
-
-      <!--hit ska den dynamiska HTML:en-->
-      <!--@Celina, fungerar category.image? Annars byt till product.title-->
-      <article class="category">
-        <div class="category__img--container">
-          <img id="categoryImgDam" src= ${category.image} 
-          alt="produkt ${product.title}" 
-          class="category__img">
-          
-
-          <div class="products__items">
-            <div id="categoryTitelInfoDam" class="products-items--row">
-            </div>
-          </div>
-        </div>
-
-
-        <div class="category__img--container">
-
-          <img id="categoryImgHerr" src= ${category.image} 
-          alt="produkt ${product.title}" 
-          class="category__img">
-
-          
-          
-          <div class="category__items">
-            <div id="categoryTitelInfoHerr" class="category-items--row">
-            </div>
-          </div>
-        </div>
-
-
-        <div class="category__img--container">
-
-          <img id="categoryImgBaby" src= ${category.image} 
-          alt="produkt ${product.title}" 
-          class="category__img">
-
-         
-          <div class="category__items">
-            <div id="categoryTitelInfoBaby" class="category-items--row">
-            </div>
-          </div>
-        </div>
-      </article>  
-    </div>
+  <section id="productListSection" 
+  class="section hidden">
+  
   </section>
 
-  <section id="productListSection" 
-  class="section">
-</section>
-
   <section id="individualProductSection" 
-  class="">
+  class="section hidden">
   </section>
 
 <!--varor + logga in/skriv in på formulär-->
-<section id="orderConfirmationSection"
-class="section">
+  <section id="orderConfirmationSection"
+class="section hidden">
+
   <article id="orderProductsSummation">
     <h2>Dina Produkter:</h2>
   </article>
@@ -193,57 +295,46 @@ class="section">
     
       <label for="commentsOrderConfirmation" class="hidden">Övriga kommentarer</label>
       <textarea name="commentsOrderConfirmation" id="commentsOrderConfirmation" cols="30" rows="10" placeholder="Övriga kommentarer"></textarea>
-      <button type="submit" id="submitBtnOrderConfirmation" class="hidden">Nästa</button>
+      <button type="submit" id="submitBtnOrderConfirmation">Nästa</button>
       <button id="cancelBtnOrderConfirmation">Avbryt</button>
     </form>
   </article>
-</section>
+  </section>
 
 <!--kvitto dropdown-->
-<section id="receiptSection"
-class="section">
-  
-</section>
+  <section id="receiptSection"
+  class="section hidden">
+    
+  </section>
 
-<section id="loginSection">
-  <div class="login">
-    <div class="heading">
-      <h6>Logga in</h6>
-      <form action="#">
-  
-        <div class="input-group input-group-lg">
-          <span class="input-group-addon"><i class="fa fa-user"></i></span>
-          <input type="text" class="form-control" placeholder="Användarnamn">
-            </div>
+<section id="loginSection" class="section hidden">
+  <div class="login__box">
+      <h2>Logga in</h2>
+      <form id="loginForm">
 
-          <div class="input-group input-group-lg">
-            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-            <input type="password" class="form-control" placeholder="Lösenord">
-          </div>
-  
-          <button type="submit" >Logga in</button>
-          <button type="submit" >Registrera dig</button>
-         </form>
+       <!--divs are for aesthetic reasons-->
+       <div class="input-group1">
+         <span class="input-group-addon"><i class="fa fa-user"></i></span>
+         <label for="emailLogin">E-postaddress</label><br>
+         <input type="text" class="form-control" id="emailLogin" placeholder="E-postaddress" required>
+
        </div>
-   </div>
- 
-<section id="loginSection"
-class="section">
-
-            <button type="submit" >Logga in</button>
-            <button type="submit" >Registrera dig</button>
-           </form>
+     <!--divs are for aesthetic reasons-->
+       <div class="input-group1">
+         <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+         <label for="password">password</label><br>
+         <input type="password" class="form-control" id="password" placeholder="Lösenord" required>
          </div>
-     </div>
+       
+         <button type="submit" id="loginButton">login</button> 
+         <button id="goToRegisterUserButton">register</button> 
 
-
-
-</section>
-
-
+      </form>
+   </div>
+   </section>
 
   <section id="createUserSection"
-  class="section">
+  class="section hidden">
     <h2>Skapa användare</h2>
     <p>Fyll i din information här:</p>
     <form id="createUserForm">
@@ -268,43 +359,72 @@ class="section">
 
   </main>
 
-<!--
-<aside id="cartSection">  
-<section class="cart__overlay">
-  <div class="cart">
-    <span class="cart--close">
-      <img src="styles/sass/img/closing.png" alt="Close"/>
-    </span>
-    <h2>Din kundvagn:</h2>
-    <div class="cart__content">
-   
-    </div>
-    <div class="cart__footer">
-      <h3>Totalt: <span class="cart-total">0</span> SEK</h3>
-      <button class="cart--clear banner-btn">Rensa kundvagn</button>
-    </div>
-  </div>
-</section>
-</aside> -->
+<!--varukorgen-->
+  <aside>  
+    <section class="cart__container cart__hidden">
+      <div class="cart__content">
+          <img src="styles/sass/img/closing.png" 
+          alt="Stäng varukorg"
+          class="cart--close dropdown--close"/>
+       
+        <h2>Din kundvagn:</h2>
+        <article id="cartDynamicContent">
+      
+        </article>
+        <article class="cart__footer">
+          <h3>Totalt: 
+            <span id="cartTotal">
+              0</span> SEK
+            </h3>
+          <span class="button__span">
+          <button id="clearCart" 
+          class="button__dropdown">Rensa kundvagn</button>
+          <button id="toConfirmation" class="button__dropdown">Bekräfta ditt köp</button>
+        </span>   
+        </article>
+      </div>
+    </section>
+  </aside>
+
+     <!--logga in --> 
+     <aside>
+      <div id="userNavDropdown" class="hidden login__container">
+        <div class="login__dropdown">
+          <img src="styles/sass/img/closing.png" 
+          id="closeUserNavDropdown"
+          alt="Stäng varukorg"
+          class="dropdown--close"/>
+        <span class="login__dropdown--content">
+        <h2 id="userNavName" class="hidden login--name"></h2>
+        <button id="userNavLogInRegisterBtn" class="button__dropdown">Logga in/Registrera</button>
+        <button id="userNavLogOutBtn" class="hidden button__dropdown">Logga ut</button>
+        </span>
+     </div>
+   </aside>
 
 <footer>
 
 </footer>
 
-<!--javascripts-->
 
-<script src=".js/utilities.js"></script>
-<script src=".js/views/categorys.js"></script>
-<script src="/js/utilities.js"></script>
-<script src="/js/views/main.js"></script>
-<script src="/js/views/changepage.js"></script>
-<script src="/js/views/pagewidenavigationbuttons.js"></script>
-<script src="/js/views/products.js"></script>
-<script src="./js/views/main.js"></script>
+<!---buttons, querystring and nav:-->
+
 <script src="./js/views/changepage.js"></script>
 <script src="./js/views/pagewidenavigationbuttons.js"></script>
+<script src="./js/utilities.js"></script>
+<script src="./js/views/userNavDropdown.js"></script>
+  
+<!--product and shopping cart functionality--->
+
+<script src="./js/views/productList.js"></script>
+<script src="./js/views/product.js"></script>
+<script src="./js/views/shoppingcart.js"></script>
 <script src="./js/views/orderConfirmation.js"></script>
-<script src="./js/views/createAccount.js"></script>
+
+
+<!--create account and log in--->
+<script src="./js/views/createAccount.js"></script> 
+<script src="./js/views/login.js"></script>
 
 </body>
 </html>
