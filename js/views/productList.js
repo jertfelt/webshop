@@ -62,7 +62,7 @@ async function getProductList() {
   
   productList = [...data.products];
   drawProducts();  
-  buyProduct();
+  setAddToCartClick(productList);
 }
 
 getProductList();

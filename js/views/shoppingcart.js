@@ -78,14 +78,16 @@ const createCart = (item) => {
 
 //*-----------------ADD TO CART FUNCTION
 // Wrapper funktion för att köra den efter HTML har ritats
-const buyProduct = () => {
+const setAddToCartClick = (productList) => {
   // Hämtar alla köp-knappar
   const addToCartButtons = document.querySelectorAll(".addToCartBtn");
 
   // Sparar/uppdaterar varukorgen i local storage
   const addToCart = (prodID) => {
-    const existingProducts = localStorage.getItem("cart");
+    // Hittar rätt produkt och hämtar datan.
+    const selectedProductData = productList.find(product => product.sys.id === prodID);
     // Kollar om det redan finns något i local storage
+    const existingProducts = localStorage.getItem("cart");
     if (existingProducts) {
       // Lägger till produkterna från local storage till array
       const cart = JSON.parse(existingProducts);
@@ -93,19 +95,28 @@ const buyProduct = () => {
       const existingProduct = cart.find(product => product.sys.id === prodID);
 
       if (existingProduct) {
-        // Uppdaterar cart med rätt antal (quantity).
+        // Uppdaterar cart med rätt antal (quantity) och totala priset.
         const updatedProducts = cart.map(product => {
           if (product.sys.id === prodID) {
             product.quantity++;
+            product.amount = product.fields.price * product.quantity;
           }
           return product;
         })
         setCartinLocalStorage(updatedProducts);
         return;
       } else { //Skapa ny produkt och lägger till i array.
-        cart.push({
+        cart.push(        {
           quantity: 1,
-          sys: { id: prodID }
+          amount: selectedProductData.fields.price,
+          sys: { id: selectedProductData.sys.id },
+          category: selectedProductData.category,
+          fields: {
+            title: selectedProductData.fields.title,
+            price: selectedProductData.fields.price,
+            description: selectedProductData.fields.description,
+            image: { fields: { file: { url: selectedProductData.fields.image.fields.file.url } } }
+          }
         });
         setCartinLocalStorage(cart);
         return;
@@ -115,7 +126,15 @@ const buyProduct = () => {
       const newCartWithProduct = [
         {
           quantity: 1,
-          sys: { id: prodID }
+          amount: selectedProductData.fields.price,
+          sys: { id: selectedProductData.sys.id },
+          category: selectedProductData.category,
+          fields: {
+            title: selectedProductData.fields.title,
+            price: selectedProductData.fields.price,
+            description: selectedProductData.fields.description,
+            image: { fields: { file: { url: selectedProductData.fields.image.fields.file.url } } }
+          }
         }
       ]
       setCartinLocalStorage(newCartWithProduct);
