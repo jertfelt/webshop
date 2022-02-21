@@ -43,25 +43,9 @@ const hideCart = () => {
 
 const createCart = (item) => {
 
-<<<<<<< HEAD
-const setCartValue = (cart) => {
-      setCartValue(cart);
-      // saveCart(cart);
-    }
-// }
-// const buyProduct = (prodID) => {
-//   addToCart(prodID);
-
-
-//  //for each cart item:
-//  addCartItem(item){
-//   let cartdiv = document.createElement("div");
-//   cartdiv.classList.add("cart-item-new");
-=======
   let cartDiv = document.createElement("div");
   cartDiv.innerHTML = `<p>HÄR SKA DET RENDERAS</p>
 `
->>>>>>> main
 //   cartdiv.innerHTML = `
 //   <div class="cart__item" data-id=${item.id}>
 //       <img src=${item.image}
@@ -86,18 +70,6 @@ const setCartValue = (cart) => {
 
 
 
-<<<<<<< HEAD
-    })
-  });
-
-//*-----------
-    // //method for cart array
-    // populateCart(cart){
-    //   //adding cart items to the cart
-    //   cart.forEach(item => this.addCartItem(item));
-    // }
-=======
->>>>>>> main
 
 
   //*----------funktioner i varukorgen
@@ -118,15 +90,15 @@ const setAddToCartClick = (productList) => {
     // Hittar rätt produkt och hämtar datan.
     const selectedProductData = productList.find(product => product.sys.id === prodID);
     // Hämtar productsOrder array från utilities
-    existingProducts = productsOrder;
+    const existingProductList = getCart();
     // Kollar om existingProducts array är inte tom
-    if (existingProducts !== null) {
+    if (existingProductList !== null) {
       // Kollar om produkten redan finns
-      const existingProduct = cart.find(product => product.sys.id === prodID);
+      const existingProduct = existingProductList.find(product => product.sys.id === prodID);
 
       if (existingProduct) {
         // Uppdaterar cart med rätt antal (quantity) och totala priset.
-        const updatedProducts = cart.map(product => {
+        const updatedProducts = existingProductList.map(product => {
           if (product.sys.id === prodID) {
             product.quantity++;
             product.amount = product.fields.price * product.quantity;
@@ -136,7 +108,9 @@ const setAddToCartClick = (productList) => {
         setCartinLocalStorage(updatedProducts);
         return;
       } else { //Skapa ny produkt och lägger till i array.
-        cart.push(        {
+        const newProducts = existingProductList;
+        
+        newProducts.push({
           quantity: 1,
           amount: selectedProductData.fields.price,
           sys: { id: selectedProductData.sys.id },
@@ -148,7 +122,7 @@ const setAddToCartClick = (productList) => {
             image: { fields: { file: { url: selectedProductData.fields.image.fields.file.url } } }
           }
         });
-        setCartinLocalStorage(cart);
+        setCartinLocalStorage(newProducts);
         return;
       }
 
