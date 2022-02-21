@@ -1,4 +1,4 @@
-const queryParams = new URLSearchParams(location.search);
+
 
 const searchSection = document.getElementById("searchSection");
 let searchResult = [];
