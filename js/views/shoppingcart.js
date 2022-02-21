@@ -107,6 +107,7 @@ const buyProduct = () => {
           quantity: 1,
           sys: { id: prodID }
         });
+        setCartinLocalStorage(cart);
         return;
       }
 
