@@ -28,7 +28,6 @@
 }
 
 .product{
- 
   &__img {
   border-radius: 29px;
   width: 100%;
@@ -46,12 +45,13 @@
   }
 } 
   &__listofitems{
-    width:200px;
+    width:100%;
+    margin:2rem;
   }
 
   &__box{
     @include flexBox(column,center,space-between);
-    background-color: rgba(236, 230, 210, .8);
+    background-color: $color-sand;
     padding: 2rem;
     border-radius:59px;
 
@@ -66,7 +66,7 @@
   }
   &__box:hover{
     transition: all 100ms ease-in;
-    background-color: $color-white;
+    background-color: rgba(242, 234, 3, .7);
   }
   
   &__individual{
@@ -80,6 +80,9 @@
 
 .outer{
   position: relative;
+  @include breakpoint(small-max-m) {
+
+  }
 }
 
 .inner{
@@ -88,4 +91,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index:2;
+  @include breakpoint(small-max-m) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index:2;
+   
+  }
 }
