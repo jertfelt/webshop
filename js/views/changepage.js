@@ -1,6 +1,6 @@
-///------------Query strings function (show different sections) 
+//?------------Query strings function (show different sections) 
 
-//-variables
+//*---------------------variables
 
 const homepageSection = document.getElementById("homepageSection");
 const categoriesSection = document.getElementById("categoriesSection");
@@ -39,7 +39,7 @@ const createURL  = (sectionName, categoryName, prodID) => {
   }
   // Lägger till produkt ID om angiven
   if (prodID) {
-    search_params.set('prod', prodID);
+    search_params.set('id', prodID);
   }
   // Ger en sträng med komplett URL
   return url.toString();
@@ -47,19 +47,26 @@ const createURL  = (sectionName, categoryName, prodID) => {
 
 const setActivePage = () => {
   let url = new URL(window.location.href);
-  const search_params = url.searchParams;
+ 
+  let search_params = url.searchParams;
+  console.log(search_params); ///blir tom vid start  (första gången)
+
   const currentSection = search_params.get("section");
+  console.log(currentSection) // blir null vid start (första gången)
 
-  //döljer och visar rätt sektion
-  if (currentSection){
+ //ändrat funktion och for loop - default är att allt utom homepageSection är dolt i början (så om man öppnar fönstret första gången så syns bara homepage, inte allt)
+ 
+ if (currentSection) {
   sections.forEach(section => {
-    section.classList.add("hidden");
-
+    
     if (section.id === currentSection){
-     section.classList.remove("hidden");
-   }
+      if (section.id !== "homepageSection"){
+     
+        homepageSection.classList.add("hidden");
+      }
+      section.classList.remove("hidden");
+    }
+  })}
   }
-  )}
-};
-
+ 
 setActivePage();
