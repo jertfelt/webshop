@@ -1,7 +1,3 @@
-const testUser = {
-  name: "hej"
-}
-localStorage.setItem("loggedInUser", JSON.stringify(testUser));
 
 //Variables
 
