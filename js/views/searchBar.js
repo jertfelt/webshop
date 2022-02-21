@@ -1,5 +1,4 @@
 
-
 const searchSection = document.getElementById("searchSection");
 let searchResult = [];
 const loadSearchResult = async () => {
