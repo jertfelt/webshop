@@ -1,6 +1,5 @@
 
-
-fetch(`.js/data/categories.json`)
+fetch("js\data\categories.json")
 .then (response => response.json())
 .then(data =>{
     const categoryDam = document.getElementById("categoryTitelInfoDam");
