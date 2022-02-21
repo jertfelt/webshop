@@ -22,9 +22,8 @@ const createUser = (email, password, userName, street, postalCode, town, tel) =>
 
 //Retrives data from form and sends it to createUser();
 
-document.querySelector("#submitBtnCreateUser").addEventListener("submit", (e) => {
-  e.preventDefault();
-
+document.querySelector("#createUserForm").addEventListener("submit", (e) => {
+  e.preventDefault()
   const emailCreateAccount = document.querySelector("#emailCreateUser").value;
   const passWordCreateAccount = document.querySelector("#passwordCreateUser").value;
   const userNameCreateAccount = document.querySelector("#usernameCreateUser").value;
@@ -51,7 +50,6 @@ document.querySelector("#submitBtnCreateUser").addEventListener("submit", (e) =>
         streetCreateAccount,  postalCodeCreateAccount, townCreateAccount, telCreateAccount);
   
     localStorage.setItem("users", JSON.stringify(usersArr));
-    console.log(usersArr);
-   //confirmAndExitCreateUser();
+    confirmAndExitCreateUser();
   }
 });
