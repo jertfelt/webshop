@@ -3,12 +3,11 @@ const searchSection = document.getElementById("searchSection");
 let searchResult = [];
 const loadSearchResult = async () => {
   //getting search input field value
-  
   let source = document.getElementById("searchBar");
   const inputHandler = async (e) => {
     source = e.target.value;
     try {
-      const res = await fetch("./js/data/products.json");
+      const res = await fetch("/js/data/products.json");
       searchResult = await res.json();
       //calling the function to get results when the input word is more than 3 letters
       if (source.length >= 3) {
@@ -23,7 +22,6 @@ const loadSearchResult = async () => {
 
 const displaySearchResult = (res, source) => {
   //mapping all products and checking if the product title includes the input word
-
   const htmlString = res.products
     .map((produx) => {
       if (produx.fields.title.toLowerCase().includes(source.toLowerCase())) {
@@ -48,12 +46,10 @@ const displaySearchResult = (res, source) => {
                 </li>
                 </ul>
             </a>
-
         `;
       }
     })
     .join("");
-
   const searchResults = document.getElementById("searchSection");
   searchResults.innerHTML = htmlString;
 };
