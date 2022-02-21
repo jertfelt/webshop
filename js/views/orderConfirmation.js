@@ -124,7 +124,7 @@ yyy();*/
 
   //Submit button
 
-  document.getElementById("submitBtnOrderConfirmation").addEventListener("click", (e) => {
+  document.getElementById("submitBtnOrderConfirmation").addEventListener("onClick", (e) => {
     e.preventDefault();
     saveOrderDetails();
     confirmOrderConfirmationBtn();
