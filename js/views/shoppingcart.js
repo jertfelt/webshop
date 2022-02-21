@@ -13,6 +13,7 @@ const cartContainer = document.querySelector(".cart__container");
 
 //det som renderas ut 
 const cartContent = document.querySelector("#cartDynamicContent");
+const cartTotal = document.getElementById("cartTotal");
 
 //räknaren i headern (T)
 let cartCounterHeader = document.querySelector(".headercart__showAmount");
@@ -73,7 +74,9 @@ const createCart = (item) => {
 
   //*----------funktioner i varukorgen
 
+const getTotalPriceOrder = () => {
 
+}
 
 
 //*-----------------ADD TO CART FUNCTION
@@ -86,11 +89,10 @@ const setAddToCartClick = (productList) => {
   const addToCart = (prodID) => {
     // Hittar rätt produkt och hämtar datan.
     const selectedProductData = productList.find(product => product.sys.id === prodID);
-    // Kollar om det redan finns något i local storage
-    const existingProducts = localStorage.getItem("cart");
-    if (existingProducts) {
-      // Lägger till produkterna från local storage till array
-      const cart = JSON.parse(existingProducts);
+    // Hämtar productsOrder array från utilities
+    existingProducts = productsOrder;
+    // Kollar om existingProducts array är inte tom
+    if (existingProducts !== null) {
       // Kollar om produkten redan finns
       const existingProduct = cart.find(product => product.sys.id === prodID);
 
