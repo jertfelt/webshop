@@ -4,7 +4,6 @@ let usersArr = JSON.parse(localStorage.getItem("users"));
 if (usersArr === null) {
   usersArr = [];
 }
-
 //Creates user and saves it in local storage
 
 const createUser = (email, password, userName, street, postalCode, town, tel) => {
@@ -51,8 +50,8 @@ document.querySelector("#submitBtnCreateUser").addEventListener("submit", (e) =>
       createUser(emailCreateAccount, passWordCreateAccount, userNameCreateAccount, 
         streetCreateAccount,  postalCodeCreateAccount, townCreateAccount, telCreateAccount);
   
-    localStorage.setItem("users", JSON.stringify(usersArr));  
+    localStorage.setItem("users", JSON.stringify(usersArr));
+    console.log(usersArr);
    //confirmAndExitCreateUser();
   }
-  console.log(9);
 });
