@@ -89,7 +89,6 @@
         </li>
       </div>
       </ul>
-      
 
   <!--logotyp-->
       <a 
@@ -102,14 +101,16 @@
         class="nav__logotype"/>
       </a>
 
+      <!-- sökfunktion -->
       <div class="searchWrapper">
         <label for="searchBar">Search product</label>
         <input type="text" name="searchBar" id="searchBar" placeholder="Search product">
-  </div>
+  </div> 
+
+
 
       <span 
       class="nav__span">
-
   <!--varukorg klickbar-->
         <span 
         class="nav__cart--icon">
@@ -230,21 +231,12 @@
 
   <section id="productListSection" 
   class="section hidden">
-
-  <!-- eventuellt lägga in två sökbarer, och fånga dem med classes ("searchBar")-->
-  <!-- <div class="searchWrapper">
-    <label for="searchBar">Search product</label>
-    <input type="text" name="searchBar" id="searchBar" placeholder="Search product">
-</div> -->
-
+  
   
   </section>
 
   <section id="individualProductSection" 
   class="section hidden">
-  </section>
-  <section id="searchSection" 
-  class="">
   </section>
 
 <!--varor + logga in/skriv in på formulär-->
@@ -277,7 +269,7 @@ class="section hidden">
     
       <label for="commentsOrderConfirmation" class="hidden">Övriga kommentarer</label>
       <textarea name="commentsOrderConfirmation" id="commentsOrderConfirmation" cols="30" rows="10" placeholder="Övriga kommentarer"></textarea>
-      <button type="submit" id="submitBtnOrderConfirmation" class="hidden">Nästa</button>
+      <button type="submit" id="submitBtnOrderConfirmation">Nästa</button>
       <button id="cancelBtnOrderConfirmation">Avbryt</button>
     </form>
   </article>
@@ -321,7 +313,8 @@ class="section hidden">
     <p>Fyll i din information här:</p>
     <form id="createUserForm">
       <label for="usernameCreateUser" class="hidden">Användarnamn</label>
-      <input type="text" name="usernameCreateUser" id="usernameCreateUser" required placeholder="Användarnamn">
+      <input 
+      type="text" name="usernameCreateUser" id="usernameCreateUser" required placeholder="Användarnamn">
       <label for="passwordCreateUser" class="hidden">Lösenord</label>
       <input type="password" name="passwordCreateUser" id="passwordCreateUser" required placeholder="Lösenord">
       <label for="streetCreateUser" class="hidden">Gatuadress</label>
@@ -394,14 +387,13 @@ class="section hidden">
 <script src="./js/views/changepage.js"></script>
 <script src="./js/views/pagewidenavigationbuttons.js"></script>
 <script src="./js/utilities.js"></script>
-<script src="./js/views/userLoginNavDropdown.js"></script>
+<script src="./js/views/userNavDropdown.js"></script>
   
 <!--product and shopping cart functionality--->
 
 <script src="./js/views/productList.js"></script>
 <script src="./js/views/product.js"></script>
 <script src="./js/views/shoppingcart.js"></script>
-<script src="./js/views/searchBar.js"></script>
 <script src="./js/views/orderConfirmation.js"></script>
 
 
