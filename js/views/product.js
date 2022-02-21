@@ -29,9 +29,7 @@ const productCreator = (product)=>{
       </span>
     </div>
     `
-    //  <article>
-    // <div>
-    // <h4>Vill du se mer? (obs ej obligatoriskt, bara mån av tid: rendera ut productlist för den här kategorin, i miniatyr?</h4> eller typ bläddra till nästa? 
+    
     
     sectionProduct.appendChild(articleProduct);
 }
