@@ -24,6 +24,7 @@ localStorage.setItem("totalPriceOrder", JSON.stringify(100));
 
 
 //Get cart from local storage
+//Remove later
     const productsOrder = JSON.parse(localStorage.getItem("cart"));
 
 
