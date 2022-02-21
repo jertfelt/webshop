@@ -30,7 +30,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 60%;
+  width: 100%;
   height: 100%;
   overflow: scroll;
   z-index: 10;
@@ -38,13 +38,15 @@
   padding: 1.5rem;
   transition: $mainTransition;
   
+  @include breakpoint(medium-tablet-min){
+    width:60%;
+  }
+  
   h2{
     text-align: center;
     color:$color-green;
   }
-
   }
-
   &__item{
       display: grid;
       align-items: center;

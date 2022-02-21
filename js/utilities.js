@@ -51,3 +51,9 @@ document.querySelector(".list__nested--mother").addEventListener("click", () =>{
 
 })
 
+//*-------Get logged in user info
+
+const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
+//*-------Get cart from local storage
+const productsOrder = JSON.parse(localStorage.getItem("cart"));

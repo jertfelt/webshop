@@ -42,6 +42,12 @@ changeActivePage("homepageSection");
 
 //------homepage
 
+//------user nav
+
+const userNavLogInRegister = () => {
+  changeActivePage("loginSection");
+}
+
 //------cart (go to product shown in cart)
 
 //------categories
@@ -50,10 +56,9 @@ changeActivePage("homepageSection");
 
 //------orderconfirmation (beställning)
 
-document.getElementById("submitBtnOrderConfirmation").addEventListener("click", (e) => {
-  e.preventDefault();
-changeActivePage("receiptSection");
-})
+const confirmOrderConfirmationBtn = () => {
+  changeActivePage("receiptSection");
+}
 
 document.getElementById("cancelBtnOrderConfirmation").addEventListener("click", () => {
 changeActivePage("homepageSection");
@@ -70,3 +75,10 @@ document.getElementById("cancelButtonCreateUser").addEventListener("click", () =
   })
 
 //-------login 
+document.getElementById("goToRegisterUserButton").addEventListener("click", (e) => {
+  e.preventDefault();
+changeActivePage("createUserSection");
+})
+const confirmAndLogin = () => {
+  changeActivePage("homepageSection")
+}
