@@ -6,7 +6,6 @@ const cartNavBtn = document.getElementById("cartLinkNav");
 const closeCartWindow = document.querySelector(".cart--close");
 const clearCartBtn = document.getElementById("clearCart");
 
-
 //varukorgen 
 const cartMenu = document.querySelector(".cart__content");
 const cartContainer = document.querySelector(".cart__container");
@@ -21,7 +20,6 @@ let cartCounterHeader = document.querySelector(".headercart__showAmount");
 //räknare i varukorgens footer (T)
 let cartCounterFooter = document.querySelector("#cartTotal");
 
-
 //*------visa/dölja VARUKORG
 
 //visa
@@ -29,6 +27,7 @@ const showCart = () => {
   cartContainer.classList.add("cart__transparentBack");
   cartContainer.classList.remove("cart__hidden")
   cartMenu.classList.add("cart__show");
+  drawProductsinCart();
 };
 
 //dölja varukorg
