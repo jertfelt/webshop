@@ -13,23 +13,23 @@ const productCreator = (product)=>{
     const articleProduct = document.createElement("article");
 
     articleProduct.innerHTML = `
-    <div class="container--margin">
-      <div class="product__img--container product__img--list">
         <img 
         src="/${product.fields.image.fields.file.url}">
         </img>
-      </div>
       <span class="product__box--individual">
-        
+      <span class="row">
+          <h3>${product.fields.title}</h3>
+          <p class="text--s text--green text--bold">
+          ${product.fields.price} kr </p>
+        </span>
+         
+          <p class="text--s">${product.fields.description}</p>
           <button class="addToCartBtn " 
           data-id="${product.sys.id}">Köp
           </button>
-          <h3>${product.fields.title}</h3>
-      
-          <p class="text--s">${product.fields.description}</p>
-          <p class="text--s text--green text--bold">${product.fields.price} kr </p>
+          
+          
       </span>
-    </div>
     `
   
     sectionProduct.appendChild(articleProduct);

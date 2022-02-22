@@ -2,7 +2,18 @@
 //grids
 .products{
   &__individual{
+    padding:3rem;
     width:90vw;
+    margin:3rem;
+
+    img {
+      width:100%;
+      border-radius: 29px;
+    }
+    img:hover{
+      border-radius:55% 55% 52% 48% / 30% 25% 55% 30%;
+      transition: all 100ms ease-in;
+    }
   }
 
   &__grid {
@@ -26,19 +37,6 @@
   grid-column-gap: 3rem;
   grid-row-gap: 2rem;
   }
-
-  //for individual
-
-  // &--individual{
-  // width: 90vw;
-  // margin: 0 auto;
-  // max-width: 1170px;
-  // display: grid;
-  // grid-template-columns: 40% 40%;
-  // // grid-template-columns: repeat(auto-fit, minmax(90%, 1fr));
-  // grid-column-gap: 3rem;
-  // grid-row-gap: 2rem;
-  // }
 
 }
 }
@@ -74,12 +72,23 @@
     border-style: none;
     padding: 1rem 2rem;
     font-weight: bold;
-    color:  $color-yellow;
     margin-top:1rem;
     text-transform: uppercase;
     } 
+
     button:hover{
       color: $color-yellow;
+    }
+
+    &--individual{
+      margin-top:1rem;
+      h3 {
+        margin-right:20px;
+      }
+      @include flexBox(column,center,center);
+      button{
+        margin-top:1rem;
+      }
     }
   }
 
