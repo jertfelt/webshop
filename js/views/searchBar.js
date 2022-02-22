@@ -19,6 +19,8 @@ const loadSearchResult = async () => {
     }
   };
   source.addEventListener("input", inputHandler);
+
+  
 };
 
 const displaySearchResult = (res, source) => {
@@ -53,24 +55,17 @@ const displaySearchResult = (res, source) => {
             </a>
             <span class="product__box--search">
               <span class="row">
-             
                     <h3 
                     class="text--uppercase text--cursive">
                     ${produx.fields.title}
                     </h3>
                     <h4 class="text--green">${produx.fields.price} kr
                     </h4>
-                  
               </span>
                   <p 
                   class="text--centered">
                   ${produx.fields.description}  <a href="${productLink}">Se mer </a> </p>
-             
-                 
-               
                </span>
-              
-              
           </article>
         `;
       }
@@ -79,5 +74,6 @@ const displaySearchResult = (res, source) => {
   const searchResults = document.getElementById("searchSection");
   searchResults.innerHTML = htmlString;
 };
+
 
 loadSearchResult();
