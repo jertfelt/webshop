@@ -398,6 +398,19 @@ h6 {
   transition: all 100ms ease-in;
 }
 
+.products__search {
+  margin: 2rem;
+}
+
+.products__search img {
+  width: 100%;
+  border-radius: 29px;
+}
+
+.products__search a {
+  text-decoration: none;
+}
+
 .products__grid {
   width: 90vw;
   margin: 0 auto;
@@ -499,6 +512,50 @@ h6 {
 
 .product__box--individual button {
   margin-top: 1rem;
+}
+
+.product__box--search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.product__box--search h3 {
+  margin-right: 20px;
+}
+
+.product__box--search a {
+  color: #225e39;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.search__seemorebtn {
+  padding: 0.8rem;
+  background-color: transparent;
+  background-color: #1b1b1b;
+  color: #fbfbfb;
+  border: none;
+  cursor: pointer;
+  border-radius: 19px;
+  z-index: 10;
+}
+
+.search__seemorebtn:hover {
+  background-color: #225e39;
+  color: #fbfbfb;
 }
 
 .login--name {

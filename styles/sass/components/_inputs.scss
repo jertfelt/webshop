@@ -1,0 +1,18 @@
+//search inputs
+.search{
+  &__seemorebtn{
+    padding: 0.8rem;
+    background-color: transparent;
+    background-color: $color-black;
+    color:$color-white;
+    border:none; 
+    cursor: pointer;
+    
+    border-radius: 19px;
+    z-index:10;
+  }
+  &__seemorebtn:hover{
+    background-color: $color-green;
+    color:$color-white;
+  }
+}

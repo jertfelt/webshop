@@ -13,7 +13,7 @@ const productCreator = (product)=>{
     const articleProduct = document.createElement("article");
 
     articleProduct.innerHTML = `
-        <img 
+        <img alt="Produkt"
         src="/${product.fields.image.fields.file.url}">
         </img>
       <span class="product__box--individual">

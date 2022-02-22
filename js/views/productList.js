@@ -33,10 +33,10 @@ function drawProducts() {
         </a>
       </div>
       <span class="product__box">
-      <span>
+        <span>
           <h3 class="text--uppercase text--cursive">${product.fields.title}</h3>
           <h4 class="text--green">${product.fields.price} kr</h4>
-          </span>
+        </span>
         <button 
         class="addToCartBtn" 
         data-id="${product.sys.id}">

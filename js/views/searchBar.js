@@ -9,6 +9,7 @@ const loadSearchResult = async () => {
     try {
       const res = await fetch("/js/data/products.json");
       searchResult = await res.json();
+
       //calling the function to get results when the input word is more than 3 letters
       if (source.length >= 3) {
         displaySearchResult(searchResult, source);
@@ -21,6 +22,7 @@ const loadSearchResult = async () => {
 };
 
 const displaySearchResult = (res, source) => {
+
   //mapping all products and checking if the product title includes the input word
   const htmlString = res.products
     .map((produx) => {
@@ -36,16 +38,40 @@ const displaySearchResult = (res, source) => {
         const produxPage = document.getElementById("individualProductSection");
         produxPage.innerHTML = "";
         return `
-        <a href="${productLink}" style="width:30%">
-            <ul>
-                <li class="productsordered__grid">
-                <img style="width:100%" src="/${produx.fields.image.fields.file.url}"></img>
-                <h3>${produx.fields.title}</h3>
-                <p>${produx.fields.description}</p>
-                <p>${produx.fields.price} kr</p>
-                </li>
-                </ul>
+        <article class="products__search">
+            
+            <div class=" product__img--container product__img--list">
+              <a href="${productLink}">
+                <img 
+                  alt= "Produkt"
+                  src="/${produx.fields.image.fields.file.url}">
+                </img>
+              <a href="${productLink}">
+            </div>
+            <a href="${productLink}">
+            
             </a>
+            <span class="product__box--search">
+              <span class="row">
+             
+                    <h3 
+                    class="text--uppercase text--cursive">
+                    ${produx.fields.title}
+                    </h3>
+                    <h4 class="text--green">${produx.fields.price} kr
+                    </h4>
+                  
+              </span>
+                  <p 
+                  class="text--centered">
+                  ${produx.fields.description}  <a href="${productLink}">Se mer </a> </p>
+             
+                 
+               
+               </span>
+              
+              
+          </article>
         `;
       }
     })

@@ -16,6 +16,18 @@
     }
   }
 
+  &__search{
+    margin:2rem;
+
+    img {
+      width:100%;
+      border-radius: 29px;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+
   &__grid {
   //for homepage
   width: 90vw;
@@ -27,7 +39,7 @@
   grid-row-gap: 2rem;
   margin-bottom:8rem;
 
-  //for productList and for search
+  //for productList 
   &--all{
   width: 90vw;
   margin: 0 auto;
@@ -90,6 +102,24 @@
         margin-top:1rem;
       }
     }
+
+    &--search{
+      @include flexBox(column,center,center);
+      margin-top:1rem;
+      margin-bottom:2rem;
+
+      h3 {
+        margin-right:20px;
+      }
+
+      a{
+        color: $color-green;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+  
+    }
+    
   }
 
 }
