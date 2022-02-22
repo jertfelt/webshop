@@ -635,10 +635,6 @@ h6 {
   right: 10%;
 }
 
-.login--name {
-  color: #225e39;
-}
-
 .login__container {
   position: fixed;
   top: 0;
@@ -656,7 +652,7 @@ h6 {
   top: 0;
   right: 0;
   width: 60%;
-  height: 50%;
+  height: 30%;
   overflow: scroll;
   z-index: 10;
   background: #ece6d2;
@@ -670,6 +666,17 @@ h6 {
     top: 60px;
     width: 30%;
   }
+}
+
+.login__dropdown h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  text-transform: capitalize;
+}
+
+.login__dropdown h2:nth-of-type(1) {
+  margin-top: 2rem;
 }
 
 .login__dropdown--content {

@@ -8,6 +8,8 @@ const userNavName = document.querySelector("#userNavName");
 const userNavLogInRegisterBtn = document.querySelector("#userNavLogInRegisterBtn");
 const userNavLogOutBtn = document.querySelector("#userNavLogOutBtn");
 
+const ifUserLoggedIn = document.getElementById("ifUserLoggedIn");
+
 //Shows and hides dropdown
 
 document.querySelector("#userNavIcon").addEventListener("click", () => {
@@ -28,6 +30,7 @@ document.querySelector("#closeUserNavDropdown").addEventListener("click", () => 
 //Fills in information om inloggad
 
 if (getLoggedinUser()) {
+  ifUserLoggedIn.classList.remove("hidden");
   userNavName.classList.remove("hidden");
   userNavName.innerText = getLoggedinUser().name;
 

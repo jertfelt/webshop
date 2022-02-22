@@ -286,6 +286,7 @@ class="section hidden">
          </div>
          
          <button type="submit" id="loginButton" class="text--bold">Logga in</button> 
+
          <button id="goToRegisterUserButton" class="text--bold">Registrera</button> 
       </form>
    </div>
@@ -314,7 +315,7 @@ class="section hidden">
       <input type="text" name="townCreateUser" id="townCreateUser" required placeholder="Ort">
       <label for="phoneNumberCreateUser" class="hidden">Telefonnummer</label>
       <input type="text" name="phoneNumberCreateUser" id="phoneNumberCreateUser" placeholder="Telefonnummer">
-      
+
       <span>
         <button type="submit" id="submitBtnCreateUser" class="text--bold text--u">
           Registrera</button>
@@ -356,7 +357,7 @@ class="section hidden">
     </section>
   </aside>
 
-     <!--logga in --> 
+     <!--kolla om inloggad --> 
      <aside>
       <div id="userNavDropdown" class="hidden login__container">
         <div class="login__dropdown">
@@ -365,7 +366,10 @@ class="section hidden">
           alt="Stäng varukorg"
           class="dropdown--close"/>
         <span class="login__dropdown--content">
-        <h2 id="userNavName" class="hidden login--name"></h2>
+        <span id="ifUserLoggedIn" class="hidden ">
+        <h2 class="text--green">Välkommen</h2>
+        <h2 id="userNavName"></h2>
+        </span>
         <button id="userNavLogInRegisterBtn" class="button__dropdown">Logga in/Registrera</button>
         <button id="userNavLogOutBtn" class="hidden button__dropdown">Logga ut</button>
         </span>
