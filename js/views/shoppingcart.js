@@ -43,6 +43,11 @@ const hideCart = () => {
 const drawProductsinCart = () => {
   const selectedProductList = getCart();
 
+  // Ta bort ritade produkter
+  while(cartContent.lastElementChild) {
+    cartContent.removeChild(cartContent.lastElementChild);
+  }
+  
   selectedProductList.forEach(product => {
     const cartDiv = document.createElement("div");
     cartDiv.innerHTML = `
@@ -212,6 +217,7 @@ const setAddToCartClick = (productList) => {
       const prodID = button.dataset.id;
       addToCart(prodID);
       getTotalPriceOrder();
+      showCart();
     })
   });
 }
