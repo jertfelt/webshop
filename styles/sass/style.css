@@ -387,6 +387,13 @@ h6 {
   margin: 3rem;
 }
 
+@media only screen and (max-width: 768px) {
+  .products__individual {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
 .products__individual img {
   width: 100%;
   border-radius: 29px;
@@ -957,6 +964,12 @@ nav {
   background-color: rgba(236, 230, 210, 0.6);
 }
 
+@media only screen and (max-width: 768px) {
+  .hero__transparentBack {
+    background-color: rgba(236, 230, 210, 0.2);
+  }
+}
+
 .hero__content {
   text-align: center;
   display: -webkit-box;
@@ -999,16 +1012,29 @@ nav {
   padding: 2rem;
 }
 
+@media only screen and (max-width: 768px) {
+  .categories article {
+    text-align: center;
+  }
+}
+
 .categories article h2 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
 .categories img {
+  width: 100%;
   padding-bottom: 2rem;
   border-radius: 45% 55% 52% 48% / 30% 25% 55% 10%;
   height: 400px;
   margin: 0px 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .categories img {
+    width: 90%;
+  }
 }
 
 .categories img:hover {

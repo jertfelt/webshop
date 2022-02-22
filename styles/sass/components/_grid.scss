@@ -5,6 +5,11 @@
     padding:3rem;
     width:90vw;
     margin:3rem;
+    
+    @include breakpoint(small-max-m){
+      margin: 0 auto;
+      text-align: center;
+     };
 
     img {
       width:100%;
