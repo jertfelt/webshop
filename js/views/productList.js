@@ -54,6 +54,21 @@ function drawProducts() {
   
 }
 
+// Wrapper funktion som kör funktioner/eventListeners efter HTML i produktlistan har ritats
+const setAddToCartClick = (productList) => {
+  // Hämtar alla köp-knappar
+  const addToCartButtons = document.querySelectorAll(".addToCartBtn");
+  // Hämtar ID på klickat produkt och lägger till den i varukorgen
+  addToCartButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const prodID = button.dataset.id;
+      addToCart(prodID);
+      setTotalPriceOrder();
+      showCart();
+    })
+  });
+}
+
 async function getProductList() {
   const response = await fetch("/js/data/products.json");
   const data = await response.json();

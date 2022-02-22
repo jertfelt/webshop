@@ -140,11 +140,13 @@ const addToCart = (prodID) => {
 // Uppdaterar totala priset för hela ordern i local storage
 const setTotalPriceOrder = () => {
   const cartItems = getCart();
-  let totalPrice = 0;
-  cartItems.forEach(product => {
-    totalPrice += product.amount;
-  })
-  localStorage.setItem("totalPriceOrder", totalPrice);
+  // Returnerar totala priset av ordern
+  const totalFinalPrice = cartItems
+  .map(product => product.amount)
+  .reduce((acc, current) => {
+    return acc+current;
+  });
+  localStorage.setItem("totalPriceOrder", totalFinalPrice);
 }
 
 // Tar bort en produkt i taget. Funktionen körs när man klickar på pilen nedåt i varukorgen
@@ -264,12 +266,12 @@ const clearCart= () => {
 
 closeCartWindow.addEventListener("click", hideCart);
 
-  document.addEventListener('keydown', function(event){
-    if(event.key === "Arrowdown")
-    {
-    showCart();
-    }
-  });
+document.addEventListener('keydown', function(event){
+  if(event.key === "Arrowdown")
+  {
+  showCart();
+  }
+});
 
 cartHeaderBtn.addEventListener("click", () =>{
   showCart();
@@ -281,6 +283,8 @@ document.addEventListener('keydown', function(event){
   hideCart();
   }
 });
+
+clearCartBtn.addEventListener("click", clearCart);
 
 //*--------knapp till beställningsbekräfelse-sida:
 document.getElementById("toConfirmation").addEventListener("click",
@@ -320,18 +324,3 @@ const setCartEventListener = () => {
     })
   })
 }
-// Wrapper funktion som kör funktioner efter HTML har ritats
-const setAddToCartClick = (productList) => {
-  // Hämtar alla köp-knappar
-  const addToCartButtons = document.querySelectorAll(".addToCartBtn");
-  // Hämtar ID på klickat produkt och lägger till den i varukorgen
-  addToCartButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      const prodID = button.dataset.id;
-      addToCart(prodID);
-      setTotalPriceOrder();
-      showCart();
-    })
-  });
-}
-
