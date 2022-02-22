@@ -14,16 +14,28 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media only screen and (min-width: 991px) {
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .centered {
@@ -409,7 +421,8 @@ h6 {
 }
 
 .product__listofitems {
-  width: 200px;
+  width: 100%;
+  margin: 2rem;
 }
 
 .product__box {
@@ -426,7 +439,7 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: rgba(236, 230, 210, 0.8);
+  background-color: #ece6d2;
   padding: 2rem;
   border-radius: 59px;
 }
@@ -444,7 +457,7 @@ h6 {
 .product__box:hover {
   -webkit-transition: all 100ms ease-in;
   transition: all 100ms ease-in;
-  background-color: #fbfbfb;
+  background-color: rgba(242, 234, 3, 0.7);
 }
 
 .product__individual--text {
@@ -475,6 +488,16 @@ h6 {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 2;
+}
+
+@media only screen and (max-width: 768px) {
+  .inner {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 2;
+  }
 }
 
 .login--name {

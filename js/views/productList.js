@@ -28,10 +28,8 @@ function drawProducts() {
     <div class="inner">
         <div class="product__listofitems">
         <span class="product__box">
-        <a href="${productLink}">
             <h3 class="text--centered text--s text--uppercase">${product.fields.title}</h3>
             <h4 class="text--s text--green text--bold">${product.fields.price} kr</h4>
-            <a href="${productLink}">
           <button 
           class="addToCartBtn" 
           data-id="${product.sys.id}">

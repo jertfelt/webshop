@@ -101,8 +101,13 @@
         class="nav__logotype"/>
       </a>
 
-      <span 
-      class="nav__span">
+  <div class="searchWrapper">
+        <label for="searchBar">Search product</label>
+        <input type="text" name="searchBar" id="searchBar" placeholder="Search product">
+  </div> 
+
+
+
   <!--varukorg klickbar-->
         <span 
         class="nav__cart--icon">
@@ -224,8 +229,12 @@
   <section id="productListSection" 
   class="section hidden">
   
+  
   </section>
 
+  <section id="searchSection" 
+  class="">
+  </section>
   <section id="individualProductSection" 
   class="section hidden">
   </section>
@@ -239,7 +248,7 @@ class="section hidden">
   </article>
   <article id="yourOrderInformation">
     <h2>Dina Detaljer:</h2>
-    <form>
+    <form id="orderConfirmationForm">
       <label for="nameOrderConfirmation" class="hidden">Namn</label>
       <input type="text" name="nameOrderConfirmation" id="nameOrderConfirmation" required placeholder="Namn">
       
@@ -303,18 +312,20 @@ class="section hidden">
     <h2>Skapa användare</h2>
     <p>Fyll i din information här:</p>
     <form id="createUserForm">
-      <label for="usernameCreateUser" class="hidden">Användarnamn</label>
-      <input type="text" name="usernameCreateUser" id="usernameCreateUser" required placeholder="Användarnamn">
+
+      <label for="emailCreateUser" class="hidden">E-post</label>
+      <input type="email" name="emailCreateUser" id="emailCreateUser" required placeholder="E-post">
+
       <label for="passwordCreateUser" class="hidden">Lösenord</label>
       <input type="password" name="passwordCreateUser" id="passwordCreateUser" required placeholder="Lösenord">
+      <label for="nameCreateUser" class="hidden">Användarnamn</label>
+      <input type="text" name="nameCreateUser" id="nameCreateUser" required placeholder="Användarnamn">
       <label for="streetCreateUser" class="hidden">Gatuadress</label>
       <input type="text" name="streetCreateUser" id="streetCreateUser" required placeholder="Gatuadress">
       <label for="postalCodeCreateUser" class="hidden">Postnummer</label>
       <input type="number" name="postalCodeCreateUser" id="postalCodeCreateUser" required placeholder="Postnummer">
       <label for="townCreateUser" class="hidden">Ort</label>
       <input type="text" name="townCreateUser" id="townCreateUser" required placeholder="Ort">
-      <label for="emailCreateUser" class="hidden">E-post</label>
-      <input type="email" name="emailCreateUser" id="emailCreateUser" required placeholder="E-post">
       <label for="phoneNumberCreateUser" class="hidden">Telefonnummer</label>
       <input type="text" name="phoneNumberCreateUser" id="phoneNumberCreateUser" placeholder="Telefonnummer">
       <button type="submit" id="submitBtnCreateUser">Registrera</button>
@@ -377,18 +388,20 @@ class="section hidden">
 <script src="./js/views/changepage.js"></script>
 <script src="./js/views/pagewidenavigationbuttons.js"></script>
 <script src="./js/utilities.js"></script>
-<script src="./js/views/userLoginNavDropdown.js"></script>
+<script src="./js/views/userNavDropdown.js"></script>
+<script src="./js/views/searchBar.js"></script>
   
 <!--product and shopping cart functionality--->
 
 <script src="./js/views/productList.js"></script>
 <script src="./js/views/product.js"></script>
+
 <script src="./js/views/shoppingcart.js"></script>
 <script src="./js/views/orderConfirmation.js"></script>
 
-
 <!--create account and log in--->
 <script src="./js/views/createAccount.js"></script> 
+<script src="./js/views/login.js"></script>
 
 </body>
 </html>

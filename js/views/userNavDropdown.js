@@ -1,6 +1,5 @@
 
 //Variables
-
 let userNavDropdownShowing = false;
 
 const userNavDropdown = document.querySelector("#userNavDropdown");
@@ -28,9 +27,9 @@ document.querySelector("#closeUserNavDropdown").addEventListener("click", () => 
 
 //Fills in information om inloggad
 
-if (loggedInUser) {
+if (getLoggedinUser()) {
   userNavName.classList.remove("hidden");
-  userNavName.innerText = loggedInUser.name;
+  userNavName.innerText = getLoggedinUser().name;
 
   userNavLogInRegisterBtn.classList.add("hidden");
   userNavLogOutBtn.classList.remove("hidden");

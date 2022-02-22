@@ -38,4 +38,4 @@ loginEmail = document.getElementById("emailLogin").value;
 loginPassword = document.getElementById("password").value;
 lookForUser();
 
-}) 
+})

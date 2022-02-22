@@ -1,4 +1,4 @@
-//test code
+/*//test code
 const tester2 = [{
   "sys": { "id": "4" },
   "category": "Dam",
@@ -21,8 +21,7 @@ const tester2 = [{
 }];
 localStorage.setItem("cart", JSON.stringify(tester2));
 localStorage.setItem("totalPriceOrder", JSON.stringify(100));
-
-
+*/
 
 //Creates product element
     const createProductElementOrderConfirmation = (img, name, price, amount) => {
@@ -51,7 +50,7 @@ localStorage.setItem("totalPriceOrder", JSON.stringify(100));
   }
 
 //Go through each product in cart and send it to print
-    productsOrder.forEach(product => {
+    getCart().forEach(product => {
       createProductElementOrderConfirmation(
         product.fields.image, product.fields.title, 
         product.fields.price, product.amount);
@@ -69,16 +68,16 @@ localStorage.setItem("totalPriceOrder", JSON.stringify(100));
 
     
 //Checks if anyone is logged in, if they are they get your details and fills out the form
-    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
-    if (loggedInUser !== null) {
-      document.querySelector("#nameOrderConfirmation").value = loggedInUser.name;
-            document.querySelector("#streetOrderConfirmation").value = loggedInUser.street;
-            document.querySelector("#postalCodeOrderConfirmation").value = loggedInUser.postalCode;
-            document.querySelector("#townOrderConfirmation").value = loggedInUser.town;
-            document.querySelector("#emailOrderConfirmation").value = loggedInUser.email;
+   // const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (getLoggedinUser() !== null) {
+      document.querySelector("#nameOrderConfirmation").value = getLoggedinUser().name;
+            document.querySelector("#streetOrderConfirmation").value = getLoggedinUser().street;
+            document.querySelector("#postalCodeOrderConfirmation").value = getLoggedinUser().postalCode;
+            document.querySelector("#townOrderConfirmation").value = getLoggedinUser().town;
+            document.querySelector("#emailOrderConfirmation").value = getLoggedinUser().email;
 
-            if (loggedInUser.tel !== null) {
-              document.querySelector("#phoneNumberOrderConfirmation").value = loggedInUser.tel;
+            if (getLoggedinUser().tel !== null) {
+              document.querySelector("#phoneNumberOrderConfirmation").value = getLoggedinUser().tel;
             }
     }
 
@@ -97,7 +96,7 @@ localStorage.setItem("totalPriceOrder", JSON.stringify(100));
     }
 
 //Submit button
-  document.getElementById("submitBtnOrderConfirmation").addEventListener("onClick", (e) => {
+  document.getElementById("orderConfirmationForm").addEventListener("submit", (e) => {
     e.preventDefault();
     saveOrderDetails();
     confirmOrderConfirmationBtn();
