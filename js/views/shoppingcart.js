@@ -18,7 +18,7 @@ const cartTotal = document.getElementById("cartTotal");
 let cartCounterHeader = document.querySelector(".headercart__showAmount");
 
 //räknare i varukorgens footer (T)
-let cartCounterFooter = document.querySelector("#cartTotal");
+//let cartCounterFooter = document.querySelector("#cartTotal");
 
 //*------visa/dölja VARUKORG
 
@@ -28,6 +28,7 @@ const showCart = () => {
   cartContainer.classList.remove("cart__hidden")
   cartMenu.classList.add("cart__show");
   drawProductsinCart();
+  drawTotalPriceOrderinCart();
 };
 
 //dölja varukorg
@@ -47,7 +48,7 @@ const drawProductsinCart = () => {
   while(cartContent.lastElementChild) {
     cartContent.removeChild(cartContent.lastElementChild);
   }
-  
+
   selectedProductList.forEach(product => {
     const cartDiv = document.createElement("div");
     cartDiv.innerHTML = `
@@ -67,7 +68,13 @@ const drawProductsinCart = () => {
       `
       cartContent.appendChild(cartDiv);
   })
-  
+}
+
+const drawTotalPriceOrderinCart = () => {
+  const totalPriceOrder = getTotalPriceOrder();
+  cartTotal.innerText = totalPriceOrder;
+}
+
 // }
 // const buyProduct = (prodID) => {
 //   addToCart(prodID);
@@ -97,11 +104,6 @@ const drawProductsinCart = () => {
 //   `
 //   cartContent.appendChild(cartdiv);
 // }
-
-}
-
-
-
 //*-----------
     // //method for cart array
     // populateCart(cart){
@@ -174,7 +176,7 @@ const setCartinLocalStorage = (cart) => {
   localStorage.setItem("cart", stringifyCart);
 }
 
-const getTotalPriceOrder = () => {
+const setTotalPriceOrder = () => {
   const cartItems = getCart();
   let totalPrice = 0;
   cartItems.forEach(product => {
@@ -216,7 +218,7 @@ const setAddToCartClick = (productList) => {
     button.addEventListener("click", () => {
       const prodID = button.dataset.id;
       addToCart(prodID);
-      getTotalPriceOrder();
+      setTotalPriceOrder();
       showCart();
     })
   });
