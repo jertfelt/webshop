@@ -77,8 +77,9 @@ const drawTotalPriceOrderinCart = () => {
   cartTotal.innerText = totalPriceOrder;
 }
 
-//*-----------------ADD TO CART FUNCTION
-// Sparar/uppdaterar varukorgen i local storage
+//*---------------Cart functionality
+
+// Lägger till produkter i local storage
 const addToCart = (prodID) => {
   // Hittar rätt produkt och hämtar datan.
   const selectedProductData = productList.find(product => product.sys.id === prodID);
@@ -146,7 +147,7 @@ const setTotalPriceOrder = () => {
   localStorage.setItem("totalPriceOrder", totalPrice);
 }
 
-// Tar bort en produkt i taget. Funktionen borde köras när man klickar på pilen nedåt i varukorgen
+// Tar bort en produkt i taget. Funktionen körs när man klickar på pilen nedåt i varukorgen
 const decreaseQuantity = (prodID) => {
   // Hämtar produkter från local storage
   const existingProductList = getCart();
@@ -169,7 +170,7 @@ const decreaseQuantity = (prodID) => {
   setCartinLocalStorage(updatedProductList);
 }
 
-// Tar bort hela produkten. Funktionen borde köras när man klickar på "Remove"-knappen i varukorgen
+// Tar bort hela produkten. Funktionen körs när man klickar på "Remove"-knappen i varukorgen
 const deleteProduct = (prodID) => {
   // Hämtar produkter från local storage
   const existingProductList = getCart();
@@ -183,11 +184,81 @@ const deleteProduct = (prodID) => {
 
   // Göm varukorgen dropdown om den är tom
   if(updatedProductList.length === 0) {
-    hideCart();
+    clearCart();
   } else {
     showCart();
   }
 }
+
+// Rensar varukorgen och totala priset i local storage
+const clearCart= () => {
+  localStorage.removeItem("cart");
+  localStorage.removeItem("totalPriceOrder");
+  hideCart(); 
+}
+
+// cartMenu.addEventListener("click" ,event => {
+
+//   if(event.target.classList.contains("cart__item--remove")){
+//     let removeItem = event.target;
+//     let id = removeItem.dataset.id;
+//     let removingDom = removeItem.parentElement.parentElement;
+//     removingDom.classList.add("cart__item--hide");
+//     this.removeItem(id);
+//   }
+
+//   else if (event.target.classList.contains("fa-chevron-up")){
+//    let addAmount = event.target;
+//    let addId = addAmount.dataset.id;
+//     //push new amount into local storage:
+//     let temporaryItem = cart.find(item => item.id === addId);
+//     temporaryItem.amount = temporaryItem.amount + 1;
+
+//     saveCart(cart);
+//     this.setCartValue(cart);
+//     addAmount.nextElementSibling.innerText = temporaryItem.amount;
+//   }
+
+//   else if (event.target.classList.contains("fa-chevron-down")){
+//    let reduceAmount = event.target;
+//    let reduceId = reduceAmount.dataset.id;
+
+//    //reduce new amount:
+//    let temporaryItem = cart.find(item => item.id ===reduceId);
+//    temporaryItem.amount = temporaryItem.amount -1;
+
+//     if(temporaryItem.amount > 0){
+//       Storage.saveCart(cart);
+//       this.setCartValue(cart);
+//       reduceAmount.previousElementSibling.innerText = temporaryItem.amount;
+
+//     }
+//     else{
+//       console.log(reduceAmount.parentElement.parentElement.classList)
+//       console.log(temporaryItem.id);
+//        let classID = (reduceAmount.parentElement.parentElement.getAttribute("data-id"));
+//       console.log(classID);
+//       if (temporaryItem.id === classID){
+//         reduceAmount.parentElement.parentElement.classList.add("hide-item")
+//       }
+//       this.removeItem(temporaryItem.id);
+//     }
+//   }
+// });
+
+
+// const setCartValue = (cart) => {
+//   let temporaryTotal = 0;
+//   let itemsTotal = 0;
+//   cart.map(item =>{
+//     //amount of items multiplied by their prices
+//     temporaryTotal += item.price * item.amount;
+//     itemsTotal += item.amount;
+//   });
+//   //showing amount in cart in navigations wooo!:
+//   cartItems.innerText = itemsTotal; 
+
+// }
 
 //*---------event listeners
 
@@ -264,73 +335,3 @@ const setAddToCartClick = (productList) => {
   });
 }
 
-const clearCart= () => {
-  localStorage.removeItem("cart");
-  hideCart(); 
-}
-
-
-
-//*---------------Cart functionality
-// cartMenu.addEventListener("click" ,event => {
-
-//   if(event.target.classList.contains("cart__item--remove")){
-//     let removeItem = event.target;
-//     let id = removeItem.dataset.id;
-//     let removingDom = removeItem.parentElement.parentElement;
-//     removingDom.classList.add("cart__item--hide");
-//     this.removeItem(id);
-//   }
-
-//   else if (event.target.classList.contains("fa-chevron-up")){
-//    let addAmount = event.target;
-//    let addId = addAmount.dataset.id;
-//     //push new amount into local storage:
-//     let temporaryItem = cart.find(item => item.id === addId);
-//     temporaryItem.amount = temporaryItem.amount + 1;
-
-//     saveCart(cart);
-//     this.setCartValue(cart);
-//     addAmount.nextElementSibling.innerText = temporaryItem.amount;
-//   }
-
-//   else if (event.target.classList.contains("fa-chevron-down")){
-//    let reduceAmount = event.target;
-//    let reduceId = reduceAmount.dataset.id;
-
-//    //reduce new amount:
-//    let temporaryItem = cart.find(item => item.id ===reduceId);
-//    temporaryItem.amount = temporaryItem.amount -1;
-
-//     if(temporaryItem.amount > 0){
-//       Storage.saveCart(cart);
-//       this.setCartValue(cart);
-//       reduceAmount.previousElementSibling.innerText = temporaryItem.amount;
-
-//     }
-//     else{
-//       console.log(reduceAmount.parentElement.parentElement.classList)
-//       console.log(temporaryItem.id);
-//        let classID = (reduceAmount.parentElement.parentElement.getAttribute("data-id"));
-//       console.log(classID);
-//       if (temporaryItem.id === classID){
-//         reduceAmount.parentElement.parentElement.classList.add("hide-item")
-//       }
-//       this.removeItem(temporaryItem.id);
-//     }
-//   }
-// });
-
-
-// const setCartValue = (cart) => {
-//   let temporaryTotal = 0;
-//   let itemsTotal = 0;
-//   cart.map(item =>{
-//     //amount of items multiplied by their prices
-//     temporaryTotal += item.price * item.amount;
-//     itemsTotal += item.amount;
-//   });
-//   //showing amount in cart in navigations wooo!:
-//   cartItems.innerText = itemsTotal; 
-
-// }
