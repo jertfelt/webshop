@@ -1,4 +1,4 @@
-//test code
+/*//test code
 const tester2 = [{
   "sys": { "id": "4" },
   "category": "Dam",
@@ -21,9 +21,7 @@ const tester2 = [{
 }];
 localStorage.setItem("cart", JSON.stringify(tester2));
 localStorage.setItem("totalPriceOrder", JSON.stringify(100));
-
-
-//Get cart from local storage
+*/
 
 //Creates product element
     const createProductElementOrderConfirmation = (img, name, price, amount) => {
