@@ -39,10 +39,18 @@ nav{
  }
 
  &__span{
-  @include flexBox(row,center,space-between)
- }
+  @include flexBox(row,center,space-between);
+ 
+  @include breakpoint(small-max-m){
+   position:relative;
+   right:-60px;
+  };
+}
 
  &__user{
+   @include breakpoint(small-max-m){
+     visibility:hidden;
+   };
    background-color: $color-green;
    border-radius: 50%;
    padding:0.5rem;
