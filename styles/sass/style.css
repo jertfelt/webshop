@@ -712,6 +712,7 @@ h6 {
 }
 
 .login__box button {
+  cursor: pointer;
   padding: 0.5rem;
   background-color: #225e39;
   border: none;
