@@ -151,10 +151,12 @@ const addToCart = (prodID) => {
     return;
   }
 }
+
 const setCartinLocalStorage = (cart) => {
   const stringifyCart = JSON.stringify(cart);
   localStorage.setItem("cart", stringifyCart);
 }
+
 const getTotalPriceOrder = () => {
   const cartItems = getCart();
   let totalPrice = 0;
@@ -163,6 +165,22 @@ const getTotalPriceOrder = () => {
   })
   localStorage.setItem("totalPriceOrder", totalPrice);
 }
+
+const decreaseQuantity = (prodID) => {
+   // Hämtar produkter från local storage
+   const existingProductList = getCart();
+   // Får lista med uppdaterat data
+   const updatedProductList = existingProductList.map(product => {
+     // Minska antal och uppdatera priset av vald produkt
+     if (product.sys.id == prodID) {
+      product.quantity--; 
+      product.amount = product.fields.price * product.quantity;
+     }
+     return product;
+   });
+   setCartinLocalStorage(updatedProductList);
+}
+
 // Wrapper funktion som kör funktioner efter HTML har ritats
 const setAddToCartClick = (productList) => {
   // Hämtar alla köp-knappar
