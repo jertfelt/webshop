@@ -51,6 +51,9 @@ const drawProductsinCart = () => {
     cartContent.removeChild(cartContent.lastElementChild);
   }
 
+  // Visa footer
+  cartFooter.classList.remove("hidden");
+
   // Om varukorgen är tom, visa meddelande och göm cart__footer
   if(!selectedProductList) {
     const errorElement = document.createElement("p");
@@ -59,7 +62,6 @@ const drawProductsinCart = () => {
     cartFooter.classList.add("hidden");
     return;
   }
-
   selectedProductList.forEach(product => {
     const cartDiv = document.createElement("div");
     cartDiv.innerHTML = `
