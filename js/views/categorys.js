@@ -1,69 +1,77 @@
 const categoriesSection = document.querySelector(".products__grid--categories");
 
+const queryParams1 = new URLSearchParams(location.search);
+const categoryId = queryParams1.get('id');
+
 let categoryArray = []; 
 
-const categoryCreator = (item) => {
-    const categoryDam = document.getElementById("categoryTitelInfoDam");
+const categoryCreator = (data) => {
+    const categoryDam = document.getElementById("categorysMainSection");
 
         categoryDam.innerHTML= `
-            <h3>${data.categories[0].fields.title}</h3>
-            <h4>${data.categories[0].fields.description}</h4>
-            <button id="categoryDamBtn">Se mer</button>
+
+            <article id="categoryDam" class="product__img--container">
+                    <div class="">
+                        <img src="${data[0].fields.image.fields.file.url}" class="product__img" alt="produkt ${data[0].fields.title}"></img>
+                    </div>
+                
+                    <article class="products__items">
+                        <div id="categoryTitelInfoDam" class="">
+                            <h3>${data[0].fields.title}</h3>
+                            <h4>${data[0].fields.description}</h4>
+                            <button class="">Se mer</button>
+                        </div>
+                    </article>
+            </article>
+
+
+            <article id="categoryHerr" class="product__img--container">
+                    <div class="">
+                        <img src="${data[1].fields.image.fields.file.url}" class="product__img" alt="produkt ${data[1].fields.title}"></img>
+                    </div>
+                
+                    <article class="products__items">
+                        <div id="categoryTitelInfoHerr" class="">
+                            <h3>${data[1].fields.title}</h3>
+                            <h4>${data[1].fields.description}</h4>
+                            <button class="">Se mer</button>
+                        </div>
+                    </article>
+            </article>
+
+
+            <article id="categoryBaby" class="product__img--container">
+                    <div class="">
+                        <img src="${data[2].fields.image.fields.file.url}" class="product__img" alt="produkt ${data[2].fields.title}"></img>
+                    </div>
+                
+                    <article class="products__items">
+                        <div id="categoryTitelInfoBaby" class="">
+                            <h3>${data[2].fields.title}</h3>
+                            <h4>${data[2].fields.description}</h4>
+                            <button class="">Se mer</button>
+                        </div>
+                    </article>
+            </article>
         `;
-        const imgDam = document.getElementById("imgWrapperDam");
-        const btnDam = document.getElementById("categoryDamBtn");
-        imgDam.innerHTML= `
-            <img src="${data.categories[0].fields.image.fields.file.url}" class="product__img" alt="produkt ${data.categories[0].fields.title}">
-        `;
-        imgDam.onclick=()=>{
-            console.log("image clicked...");
+
+        const categoryDamClick = document.getElementById("categoryDam");
+        categoryDamClick.onclick=()=>{
+            console.log("Dam category clicked...");
         }
-        btnDam.onclick=()=>{
-            console.log("button clicked...");
+
+        const categoryHerrClick = document.getElementById("categoryHerr");
+        categoryHerrClick.onclick=()=>{
+            console.log("Herr category clicked...");
         }
-    
-        categoriesSection.appendChild(categoryDam);
-    
-        const categoryHerr = document.getElementById("categoryTitelInfoHerr");
-        categoryHerr.innerHTML= `
-            <h3>${data.categories[1].fields.title}</h3>
-            <h4>${data.categories[1].fields.description}</h4>
-            <button id="categoryHerrBtn">Se mer</button>
-        `;
-        const imgHerr = document.getElementById("imgWrapperHerr");
-        const btnHerr = document.getElementById("categoryHerrBtn");
-        imgHerr.innerHTML= `
-            <img src="${data.categories[1].fields.image.fields.file.url}" class="product__img" alt="produkt ${data.categories[1].fields.title}">
-        `;
-        imgHerr.onclick=()=>{
-            console.log("image clicked...");
-        }
-        btnHerr.onclick=()=>{
-            console.log("button clicked...");
-        }
-    
-        const categoryBaby = document.getElementById("categoryTitelInfoBaby");
-        categoryBaby.innerHTML= `
-            <h3>${data.categories[2].fields.title}</h3>
-            <h4>${data.categories[2].fields.description}</h4>
-            <button id="categoryBabyBtn">Se mer</button>
-        `;
-        const imgBaby = document.getElementById("imgWrapperBaby");
-        const btnBaby = document.getElementById("categoryBabyBtn");
-        imgBaby.innerHTML= `
-            <img src="${data.categories[2].fields.image.fields.file.url}" class="product__img" alt="produkt ${data.categories[2].fields.title}">
-        `;
-        imgBaby.onclick=()=>{
-            console.log("image clicked...");
-        }
-        btnBaby.onclick=()=>{
-            console.log("image clicked...");
+
+        const categoryBabyClick = document.getElementById("categoryBaby");
+        categoryBabyClick.onclick=()=>{
+            console.log("Baby category clicked...");
         }
     }
 
 //---------fetch from JSON and render:
-
-
 
 async function getCategories() {
 
@@ -73,79 +81,10 @@ async function getCategories() {
 
     productsArray = [...data.categories];
 
-    console.log(productsArray);
-
-    //här behöver vi göra en form av .map() för att få ut och definiera data
-    // productsArray.map((product) => {
-    //     if (product.sys.id === productId){
-    //         productCreator(product)
-    //     }
-    //     })
-
-    //categoryCreator();
+    const categoryTitle = productsArray.map(x=>{
+        return x;
+    })
+    categoryCreator(categoryTitle);
 }
 
 getCategories();
-
-
-
-// fetch("js\data\categories.json")
-// .then (response => response.json())
-// .then(data =>{
-//     const categoryDam = document.getElementById("categoryTitelInfoDam");
-//     categoryDam.innerHTML= `
-//         <h3>${data.categories[0].fields.title}</h3>
-//         <h4>${data.categories[0].fields.description}</h4>
-//         <button id="categoryDamBtn">Se mer</button>
-//     `;
-//     const imgDam = document.getElementById("imgWrapperDam");
-//     const btnDam = document.getElementById("categoryDamBtn");
-//     imgDam.innerHTML= `
-//         <img src="${data.categories[0].fields.image.fields.file.url}" class="product__img" alt="produkt ${data.categories[0].fields.title}">
-//     `;
-//     imgDam.onclick=()=>{
-//         console.log("image clicked...");
-//     }
-//     btnDam.onclick=()=>{
-//         console.log("button clicked...");
-//     }
-
-//     categoriesSection.appendChild(categoryDam);
-
-//     const categoryHerr = document.getElementById("categoryTitelInfoHerr");
-//     categoryHerr.innerHTML= `
-//         <h3>${data.categories[1].fields.title}</h3>
-//         <h4>${data.categories[1].fields.description}</h4>
-//         <button id="categoryHerrBtn">Se mer</button>
-//     `;
-//     const imgHerr = document.getElementById("imgWrapperHerr");
-//     const btnHerr = document.getElementById("categoryHerrBtn");
-//     imgHerr.innerHTML= `
-//         <img src="${data.categories[1].fields.image.fields.file.url}" class="product__img" alt="produkt ${data.categories[1].fields.title}">
-//     `;
-//     imgHerr.onclick=()=>{
-//         console.log("image clicked...");
-//     }
-//     btnHerr.onclick=()=>{
-//         console.log("button clicked...");
-//     }
-
-//     const categoryBaby = document.getElementById("categoryTitelInfoBaby");
-//     categoryBaby.innerHTML= `
-//         <h3>${data.categories[2].fields.title}</h3>
-//         <h4>${data.categories[2].fields.description}</h4>
-//         <button id="categoryBabyBtn">Se mer</button>
-//     `;
-//     const imgBaby = document.getElementById("imgWrapperBaby");
-//     const btnBaby = document.getElementById("categoryBabyBtn");
-//     imgBaby.innerHTML= `
-//         <img src="${data.categories[2].fields.image.fields.file.url}" class="product__img" alt="produkt ${data.categories[2].fields.title}">
-//     `;
-//     imgBaby.onclick=()=>{
-//         console.log("image clicked...");
-//     }
-//     btnBaby.onclick=()=>{
-//         console.log("image clicked...");
-//     }
-// })
-
