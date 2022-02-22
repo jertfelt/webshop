@@ -11,13 +11,14 @@ let loginPassword = "";
 const lookForUser = () => {
     const currentUsers = JSON.parse(localStorage.getItem("users"))
 
-    currentUsers.forEach(user => {
-        if(loginEmail.toUpperCase()==user.email.toUpperCase()){
-            userDoesExist = true;
-            getUser = user;
-        }
-        
-    });
+    if (currentUsers !== null) {
+        currentUsers.forEach(user => {
+         if(loginEmail.toUpperCase()==user.email.toUpperCase()){
+             userDoesExist = true;
+              getUser = user;
+         }
+        });
+    };
     if(userDoesExist){
         if(loginPassword == getUser.password){
             localStorage.setItem("loggedInUser", JSON.stringify(getUser))
