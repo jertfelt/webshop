@@ -32,7 +32,7 @@ const lookForUser = () => {
     }
 }
 
-document.getElementById("loginButton").addEventListener("click", (e) => {
+document.getElementById("loginForm").addEventListener("submit", (e) => {
     e.preventDefault();
 loginEmail = document.getElementById("emailLogin").value;
 loginPassword = document.getElementById("password").value;

@@ -63,6 +63,6 @@ const getCart = () => {
   return JSON.parse(localStorage.getItem("cart"));
 }
 
-const getTotalPriceOrder = () => {
+/*const getTotalPriceOrder = () => {
   return JSON.parse(localStorage.getItem("totalPriceOrder"));
-}
+}*/
