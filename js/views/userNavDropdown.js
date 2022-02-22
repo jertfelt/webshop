@@ -29,7 +29,7 @@ document.querySelector("#closeUserNavDropdown").addEventListener("click", () => 
 
 if (getLoggedinUser()) {
   userNavName.classList.remove("hidden");
-  userNavName.innerText = getLoggedinUser().userName;
+  userNavName.innerText = getLoggedinUser().name;
 
   userNavLogInRegisterBtn.classList.add("hidden");
   userNavLogOutBtn.classList.remove("hidden");
