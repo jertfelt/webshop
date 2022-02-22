@@ -6,11 +6,11 @@ if (usersArr === null) {
 }
 //Creates user and saves it in local storage
 
-const createUser = (email, password, userName, street, postalCode, town, tel) => {
+const createUser = (email, password, name, street, postalCode, town, tel) => {
   const userObj = {
     email: email,
     password: password,
-    userName: userName,
+    name: name,
     street: street,
     postalCode: postalCode,
     town: town,
@@ -28,7 +28,7 @@ document.querySelector("#createUserForm").addEventListener("submit", (e) => {
   e.preventDefault()
   const emailCreateAccount = document.querySelector("#emailCreateUser").value;
   const passWordCreateAccount = document.querySelector("#passwordCreateUser").value;
-  const userNameCreateAccount = document.querySelector("#usernameCreateUser").value;
+  const nameCreateAccount = document.querySelector("#nameCreateUser").value;
   const streetCreateAccount = document.querySelector("#streetCreateUser").value;
   const postalCodeCreateAccount = document.querySelector("#postalCodeCreateUser").value;
   const townCreateAccount = document.querySelector("#townCreateUser").value;
@@ -48,7 +48,7 @@ document.querySelector("#createUserForm").addEventListener("submit", (e) => {
   //Creates user and saves it in local storage and takes you back to the home page
   
   if (userAlreadyExist == false) {
-      createUser(emailCreateAccount, passWordCreateAccount, userNameCreateAccount, 
+      createUser(emailCreateAccount, passWordCreateAccount, nameCreateAccount, 
         streetCreateAccount,  postalCodeCreateAccount, townCreateAccount, telCreateAccount);
   
     localStorage.setItem("users", JSON.stringify(usersArr));
