@@ -8,6 +8,10 @@
 
   &__transparentBack{
     background-color: rgba(236, 230, 210, .6);
+
+    @include breakpoint(small-max-m){
+      background-color: rgba(236, 230, 210, .2);
+    };
   }
 
 &__content{
@@ -26,17 +30,26 @@
 
   article {
 padding:2rem;
+@include breakpoint(small-max-m){
+  text-align: center;
+ };
 
     h2 {
       margin-top:2rem;
       margin-bottom:2rem;
+   
     }
   }
+
   img {
+    width:100%;
     padding-bottom: 2rem;
   border-radius:45% 55% 52% 48% / 30% 25% 55% 10%;
   height:400px;
   margin:0px 30px;
+  @include breakpoint(small-max-m){
+    width:90%;
+  };
   }
   img:hover{
     border-radius:100%;

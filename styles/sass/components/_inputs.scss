@@ -1,0 +1,63 @@
+//search inputs
+.search{
+  &__dropdown{
+    background-color: $color-yellow;
+  };
+  &__wrapper{
+    @include flexBox(row,center,center);
+    margin-left:-2rem;
+
+    img {
+      height:30px;
+    }
+
+    label {
+      visibility: hidden;
+    }
+
+    input {
+      margin-left:-80px;
+      @include breakpoint(small-max-m){
+        visibility:hidden;
+      }
+    }
+    
+  }
+
+  &__img{
+    background-color: $color-yellow;
+    border-radius: 50%;
+    width:40px;
+    height:40px;
+    padding:4px;
+  }
+
+  &__navigation{
+    @include flexBox(row,center,center);
+
+    span {
+      background-color: $color-yellow;
+      border-radius: 50%;
+      padding:4px;
+      height:40px;
+      width:40px;
+      position:relative;
+      right:-10%;
+    }
+    
+    img {
+      height:30px;
+     
+    
+    }
+    label{
+      visibility:hidden;
+    }
+    
+    input{
+     position: relative;
+     right:10%;
+    }
+  }
+}
+

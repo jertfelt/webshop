@@ -47,11 +47,12 @@ $font-secondary: "Roboto", Arial, sans-serif;
   &--m {
     @include font-size(42);
   }
+
   &--s {
-    @include font-size(36);
-    line-height: 42px;
-    @include breakpoint(small-max) {
-      @include font-size(22);
+    @include font-size(28);
+    line-height: 36px;
+    @include breakpoint(small-max-m) {
+      @include font-size(18);
       line-height: 28px;
 
     }
@@ -60,7 +61,7 @@ $font-secondary: "Roboto", Arial, sans-serif;
   &--xs {
     @include font-size(24);
     line-height: 30px;
-    @include breakpoint(small-max) {
+    @include breakpoint(small-max-m) {
       @include font-size(18);
       line-height: 22px;
     }
@@ -96,16 +97,12 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   h3 {
-      @include font-size(48);
+      @include font-size(30);
   }
   
   h4 {
       @include font-size(22);
       line-height: 28px;
-      @include breakpoint(small-max) {
-        @include font-size(36);
-        line-height: 42px;
-      }
   }
   
   h5 {

@@ -15,8 +15,8 @@
 
     imgOrderConfirmation.src = img;
     productNameOrderConfirmation.innerText = name;
-    amountOrderConfirmation.innerText = amount;
-    quantityOrderConfirmation.innerText = `${quantity}} st`;
+    amountOrderConfirmation.innerText = `${amount}kr`;
+    quantityOrderConfirmation.innerText = `${quantity} st`;
 
     productInformationDivOrderConfirmation.appendChild(productNameOrderConfirmation);
     productInformationDivOrderConfirmation.appendChild(amountOrderConfirmation);
@@ -29,17 +29,18 @@
   }
 
 //Go through each product in cart and send it to print
-    getCart().forEach(product => {
-      createProductElementOrderConfirmation(
-        product.fields.image, product.fields.title, 
-        product.amount, product.quantity);
-    });
+    if (getCart() !== null) {
+      getCart().forEach(product => {
+        createProductElementOrderConfirmation(
+          product.fields.image.fields.file.url, product.fields.title, 
+          product.amount, product.quantity);
+      });
+    }
 
 //Adds total price
     const addTotalPriceOrderConfirmation = () => {
       const totalPriceText = document.createElement("p");
-      const totalPrice = JSON.parse(localStorage.getItem("totalPriceOrder"));
-      totalPriceText.innerText = `Total kostnad: ${totalPrice}kr`;
+      totalPriceText.innerText = `Total kostnad: ${getTotalPriceOrder()}kr`;
       document.querySelector("#orderProductsSummation").appendChild(totalPriceText);
     }
     addTotalPriceOrderConfirmation();
