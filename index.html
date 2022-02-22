@@ -101,8 +101,13 @@
         class="nav__logotype"/>
       </a>
 
-      <span 
-      class="nav__span">
+  <div class="searchWrapper">
+        <label for="searchBar">Search product</label>
+        <input type="text" name="searchBar" id="searchBar" placeholder="Search product">
+  </div> 
+
+
+
   <!--varukorg klickbar-->
         <span 
         class="nav__cart--icon">
@@ -224,8 +229,12 @@
   <section id="productListSection" 
   class="section hidden">
   
+  
   </section>
 
+  <section id="searchSection" 
+  class="">
+  </section>
   <section id="individualProductSection" 
   class="section hidden">
   </section>
@@ -303,8 +312,10 @@ class="section hidden">
     <h2>Skapa användare</h2>
     <p>Fyll i din information här:</p>
     <form id="createUserForm">
+
       <label for="emailCreateUser" class="hidden">E-post</label>
       <input type="email" name="emailCreateUser" id="emailCreateUser" required placeholder="E-post">
+
       <label for="passwordCreateUser" class="hidden">Lösenord</label>
       <input type="password" name="passwordCreateUser" id="passwordCreateUser" required placeholder="Lösenord">
       <label for="usernameCreateUser" class="hidden">Användarnamn</label>
@@ -383,9 +394,12 @@ class="section hidden">
 
 <script src="./js/views/productList.js"></script>
 <script src="./js/views/product.js"></script>
+
 <script src="./js/views/shoppingcart.js"></script>
 <script src="./js/views/orderConfirmation.js"></script>
 
+<!-- search -->
+<script src="./js/views/searchBar.js"></script>
 
 <!--create account and log in--->
 <script src="./js/views/createAccount.js"></script> 
