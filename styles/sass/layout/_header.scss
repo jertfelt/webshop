@@ -54,6 +54,12 @@ nav{
   @include breakpoint(xxsmall-max){
     visibility:hidden;
   }
+  &--user{
+   
+    div{
+      position:relative;
+    }
+  }
 }
 
  &__user{

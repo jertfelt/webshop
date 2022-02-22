@@ -635,6 +635,14 @@ h6 {
   right: 10%;
 }
 
+.login__dot {
+  height: 12px;
+  width: 12px;
+  background-color: #f2ea03;
+  border-radius: 50%;
+  z-index: 10;
+}
+
 .login__container {
   position: fixed;
   top: 0;
@@ -899,6 +907,10 @@ nav {
   .nav__span {
     visibility: hidden;
   }
+}
+
+.nav__span--user div {
+  position: relative;
 }
 
 .nav__user {

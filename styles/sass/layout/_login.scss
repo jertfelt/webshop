@@ -4,7 +4,14 @@
 
  //*-------------login dropdown
 
-
+  &__dot{
+    height: 12px;
+    width:12px;
+    background-color: $color-yellow;
+    border-radius: 50%;
+    z-index:10;
+    
+  }
  
   &__container{
     position: fixed;
@@ -40,7 +47,7 @@
     line-height:2rem;
     text-transform: capitalize;
     }
-    
+
     h2:nth-of-type(1){
       margin-top:2rem;
     }

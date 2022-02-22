@@ -145,9 +145,9 @@
             id="headerCartAmount">
             0
             </span>
-    </span>
-
-          <!--Användare klickbar-->
+    </span>   
+<!--Användare klickbar-->
+        <span class="nav__span--user">
           <span 
           class="nav__user input-group-addon" 
           id="userNavIcon">
@@ -155,7 +155,10 @@
             class="fa fa-user">
             </i>
           </span>
-
+            <!--dot that shows when logged in (saknas funktion)-->
+          <div class="login__dot hidden">
+          </div>
+        </span>
   </span>
       </div>
     </nav>
@@ -361,10 +364,12 @@ class="section hidden">
      <aside>
       <div id="userNavDropdown" class="hidden login__container">
         <div class="login__dropdown">
+         
           <img src="styles/sass/img/closing.png" 
           id="closeUserNavDropdown"
           alt="Stäng varukorg"
           class="dropdown--close"/>
+          
         <span class="login__dropdown--content">
         <span id="ifUserLoggedIn" class="hidden ">
         <h2 class="text--green">Välkommen</h2>
