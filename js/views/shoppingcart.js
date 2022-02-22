@@ -71,47 +71,11 @@ const drawProductsinCart = () => {
   })
 }
 
+// Rita totala priset av hela order
 const drawTotalPriceOrderinCart = () => {
   const totalPriceOrder = getTotalPriceOrder();
   cartTotal.innerText = totalPriceOrder;
 }
-
-// }
-// const buyProduct = (prodID) => {
-//   addToCart(prodID);
-
-
-//  //for each cart item:
-//  addCartItem(item){
-//   let cartdiv = document.createElement("div");
-//   cartdiv.classList.add("cart-item-new");
-
-//   cartdiv.innerHTML = `
-//   <div class="cart__item" data-id=${item.id}>
-//       <img src=${item.image}
-//   alt="product" />
-//   <div>
-//     <h4>${item.title}</h4>
-//     <h5>${item.price}SEK</h5>
-//     <span class="cart__item--remove" data-id=${item.id} >Remove</span>
-//   </div>
-//   <div>
-//     <i class="fas fa-chevron-up" data-id=${item.id}></i>
-//     <p class="cart__item--amount">${item.amount}</p>
-//     <i class="fas fa-chevron-down"data-id=${item.id} ></i>
-  
-//   </div> 
-//   </div>
-//   `
-//   cartContent.appendChild(cartdiv);
-// }
-//*-----------
-    // //method for cart array
-    // populateCart(cart){
-    //   //adding cart items to the cart
-    //   cart.forEach(item => this.addCartItem(item));
-    // }
-
 
 //*-----------------ADD TO CART FUNCTION
 // Sparar/uppdaterar varukorgen i local storage
@@ -172,12 +136,6 @@ const addToCart = (prodID) => {
   }
 }
 
-// Uppdaterar varukorgen i local storage
-const setCartinLocalStorage = (cart) => {
-  const stringifyCart = JSON.stringify(cart);
-  localStorage.setItem("cart", stringifyCart);
-}
-
 // Uppdaterar totala priset för hela ordern i local storage
 const setTotalPriceOrder = () => {
   const cartItems = getCart();
@@ -216,7 +174,39 @@ const deleteProduct = (prodID) => {
   setCartinLocalStorage(updatedProductList);
 }
 
-// Lägg till event listener på varje produkt i varukorg. Kör funktion kopplat till klickat knapp.
+//*---------event listeners
+
+closeCartWindow.addEventListener("click", hideCart);
+
+  document.addEventListener('keydown', function(event){
+    if(event.key === "Arrowdown")
+    {
+    showCart();
+    }
+  });
+
+cartHeaderBtn.addEventListener("click", () =>{
+  showCart();
+});
+
+document.addEventListener('keydown', function(event){
+  if(event.key === "Escape")
+  {
+  hideCart();
+  }
+});
+
+//*--------knapp till beställningsbekräfelse-sida:
+document.getElementById("toConfirmation").addEventListener("click",
+  (e) => {
+    e.preventDefault();
+  changeActivePage("orderConfirmationSection");
+ })
+
+ //!bugg: syns inte något tar över  (T)
+cartNavBtn.addEventListener("click", showCart);
+
+// Lägg till event listener på varje produkt i varukorg. Kör funktion kopplat till klickat knapp: lägga till, radera produkt och minska antal produkt
 const setCartEventListener = () => {
   const productList = document.querySelectorAll(".cart__item");
 
@@ -261,42 +251,7 @@ const setAddToCartClick = (productList) => {
   });
 }
 
-//*---------event listeners
-
-closeCartWindow.addEventListener("click", hideCart);
-
-  document.addEventListener('keydown', function(event){
-    if(event.key === "Arrowdown")
-    {
-    showCart();
-    }
-  });
-
-cartHeaderBtn.addEventListener("click", () =>{
-  showCart();
-});
-
-
-
-document.addEventListener('keydown', function(event){
-  if(event.key === "Escape")
-  {
-  hideCart();
-  }
-});
-
-//*--------knapp till beställningsbekräfelse-sida:
-document.getElementById("toConfirmation").addEventListener("click",
-  (e) => {
-    e.preventDefault();
-  changeActivePage("orderConfirmationSection");
- })
-
- //!bugg: syns inte något tar över  (T)
-cartNavBtn.addEventListener("click", showCart);
-
-
-// const clearCart=() => {
+// const clearCart= () => {
  //get all the ID:s from the cart
 //   let cartItemsAllClear = cart.map(item => item.id);
 

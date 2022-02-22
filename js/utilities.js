@@ -63,6 +63,13 @@ const getCart = () => {
   return JSON.parse(localStorage.getItem("cart"));
 }
 
+//*-------Get total price from local storage
 const getTotalPriceOrder = () => {
   return JSON.parse(localStorage.getItem("totalPriceOrder"));
+}
+
+// Uppdaterar varukorgen i local storage
+const setCartinLocalStorage = (cart) => {
+  const stringifyCart = JSON.stringify(cart);
+  localStorage.setItem("cart", stringifyCart);
 }
