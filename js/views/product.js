@@ -7,23 +7,25 @@ const productCreator = (product)=>{
 
    
     const sectionProduct = document.createElement("section");
-    sectionProduct.classList.add("products__grid--individual");
+    sectionProduct.classList.add("products__individual");
     individualProductSection.appendChild(sectionProduct);
     
     const articleProduct = document.createElement("article");
 
     articleProduct.innerHTML = `
     <div class="container--margin">
-      <div class="product__img--container">
+      <div class="product__img--container product__img--list">
         <img 
         src="/${product.fields.image.fields.file.url}">
         </img>
       </div>
-      <span class="product__individual--text">
-      <button class="addToCartBtn " 
-      data-id="${product.sys.id}">Köp
-      </button>
+      <span class="product__box--individual">
+        
+          <button class="addToCartBtn " 
+          data-id="${product.sys.id}">Köp
+          </button>
           <h3>${product.fields.title}</h3>
+      
           <p class="text--s">${product.fields.description}</p>
           <p class="text--s text--green text--bold">${product.fields.price} kr </p>
       </span>
