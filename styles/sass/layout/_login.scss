@@ -1,8 +1,8 @@
-//*-------------login dropdown
+
 
 .login{
 
- 
+ //*-------------login dropdown
   &--name{
     color:$color-green;
   }
@@ -41,8 +41,84 @@
 
     }
   }
-    
+  &__box{
+    background-color: $color-white;
+    padding:3rem;
+    border-radius: 29px;
+    h2 {
+      margin-top:-1rem;
+      color: $color-green;
+    }
+    form{
+      margin-top:2rem;
+      input{
+        padding:0.2rem;
+      }
+    }
+    &--inputs{
+      margin-bottom:1rem;
+    }
+
+    button {
+      padding:0.5rem;
+      background-color: $color-green;
+      border:none;
+      border-radius:9px;
+      color: $color-white;
+    }
+
+    button:nth-of-type(2){
+      background-color: $color-black;
+    }
+  }
 }
 
+///---------log in section page
+#loginSection{
+  margin-top:3rem;
+  @include flexBox(column,center,center)
+}
 
+//--------skapa användare 
+.register{
+
+  &__box{
+    width:80%;
+    margin: 0 auto;
+    margin-top:3rem;
+    @include flexBox(column,center,center);
+    background-color: $color-white;
+    padding:3rem;
+    border-radius: 29px;
+
+    h2 {
+      margin-top:-1rem;
+      color: $color-green;
+    }
+    form{
+      margin-top:2rem;
+      @include flexBox(column,center,center);
+
+      input{
+        padding:0.2rem;
+        margin-bottom:0.6rem;
+      }
+    }
+   
+    button {
+      cursor: pointer;
+      margin-top:1rem;
+      padding:0.5rem;
+      background-color: $color-green;
+      border:none;
+      border-radius:9px;
+      color: $color-white;
+    }
+
+    button:nth-of-type(2){
+      background-color: $color-black;
+    }
+  
+  }
+}
 
