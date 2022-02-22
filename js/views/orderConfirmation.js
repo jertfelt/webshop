@@ -74,15 +74,15 @@ localStorage.setItem("totalPriceOrder", JSON.stringify(100));
     
 //Checks if anyone is logged in, if they are they get your details and fills out the form
    // const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
-    if (loggedInUser !== null) {
-      document.querySelector("#nameOrderConfirmation").value = loggedInUser.name;
-            document.querySelector("#streetOrderConfirmation").value = loggedInUser.street;
-            document.querySelector("#postalCodeOrderConfirmation").value = loggedInUser.postalCode;
-            document.querySelector("#townOrderConfirmation").value = loggedInUser.town;
-            document.querySelector("#emailOrderConfirmation").value = loggedInUser.email;
+    if (getLoggedinUser() !== null) {
+      document.querySelector("#nameOrderConfirmation").value = getLoggedinUser().name;
+            document.querySelector("#streetOrderConfirmation").value = getLoggedinUser().street;
+            document.querySelector("#postalCodeOrderConfirmation").value = getLoggedinUser().postalCode;
+            document.querySelector("#townOrderConfirmation").value = getLoggedinUser().town;
+            document.querySelector("#emailOrderConfirmation").value = getLoggedinUser().email;
 
-            if (loggedInUser.tel !== null) {
-              document.querySelector("#phoneNumberOrderConfirmation").value = loggedInUser.tel;
+            if (getLoggedinUser().tel !== null) {
+              document.querySelector("#phoneNumberOrderConfirmation").value = getLoggedinUser().tel;
             }
     }
 
