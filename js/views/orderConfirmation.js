@@ -25,7 +25,7 @@ localStorage.setItem("totalPriceOrder", JSON.stringify(100));
 
 //Get cart from local storage
 //Remove later
-    const productsOrder = JSON.parse(localStorage.getItem("cart"));
+    //const productsOrder = JSON.parse(localStorage.getItem("cart"));
 
 
 //Creates product element
@@ -73,7 +73,7 @@ localStorage.setItem("totalPriceOrder", JSON.stringify(100));
 
     
 //Checks if anyone is logged in, if they are they get your details and fills out the form
-    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+   // const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
     if (loggedInUser !== null) {
       document.querySelector("#nameOrderConfirmation").value = loggedInUser.name;
             document.querySelector("#streetOrderConfirmation").value = loggedInUser.street;
