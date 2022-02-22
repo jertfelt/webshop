@@ -203,6 +203,17 @@ const decreaseQuantity = (prodID) => {
    setCartinLocalStorage(updatedProductList);
 }
 
+// Tar bort hela produkten
+const deleteProduct = (prodID) => {
+   // Hämtar produkter från local storage
+   const existingProductList = getCart();
+   // Får lista med uppdaterat data
+   const updatedProductList = existingProductList.filter( (product) => {
+    // Spara alla produkter förutom den som ska raderas
+    return !(product.sys.id == prodID);
+    })
+  setCartinLocalStorage(updatedProductList);
+}
 
 // const setDecreaseQuantityClick = () => {
 //   const minusButtons = document.querySelectorAll(".decrease");
