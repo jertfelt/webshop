@@ -30,6 +30,13 @@ nav{
 
   &__logotype{
   max-height:90px;
+   
+  @include breakpoint(small-max-m){
+    position:relative;
+    right:-60px;
+   };
+ 
+   
  
 }
 
@@ -45,12 +52,19 @@ nav{
    position:relative;
    right:-60px;
   };
+
+  @include breakpoint(xxsmall-max){
+    visibility:hidden;
+  }
 }
 
  &__user{
    @include breakpoint(small-max-m){
      visibility:hidden;
    };
+   @include breakpoint(small-max-m){
+    visibility:hidden;
+  };
    background-color: $color-green;
    border-radius: 50%;
    padding:0.5rem;

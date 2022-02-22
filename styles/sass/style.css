@@ -728,6 +728,13 @@ nav {
   max-height: 90px;
 }
 
+@media only screen and (max-width: 768px) {
+  .nav__logotype {
+    position: relative;
+    right: -60px;
+  }
+}
+
 .nav__logotype:hover {
   -webkit-transform: rotate(-50deg);
           transform: rotate(-50deg);
@@ -758,6 +765,12 @@ nav {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .nav__span {
+    visibility: hidden;
+  }
+}
+
 .nav__user {
   background-color: #225e39;
   border-radius: 50%;
@@ -768,6 +781,12 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav__user {
+    visibility: hidden;
+  }
 }
 
 @media only screen and (max-width: 768px) {
