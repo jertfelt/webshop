@@ -40,17 +40,30 @@ const hideCart = () => {
 
 //*-----------varukorgen
 
+// Rita produkterna
+const drawProductsinCart = () => {
+  const selectedProductList = getCart();
 
-const createCart = (item) => {
-
-  let cartDiv = document.createElement("div");
-  cartDiv.innerHTML = `<p>HÄR SKA DET RENDERAS</p>
-`
-
-const setCartValue = (cart) => {
-      setCartValue(cart);
-      // saveCart(cart);
-    }
+  selectedProductList.forEach(product => {
+    const cartDiv = document.createElement("div");
+    cartDiv.innerHTML = `
+      <div class="cart__item" data-id=${product.sys.id}>
+        <img src=${product.fields.image.fields.file.url} alt="product" />
+        <div>
+          <h4>${product.fields.title}</h4>
+          <h5>${product.amount} kr</h5>
+          <span class="cart__item--remove" data-id=${product.id} >Remove</span>
+        </div>
+        <div>
+          <i class="fas fa-chevron-up"}></i>
+          <p class="cart__item--quantity">${product.quantity}</p>
+          <i class="fas fa-chevron-down"></i>
+        </div> 
+      </div>
+      `
+      cartContent.appendChild(cartDiv);
+  })
+  
 // }
 // const buyProduct = (prodID) => {
 //   addToCart(prodID);
@@ -80,7 +93,7 @@ const setCartValue = (cart) => {
 //   `
 //   cartContent.appendChild(cartdiv);
 // }
-  cartContent.appendChild(cartDiv);
+
 }
 
 
@@ -181,6 +194,15 @@ const decreaseQuantity = (prodID) => {
    setCartinLocalStorage(updatedProductList);
 }
 
+// const setDecreaseQuantityClick = () => {
+//   const minusButtons = document.querySelectorAll(".decrease");
+
+//   minusButtons.forEach(button => {
+//     button.addEventListener("click", () => {
+
+//     })
+//   })
+// }
 // Wrapper funktion som kör funktioner efter HTML har ritats
 const setAddToCartClick = (productList) => {
   // Hämtar alla köp-knappar
