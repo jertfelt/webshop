@@ -40,8 +40,7 @@
 //Adds total price
     const addTotalPriceOrderConfirmation = () => {
       const totalPriceText = document.createElement("p");
-      const totalPrice = JSON.parse(localStorage.getItem("totalPriceOrder"));
-      totalPriceText.innerText = `Total kostnad: ${totalPrice}kr`;
+      totalPriceText.innerText = `Total kostnad: ${getTotalPriceOrder()}kr`;
       document.querySelector("#orderProductsSummation").appendChild(totalPriceText);
     }
     addTotalPriceOrderConfirmation();
