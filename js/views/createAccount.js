@@ -17,6 +17,8 @@ const createUser = (email, password, userName, street, postalCode, town, tel) =>
     tel: tel
   }
   usersArr.push(userObj);
+  //loggar in användaren
+  localStorage.setItem("loggedInUser", JSON.stringify(userObj))
 }
 
 
