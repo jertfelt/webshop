@@ -23,28 +23,30 @@ localStorage.setItem("cart", JSON.stringify(tester2));
 localStorage.setItem("totalPriceOrder", JSON.stringify(100));
 */
 
+//Product information
+
 //Creates product element
-    const createProductElementOrderConfirmation = (img, name, price, amount) => {
+    const createProductElementOrderConfirmation = (img, name, amount, quantity) => {
     
     const productOrderConfirmation = document.createElement("article");
     const productInformationDivOrderConfirmation = document.createElement("div");
     const imgOrderConfirmation = document.createElement("img");
 
     const productNameOrderConfirmation = document.createElement("h3");
-    const priceOrderConfirmation = document.createElement("p");
     const amountOrderConfirmation = document.createElement("p");
+    const quantityOrderConfirmation = document.createElement("p");
 
     imgOrderConfirmation.src = img;
     productNameOrderConfirmation.innerText = name;
-    priceOrderConfirmation.innerText = price;
-    amountOrderConfirmation.innerText = `${amount} st`;
+    amountOrderConfirmation.innerText = amount;
+    quantityOrderConfirmation.innerText = `${quantity}} st`;
 
     productInformationDivOrderConfirmation.appendChild(productNameOrderConfirmation);
-    productInformationDivOrderConfirmation.appendChild(priceOrderConfirmation);
+    productInformationDivOrderConfirmation.appendChild(amountOrderConfirmation);
 
     productOrderConfirmation.appendChild(imgOrderConfirmation);
     productOrderConfirmation.appendChild(productInformationDivOrderConfirmation);
-    productOrderConfirmation.appendChild(amountOrderConfirmation);
+    productOrderConfirmation.appendChild(quantityOrderConfirmation);
 
     document.querySelector("#orderProductsSummation").appendChild(productOrderConfirmation);
   }
@@ -53,7 +55,7 @@ localStorage.setItem("totalPriceOrder", JSON.stringify(100));
     getCart().forEach(product => {
       createProductElementOrderConfirmation(
         product.fields.image, product.fields.title, 
-        product.fields.price, product.amount);
+        product.amount, product.quantity);
     });
 
 //Adds total price
@@ -66,7 +68,8 @@ localStorage.setItem("totalPriceOrder", JSON.stringify(100));
     addTotalPriceOrderConfirmation();
 
 
-    
+//User information
+
 //Checks if anyone is logged in, if they are they get your details and fills out the form
    // const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
     if (getLoggedinUser() !== null) {
