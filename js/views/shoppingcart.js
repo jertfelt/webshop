@@ -171,11 +171,13 @@ const addToCart = (prodID) => {
   }
 }
 
+// Uppdaterar varukorgen i local storage
 const setCartinLocalStorage = (cart) => {
   const stringifyCart = JSON.stringify(cart);
   localStorage.setItem("cart", stringifyCart);
 }
 
+// Uppdaterar totala priset för hela ordern i local storage
 const setTotalPriceOrder = () => {
   const cartItems = getCart();
   let totalPrice = 0;
@@ -185,6 +187,7 @@ const setTotalPriceOrder = () => {
   localStorage.setItem("totalPriceOrder", totalPrice);
 }
 
+// Tar bort en produkt i taget. Funktionen borde köras när man klickar på pilen nedåt i varukorgen.
 const decreaseQuantity = (prodID) => {
    // Hämtar produkter från local storage
    const existingProductList = getCart();
@@ -199,6 +202,7 @@ const decreaseQuantity = (prodID) => {
    });
    setCartinLocalStorage(updatedProductList);
 }
+
 
 // const setDecreaseQuantityClick = () => {
 //   const minusButtons = document.querySelectorAll(".decrease");
