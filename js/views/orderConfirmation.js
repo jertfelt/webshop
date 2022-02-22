@@ -29,11 +29,13 @@
   }
 
 //Go through each product in cart and send it to print
-    getCart().forEach(product => {
-      createProductElementOrderConfirmation(
-        product.fields.image, product.fields.title, 
-        product.amount, product.quantity);
-    });
+    if (getCart() !== null) {
+      getCart().forEach(product => {
+        createProductElementOrderConfirmation(
+          product.fields.image, product.fields.title, 
+          product.amount, product.quantity);
+      });
+    }
 
 //Adds total price
     const addTotalPriceOrderConfirmation = () => {
