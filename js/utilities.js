@@ -62,3 +62,7 @@ const getLoggedinUser = () => {
 const getCart = () => {
   return JSON.parse(localStorage.getItem("cart"));
 }
+
+const getTotalPriceOrder = () => {
+  return JSON.parse(localStorage.getItem("totalPriceOrder"));
+}
