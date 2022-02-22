@@ -29,6 +29,7 @@ const showCart = () => {
   cartMenu.classList.add("cart__show");
   drawProductsinCart();
   drawTotalPriceOrderinCart();
+  setCartEventListener();
 };
 
 //dölja varukorg
@@ -57,12 +58,12 @@ const drawProductsinCart = () => {
         <div>
           <h4>${product.fields.title}</h4>
           <h5>${product.amount} kr</h5>
-          <span class="cart__item--remove" data-id=${product.id} >Remove</span>
+          <span class="cart__item--remove" id="deleteBtn">Remove</span>
         </div>
         <div>
-          <i class="fas fa-chevron-up"}></i>
+          <i class="fas fa-chevron-up" id="addBtn"></i>
           <p class="cart__item--quantity">${product.quantity}</p>
-          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-chevron-down" id="decreaseBtn"></i>
         </div> 
       </div>
       `
@@ -187,7 +188,7 @@ const setTotalPriceOrder = () => {
   localStorage.setItem("totalPriceOrder", totalPrice);
 }
 
-// Tar bort en produkt i taget. Funktionen borde köras när man klickar på pilen nedåt i varukorgen.
+// Tar bort en produkt i taget. Funktionen borde köras när man klickar på pilen nedåt i varukorgen
 const decreaseQuantity = (prodID) => {
    // Hämtar produkter från local storage
    const existingProductList = getCart();
@@ -203,7 +204,7 @@ const decreaseQuantity = (prodID) => {
    setCartinLocalStorage(updatedProductList);
 }
 
-// Tar bort hela produkten
+// Tar bort hela produkten. Funktionen borde köras när man klickar på "Remove"-knappen i varukorgen
 const deleteProduct = (prodID) => {
    // Hämtar produkter från local storage
    const existingProductList = getCart();
@@ -215,15 +216,36 @@ const deleteProduct = (prodID) => {
   setCartinLocalStorage(updatedProductList);
 }
 
-// const setDecreaseQuantityClick = () => {
-//   const minusButtons = document.querySelectorAll(".decrease");
+// Lägg till event listener på varje produkt i varukorg. Kör funktion kopplat till klickat knapp.
+const setCartEventListener = () => {
+  const productList = document.querySelectorAll(".cart__item");
 
-//   minusButtons.forEach(button => {
-//     button.addEventListener("click", () => {
+  productList.forEach(product => {
+    product.addEventListener("click", (e) => {
+      const prodID = e.currentTarget.dataset.id;
+      console.log(prodID);
 
-//     })
-//   })
-// }
+      if (e.target.id === "addBtn") {
+        addToCart(prodID);
+        setTotalPriceOrder();
+        showCart();
+        return;
+      }
+      if (e.target.id == "deleteBtn") {
+        deleteProduct(prodID);
+        setTotalPriceOrder();
+        showCart();
+        return;
+      }
+      if (e.target.id === "decreaseBtn") {
+        decreaseQuantity(prodID);
+        setTotalPriceOrder();
+        showCart();
+        return;
+      }
+    })
+  })
+}
 // Wrapper funktion som kör funktioner efter HTML har ritats
 const setAddToCartClick = (productList) => {
   // Hämtar alla köp-knappar
