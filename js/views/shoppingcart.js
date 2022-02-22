@@ -148,30 +148,45 @@ const setTotalPriceOrder = () => {
 
 // Tar bort en produkt i taget. Funktionen borde köras när man klickar på pilen nedåt i varukorgen
 const decreaseQuantity = (prodID) => {
-   // Hämtar produkter från local storage
-   const existingProductList = getCart();
-   // Får lista med uppdaterat data
-   const updatedProductList = existingProductList.map(product => {
-     // Minska antal och uppdatera priset av vald produkt
-     if (product.sys.id == prodID) {
-      product.quantity--; 
-      product.amount = product.fields.price * product.quantity;
-     }
-     return product;
-   });
-   setCartinLocalStorage(updatedProductList);
+  // Hämtar produkter från local storage
+  const existingProductList = getCart();
+
+  // // Göm varukorgen om den enda/sista produkten tas bort 
+  // if(existingProductList.length === 1 && existingProductList[0].quantity === 1) {
+  //   clearCart();
+  //   return;
+  // }
+  // Får lista med uppdaterat data
+  const updatedProductList = existingProductList.map(product => {
+    // Minska antal och uppdatera priset av vald produkt
+    if (product.sys.id == prodID) {
+    product.quantity--; 
+    product.amount = product.fields.price * product.quantity;
+    }
+    return product;
+  });
+
+  setCartinLocalStorage(updatedProductList);
 }
 
 // Tar bort hela produkten. Funktionen borde köras när man klickar på "Remove"-knappen i varukorgen
 const deleteProduct = (prodID) => {
-   // Hämtar produkter från local storage
-   const existingProductList = getCart();
-   // Får lista med uppdaterat data
-   const updatedProductList = existingProductList.filter( (product) => {
-    // Spara alla produkter förutom den som ska raderas
-    return !(product.sys.id == prodID);
-    })
+  // Hämtar produkter från local storage
+  const existingProductList = getCart();
+  // Får lista med uppdaterat data
+  const updatedProductList = existingProductList.filter( (product) => {
+  // Spara alla produkter förutom den som ska raderas
+  return !(product.sys.id == prodID);
+  })
+
   setCartinLocalStorage(updatedProductList);
+
+  // Göm varukorgen dropdown om den är tom
+  if(updatedProductList.length === 0) {
+    hideCart();
+  } else {
+    showCart();
+  }
 }
 
 //*---------event listeners
@@ -213,7 +228,6 @@ const setCartEventListener = () => {
   productList.forEach(product => {
     product.addEventListener("click", (e) => {
       const prodID = e.currentTarget.dataset.id;
-      console.log(prodID);
 
       if (e.target.id === "addBtn") {
         addToCart(prodID);
@@ -224,7 +238,6 @@ const setCartEventListener = () => {
       if (e.target.id == "deleteBtn") {
         deleteProduct(prodID);
         setTotalPriceOrder();
-        showCart();
         return;
       }
       if (e.target.id === "decreaseBtn") {
@@ -251,18 +264,10 @@ const setAddToCartClick = (productList) => {
   });
 }
 
-// const clearCart= () => {
- //get all the ID:s from the cart
-//   let cartItemsAllClear = cart.map(item => item.id);
-
- //loop over the array and remove
-//   cartItemsAllClear.forEach(id => this.removeItem(id));
-
-//   while(cartContent.children.length>0){
-//     cartContent.removeChild(cartContent.children[0]);
-//   }
-//   hideCart(); 
-// }
+const clearCart= () => {
+  localStorage.removeItem("cart");
+  hideCart(); 
+}
 
 
 
