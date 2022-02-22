@@ -9,6 +9,7 @@ const clearCartBtn = document.getElementById("clearCart");
 //varukorgen 
 const cartMenu = document.querySelector(".cart__content");
 const cartContainer = document.querySelector(".cart__container");
+const cartFooter = document.querySelector(".cart__footer");
 
 //det som renderas ut 
 const cartContent = document.querySelector("#cartDynamicContent");
@@ -48,6 +49,15 @@ const drawProductsinCart = () => {
   // Ta bort ritade produkter
   while(cartContent.lastElementChild) {
     cartContent.removeChild(cartContent.lastElementChild);
+  }
+
+  // Om varukorgen är tom, visa meddelande och göm cart__footer
+  if(!selectedProductList) {
+    const errorElement = document.createElement("p");
+    errorElement.innerText = "Din varukorg är tom."
+    cartContent.appendChild(errorElement);
+    cartFooter.classList.add("hidden");
+    return;
   }
 
   selectedProductList.forEach(product => {
