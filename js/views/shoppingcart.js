@@ -13,6 +13,7 @@ const cartContainer = document.querySelector(".cart__container");
 
 //det som renderas ut 
 const cartContent = document.querySelector("#cartDynamicContent");
+const cartTotal = document.getElementById("cartTotal");
 
 //räknaren i headern (T)
 let cartCounterHeader = document.querySelector(".headercart__showAmount");
@@ -42,6 +43,9 @@ const hideCart = () => {
 
 const createCart = (item) => {
 
+  let cartDiv = document.createElement("div");
+  cartDiv.innerHTML = `<p>HÄR SKA DET RENDERAS</p>
+`
 
 const setCartValue = (cart) => {
       setCartValue(cart);
@@ -56,10 +60,6 @@ const setCartValue = (cart) => {
 //  addCartItem(item){
 //   let cartdiv = document.createElement("div");
 //   cartdiv.classList.add("cart-item-new");
-
-  let cartDiv = document.createElement("div");
-  cartDiv.innerHTML = `<p>HÄR SKA DET RENDERAS</p>
-`
 
 //   cartdiv.innerHTML = `
 //   <div class="cart__item" data-id=${item.id}>
@@ -83,6 +83,8 @@ const setCartValue = (cart) => {
   cartContent.appendChild(cartDiv);
 }
 
+
+
 //*-----------
     // //method for cart array
     // populateCart(cart){
@@ -91,68 +93,86 @@ const setCartValue = (cart) => {
     // }
 
 
-  //*----------funktioner i varukorgen
-
-
-
-
 //*-----------------ADD TO CART FUNCTION
-// Wrapper funktion för att köra den efter HTML har ritats
-const buyProduct = () => {
-  // Hämtar alla köp-knappar
-  const addToCartButtons = document.querySelectorAll(".addToCartBtn");
-
-  // Sparar/uppdaterar varukorgen i local storage
-  const addToCart = (prodID) => {
-    const existingProducts = localStorage.getItem("cart");
-    // Kollar om det redan finns något i local storage
-    if (existingProducts) {
-      // Lägger till produkterna från local storage till array
-      const cart = JSON.parse(existingProducts);
-      // Kollar om produkten redan finns
-      const existingProduct = cart.find(product => product.sys.id === prodID);
-
-      if (existingProduct) {
-        // Uppdaterar cart med rätt antal (quantity).
-        const updatedProducts = cart.map(product => {
-          if (product.sys.id === prodID) {
-            product.quantity++;
-          }
-          return product;
-        })
-        setCartinLocalStorage(updatedProducts);
-        return;
-      } else { //Skapa ny produkt och lägger till i array.
-        cart.push({
-          quantity: 1,
-          sys: { id: prodID }
-        });
-        setCartinLocalStorage(cart);
-        return;
-      }
-
-    } else { // Skapar ny array med produkt om varukorgen är tom
-      const newCartWithProduct = [
-        {
-          quantity: 1,
-          sys: { id: prodID }
+// Sparar/uppdaterar varukorgen i local storage
+const addToCart = (prodID) => {
+  // Hittar rätt produkt och hämtar datan.
+  const selectedProductData = productList.find(product => product.sys.id === prodID);
+  // Hämtar produkter från local storage
+  const existingProductList = getCart();
+  // Kollar om det redan finns produkter i cart
+  if (existingProductList !== null) {
+    // Kollar om produkten redan finns
+    const existingProduct = existingProductList.find(product => product.sys.id === prodID);
+    if (existingProduct) {
+      // Uppdaterar cart med rätt antal (quantity) och totala priset.
+      const updatedProducts = existingProductList.map(product => {
+        if (product.sys.id === prodID) {
+          product.quantity++;
+          product.amount = product.fields.price * product.quantity;
         }
-      ]
-      setCartinLocalStorage(newCartWithProduct);
+        return product;
+      })
+      setCartinLocalStorage(updatedProducts);
+      return;
+    } else { //Skapa ny produkt och lägger till i array.
+      const newProducts = existingProductList;
+      newProducts.push({
+        quantity: 1,
+        amount: selectedProductData.fields.price,
+        sys: { id: selectedProductData.sys.id },
+        category: selectedProductData.category,
+        fields: {
+          title: selectedProductData.fields.title,
+          price: selectedProductData.fields.price,
+          description: selectedProductData.fields.description,
+          image: { fields: { file: { url: selectedProductData.fields.image.fields.file.url } } }
+        }
+      });
+      setCartinLocalStorage(newProducts);
       return;
     }
+  } else { // Skapar ny array med produkt om varukorgen är tom
+    const newCartWithProduct = [
+      {
+        quantity: 1,
+        amount: selectedProductData.fields.price,
+        sys: { id: selectedProductData.sys.id },
+        category: selectedProductData.category,
+        fields: {
+          title: selectedProductData.fields.title,
+          price: selectedProductData.fields.price,
+          description: selectedProductData.fields.description,
+          image: { fields: { file: { url: selectedProductData.fields.image.fields.file.url } } }
+        }
+      }
+    ]
+    setCartinLocalStorage(newCartWithProduct);
+    return;
   }
-
-  const setCartinLocalStorage = (cart) => {
-    const stringifyCart = JSON.stringify(cart);
-    localStorage.setItem("cart", stringifyCart);
-  }
-
+}
+const setCartinLocalStorage = (cart) => {
+  const stringifyCart = JSON.stringify(cart);
+  localStorage.setItem("cart", stringifyCart);
+}
+const getTotalPriceOrder = () => {
+  const cartItems = getCart();
+  let totalPrice = 0;
+  cartItems.forEach(product => {
+    totalPrice += product.amount;
+  })
+  localStorage.setItem("totalPriceOrder", totalPrice);
+}
+// Wrapper funktion som kör funktioner efter HTML har ritats
+const setAddToCartClick = (productList) => {
+  // Hämtar alla köp-knappar
+  const addToCartButtons = document.querySelectorAll(".addToCartBtn");
   // Hämtar ID på klickat produkt och lägger till den i varukorgen
   addToCartButtons.forEach(button => {
     button.addEventListener("click", () => {
       const prodID = button.dataset.id;
       addToCart(prodID);
+      getTotalPriceOrder();
     })
   });
 }

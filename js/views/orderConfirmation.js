@@ -1,27 +1,4 @@
-/*//test code
-const tester2 = [{
-  "sys": { "id": "4" },
-  "category": "Dam",
-  "fields": {
-    "title": "Pants",
-    "price": 219,
-    "description": "Byxor gjord på återvunnen bomull, perfekt för myset hemma i covidtider",
-    "image": { "fields": { "file": { "url": "styles/sass/img/womens-traveller-pants.png" } } }
-  }
-},
-{
-  "sys": { "id": "5" },
-  "category": "Dam",
-  "fields": {
-    "title": "I am hat",
-    "price": 500,
-    "description": "En varm och mysig handgjord virkad mössa, gjord av hantverkare på Gotland.",
-    "image": { "fields": { "file": { "url": "styles/sass/img/women-hat.png" } } }
-  }
-}];
-localStorage.setItem("cart", JSON.stringify(tester2));
-localStorage.setItem("totalPriceOrder", JSON.stringify(100));
-*/
+
 
 //Creates product element
     const createProductElementOrderConfirmation = (img, name, price, amount) => {
@@ -101,3 +78,61 @@ localStorage.setItem("totalPriceOrder", JSON.stringify(100));
     saveOrderDetails();
     confirmOrderConfirmationBtn();
   });
+
+
+
+
+// //test code
+// const tester2 = [{
+//   "sys": { "id": "4" },
+//   "category": "Dam",
+//   "fields": {
+//     "title": "Pants",
+//     "price": 219,
+//     "description": "Byxor gjord på återvunnen bomull, perfekt för myset hemma i covidtider",
+//     "image": { "fields": { "file": { "url": "styles/sass/img/womens-traveller-pants.png" } } }
+//   }
+// },
+// {
+//   "sys": { "id": "5" },
+//   "category": "Dam",
+//   "fields": {
+//     "title": "I am hat",
+//     "price": 500,
+//     "description": "En varm och mysig handgjord virkad mössa, gjord av hantverkare på Gotland.",
+//     "image": { "fields": { "file": { "url": "styles/sass/img/women-hat.png" } } }
+//   }
+// }];
+// localStorage.setItem("cart", JSON.stringify(tester2));
+// localStorage.setItem("totalPriceOrder", JSON.stringify(100));
+
+
+//Get cart from local storage
+//Remove later
+    //const productsOrder = JSON.parse(localStorage.getItem("cart"));
+
+
+/*//test code
+const tester2 = [{
+  "sys": { "id": "4" },
+  "category": "Dam",
+  "fields": {
+    "title": "Pants",
+    "price": 219,
+    "description": "Byxor gjord på återvunnen bomull, perfekt för myset hemma i covidtider",
+    "image": { "fields": { "file": { "url": "styles/sass/img/womens-traveller-pants.png" } } }
+  }
+},
+{
+  "sys": { "id": "5" },
+  "category": "Dam",
+  "fields": {
+    "title": "I am hat",
+    "price": 500,
+    "description": "En varm och mysig handgjord virkad mössa, gjord av hantverkare på Gotland.",
+    "image": { "fields": { "file": { "url": "styles/sass/img/women-hat.png" } } }
+  }
+}];
+localStorage.setItem("cart", JSON.stringify(tester2));
+localStorage.setItem("totalPriceOrder", JSON.stringify(100));
+*/
