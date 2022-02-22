@@ -15,8 +15,8 @@
 
     imgOrderConfirmation.src = img;
     productNameOrderConfirmation.innerText = name;
-    amountOrderConfirmation.innerText = amount;
-    quantityOrderConfirmation.innerText = `${quantity}} st`;
+    amountOrderConfirmation.innerText = `${amount}kr`;
+    quantityOrderConfirmation.innerText = `${quantity} st`;
 
     productInformationDivOrderConfirmation.appendChild(productNameOrderConfirmation);
     productInformationDivOrderConfirmation.appendChild(amountOrderConfirmation);
@@ -32,7 +32,7 @@
     if (getCart() !== null) {
       getCart().forEach(product => {
         createProductElementOrderConfirmation(
-          product.fields.image, product.fields.title, 
+          product.fields.image.fields.file.url, product.fields.title, 
           product.amount, product.quantity);
       });
     }
