@@ -59,4 +59,6 @@ const getLoggedinUser = () => {
 }
 
 //*-------Get cart from local storage
-const productsOrder = JSON.parse(localStorage.getItem("cart"));
+const getCart = () => {
+  return JSON.parse(localStorage.getItem("cart"));
+}

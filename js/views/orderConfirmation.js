@@ -24,9 +24,6 @@ localStorage.setItem("totalPriceOrder", JSON.stringify(100));
 
 
 //Get cart from local storage
-//Remove later
-    //const productsOrder = JSON.parse(localStorage.getItem("cart"));
-
 
 //Creates product element
     const createProductElementOrderConfirmation = (img, name, price, amount) => {
@@ -55,7 +52,7 @@ localStorage.setItem("totalPriceOrder", JSON.stringify(100));
   }
 
 //Go through each product in cart and send it to print
-    productsOrder.forEach(product => {
+    getCart().forEach(product => {
       createProductElementOrderConfirmation(
         product.fields.image, product.fields.title, 
         product.fields.price, product.amount);
