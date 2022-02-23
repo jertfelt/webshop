@@ -1,6 +1,5 @@
 
 //Variables
-
 let userNavDropdownShowing = false;
 
 const userNavDropdown = document.querySelector("#userNavDropdown");
@@ -8,6 +7,10 @@ const userNavName = document.querySelector("#userNavName");
 
 const userNavLogInRegisterBtn = document.querySelector("#userNavLogInRegisterBtn");
 const userNavLogOutBtn = document.querySelector("#userNavLogOutBtn");
+
+const ifUserLoggedIn = document.getElementById("ifUserLoggedIn");
+
+const userNavOnlineDot = document.querySelector("#navUserOnlineDot");
 
 //Shows and hides dropdown
 
@@ -28,12 +31,15 @@ document.querySelector("#closeUserNavDropdown").addEventListener("click", () => 
 
 //Fills in information om inloggad
 
-if (loggedInUser) {
+if (getLoggedinUser()) {
+  ifUserLoggedIn.classList.remove("hidden");
   userNavName.classList.remove("hidden");
-  userNavName.innerText = loggedInUser.name;
+  userNavName.innerText = getLoggedinUser().name;
 
   userNavLogInRegisterBtn.classList.add("hidden");
   userNavLogOutBtn.classList.remove("hidden");
+
+  userNavOnlineDot.classList.remove("hidden");
 }
 
 //Logout button
@@ -48,6 +54,8 @@ userNavLogOutBtn.addEventListener("click", () => {
 
   userNavLogInRegisterBtn.classList.remove("hidden");
   userNavLogOutBtn.classList.add("hidden");
+
+  userNavOnlineDot.classList.add("hidden");
 });
 
 //Log in / Register button

@@ -53,7 +53,23 @@ document.querySelector(".list__nested--mother").addEventListener("click", () =>{
 
 //*-------Get logged in user info
 
-const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+const getLoggedinUser = () => {
+  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+  return loggedInUser;
+}
 
 //*-------Get cart from local storage
-const productsOrder = JSON.parse(localStorage.getItem("cart"));
+const getCart = () => {
+  return JSON.parse(localStorage.getItem("cart"));
+}
+
+//*-------Get total price from local storage
+const getTotalPriceOrder = () => {
+  return JSON.parse(localStorage.getItem("totalPriceOrder"));
+}
+
+// Uppdaterar varukorgen i local storage
+const setCartinLocalStorage = (cart) => {
+  const stringifyCart = JSON.stringify(cart);
+  localStorage.setItem("cart", stringifyCart);
+}

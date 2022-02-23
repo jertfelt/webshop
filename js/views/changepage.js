@@ -30,6 +30,10 @@ const changeActivePage = (sectionName, categoryName, prodID) => {
 const createURL  = (sectionName, categoryName, prodID) => {
   const url = new URL(window.location.href);
   const search_params = url.searchParams;
+
+  search_params.delete("id");
+  search_params.delete("category");
+  
   // Lägger till section parameter
   search_params.set('section', sectionName);
   // Lägger till kategori om angiven
@@ -46,7 +50,7 @@ const createURL  = (sectionName, categoryName, prodID) => {
 
 const setActivePage = () => {
   let url = new URL(window.location.href);
- 
+  
   let search_params = url.searchParams;
   // console.log(search_params); ///blir tom vid start  (första gången)
 
