@@ -8,7 +8,7 @@
   <link rel="shortcut icon" type="image/jpg" href="styles\img\favicon-32x32.png"/>
   <link rel="stylesheet" href="styles\sass\style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
@@ -114,11 +114,6 @@
   <div class="search__dropdown"
   id ="searchContent"> -->
 
-
-    
-  </div>
-
-
   <!--logotyp-->
       <a 
       href="index.html"
@@ -166,6 +161,7 @@
   </header>
   
   <main>
+
     <!--välkommen-->
     <section class="homepage section"
     id="homepageSection">
@@ -176,103 +172,34 @@
             Välkommen till Ekoline</h1>
           <p class="text--primary text--bold text--m"> 
             Genvägen till en mer hållbar shopping. </p>
-          <button 
-            class="button__hero"
-            id="buttonHero">
-            Se våra produkter
-          </button>
-          </div>
-    </section>
-
-
-  <section class="section categories__section" 
-          id="categoriesSection">
-    <span>
-      <h2> Våra produkter:</h2>
-      <p class="text--s">Vi är en ekologisk, hållbar butik som fokuserar på det handgjorda, naturvänliga och unika.</p>
-    </span>
-
-    <div class="products__grid">
-
-      <!--hit ska den dynamiska HTML:en-->
-      <!-- den ska klistras in i javascripten men som placeholder så man ser: (saknas länk till produktlista)-->
-
-      <article class="product">
-
-        <div class="product__img--container">
-
-          <img id="categoryImgDam" src= ${product.image} 
-          alt="produkt ${product.title}" 
-          class="product__img">
-
-          </a> 
-
-          <div class="products__items">
-            <div id="categoryTitelInfoDam" class="products-items--row">
-            </div>
-          </div>
-        </div>
-
-
-        <div class="product__img--container">
-
-          <img id="categoryImgHerr" src= ${product.image} 
-          alt="produkt ${product.title}" 
-          class="product__img">
-
-          </a> 
-          
-          <div class="products__items">
-            <div id="categoryTitelInfoHerr" class="products-items--row">
-            </div>
-          </div>
-        </div>
-
-
-        <div class="product__img--container">
-
-          <img id="categoryImgBaby" src= ${product.image} 
-          alt="produkt ${product.title}" 
-          class="product__img">
-
-          </a> 
-          
-          <div class="products__items">
-            <div id="categoryTitelInfoBaby" class="products-items--row">
-            </div>
-          </div>
-        </div>
-    
-
-      
-      </article>  
         </div>
       </div>
     </div>
-
- <section id="categoriesSection">
-        <article class="categories">
-          <h2 class="text--primary text--cursive"> Vårt motto:</h2>
-          <p class="text--m">
-            Vi är en ekologisk, hållbar butik som fokuserar på det handgjorda, naturvänliga och unika.
-          </p>
-        </article>
-        <article class="row">
-           <img src="styles/sass/img/monstrera.png">
-           <img src="styles/sass/img/1024px-Gotlandsk_pelsfaar.jpg">
-        </article>
-        <article>
-          <p class="text--m">
-           Våra produkter är lokalt producerade i Sverige, med återvunna eller lokalproducerat material.
-          </p>
-        </article>
    
-        <section id="categorysMainSection" 
-                 class="products__grid--categories">
-        </section>
-  </section>
-    
+    <section id="categoriesSection">
+      <article class="categories">
+        <h2 class="text--primary text--cursive"> Vårt motto:</h2>
+        <p class="text--m">
+          Vi är en ekologisk, hållbar butik som fokuserar på det handgjorda, naturvänliga och unika.
+        </p>
+      </article>
+      
+      <article class="row">
+         <img class="" src="styles/sass/img/monstrera.png">
+         <img class="" src="styles/sass/img/1024px-Gotlandsk_pelsfaar.jpg">
+      </article>
 
+      <article>
+        <p class="text--m">
+         Våra produkter är lokalt producerade i Sverige, med återvunna eller lokalproducerat material.
+        </p>
+      </article>
+ 
+      <section id="categorysMainSection" 
+               class="products__grid--categories">
+      </section>
+</section>
+</section>
   <section id="productListSection" 
   class="section hidden">
   </section>
@@ -296,19 +223,19 @@ class="section hidden">
     <h2>Dina Detaljer:</h2>
     <form id="orderConfirmationForm">
       <label for="nameOrderConfirmation" class="hidden">Namn</label>
-      <input type="text" name="nameOrderConfirmation" id="nameOrderConfirmation" required placeholder="För- och Efternamn*">
+      <input type="text" name="nameOrderConfirmation" id="nameOrderConfirmation" required placeholder="Namn">
       
       <label for="streetOrderConfirmation" class="hidden">Gatuadress</label>
-      <input type="text" name="streetOrderConfirmation" id="streetOrderConfirmation" required placeholder="Gatuadress*">
+      <input type="text" name="streetOrderConfirmation" id="streetOrderConfirmation" required placeholder="Gatuadress">
 
       <label for="postalCodeOrderConfirmation" class="hidden">Postnummer</label>
-      <input type="number" name="postalCodeOrderConfirmation" id="postalCodeOrderConfirmation" required placeholder="Postnummer*">
+      <input type="number" name="postalCodeOrderConfirmation" id="postalCodeOrderConfirmation" required placeholder="Postnummer">
     
       <label for="townOrderConfirmation" class="hidden">Ort</label>
-      <input type="text" name="townOrderConfirmation" id="townOrderConfirmation" required placeholder="Ord*">
+      <input type="text" name="townOrderConfirmation" id="townOrderConfirmation" required placeholder="Ord">
 
       <label for="emailOrderConfirmation" class="hidden">E-post</label>
-      <input type="email" name="emailOrderConfirmation" id="emailOrderConfirmation" required placeholder="E-post*">
+      <input type="email" name="emailOrderConfirmation" id="emailOrderConfirmation" required placeholder="E-post">
       
       <label for="phoneNumberOrderConfirmation" class="hidden">Telefonnummer</label>
       <input type="tel" name="phoneNumberOrderConfirmation" id="phoneNumberOrderConfirmation" placeholder="Telefonnummer">
@@ -330,9 +257,11 @@ class="section hidden">
 <section id="loginSection" 
 class="section hidden">
 
-  <div class="login__box section hidden">
+  <div class="login__box">
       <h2>Logga in</h2>
       <form id="loginForm">
+
+       
        <div class="login__box--inputs">
          <span class="input-group-addon">
            <i class="fa fa-user"></i>
@@ -355,8 +284,7 @@ class="section hidden">
          <button id="goToRegisterUserButton" class="text--bold">Registrera</button> 
       </form>
    </div>
-  
- </section>
+   </section>
 
   <section id="createUserSection"
   class="section hidden">
@@ -368,17 +296,17 @@ class="section hidden">
     <form id="createUserForm">
 
       <label for="emailCreateUser" class="hidden">E-post</label>
-      <input type="email" name="emailCreateUser" id="emailCreateUser" required placeholder="E-post*">
+      <input type="email" name="emailCreateUser" id="emailCreateUser" required placeholder="E-post">
       <label for="passwordCreateUser" class="hidden">Lösenord</label>
-      <input type="password" name="passwordCreateUser" id="passwordCreateUser" required placeholder="Lösenord*">
+      <input type="password" name="passwordCreateUser" id="passwordCreateUser" required placeholder="Lösenord">
       <label for="nameCreateUser" class="hidden">Användarnamn</label>
-      <input type="text" name="nameCreateUser" id="nameCreateUser" required placeholder="För- och Efternamn*">
+      <input type="text" name="nameCreateUser" id="nameCreateUser" required placeholder="Användarnamn">
       <label for="streetCreateUser" class="hidden">Gatuadress</label>
-      <input type="text" name="streetCreateUser" id="streetCreateUser" required placeholder="Gatuadress*">
+      <input type="text" name="streetCreateUser" id="streetCreateUser" required placeholder="Gatuadress">
       <label for="postalCodeCreateUser" class="hidden">Postnummer</label>
-      <input type="number" name="postalCodeCreateUser" id="postalCodeCreateUser" required placeholder="Postnummer*">
+      <input type="number" name="postalCodeCreateUser" id="postalCodeCreateUser" required placeholder="Postnummer">
       <label for="townCreateUser" class="hidden">Ort</label>
-      <input type="text" name="townCreateUser" id="townCreateUser" required placeholder="Ort*">
+      <input type="text" name="townCreateUser" id="townCreateUser" required placeholder="Ort">
       <label for="phoneNumberCreateUser" class="hidden">Telefonnummer</label>
       <input type="text" name="phoneNumberCreateUser" id="phoneNumberCreateUser" placeholder="Telefonnummer">
 
@@ -476,32 +404,31 @@ class="section hidden">
   </section>
 </footer>
 
-       
-       
 <!--javascripts-->
 
-       
-<!---buttons, querystring and nav:-->
 
+
+
+
+
+<!---buttons, querystring and nav:-->
+<script type="text/javascript" src="./js/utilities.js"></script>
 <script type="text/javascript" src="./js/views/changepage.js"></script>
 <script type="text/javascript" src="./js/views/pagewidenavigationbuttons.js"></script>
-<script type="text/javascript" src="./js/utilities.js"></script>
 <script type="text/javascript" src="./js/views/userNavDropdown.js"></script>
 <script type="text/javascript" src="./js/views/searchBar.js"></script>
   
 <!--product and shopping cart functionality--->
-       
-<script type="text/javascript" src=".js/views/categorys.js"></script> 
+<script type="text/javascript" src="js/views/categorys.js"></script>
 <script type="text/javascript" src="./js/views/productList.js"></script>
 <script type="text/javascript" src="./js/views/product.js"></script>
 <script type="text/javascript" src="./js/views/shoppingcart.js"></script>
 <script type="text/javascript" src="./js/views/orderConfirmation.js"></script>
-<script type="text/javascript" src=".js/views/receipt.js"></script> 
+<script type="text/javascript" src="./js/views/receipt.js"></script>
 
 <!--create account and log in--->
-<script src="./js/views/createAccount.js"></script> 
-<script src="./js/views/login.js"></script>
-
+<script type="text/javascript" src="./js/views/createAccount.js"></script> 
+<script type="text/javascript" src="./js/views/login.js"></script>
 
 </body>
 </html>
