@@ -10,6 +10,8 @@ const userNavLogOutBtn = document.querySelector("#userNavLogOutBtn");
 
 const ifUserLoggedIn = document.getElementById("ifUserLoggedIn");
 
+const userNavOnlineDot = document.querySelector("#navUserOnlineDot");
+
 //Shows and hides dropdown
 
 document.querySelector("#userNavIcon").addEventListener("click", () => {
@@ -36,6 +38,8 @@ if (getLoggedinUser()) {
 
   userNavLogInRegisterBtn.classList.add("hidden");
   userNavLogOutBtn.classList.remove("hidden");
+
+  userNavOnlineDot.classList.remove("hidden");
 }
 
 //Logout button
@@ -50,6 +54,8 @@ userNavLogOutBtn.addEventListener("click", () => {
 
   userNavLogInRegisterBtn.classList.remove("hidden");
   userNavLogOutBtn.classList.add("hidden");
+
+  userNavOnlineDot.classList.add("hidden");
 });
 
 //Log in / Register button

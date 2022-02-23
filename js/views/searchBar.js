@@ -1,6 +1,9 @@
 
 const searchSection = document.getElementById("searchSection");
 let searchResult = [];
+
+
+
 const loadSearchResult = async () => {
   //getting search input field value
   let source = document.getElementById("searchBar");
@@ -35,9 +38,9 @@ const displaySearchResult = (res, source) => {
           `${produx.category}`,
           `${produx.sys.id}`
         );
-        const produxsList = document.getElementById("productListSection");
-        produxsList.innerHTML = "";
-        const produxPage = document.getElementById("individualProductSection");
+          //replacing all sections
+        const produxPage = document.querySelector(".section")
+      
         produxPage.innerHTML = "";
         return `
         <article class="products__search">
@@ -55,18 +58,24 @@ const displaySearchResult = (res, source) => {
             </a>
             <span class="product__box--search">
               <span class="row">
-                    <h3 
+                <a href="${productLink}">
+                  <h3 
                     class="text--uppercase text--cursive">
                     ${produx.fields.title}
                     </h3>
+                </a>
                     <h4 class="text--green">${produx.fields.price} kr
                     </h4>
               </span>
                   <p 
                   class="text--centered">
-                  ${produx.fields.description}  <a href="${productLink}">Se mer </a> </p>
+                  ${produx.fields.description} 
+                  
+                  </p>
                </span>
+              
           </article>
+
         `;
       }
     })
@@ -75,5 +84,17 @@ const displaySearchResult = (res, source) => {
   searchResults.innerHTML = htmlString;
 };
 
+// // <button class="addToCartBtn " 
+// data-id="${produx.sys.id}">Köp
+// </button>
+
 
 loadSearchResult();
+
+
+//Dropdown closes on enter
+document.querySelector("#searchBar").addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    closeDropDown();
+  }
+})
