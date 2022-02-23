@@ -1,3 +1,4 @@
+
 const categoriesSection = document.querySelector(".products__grid--categories");
 
 const queryParams1 = new URLSearchParams(location.search);

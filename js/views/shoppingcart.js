@@ -56,12 +56,10 @@ const drawProductsinCart = () => {
 
   // Om varukorgen är tom, visa meddelande och göm cart__footer
   if(!selectedProductList) {
-    const errorElement = document.createElement("p");
-    errorElement.innerText = "Din varukorg är tom."
-    cartContent.appendChild(errorElement);
-    cartFooter.classList.add("hidden");
+    showEmptyCartMessage();
     return;
   }
+
   selectedProductList.forEach(product => {
     const cartDiv = document.createElement("div");
     cartDiv.innerHTML = `
@@ -99,7 +97,7 @@ const addToCart = (prodID) => {
   const existingProductList = getCart();
   // Kollar om det redan finns produkter i cart
   if (existingProductList !== null) {
-    // Kollar om produkten redan finns
+    // Kollar om valt produkten redan finns
     const existingProduct = existingProductList.find(product => product.sys.id === prodID);
     if (existingProduct) {
       // Uppdaterar cart med rätt antal (quantity) och totala priset.
@@ -112,7 +110,7 @@ const addToCart = (prodID) => {
       })
       setCartinLocalStorage(updatedProducts);
       return;
-    } else { //Skapa ny produkt och lägger till i array.
+    } else { //Skapar produkt och lägger till i array om det är en ny produkt
       const newProducts = existingProductList;
       newProducts.push({
         quantity: 1,
@@ -166,15 +164,22 @@ const decreaseQuantity = (prodID) => {
   // Hämtar produkter från local storage
   const existingProductList = getCart();
 
-  // // Göm varukorgen om den enda/sista produkten tas bort 
-  // if(existingProductList.length === 1 && existingProductList[0].quantity === 1) {
-  //   clearCart();
-  //   return;
-  // }
+  // Visa meddelande att varukorgen är tom om den enda/sista produkten tas bort 
+  if(existingProductList.length === 1 && existingProductList[0].quantity === 1) {
+    clearCart();
+    return;
+  }
+  // Hitta vald produktID 
+  const selectedProduct = existingProductList.find(product => product.sys.id === prodID);
+  // Ta bort vald produkt om det är den enda av den typ (quantity = 1)
+  if(selectedProduct.quantity === 1) {
+    deleteProduct(prodID);
+    return;
+  }
   // Får lista med uppdaterat data
   const updatedProductList = existingProductList.map(product => {
     // Minska antal och uppdatera priset av vald produkt
-    if (product.sys.id == prodID) {
+    if (selectedProduct) {
     product.quantity--; 
     product.amount = product.fields.price * product.quantity;
     }
@@ -182,33 +187,45 @@ const decreaseQuantity = (prodID) => {
   });
 
   setCartinLocalStorage(updatedProductList);
+  setTotalPriceOrder();
+  showCart();
 }
 
 // Tar bort hela produkten. Funktionen körs när man klickar på "Remove"-knappen i varukorgen
 const deleteProduct = (prodID) => {
   // Hämtar produkter från local storage
   const existingProductList = getCart();
-  // Får lista med uppdaterat data
+
+  // Visa meddelande att varukorgen är tom om den enda/sista produkten tas bort 
+  if(existingProductList.length === 1) {
+    clearCart();
+    return;
+  }
+
+  // Får uppdaterat listan utan vald produkten som ska tas bort
   const updatedProductList = existingProductList.filter( (product) => {
   // Spara alla produkter förutom den som ska raderas
   return !(product.sys.id == prodID);
   })
 
   setCartinLocalStorage(updatedProductList);
-
-  // Göm varukorgen dropdown om den är tom
-  if(updatedProductList.length === 0) {
-    clearCart();
-  } else {
-    showCart();
-  }
+  setTotalPriceOrder();
+  showCart();
 }
 
-// Rensar varukorgen och totala priset i local storage
+// Rensar varukorgen och totala priset i local storage och dropdown
 const clearCart= () => {
   localStorage.removeItem("cart");
   localStorage.removeItem("totalPriceOrder");
-  hideCart(); 
+  drawProductsinCart();
+}
+
+const showEmptyCartMessage = () => {
+    const errorElement = document.createElement("p");
+    errorElement.innerText = "Din varukorg är tom."
+    cartContent.appendChild(errorElement);
+    cartFooter.classList.add("hidden");
+    return;
 }
 
 // cartMenu.addEventListener("click" ,event => {
@@ -324,13 +341,10 @@ const setCartEventListener = () => {
       }
       if (e.target.id == "deleteBtn") {
         deleteProduct(prodID);
-        setTotalPriceOrder();
         return;
       }
       if (e.target.id === "decreaseBtn") {
         decreaseQuantity(prodID);
-        setTotalPriceOrder();
-        showCart();
         return;
       }
     })
