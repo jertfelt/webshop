@@ -250,30 +250,28 @@
       </div>
     </div>
 
-      <section id="categoriesSection" 
-      class="categories">
-        <article>
+ <section id="categoriesSection">
+        <article class="categories">
           <h2 class="text--primary text--cursive"> Vårt motto:</h2>
           <p class="text--m">
             Vi är en ekologisk, hållbar butik som fokuserar på det handgjorda, naturvänliga och unika.
           </p>
         </article>
         <article class="row">
-        <img src="styles/sass/img/monstrera.png">
-        <img src="styles/sass/img/1024px-Gotlandsk_pelsfaar.jpg">
-      </article>
+           <img src="styles/sass/img/monstrera.png">
+           <img src="styles/sass/img/1024px-Gotlandsk_pelsfaar.jpg">
+        </article>
         <article>
           <p class="text--m">
            Våra produkter är lokalt producerade i Sverige, med återvunna eller lokalproducerat material.
           </p>
         </article>
-      </section>
-    
-      <section class="products__grid">
-    <!--hit ska den dynamiska HTML:en-->
-  
+   
+        <section id="categorysMainSection" 
+                 class="products__grid--categories">
         </section>
-    </section>
+  </section>
+    
 
   <section id="productListSection" 
   class="section hidden">
@@ -332,11 +330,9 @@ class="section hidden">
 <section id="loginSection" 
 class="section hidden">
 
-  <div class="login__box">
+  <div class="login__box section hidden">
       <h2>Logga in</h2>
       <form id="loginForm">
-
-       
        <div class="login__box--inputs">
          <span class="input-group-addon">
            <i class="fa fa-user"></i>
@@ -359,7 +355,8 @@ class="section hidden">
          <button id="goToRegisterUserButton" class="text--bold">Registrera</button> 
       </form>
    </div>
-   </section>
+  
+ </section>
 
   <section id="createUserSection"
   class="section hidden">
@@ -479,35 +476,32 @@ class="section hidden">
   </section>
 </footer>
 
+       
+       
 <!--javascripts-->
 
-
-
-<script src="js/views/categorys.js"></script>
-<script 
-src="/js/utilities.js"></script>
-<script src="./js/views/main.js"></script>
-
+       
 <!---buttons, querystring and nav:-->
 
-<script src="./js/views/changepage.js"></script>
-<script src="./js/views/pagewidenavigationbuttons.js"></script>
-<script src="./js/utilities.js"></script>
-<script src="./js/views/userNavDropdown.js"></script>
-<script src="./js/views/searchBar.js"></script>
+<script type="text/javascript" src="./js/views/changepage.js"></script>
+<script type="text/javascript" src="./js/views/pagewidenavigationbuttons.js"></script>
+<script type="text/javascript" src="./js/utilities.js"></script>
+<script type="text/javascript" src="./js/views/userNavDropdown.js"></script>
+<script type="text/javascript" src="./js/views/searchBar.js"></script>
   
 <!--product and shopping cart functionality--->
-
-<script src="./js/views/productList.js"></script>
-<script src="./js/views/product.js"></script>
-
-<script src="./js/views/shoppingcart.js"></script>
-<script src="./js/views/orderConfirmation.js"></script>
-<script src="./js/views/receipt.js"></script>
+       
+<script type="text/javascript" src=".js/views/categorys.js"></script> 
+<script type="text/javascript" src="./js/views/productList.js"></script>
+<script type="text/javascript" src="./js/views/product.js"></script>
+<script type="text/javascript" src="./js/views/shoppingcart.js"></script>
+<script type="text/javascript" src="./js/views/orderConfirmation.js"></script>
+<script type="text/javascript" src=".js/views/receipt.js"></script> 
 
 <!--create account and log in--->
 <script src="./js/views/createAccount.js"></script> 
 <script src="./js/views/login.js"></script>
+
 
 </body>
 </html>

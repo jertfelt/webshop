@@ -3,7 +3,6 @@
 //*---------------------variables
 
 const homepageSection = document.getElementById("homepageSection");
-const categoriesSection = document.getElementById("categoriesSection");
 const productListSection = document.getElementById("productListSection");
 const individualProductSection = document.getElementById("individualProductSection");
 const orderConfirmationSection = document.getElementById("orderConfirmationSection");
@@ -53,10 +52,10 @@ const setActivePage = () => {
   let url = new URL(window.location.href);
   
   let search_params = url.searchParams;
-  console.log(search_params); ///blir tom vid start  (första gången)
+  // console.log(search_params); ///blir tom vid start  (första gången)
 
   const currentSection = search_params.get("section");
-  console.log(currentSection) // blir null vid start (första gången)
+  // console.log(currentSection) // blir null vid start (första gången)
 
  //ändrat funktion och for loop - default är att allt utom homepageSection är dolt i början (så om man öppnar fönstret första gången så syns bara homepage, inte allt)
  

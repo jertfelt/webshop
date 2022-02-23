@@ -1,4 +1,5 @@
 
+
 // let infoArray =[];
 
 // if (localStorage.length!== 0){
@@ -9,8 +10,13 @@
 // }
 // console.log(infoArray);
 
-//Hämta localStorage 
 
+// submitBtn.addEventListener(("click"), ()=>{
+
+// })
+
+//Hämta localStorage 
+  
 const submitBtn = document.getElementById("submitBtnOrderConfirmation");
 
 submitBtn.addEventListener("submit", (e)=>{
@@ -19,15 +25,15 @@ submitBtn.addEventListener("submit", (e)=>{
     document.getElementById("").innerHTML = `
     <div class="kvitto__container">
         <div class="kvitto__details">
-            <p>${}</p>
-            <p>${}</p>
-            <p>${}</p>
-            <p>${}</p>
+            <p>"${}"</p>
+            <p>"${}"</p>
+            <p>"${}"</p>
+            <p>"${}"</p>
         </div>
         <div class="kvitto__products">
         </div>
         <div class="kvitto__total">
-        <p>Totalt: ${} SEK</p>
+        <p>Totalt:"${}" SEK</p>
         <p>Tack för ditt köp!</p>
         </div>
     </div>
