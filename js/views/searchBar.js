@@ -38,9 +38,9 @@ const displaySearchResult = (res, source) => {
           `${produx.category}`,
           `${produx.sys.id}`
         );
-        const produxsList = document.getElementById("productListSection");
-        produxsList.innerHTML = "";
-        const produxPage = document.getElementById("individualProductSection");
+          //replacing all sections
+        const produxPage = document.querySelector(".section")
+      
         produxPage.innerHTML = "";
         return `
         <article class="products__search">
