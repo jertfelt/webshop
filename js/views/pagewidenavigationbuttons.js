@@ -64,6 +64,9 @@ document.getElementById("cancelBtnOrderConfirmation").addEventListener("click", 
 changeActivePage("homepageSection");
 })
 //-------receipt section
+document.getElementById("closeReceipt").addEventListener("click", () => {
+  changeActivePage("homepageSection");
+  })
 
 //-------register
 const confirmAndExitCreateUser = () => {
