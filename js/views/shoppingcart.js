@@ -188,20 +188,22 @@ const decreaseQuantity = (prodID) => {
 const deleteProduct = (prodID) => {
   // Hämtar produkter från local storage
   const existingProductList = getCart();
-  // Får lista med uppdaterat data
+
+  // Visa meddelande att varukorgen är tom om den enda/sista produkten tas bort 
+  if(existingProductList.length === 1) {
+    clearCart();
+    return;
+  }
+
+  // Får uppdaterat listan utan vald produkten som ska tas bort
   const updatedProductList = existingProductList.filter( (product) => {
   // Spara alla produkter förutom den som ska raderas
   return !(product.sys.id == prodID);
   })
 
   setCartinLocalStorage(updatedProductList);
-
-  // Göm varukorgen dropdown om den är tom
-  if(updatedProductList.length === 0) {
-    clearCart();
-  } else {
-    showCart();
-  }
+  setTotalPriceOrder();
+  showCart();
 }
 
 // Rensar varukorgen och totala priset i local storage och dropdown
@@ -332,7 +334,6 @@ const setCartEventListener = () => {
       }
       if (e.target.id == "deleteBtn") {
         deleteProduct(prodID);
-        setTotalPriceOrder();
         return;
       }
       if (e.target.id === "decreaseBtn") {
