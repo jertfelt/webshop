@@ -1,7 +1,7 @@
-//buttons
+//buttons (except for navigation bar in header)
 
-
-.button__hero{
+.button{
+  &__hero{
   padding: 1rem 2rem;
   text-transform: uppercase;
   letter-spacing: $mainSpacing;
@@ -13,4 +13,62 @@
   transition: $mainTransition;
   cursor: pointer;
   margin-top:2rem;
+  }
+
+  &__hero:hover{
+    border-radius: 19px;
+    background-color: $color-blue;
+  }
+
+  &__dropdown{
+      padding: 1rem 2rem;
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: bold;
+      background: $color-blue;
+      color: $color-white;
+      border: none;
+      transition: $mainTransition;
+      cursor: pointer;
+      margin-top:1rem;
+      border-radius: 19px;
+      
+  }
+
+  &__dropdown:hover{
+    background: $color-green;
+ 
+  }
+
+  &__span{
+    @include flexBox(column,center,center)
+  }
 }
+
+.dropdown--close{
+  cursor: pointer;
+    height: 30px;
+}
+
+
+.addToCartBtn{
+  padding: 1rem;
+  background-color: $color-black;
+  color: $color-white;
+  text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      transition: $mainTransition;
+      cursor: pointer;
+      margin-top:1rem;
+      border-radius: 19px;
+  
+}
+.addToCartBtn:hover{
+  background-color: $color-green;
+  font-size: 1.3rem;
+}
+
+
+

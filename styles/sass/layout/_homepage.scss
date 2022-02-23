@@ -1,33 +1,58 @@
 .hero {
-  min-height: calc(100vh - 100px);
+  min-width: 100%;
+  min-height:600px;
   background-color: transparent;
   background: url("./img/concrete-cracking.png")center/cover no-repeat;
   
-  @include flexBox(column, flex-start, center); 
+  @include flexBox(column, center, center); 
+
+  &__transparentBack{
+    background-color: rgba(236, 230, 210, .6);
+
+    @include breakpoint(small-max-m){
+      background-color: rgba(236, 230, 210, .2);
+    };
+  }
 
 &__content{
   text-align: center;
-  // background: transparent;
-  @include flexBox(column, flex-start, space-between);
+  @include flexBox(column, center, space-between);
   padding: 2rem;
 } 
 
 &__heading{
-  font-size: 3.4rem;
-  text-transform: uppercase;
-  letter-spacing: $mainSpacing;
   margin-bottom:2rem;
 }
 }
 
-.products__section {
-  padding: 4rem 0;
-  h2 {
-    
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 5rem;
-    text-transform: capitalize;
-    letter-spacing: $mainSpacing;
+.categories{
+  @include flexBox(column,center,center);
+
+  article {
+padding:2rem;
+@include breakpoint(small-max-m){
+  text-align: center;
+ };
+
+    h2 {
+      margin-top:2rem;
+      margin-bottom:2rem;
+   
+    }
+  }
+
+  img {
+    width:100%;
+    padding-bottom: 2rem;
+  border-radius:45% 55% 52% 48% / 30% 25% 55% 10%;
+  height:400px;
+  margin:0px 30px;
+  @include breakpoint(small-max-m){
+    width:90%;
+  };
+  }
+  img:hover{
+    border-radius:100%;
   }
 }
+
