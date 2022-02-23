@@ -56,12 +56,10 @@ const drawProductsinCart = () => {
 
   // Om varukorgen är tom, visa meddelande och göm cart__footer
   if(!selectedProductList) {
-    const errorElement = document.createElement("p");
-    errorElement.innerText = "Din varukorg är tom."
-    cartContent.appendChild(errorElement);
-    cartFooter.classList.add("hidden");
+    showEmptyCartMessage();
     return;
   }
+
   selectedProductList.forEach(product => {
     const cartDiv = document.createElement("div");
     cartDiv.innerHTML = `
@@ -99,7 +97,7 @@ const addToCart = (prodID) => {
   const existingProductList = getCart();
   // Kollar om det redan finns produkter i cart
   if (existingProductList !== null) {
-    // Kollar om produkten redan finns
+    // Kollar om valt produkten redan finns
     const existingProduct = existingProductList.find(product => product.sys.id === prodID);
     if (existingProduct) {
       // Uppdaterar cart med rätt antal (quantity) och totala priset.
@@ -112,7 +110,7 @@ const addToCart = (prodID) => {
       })
       setCartinLocalStorage(updatedProducts);
       return;
-    } else { //Skapa ny produkt och lägger till i array.
+    } else { //Skapar produkt och lägger till i array om det är en ny produkt
       const newProducts = existingProductList;
       newProducts.push({
         quantity: 1,
@@ -166,11 +164,12 @@ const decreaseQuantity = (prodID) => {
   // Hämtar produkter från local storage
   const existingProductList = getCart();
 
-  // // Göm varukorgen om den enda/sista produkten tas bort 
-  // if(existingProductList.length === 1 && existingProductList[0].quantity === 1) {
-  //   clearCart();
-  //   return;
-  // }
+  // Visa meddelande att varukorgen är tom om den enda/sista produkten tas bort 
+  if(existingProductList.length === 1 && existingProductList[0].quantity === 1) {
+    clearCart();
+    drawProductsinCart();
+    return;
+  }
   // Får lista med uppdaterat data
   const updatedProductList = existingProductList.map(product => {
     // Minska antal och uppdatera priset av vald produkt
@@ -182,6 +181,8 @@ const decreaseQuantity = (prodID) => {
   });
 
   setCartinLocalStorage(updatedProductList);
+  setTotalPriceOrder();
+  showCart();
 }
 
 // Tar bort hela produkten. Funktionen körs när man klickar på "Remove"-knappen i varukorgen
@@ -209,6 +210,14 @@ const clearCart= () => {
   localStorage.removeItem("cart");
   localStorage.removeItem("totalPriceOrder");
   hideCart(); 
+}
+
+const showEmptyCartMessage = () => {
+    const errorElement = document.createElement("p");
+    errorElement.innerText = "Din varukorg är tom."
+    cartContent.appendChild(errorElement);
+    cartFooter.classList.add("hidden");
+    return;
 }
 
 // cartMenu.addEventListener("click" ,event => {
@@ -329,8 +338,6 @@ const setCartEventListener = () => {
       }
       if (e.target.id === "decreaseBtn") {
         decreaseQuantity(prodID);
-        setTotalPriceOrder();
-        showCart();
         return;
       }
     })
