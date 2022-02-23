@@ -169,10 +169,17 @@ const decreaseQuantity = (prodID) => {
     clearCart();
     return;
   }
+  // Hitta vald produktID 
+  const selectedProduct = existingProductList.find(product => product.sys.id === prodID);
+  // Ta bort vald produkt om det är den enda av den typ (quantity = 1)
+  if(selectedProduct.quantity === 1) {
+    deleteProduct(prodID);
+    return;
+  }
   // Får lista med uppdaterat data
   const updatedProductList = existingProductList.map(product => {
     // Minska antal och uppdatera priset av vald produkt
-    if (product.sys.id == prodID) {
+    if (selectedProduct) {
     product.quantity--; 
     product.amount = product.fields.price * product.quantity;
     }
