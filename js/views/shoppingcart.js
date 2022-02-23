@@ -167,7 +167,6 @@ const decreaseQuantity = (prodID) => {
   // Visa meddelande att varukorgen är tom om den enda/sista produkten tas bort 
   if(existingProductList.length === 1 && existingProductList[0].quantity === 1) {
     clearCart();
-    drawProductsinCart();
     return;
   }
   // Får lista med uppdaterat data
@@ -205,11 +204,11 @@ const deleteProduct = (prodID) => {
   }
 }
 
-// Rensar varukorgen och totala priset i local storage
+// Rensar varukorgen och totala priset i local storage och dropdown
 const clearCart= () => {
   localStorage.removeItem("cart");
   localStorage.removeItem("totalPriceOrder");
-  hideCart(); 
+  drawProductsinCart();
 }
 
 const showEmptyCartMessage = () => {
