@@ -1,15 +1,101 @@
-// <section class="cart__overlay">
-//     <div class="cart">
-//       <span class="cart--close">
-//         <img src="styles/sass/img/closing.png" alt="Close"/>
-//       </span>
-//       <h2>Din kundvagn:</h2>
-//       <div class="cart__content">
-     
-//       </div>
-//       <div class="cart__footer">
-//         <h3>Totalt: <span class="cart-total">0</span> SEK</h3>
-//         <button class="cart--clear banner-btn">Rensa kundvagn</button>
-//       </div>
-//     </div>
-//   </section>
+.cart{
+//*visa och dölja
+
+&__transparentBack{
+  visibility: visible;
+  
+}
+  &__show{
+  transform: translateX(0);
+  }
+
+  &__hidden{
+    visibility:hidden;
+  }
+
+//*varukorginnehåll
+
+  &__container{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: $mainTransition;
+  background: rgba(34, 94, 57, .7);
+  z-index: 2;
+  } 
+
+  &__content{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  z-index: 10;
+  background: $color-sand;
+  padding: 1.5rem;
+  transition: $mainTransition;
+  
+  @include breakpoint(medium-tablet-min){
+    width:60%;
+  }
+  
+  h2{
+    text-align: center;
+    color:$color-green;
+  }
+  }
+  &__item{
+      display: grid;
+      align-items: center;
+      grid-template-columns: auto 1fr auto;
+      grid-column-gap: 1.5rem;
+      margin: 1.5rem 0;
+      img {
+        width: 75px;
+        height: 75px;
+      }
+      h4 {
+        font-size: 0.85rem;
+        text-transform: capitalize;
+        letter-spacing: var(--mainSpacing);
+      }
+      h5 {
+        margin: 0.5rem 0;
+        letter-spacing: var(--mainSpacing);
+      }
+  }
+  &--amount{
+    text-align: center;
+  }
+
+  &--remove{
+    color: $color-black;
+    cursor: pointer;
+  }
+
+  &--close{
+    cursor: pointer;
+    img {
+      height: 30px;
+    }
+  }
+
+  &__footer{
+    margin-top: 2rem;
+    text-align: center;
+
+    h3{
+      text-transform: capitalize;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.fa-chevron-up,
+.fa-chevron-down {
+  color: $color-black;
+  cursor: pointer;
+}

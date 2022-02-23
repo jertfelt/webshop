@@ -1,0 +1,145 @@
+
+//grids
+.products{
+  &__individual{
+    padding:3rem;
+    width:90vw;
+    margin:3rem;
+    
+    @include breakpoint(small-max-m){
+      margin: 0 auto;
+      text-align: center;
+     };
+
+    img {
+      width:100%;
+      border-radius: 29px;
+    }
+    img:hover{
+      border-radius:55% 55% 52% 48% / 30% 25% 55% 30%;
+      transition: all 100ms ease-in;
+    }
+  }
+
+  &__search{
+    margin:2rem;
+
+    img {
+      width:100%;
+      border-radius: 29px;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__grid {
+  //for homepage
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90%, 1fr));
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  margin-bottom:8rem;
+
+  //for productList 
+  &--all{
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 2rem;
+  }
+
+}
+}
+
+.product{
+
+  &__img {
+  border-radius: 29px;
+  width: 100%;
+  min-height: 12rem;
+  transition: $mainTransition;
+
+  &--container{
+    position: relative;
+    overflow: hidden;
+
+    img{
+      border-radius: 29px;
+    }
+  }
+  &--list:hover{
+    border-radius:35% 55% 52% 48% / 30% 25% 55% 30%;
+    transition: all 100ms ease-in;
+  }
+} 
+ 
+  &__box{
+    padding:1rem;
+    @include flexBox(row,center,space-between);
+    
+    button {
+    border-radius: 19px;
+    border-style: none;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    margin-top:1rem;
+    text-transform: uppercase;
+    } 
+
+    button:hover{
+      color: $color-yellow;
+    }
+
+    &--individual{
+      margin-top:1rem;
+      h3 {
+        margin-right:20px;
+      }
+      @include flexBox(column,center,center);
+      button{
+        margin-top:1rem;
+      }
+    }
+
+    &--search{
+      @include flexBox(column,center,center);
+      margin-top:1rem;
+      margin-bottom:2rem;
+
+      h3 {
+        margin-right:20px;
+      }
+
+      a{
+        color: $color-green;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+  
+    }
+    
+  }
+
+}
+
+// .outer{
+//   position: relative;
+//   @include breakpoint(small-max-m) {
+
+//   }
+// }
+
+// .inner{
+//   position: absolute;
+//   top: 80%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   z-index:2;
+// }
