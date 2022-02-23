@@ -1,6 +1,9 @@
 
 const searchSection = document.getElementById("searchSection");
 let searchResult = [];
+
+
+
 const loadSearchResult = async () => {
   //getting search input field value
   let source = document.getElementById("searchBar");
@@ -55,18 +58,24 @@ const displaySearchResult = (res, source) => {
             </a>
             <span class="product__box--search">
               <span class="row">
-                    <h3 
+                <a href="${productLink}">
+                  <h3 
                     class="text--uppercase text--cursive">
                     ${produx.fields.title}
                     </h3>
+                </a>
                     <h4 class="text--green">${produx.fields.price} kr
                     </h4>
               </span>
                   <p 
                   class="text--centered">
-                  ${produx.fields.description}  <a href="${productLink}">Se mer </a> </p>
+                  ${produx.fields.description} 
+                  
+                  </p>
                </span>
+              
           </article>
+
         `;
       }
     })
@@ -74,6 +83,10 @@ const displaySearchResult = (res, source) => {
   const searchResults = document.getElementById("searchSection");
   searchResults.innerHTML = htmlString;
 };
+
+// // <button class="addToCartBtn " 
+// data-id="${produx.sys.id}">Köp
+// </button>
 
 
 loadSearchResult();
