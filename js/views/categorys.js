@@ -57,17 +57,17 @@ const categoryCreator = (data) => {
 
         const categoryDamClick = document.getElementById("categoryDam");
         categoryDamClick.onclick=()=>{
-            console.log("Dam category clicked...");
+            changeActivePage("productListSection", "Dam");
         }
 
         const categoryHerrClick = document.getElementById("categoryHerr");
         categoryHerrClick.onclick=()=>{
-            console.log("Herr category clicked...");
+            changeActivePage("productListSection", "Herr");
         }
 
         const categoryBabyClick = document.getElementById("categoryBaby");
         categoryBabyClick.onclick=()=>{
-            console.log("Baby category clicked...");
+            changeActivePage("productListSection", "Baby");
         }
     }
 
