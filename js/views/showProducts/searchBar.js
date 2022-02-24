@@ -31,8 +31,12 @@ const displaySearchResult = (res, source) => {
   searchResultHeader.innerText = "Ditt sökresultat";
   searchSection.appendChild(searchResultHeader);
 
-  //const 
-  
+  // Draw feedback message for searched text
+  const searchInputFeedback = document.createElement("h3");
+  searchInputFeedback.classList.add("text--green", "text--cursive", "centered");
+  searchInputFeedback.innerText = `Du sökte på "${source}"`;
+  searchSection.appendChild(searchInputFeedback);
+
   // Creates section element
   const sectionElem = document.createElement("section");   
   sectionElem.classList.add("products__grid--all");   
