@@ -323,10 +323,10 @@ class="section hidden">
   </main>
 
 <!--varukorgen-->
-  <aside>  
-    <section class="cart__container cart__hidden">
-      <div class="cart__content">
-          <img src="styles/sass/img/closing.png" 
+  <aside class="cart__container cart__hidden">  
+      <section class="cart__content">
+          <img 
+          src="styles/sass/img/closing.png" 
           alt="Stäng varukorg"
           class="cart--close dropdown--close"/>
        
@@ -334,47 +334,74 @@ class="section hidden">
         <article id="cartDynamicContent">
       
         </article>
+
         <article class="cart__footer">
           <h3>Totalt: 
             <span id="cartTotal">
               0</span> SEK
             </h3>
           <span class="button__span">
-          <button id="clearCart" 
-          class="button__dropdown">Rensa kundvagn</button>
-          <button id="toConfirmation" class="button__dropdown">Bekräfta ditt köp</button>
+            <button id="clearCart" 
+            class="button__dropdown">
+            Rensa kundvagn</button>
+            <button id="toConfirmation" class="button__dropdown">
+              Bekräfta ditt köp</button>
         </span>   
         </article>
-      </div>
     </section>
   </aside>
 
      <!--kolla om inloggad --> 
-     <aside>
-      <div id="userNavDropdown" class="hidden login__container">
-        <div class="login__dropdown">
-         
-          <img src="styles/sass/img/closing.png" 
+     <aside id="userNavDropdown" class="hidden login__container" >
+      <div class="login__dropdown">
+        <img src="styles/sass/img/closing.png" 
           id="closeUserNavDropdown"
           alt="Stäng varukorg"
-          class="dropdown--close"/>
-          
-        <span class="login__dropdown--content">
-        <span id="ifUserLoggedIn" class="hidden ">
-        <h2 class="text--green">Välkommen</h2>
-        <h2 id="userNavName"></h2>
+          class="dropdown--close"/> 
+          <span class="login__dropdown--content">
+           <span id="ifUserLoggedIn" class="hidden ">
+             <h2 class="text--green">Välkommen  
+             </h2>
+             <h2 id="userNavName"></h2>
+           </span>
+          <button id="userNavLogInRegisterBtn" class="button__dropdown">
+          Logga in || Registrera</button>
+          <button id="userNavLogOutBtn" class="hidden button__dropdown">
+          Logga ut</button>
         </span>
-        <button id="userNavLogInRegisterBtn" class="button__dropdown">Logga in/Registrera</button>
-        <button id="userNavLogOutBtn" class="hidden button__dropdown">Logga ut</button>
-        </span>
-     </div>
+      </div>
    </aside>
 
-   <!--kvitto dropdown-->
+   <!--kvitto dropdown (class hidden ska togglas)--> 
   <aside id="receiptSection" 
-  class="test">
+  class="hidden test">
     <section class="receipt__container">
-    
+      <h2 class="text--green text--bold">
+        Tack för ditt köp!
+      </h2>
+    <article class="receipt__content">
+      <h3 class="text--green text--cursive"> Dina detaljer:
+      </h3>
+      <span class="receipt__text">
+        <!--detta ska renderas-->
+      </span>
+    </article>
+    <article class="receipt__content">
+      <h3 class="text--green text--cursive">
+      Dina produkter:
+      </h3>
+      <span class="receipt__list">
+        <!--detta ska också renderas-->
+      </span>
+    </article>
+    <article class="receipt__footer">
+      <h3 class="text--green text--cursive">
+       Totalt:
+      </h3>
+      <span class="receipt__footer--price">
+        <!--detta renderas också-->
+      </span>
+    </article>
   </aside>
 
 <footer>
