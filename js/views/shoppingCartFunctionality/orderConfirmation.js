@@ -81,6 +81,8 @@
     e.preventDefault();
     saveOrderDetails();
     confirmOrderConfirmationBtn();
+    drawReceipt();
+    showReceipt();
   });
 
 

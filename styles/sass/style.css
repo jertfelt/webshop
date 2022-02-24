@@ -53,6 +53,11 @@
   margin-top: 5rem;
 }
 
+.test {
+  background-color: black;
+  height: 900px;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -739,7 +744,7 @@ h6 {
   background-color: #1b1b1b;
 }
 
-#loginSection {
+.login__section {
   margin-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;

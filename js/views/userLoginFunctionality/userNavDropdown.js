@@ -1,5 +1,5 @@
 
-//Variables
+//*---------Variables
 let userNavDropdownShowing = false;
 
 const userNavDropdown = document.querySelector("#userNavDropdown");
@@ -12,7 +12,7 @@ const ifUserLoggedIn = document.getElementById("ifUserLoggedIn");
 
 const userNavOnlineDot = document.querySelector("#navUserOnlineDot");
 
-//Shows and hides dropdown
+//*--------Shows and hides dropdown
 
 document.querySelector("#userNavIcon").addEventListener("click", () => {
   if (!userNavDropdownShowing) {
@@ -29,7 +29,7 @@ document.querySelector("#closeUserNavDropdown").addEventListener("click", () => 
   userNavDropdownShowing = false;
 })
 
-//Fills in information om inloggad
+//*-----Fills in information om inloggad
 
 if (getLoggedinUser()) {
   ifUserLoggedIn.classList.remove("hidden");
@@ -42,7 +42,7 @@ if (getLoggedinUser()) {
   userNavOnlineDot.classList.remove("hidden");
 }
 
-//Logout button
+//*-----------Logout button
 
 userNavLogOutBtn.addEventListener("click", () => {
   localStorage.removeItem("loggedInUser");
@@ -58,10 +58,17 @@ userNavLogOutBtn.addEventListener("click", () => {
   userNavOnlineDot.classList.add("hidden");
 });
 
-//Log in / Register button
+//*--------Log in / Register button
 
 userNavLogInRegisterBtn.addEventListener("click", () => {
   userNavDropdown.classList.add("hidden");
   userNavDropdownShowing = false;
   userNavLogInRegister();
 })
+
+//*-------showing today's date (bonus)
+
+let today = new Date().toJSON().slice(0,10).replace(/-/g, ' ');
+
+
+document.getElementById("todaysDate").textContent = " " + today;
