@@ -42,22 +42,21 @@ a:visited{
 a:hover{
   color: $color-black;
   text-transform: uppercase;
-  background-color: $color-yellow;
-  padding:0.3rem;
 }
 
 }
 
 .list__nested{
-
+  padding-top:1rem;
+  width:50%;
+  margin: 0 auto;
+  padding-bottom:2rem;
 
   li {
   margin-bottom:-3px;
   }
 
-
   &--mother{
-    
     font-size: 22px;
     color: $color-green;
     font-weight:bold;
@@ -67,18 +66,37 @@ a:hover{
     margin-bottom: 20px;
   }
 
-  &--mother:hover{
+  &--motherhead:hover{
     color: $color-black;
     cursor: pointer;
+    text-decoration: underline;
     text-transform: uppercase;
-    background-color: $color-yellow;
-    padding:0.3rem;
-  
   }
 
   &--mother:visited{
     color:$color-green;
   }
+  &--child{
+  width:80%;
+
+  p{
+    color: $color-green;
+    margin-top:0.5rem;
+    width:100%;
+  }
+  }
+
+  &--child:hover{
+    p{
+    text-decoration: underline;
+    color: $color-black;
+    text-transform:uppercase;
+  }
+  img{
+    opacity: 0.7;
+  }
+  }
+  
 }
 
 

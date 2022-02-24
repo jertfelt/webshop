@@ -53,32 +53,41 @@
           </a> 
         </li>
         <li class="list__nested--mother">
-          Kategorier
-          <!--start of nested category-->
+          <p class="list__nested--motherhead">Kategorier</p>
           <ul class="list__nested hidden"> 
-
             <li>
-              <a 
-              href="index.html"
-              id="damLinkNav">
-              Dam
-              </a> 
+              <span class="list__nested--child">
+                <p>Damkläder</p>
+                <a 
+                href="index.html"
+                id="damLinkNav">
+                  <img src="styles/sass/img/women-clothing-banner.png"
+                  class="nav__categories--img">
+                </a> 
+            </span>
             </li>
 
             <li>
-              <a href="index.html"
-              id="herrLinkNav">
-              Herr</a> 
+              <span class="list__nested--child">
+                <p>Herrkläder</p>
+                <a href="index.html"
+                id="herrLinkNav">
+                  <img src="styles/sass/img/men-clothing-banner.png"
+                  class="nav__categories--img">
+                </a> 
+            </span>
             </li>
 
             <li>
-            <a 
-            href="index.html"
-            id="babyLinkNav">
-            Baby
-            </a> 
+              <span class="list__nested--child">
+                <p>Babykläder</p>
+                <a href="index.html"
+                id="herrLinkNav">
+                  <img src="styles/sass/img/baby-clothing.png"
+                  class="nav__categories--img">
+                </a> 
+            </span>
             </li>
-
           </ul>
         </li>
         <li>
@@ -453,6 +462,7 @@ class="section hidden">
 <!-- buttons and navigation -->
 <script type="text/javascript" src="./js/pageWideNavigationButtons.js"></script>
 <script type="text/javascript" src="./js/views/showProducts/searchBar.js"></script>
+<script type="text/javascript" src="./js/views/showProducts/navigationCategories.js"></script>
   
 <!--product functionality--->
 <script type="text/javascript" src="js/views/showProducts/homepageCategories.js"></script>

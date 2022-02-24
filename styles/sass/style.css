@@ -53,9 +53,8 @@
   margin-top: 5rem;
 }
 
-.test {
-  background-color: black;
-  height: 900px;
+.none {
+  display: none;
 }
 
 * {
@@ -335,8 +334,13 @@ h6 {
 .mainmenu__mobile a:hover {
   color: #1b1b1b;
   text-transform: uppercase;
-  background-color: #f2ea03;
-  padding: 0.3rem;
+}
+
+.list__nested {
+  padding-top: 1rem;
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 2rem;
 }
 
 .list__nested li {
@@ -353,16 +357,35 @@ h6 {
   margin-bottom: 20px;
 }
 
-.list__nested--mother:hover {
+.list__nested--motherhead:hover {
   color: #1b1b1b;
   cursor: pointer;
+  text-decoration: underline;
   text-transform: uppercase;
-  background-color: #f2ea03;
-  padding: 0.3rem;
 }
 
 .list__nested--mother:visited {
   color: #225e39;
+}
+
+.list__nested--child {
+  width: 80%;
+}
+
+.list__nested--child p {
+  color: #225e39;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.list__nested--child:hover p {
+  text-decoration: underline;
+  color: #1b1b1b;
+  text-transform: uppercase;
+}
+
+.list__nested--child:hover img {
+  opacity: 0.7;
 }
 
 .products__individual {
@@ -844,6 +867,17 @@ nav {
 
 .nav__button {
   max-height: 40px;
+}
+
+.nav__button--category {
+  max-height: 50px;
+}
+
+.nav__categories--img {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 29px;
 }
 
 .nav__logotype {
