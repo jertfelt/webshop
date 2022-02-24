@@ -744,7 +744,7 @@ h6 {
   background-color: #1b1b1b;
 }
 
-#loginSection {
+.login__section {
   margin-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;

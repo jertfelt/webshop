@@ -92,7 +92,7 @@
 }
 
 ///---------log in section page
-#loginSection{
+.login__section{
   margin-top:3rem;
   @include flexBox(column,center,center)
 }
