@@ -15,9 +15,9 @@ const showReceipt=() =>{
 //*-----------creating the receipt
 const drawReceipt = () => {
     const orderInformationReceipt = JSON.parse(localStorage.getItem("orderInformation"));
+    console.log(orderInformationReceipt);
 
 const receiptText = document.getElementsByClassName("receipt__text")[0];
-
 
 if (orderInformationReceipt !== null) {
 receiptText.innerHTML = `
@@ -29,7 +29,6 @@ receiptText.innerHTML = `
 `;
 }
 //ul list for products
-
 
 const receiptProductList = document.createElement("ul");
 receiptProductList.classList.
@@ -56,12 +55,12 @@ if (getCart() !== null) {
     `
 }
 
+// //*-----------------eventListener
 
-//*-----------------eventListener
-document.getElementById("orderConfirmationForm").addEventListener("submit", (e)=> {
+
+document.getElementById("submitBtnOrderConfirmation").addEventListener("click",(e) => {
     e.preventDefault();
     drawReceipt();
     showReceipt();
-    console.log("testar knappen")
+    console.log("annan knapp")
 });
-
