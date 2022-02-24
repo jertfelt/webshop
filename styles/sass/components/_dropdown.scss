@@ -40,31 +40,23 @@ a:visited{
 }
 
 a:hover{
-  color: $color-blue;
+  color: $color-black;
   text-transform: uppercase;
 }
 
 }
 
 .list__nested{
-
-  @include breakpoint(medium-tablet-min){
-    @include flexBox(row,center,center)
-  }
+  padding-top:1rem;
+  width:50%;
+  margin: 0 auto;
+  padding-bottom:1rem;
 
   li {
- 
   margin-bottom:-3px;
-  }
-  li:hover{
-    background-color: $color-sand;
-   border-radius: 40px;
-    font-size:1.4rem;
-    padding: 0rem 1rem;
   }
 
   &--mother{
-    
     font-size: 22px;
     color: $color-green;
     font-weight:bold;
@@ -74,15 +66,53 @@ a:hover{
     margin-bottom: 20px;
   }
 
-  &--mother:hover{
-    color: $color-blue;
+  &--motherhead:hover{
+    color: $color-black;
     cursor: pointer;
     text-transform: uppercase;
-  
   }
 
   &--mother:visited{
     color:$color-green;
   }
+  &--child{
+  width:80%;
+  
+
+  p{
+    margin-top:0.5rem;
+    opacity:0;
+  }
+  }
+
+  &--child:hover{
+    p{
+    text-decoration: underline;
+    color: $color-black;
+    text-transform:uppercase;
+    opacity:1;
+  }
+  img{
+    opacity: 0.5;
+  }
+  }
+  
 }
 
+
+//*------------
+
+.outer{
+  position: relative;
+  @include breakpoint(small-max-m) {
+  }
+  width:100%;
+}
+
+.inner{
+  position: absolute;
+  top:280%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index:2;
+}

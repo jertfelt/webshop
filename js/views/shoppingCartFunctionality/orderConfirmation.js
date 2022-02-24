@@ -69,7 +69,7 @@
         street: document.querySelector("#streetOrderConfirmation").value,
         postalCode: document.querySelector("#postalCodeOrderConfirmation").value,
         town: document.querySelector("#townOrderConfirmation").value,
-        email: document.querySelector("#emailOrderConfirmation"),
+        email: document.querySelector("#emailOrderConfirmation").value,
         tel: document.querySelector("#phoneNumberOrderConfirmation").value,
         comment: document.querySelector("#commentsOrderConfirmation").value
       };
@@ -77,11 +77,13 @@
     }
 
 //Submit button
-  document.getElementById("orderConfirmationForm").addEventListener("submit", (e) => {
+  /*document.getElementById("orderConfirmationForm").addEventListener("submit", (e) => {
     e.preventDefault();
     saveOrderDetails();
     confirmOrderConfirmationBtn();
-  });
+    drawReceipt();
+    showReceipt();
+  });*/
 
 
 

@@ -1,9 +1,5 @@
-/* först vill vi ta emot från våra inputs
-vi vill loopa igenom datan i local storage o se om vi kan hitta matchning för username
-om vi inte hittar det så vill vi skicka ut en alert. 
-sen om det finns en användare så vill vi kolla om lösenordet matchar
-och om det gör det så vill vi visa vem som är inloggad
-*/
+
+
 let userDoesExist = false;
 let getUser = "";
 let loginEmail = "";

@@ -8,7 +8,7 @@ function drawProducts() {
   //Draw title for current category.
   const categoryHeader = document.createElement("h2");
   categoryHeader.classList.add("text--green", "text--cursive", "centered");
-  categoryHeader.innerText = qsCategory +"kläder";
+  categoryHeader.innerText = qsCategory + "kläder";
   productListSection.appendChild(categoryHeader);
 
   const sectionElem = document.createElement("section");

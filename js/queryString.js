@@ -3,7 +3,6 @@
 //*---------------------variables
 
 const homepageSection = document.getElementById("homepageSection");
-const categoriesSection = document.getElementById("categoriesSection");
 const productListSection = document.getElementById("productListSection");
 const individualProductSection = document.getElementById("individualProductSection");
 const orderConfirmationSection = document.getElementById("orderConfirmationSection");
@@ -11,12 +10,11 @@ const receiptSection = document.getElementById("receiptSection");
 const loginSection = document.getElementById("loginSection");
 const createUserSection = document.getElementById("createUserSection");
 
-//knapp i hero:
-const buttonHero = document.getElementById("buttonHero");
-
 //nodelist
 const sections = document.querySelectorAll(".section");
 
+
+//*---------querystring
 //addevent function som togglar hidden/show + byter query string NAVBAR
 
 // Uppdaterar sidan med angivna parametrar. Funkar även om man bara ger en eller två parametrar. 
@@ -53,12 +51,12 @@ const setActivePage = () => {
   let url = new URL(window.location.href);
   
   let search_params = url.searchParams;
-  console.log(search_params); ///blir tom vid start  (första gången)
+  // console.log(search_params); ///blir tom vid start  (första gången)
 
   const currentSection = search_params.get("section");
-  console.log(currentSection) // blir null vid start (första gången)
+  // console.log(currentSection) // blir null vid start (första gången)
 
- //ändrat funktion och for loop - default är att allt utom homepageSection är dolt i början (så om man öppnar fönstret första gången så syns bara homepage, inte allt)
+ // ändrat funktion och for loop - default är att allt utom homepageSection är dolt i början (så om man öppnar fönstret första gången så syns bara homepage)
  
  if (currentSection) {
   sections.forEach(section => {
