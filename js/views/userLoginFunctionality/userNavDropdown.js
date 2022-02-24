@@ -68,6 +68,7 @@ userNavLogInRegisterBtn.addEventListener("click", () => {
 
 //*-------showing today's date (bonus)
 
-let today = new Date().toJSON().slice(0,10).replace(/-/g, '/');
-console.log(today);
-document.getElementById("todaysDate").innerText = " " + today;
+let today = new Date().toJSON().slice(0,10).replace(/-/g, ' ');
+
+
+document.getElementById("todaysDate").textContent = " " + today;
