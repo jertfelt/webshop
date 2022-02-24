@@ -13,6 +13,7 @@ if (getCart() !== null) {
     });
   }
 
+  receiptSection 
 
 //självaste kvittot som renderas ut
 document.getElementById("orderConfirmationForm").addEventListener("submit", (e)=>{
