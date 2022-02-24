@@ -340,7 +340,7 @@ h6 {
   padding-top: 1rem;
   width: 50%;
   margin: 0 auto;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .list__nested li {
@@ -360,7 +360,6 @@ h6 {
 .list__nested--motherhead:hover {
   color: #1b1b1b;
   cursor: pointer;
-  text-decoration: underline;
   text-transform: uppercase;
 }
 
@@ -373,19 +372,33 @@ h6 {
 }
 
 .list__nested--child p {
-  color: #225e39;
   margin-top: 0.5rem;
-  width: 100%;
+  opacity: 0;
 }
 
 .list__nested--child:hover p {
   text-decoration: underline;
   color: #1b1b1b;
   text-transform: uppercase;
+  opacity: 1;
 }
 
 .list__nested--child:hover img {
-  opacity: 0.7;
+  opacity: 0.5;
+}
+
+.outer {
+  position: relative;
+  width: 100%;
+}
+
+.inner {
+  position: absolute;
+  top: 280%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
 .products__individual {
@@ -871,6 +884,15 @@ nav {
 
 .nav__button--category {
   max-height: 50px;
+}
+
+.nav__categories--imgtxt {
+  border-radius: 19px;
+  padding: 0.6rem;
+}
+
+.nav__categories--imgtxt p {
+  margin: 0 auto;
 }
 
 .nav__categories--img {

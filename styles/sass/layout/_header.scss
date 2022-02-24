@@ -32,17 +32,24 @@ nav{
     }
   }
 
-  &__categories--img{
+  &__categories{
+    &--imgtxt{
+
+      border-radius: 19px;
+      padding:0.6rem;
+      p{
+        margin: 0 auto;
+      }
+    }
+   
+    
+  &--img{
     position: relative;
     overflow: hidden;
     width:100%;
     border-radius: 29px;
   }
-
-
-
-
-
+}
   &__logotype{
   max-height:90px;
    
@@ -70,7 +77,6 @@ nav{
     visibility:hidden;
   }
   &--user{
-   
     div{
       position:relative;
     }

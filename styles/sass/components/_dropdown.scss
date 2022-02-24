@@ -50,7 +50,7 @@ a:hover{
   padding-top:1rem;
   width:50%;
   margin: 0 auto;
-  padding-bottom:2rem;
+  padding-bottom:1rem;
 
   li {
   margin-bottom:-3px;
@@ -69,7 +69,6 @@ a:hover{
   &--motherhead:hover{
     color: $color-black;
     cursor: pointer;
-    text-decoration: underline;
     text-transform: uppercase;
   }
 
@@ -78,11 +77,11 @@ a:hover{
   }
   &--child{
   width:80%;
+  
 
   p{
-    color: $color-green;
     margin-top:0.5rem;
-    width:100%;
+    opacity:0;
   }
   }
 
@@ -91,9 +90,10 @@ a:hover{
     text-decoration: underline;
     color: $color-black;
     text-transform:uppercase;
+    opacity:1;
   }
   img{
-    opacity: 0.7;
+    opacity: 0.5;
   }
   }
   
@@ -101,3 +101,18 @@ a:hover{
 
 
 //*------------
+
+.outer{
+  position: relative;
+  @include breakpoint(small-max-m) {
+  }
+  width:100%;
+}
+
+.inner{
+  position: absolute;
+  top:280%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index:2;
+}
