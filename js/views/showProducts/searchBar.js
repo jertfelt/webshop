@@ -1,8 +1,4 @@
-
-const searchSection = document.getElementById("searchSection");
 let searchResult = [];
-
-
 
 const loadSearchResult = async () => {
   //getting search input field value
@@ -45,13 +41,7 @@ const displaySearchResult = (res, source) => {
   
 };
 
-
-
-
-
-
 loadSearchResult();
-
 
 //Dropdown closes on enter
 document.querySelector("#searchBar").addEventListener("keypress", (e) => {

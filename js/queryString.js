@@ -9,6 +9,7 @@ const orderConfirmationSection = document.getElementById("orderConfirmationSecti
 const receiptSection = document.getElementById("receiptSection");
 const loginSection = document.getElementById("loginSection");
 const createUserSection = document.getElementById("createUserSection");
+const searchSection = document.getElementById("searchSection");
 
 //nodelist
 const sections = document.querySelectorAll(".section");
