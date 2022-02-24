@@ -24,8 +24,9 @@ receiptText.innerHTML = `
         <p>${orderInformationReceipt.name}</p>
         <p>${orderInformationReceipt.street}</p>
         <p>${orderInformationReceipt.postalCode} ${orderInformationReceipt.town}</p>
-        <p>${orderInformationReceipt.phone}</p>
-        <p>${orderInformationReceipt.email}</p>löl
+        <p>${orderInformationReceipt.tel}</p>
+        <p>${orderInformationReceipt.email}</p>
+        <p>${orderInformationReceipt.comment}</p>
 `;
 }
 //ul list for products
@@ -54,6 +55,7 @@ if (getCart() !== null) {
    <h4> Totalt: ${getTotalPriceOrder()} SEK</h4>
     `
 }
+
 //Submit button
 document.getElementById("orderConfirmationForm").addEventListener("submit", (e) => {
     e.preventDefault();

@@ -75,7 +75,7 @@
       };
       localStorage.setItem("orderInformation", JSON.stringify(orderFormDetails));
     }
-
+    
 //Submit button
   /*document.getElementById("orderConfirmationForm").addEventListener("submit", (e) => {
     e.preventDefault();
