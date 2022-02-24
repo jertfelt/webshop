@@ -1,28 +1,25 @@
 //*--------all info från localStorage
 
-let orderInformationReceipt = JSON.parse(localStorage.getItem("orderInformation"));
+
+
+const receiptContainer = document.getElementById("receiptSection");
 
 const showReceipt=() =>{
-    if(receiptSection.classList.contains("hidden")){
-        receiptSection.classList.remove("hidden");
+    if(receiptContainer.classList.contains("hidden")){
+        console.log("hide")
+        receiptContainer.classList.remove("hidden");
     }
 }
 
 
 //*-----------creating the receipt
 const drawReceipt = () => {
-    //testar:
-console.log("drawing");
-console.log(receiptSection);
-    //!bugg: console fungerar, men inte något annat, nedan test fungerar tex inte:
-receiptSection.classList.remove("test")
+    const orderInformationReceipt = JSON.parse(localStorage.getItem("orderInformation"));
 
-//creating elements in DOM
-
-
-//article with whole text
 const receiptText = document.getElementsByClassName("receipt__text")[0];
 
+
+if (orderInformationReceipt !== null) {
 receiptText.innerHTML = `
         <p>${orderInformationReceipt.name}</p>
         <p>${orderInformationReceipt.street}</p>
@@ -30,7 +27,7 @@ receiptText.innerHTML = `
         <p>${orderInformationReceipt.phone}</p>
         <p>${orderInformationReceipt.email}</p>
 `;
-
+}
 //ul list for products
 
 
