@@ -75,6 +75,12 @@
       };
       localStorage.setItem("orderInformation", JSON.stringify(orderFormDetails));
     }
+
+    document.getElementById("orderConfirmationForm").addEventListener("submit", (e) => {
+      saveOrderDetails();
+      confirmOrderConfirmationBtn();
+      e.preventDefault();
+    });
     
 //Submit button
   /*document.getElementById("orderConfirmationForm").addEventListener("submit", (e) => {

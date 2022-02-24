@@ -4,13 +4,6 @@
 
 const receiptContainer = document.getElementById("receiptSection");
 
-const showReceipt=() =>{
-    if(receiptContainer.classList.contains("hidden")){
-        console.log("hide")
-        receiptContainer.classList.remove("hidden");
-    }
-}
-
 
 //*-----------creating the receipt
 const drawReceipt = () => {
@@ -56,13 +49,8 @@ if (getCart() !== null) {
     `
 }
 
-//Submit button
-document.getElementById("orderConfirmationForm").addEventListener("submit", (e) => {
-    e.preventDefault();
-    saveOrderDetails();
-    confirmOrderConfirmationBtn();
-    drawReceipt();
-    showReceipt();
-  });
+//Renders recepit when on the correct page
 
-
+if (!receiptSection.classList.contains("hidden")) {
+    drawReceipt()
+}
