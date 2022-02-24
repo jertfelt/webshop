@@ -333,37 +333,14 @@ h6 {
 }
 
 .mainmenu__mobile a:hover {
-  color: #2798d8;
+  color: #1b1b1b;
   text-transform: uppercase;
-}
-
-@media only screen and (min-width: 991px) {
-  .list__nested {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+  background-color: #f2ea03;
+  padding: 0.3rem;
 }
 
 .list__nested li {
   margin-bottom: -3px;
-}
-
-.list__nested li:hover {
-  background-color: #ece6d2;
-  border-radius: 40px;
-  font-size: 1.4rem;
-  padding: 0rem 1rem;
 }
 
 .list__nested--mother {
@@ -377,9 +354,11 @@ h6 {
 }
 
 .list__nested--mother:hover {
-  color: #2798d8;
+  color: #1b1b1b;
   cursor: pointer;
   text-transform: uppercase;
+  background-color: #f2ea03;
+  padding: 0.3rem;
 }
 
 .list__nested--mother:visited {

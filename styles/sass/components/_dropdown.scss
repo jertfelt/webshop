@@ -40,28 +40,21 @@ a:visited{
 }
 
 a:hover{
-  color: $color-blue;
+  color: $color-black;
   text-transform: uppercase;
+  background-color: $color-yellow;
+  padding:0.3rem;
 }
 
 }
 
 .list__nested{
 
-  @include breakpoint(medium-tablet-min){
-    @include flexBox(row,center,center)
-  }
 
   li {
- 
   margin-bottom:-3px;
   }
-  li:hover{
-    background-color: $color-sand;
-   border-radius: 40px;
-    font-size:1.4rem;
-    padding: 0rem 1rem;
-  }
+
 
   &--mother{
     
@@ -75,9 +68,11 @@ a:hover{
   }
 
   &--mother:hover{
-    color: $color-blue;
+    color: $color-black;
     cursor: pointer;
     text-transform: uppercase;
+    background-color: $color-yellow;
+    padding:0.3rem;
   
   }
 
@@ -86,3 +81,5 @@ a:hover{
   }
 }
 
+
+//*------------
