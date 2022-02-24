@@ -21,7 +21,7 @@ receiptSection.classList.remove("test")
 
 
 //article with whole text
-const receiptText = document.getElementsByClassName("receipt__text");
+const receiptText = document.getElementsByClassName("receipt__text")[0];
 
 receiptText.innerHTML = `
         <p>${orderInformationReceipt.name}</p>
