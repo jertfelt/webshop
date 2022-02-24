@@ -25,7 +25,7 @@ receiptText.innerHTML = `
         <p>${orderInformationReceipt.street}</p>
         <p>${orderInformationReceipt.postalCode} ${orderInformationReceipt.town}</p>
         <p>${orderInformationReceipt.phone}</p>
-        <p>${orderInformationReceipt.email}</p>
+        <p>${orderInformationReceipt.email}</p>löl
 `;
 }
 //ul list for products
@@ -54,13 +54,13 @@ if (getCart() !== null) {
    <h4> Totalt: ${getTotalPriceOrder()} SEK</h4>
     `
 }
-
-// //*-----------------eventListener
-
-
-document.getElementById("submitBtnOrderConfirmation").addEventListener("click",(e) => {
+//Submit button
+document.getElementById("orderConfirmationForm").addEventListener("submit", (e) => {
     e.preventDefault();
+    saveOrderDetails();
+    confirmOrderConfirmationBtn();
     drawReceipt();
     showReceipt();
-    console.log("annan knapp")
-});
+  });
+
+
