@@ -31,7 +31,11 @@ const displaySearchResult = (res, source) => {
   //mapping all products and checking if the product title includes the input word
   const htmlString = res.products
     .map((produx) => {
-      if (produx.fields.title.toLowerCase().includes(source.toLowerCase())) {
+      if (produx.fields.title.toLowerCase().includes(source.toLowerCase()) || produx.fields.description.toLowerCase().includes(source.toLowerCase())) {
+        
+        
+        
+      
         //returning the products that match
         const productLink = createURL(
           "individualProductSection",
