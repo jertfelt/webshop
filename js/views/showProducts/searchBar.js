@@ -29,16 +29,16 @@ const displaySearchResult = (res, source) => {
   sectionElem.classList.add("products__grid--all");   
   searchSection.appendChild(sectionElem);
 
-  //mapping all products and checking if the product title includes the input word
-  
+  //mapping all products and checking if the product title and description includes the input word
   const htmlString = res.products
-    .map((produx) => {
-      if (produx.fields.title.toLowerCase().includes(source.toLowerCase()) || produx.fields.description.toLowerCase().includes(source.toLowerCase())) {
-        
-        
-        createProductCard(produx, sectionElem);}})
-      
-  
+  .map((produx) => {
+    const productTitle = produx.fields.title.toLowerCase();
+    const productDescription = produx.fields.description.toLowerCase();
+    const searchInput = source.toLowerCase();
+
+    if (productTitle.includes(searchInput) || productDescription.includes(searchInput)) {
+      createProductCard(produx, sectionElem);}
+  });
 };
 
 loadSearchResult();
