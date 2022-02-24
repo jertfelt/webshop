@@ -25,6 +25,13 @@ const loadSearchResult = async () => {
 };
 
 const displaySearchResult = (res, source) => {
+  //Draw title for current category.
+  const categoryHeader = document.createElement("h2");
+  categoryHeader.classList.add("text--green", "text--cursive", "centered");
+  categoryHeader.innerText = "Ditt sökresultat";
+  searchSection.appendChild(categoryHeader);
+  
+  // Creates section element
   const sectionElem = document.createElement("section");   
   sectionElem.classList.add("products__grid--all");   
   searchSection.appendChild(sectionElem);
