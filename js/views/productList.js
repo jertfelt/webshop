@@ -18,7 +18,13 @@ function drawProducts() {
   productList.forEach(product => {
     // Filter products for selected category.
     if(product.category === qsCategory) {
-    const articleElem = document.createElement("article");
+      createProductCard(product, sectionElem);
+    }
+  })
+}
+
+const createProductCard = (product, parent) => {
+  const articleElem = document.createElement("article");
   
     // Creates direct link to individual product
     const productLink = createURL("individualProductSection", `${product.category}` , `${product.sys.id}`);
@@ -46,11 +52,7 @@ function drawProducts() {
     
     
     `
-    sectionElem.appendChild(articleElem);
-    }
-  })
-
-  
+    parent.appendChild(articleElem);
 }
 
 // Wrapper funktion som kör funktioner/eventListeners efter HTML i produktlistan har ritats
