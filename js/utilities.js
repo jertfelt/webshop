@@ -10,6 +10,7 @@ const openDropdown = () => {
 }
 else 
 menuMobile.classList.add("dropdown");
+
 }
 menuButton.addEventListener("click", openDropdown);
 document.addEventListener('keydown', function(event){
@@ -40,7 +41,9 @@ document.addEventListener('keydown', function(event){
 //*--------Toggle kategori i dropdown
 
 document.querySelector(".list__nested--mother").addEventListener("click", () =>{
+  
   const categoryMenuNav = document.querySelector(".list__nested");
+  
 
   if(categoryMenuNav.classList.contains("hidden") === true){
     categoryMenuNav.classList.remove("hidden");
@@ -73,6 +76,7 @@ const setCartinLocalStorage = (cart) => {
   const stringifyCart = JSON.stringify(cart);
   localStorage.setItem("cart", stringifyCart);
 }
+
 
 const fetchProducts = async () => {
   const response = await fetch("/js/data/products.json");
@@ -109,3 +113,47 @@ const createProductCard = (product, parent) => {
   `
   parent.appendChild(articleElem);
 }
+
+
+const updateAmountCartNav = () => {
+  const headerCartAmount = document.querySelector("#headerCartAmount");
+  let amountCartNav = 0;
+
+  if (getCart() !== null) {
+    getCart().forEach(product => {
+      amountCartNav += product.quantity;
+    })
+  }
+  headerCartAmount.innerText = amountCartNav;
+};
+
+//*-------showing today's date (bonus)
+
+let today = new Date().toJSON().slice(0,10).replace(/-/g, ' ');
+
+document.getElementById("todaysDate").textContent = " " + today;
+
+
+
+
+// //*------animation function
+
+// let loader = document.querySelector(".loading");
+// const loadingContainer = document.querySelector(".loading__div");
+
+// const displayLoading = () =>{
+  
+//   if (loadingContainer.classList.contains("hidden")){
+//     loader.classList.add("display");
+
+//     setTimeout(() => {
+//         loader.classList.remove("display");
+//       }, 3000)}
+
+// }
+// .addEventListener("click", () => {
+// displayLoading();
+// })
+
+
+

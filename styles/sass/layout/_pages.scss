@@ -56,3 +56,49 @@ padding:2rem;
   }
 }
 
+
+.confirmation{
+  &__container{
+    margin-top:5rem;
+  
+    h2{
+    margin-bottom:2rem;
+    }
+  }
+  &__div{
+    background-color: $color-green;
+    padding:2rem;
+    border-radius: 29px;
+    color: $color-white;
+  }
+
+  &__row{
+    @include flexBox(row,center,space-between);
+    padding-top: 1rem;
+    p{
+      font-weight: bold;
+      font-size:1.5rem;
+    }
+  }
+
+  &__amount{
+    margin-left:6%;
+    font-weight: bolder;
+    color:$color-yellow;
+  }
+  &__amount:hover{
+    color:$color-white;
+  }
+
+  &__quantity{
+    color:$color-yellow;
+    margin-left:6%;
+    font-weight: bold;
+  }
+
+  &__totalamount{
+    padding:3rem;
+    margin: 0 auto;
+  }
+
+}

@@ -1,31 +1,50 @@
-//search inputs
+//*----------search inputs
+
 .search{
+
   &__dropdown{
-    background-color: $color-yellow;
-  };
-  &__wrapper{
-    @include flexBox(row,center,center);
-    margin-left:-2rem;
+    position:fixed;
+    top:70px;
+    left:100px;
+
 
     img {
-      height:30px;
+      height:32px;
+      background-color: $color-yellow;
+      border-radius: 50%;
+      padding:0.4rem;
     }
 
     label {
       visibility: hidden;
+      width:3%;
     }
 
     input {
-      margin-left:-80px;
-      @include breakpoint(small-max-m){
-        visibility:hidden;
-      }
+      padding:0.4rem;
+      text-transform: capitalize;
+      font-weight: bold;
+      border-color: $color-green;
+      border-radius: 29px;
     }
-    
+  };
+
+  &__wrapper{
+    @include flexBox(row,center,center);
+ 
+    img {
+      height:32px;
+      background-color: $color-yellow;
+      border-radius: 50%;
+      padding:0.4rem;
+      @include breakpoint(xxsmall-max-m){
+        visibility:hidden;
+      };
+    }
   }
 
   &__img{
-    background-color: $color-yellow;
+    margin-left:1rem;
     border-radius: 50%;
     width:40px;
     height:40px;
@@ -35,29 +54,31 @@
   &__navigation{
     @include flexBox(row,center,center);
 
-    span {
-      background-color: $color-yellow;
-      border-radius: 50%;
-      padding:4px;
-      height:40px;
-      width:40px;
-      position:relative;
-      right:-10%;
-    }
-    
+  
+
     img {
       height:30px;
+      background-color: $color-yellow;
+      border-radius: 50%;
+      padding:0.4rem;
      
-    
     }
+
     label{
       visibility:hidden;
+      width:1%;
     }
-    
+
     input{
-     position: relative;
-     right:10%;
+      border-color: $color-green;
+      border-radius: 29px;
+      font-weight: bold;
+      @include breakpoint(small-max){
+      width:14%;}
+      padding:0.4rem;
     }
+   
   }
+ 
 }
 

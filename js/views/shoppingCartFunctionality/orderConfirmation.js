@@ -6,26 +6,37 @@
     const createProductElementOrderConfirmation = (img, name, amount, quantity) => {
     
     const productOrderConfirmation = document.createElement("article");
+    
     const productInformationDivOrderConfirmation = document.createElement("div");
     const imgOrderConfirmation = document.createElement("img");
 
-    const productNameOrderConfirmation = document.createElement("h3");
+    const productNameOrderConfirmation = document.createElement("p");
     const amountOrderConfirmation = document.createElement("p");
     const quantityOrderConfirmation = document.createElement("p");
 
     imgOrderConfirmation.src = img;
+   
     productNameOrderConfirmation.innerText = name;
     amountOrderConfirmation.innerText = `${amount}kr`;
     quantityOrderConfirmation.innerText = `${quantity} st`;
+    productInformationDivOrderConfirmation.appendChild( quantityOrderConfirmation);
 
     productInformationDivOrderConfirmation.appendChild(productNameOrderConfirmation);
     productInformationDivOrderConfirmation.appendChild(amountOrderConfirmation);
+   
 
     productOrderConfirmation.appendChild(imgOrderConfirmation);
     productOrderConfirmation.appendChild(productInformationDivOrderConfirmation);
-    productOrderConfirmation.appendChild(quantityOrderConfirmation);
+
 
     document.querySelector("#orderProductsSummation").appendChild(productOrderConfirmation);
+
+    productOrderConfirmation.classList.add("product__img--container");
+    productOrderConfirmation.classList.add("confirmation__div")
+    imgOrderConfirmation.classList.add("product__img");
+    quantityOrderConfirmation.classList.add("confirmation__quantity");
+    productInformationDivOrderConfirmation.classList.add("confirmation__row")
+    amountOrderConfirmation.classList.add("confirmation__amount")
   }
 
 //Go through each product in cart and send it to print
@@ -39,9 +50,8 @@
 
 //Adds total price
     const addTotalPriceOrderConfirmation = () => {
-      const totalPriceText = document.createElement("p");
-      totalPriceText.innerText = `Total kostnad: ${getTotalPriceOrder()}kr`;
-      document.querySelector("#orderProductsSummation").appendChild(totalPriceText);
+      const totalPriceText = document.getElementById("orderProductsTotalAmount");
+      totalPriceText.innerText = `Total kostnad: ${getTotalPriceOrder()} kr`;
     }
     addTotalPriceOrderConfirmation();
 
@@ -76,6 +86,12 @@
       localStorage.setItem("orderInformation", JSON.stringify(orderFormDetails));
     }
 
+    document.getElementById("orderConfirmationForm").addEventListener("submit", (e) => {
+      saveOrderDetails();
+      confirmOrderConfirmationBtn();
+      e.preventDefault();
+    });
+    
 //Submit button
   /*document.getElementById("orderConfirmationForm").addEventListener("submit", (e) => {
     e.preventDefault();

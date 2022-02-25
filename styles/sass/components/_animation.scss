@@ -1,0 +1,29 @@
+.loading{
+
+ &__div{
+   position:fixed;
+   margin:0 auto;
+   z-index:100;
+ }
+
+  &__circle{
+  width:2rem;
+  height: 2rem;
+  border-radius: 100%;
+  border: 5px solid $color-green;
+  border-top: 6px solid $color-sand;
+  margin:auto;
+  visibility: hidden;
+  animation: spin 1s infinite linear;
+}
+}
+
+
+@keyframes spin {
+  from{
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

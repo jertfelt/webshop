@@ -23,6 +23,40 @@ function drawProducts() {
   })
 }
 
+
+const createProductCard = (product, parent) => {
+  const articleElem = document.createElement("article");
+  
+    // Creates direct link to individual product
+    const productLink = createURL("individualProductSection", `${product.category}` , `${product.sys.id}`);
+
+    articleElem.innerHTML = `
+      <div class="product__img--container product__img--list">
+        <a href="${productLink}">
+            <img alt = Produkt ${product.title}"   
+              class ="product__img" 
+              src="/${product.fields.image.fields.file.url}">
+            </img>
+        </a>
+      </div>
+      <span class="product__box">
+        <span>
+          <h3 class="text--uppercase text--cursive">${product.fields.title}</h3>
+          <h4 class="text--green">${product.fields.price} kr</h4>
+        </span>
+        <button 
+        class="addToCartBtn" 
+        data-id="${product.sys.id}">
+        Köp</button>
+       
+      </span>
+    `
+    parent.appendChild(articleElem);
+}
+
+
+
+
 // Wrapper funktion som kör funktioner/eventListeners efter HTML i produktlistan har ritats
 const setAddToCartClick = () => {
   // Hämtar alla köp-knappar
@@ -30,10 +64,13 @@ const setAddToCartClick = () => {
   // Hämtar ID på klickat produkt och lägger till den i varukorgen
   addToCartButtons.forEach(button => {
     button.addEventListener("click", () => {
+      
       const prodID = button.dataset.id;
       addToCart(prodID);
       setTotalPriceOrder();
+      updateAmountCartNav();
       showCart();
+     
     })
   });
 }

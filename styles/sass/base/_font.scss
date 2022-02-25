@@ -16,6 +16,10 @@ $font-secondary: "Roboto", Arial, sans-serif;
   &--second{
     font-family: $font-secondary;
   }
+
+  &--white{
+    color: $color-white;
+  }
   
   &--green{
     color:$color-green;

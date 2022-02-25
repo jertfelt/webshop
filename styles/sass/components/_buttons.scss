@@ -1,32 +1,15 @@
 //buttons (except for navigation bar in header)
 
 .button{
-  &__hero{
-  padding: 1rem 2rem;
-  text-transform: uppercase;
-  letter-spacing: $mainSpacing;
-  font-size: 1rem;
-  font-weight: bold;
-  background: $color-green;
-  color: $color-white;
-  border: none;
-  transition: $mainTransition;
-  cursor: pointer;
-  margin-top:2rem;
-  }
-
-  &__hero:hover{
-    border-radius: 19px;
-    background-color: $color-blue;
-  }
+  
 
   &__dropdown{
       padding: 1rem 2rem;
       text-transform: uppercase;
       font-size: 1rem;
       font-weight: bold;
-      background: $color-blue;
-      color: $color-white;
+      background: $color-yellow;
+      color: $color-black;
       border: none;
       transition: $mainTransition;
       cursor: pointer;
@@ -37,6 +20,7 @@
 
   &__dropdown:hover{
     background: $color-green;
+    color: $color-yellow;
  
   }
 
@@ -69,6 +53,7 @@
   background-color: $color-green;
   font-size: 1.3rem;
 }
+
 
 
 

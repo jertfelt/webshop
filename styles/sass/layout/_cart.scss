@@ -60,21 +60,36 @@
       h4 {
         font-size: 0.85rem;
         text-transform: capitalize;
-        letter-spacing: var(--mainSpacing);
+        
       }
       h5 {
-        margin: 0.5rem 0;
-        letter-spacing: var(--mainSpacing);
+        line-height:1rem;
+       
+        margin-bottom:0.4rem;
       }
+
+      span{
+        cursor: pointer;
+         img{
+           height:20px;
+           width:20px;
+           background-color: $color-yellow;
+           border-radius: 50%;
+         }
+      }
+
+    
+      
   }
   &--amount{
     text-align: center;
   }
-
   &--remove{
     color: $color-black;
     cursor: pointer;
+    background-color: $color-yellow;
   }
+
 
   &--close{
     cursor: pointer;
@@ -91,6 +106,12 @@
       text-transform: capitalize;
       margin-bottom: 1rem;
     }
+  }
+
+  &--empty{
+    margin-top:2rem;
+    text-align: center;
+  
   }
 }
 
