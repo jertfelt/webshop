@@ -2,8 +2,6 @@
 const searchSection = document.getElementById("searchSection");
 let searchResult = [];
 
-
-
 const loadSearchResult = async () => {
   //getting search input field value
   let source = document.getElementById("searchBar");
@@ -39,16 +37,10 @@ const displaySearchResult = (res, source) => {
     .map((produx) => {
       if (produx.fields.title.toLowerCase().includes(source.toLowerCase()) || produx.fields.description.toLowerCase().includes(source.toLowerCase())) {
         
-        
         createProductCard(produx, sectionElem);}})
       
   
 };
-
-
-
-
-
 
 loadSearchResult();
 
@@ -59,3 +51,5 @@ document.querySelector("#searchBar").addEventListener("keypress", (e) => {
     closeDropDown();
   }
 })
+
+
