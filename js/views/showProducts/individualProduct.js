@@ -1,8 +1,6 @@
 const queryParams = new URLSearchParams(location.search);
 const productId = queryParams.get('id');
 
-// let allProductsArray = [];
-
 const productCreator = (product)=>{
   const sectionProduct = document.createElement("section");
   sectionProduct.classList.add("products__individual");

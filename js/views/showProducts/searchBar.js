@@ -1,17 +1,16 @@
-let searchResult = [];
-
 const loadSearchResult = async () => {
+  const queryParams = new URLSearchParams(location.search);
+  const sectionParam = queryParams.get('section');
+  //Check if we are on the right URL before showing the products
+  if(sectionParam !== "searchSection") return;
   //getting search input field value
-  let source = document.getElementById("searchBar");
   const inputHandler = async (e) => {
-    source = e.target.value;
+    //searchInput = e.target.value;
     try {
-      const res = await fetch("/js/data/products.json");
-      searchResult = await res.json();
-
+      allProductsArray = await fetchProducts();
       //calling the function to get results when the input word is more than 3 letters
       if (source.length >= 3) {
-        displaySearchResult(searchResult, source);
+        displaySearchResult(allProductsArray, source);
         setAddToCartClick();
       }
       
@@ -19,7 +18,8 @@ const loadSearchResult = async () => {
       console.error(err);
     }
   };
-  source.addEventListener("input", inputHandler);
+  inputHandler();
+  //source.addEventListener("input", inputHandler);
 
   
 };
