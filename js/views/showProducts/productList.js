@@ -65,6 +65,7 @@ const setAddToCartClick = (productList) => {
       const prodID = button.dataset.id;
       addToCart(prodID);
       setTotalPriceOrder();
+      updateAmountCartNav();
       showCart();
     })
   });

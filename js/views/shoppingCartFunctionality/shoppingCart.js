@@ -336,15 +336,18 @@ const setCartEventListener = () => {
       if (e.target.id === "addBtn") {
         addToCart(prodID);
         setTotalPriceOrder();
+        updateAmountCartNav();
         showCart();
         return;
       }
       if (e.target.id == "deleteBtn") {
         deleteProduct(prodID);
+        updateAmountCartNav();
         return;
       }
       if (e.target.id === "decreaseBtn") {
         decreaseQuantity(prodID);
+        updateAmountCartNav();
         return;
       }
     })
