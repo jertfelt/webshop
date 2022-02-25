@@ -108,6 +108,10 @@ body {
   font-family: "Nunito", Verdana, sans-serif;
 }
 
+main {
+  margin-top: 3rem;
+}
+
 .text--primary {
   font-family: "Nunito", Verdana, sans-serif;
 }
