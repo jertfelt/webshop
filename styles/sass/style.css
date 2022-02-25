@@ -73,6 +73,10 @@
   margin-bottom: 3rem;
 }
 
+.container__margin --top {
+  margin-top: 2rem;
+}
+
 .none {
   display: none;
 }
