@@ -16,7 +16,7 @@ const cartContent = document.querySelector("#cartDynamicContent");
 const cartTotal = document.getElementById("cartTotal");
 
 //räknaren i headern (T)
-let cartCounterHeader = document.querySelector(".headercart__showAmount");
+//let cartCounterHeader = document.querySelector(".headercart__showAmount");
 
 //räknare i varukorgens footer (T)
 //let cartCounterFooter = document.querySelector("#cartTotal");
@@ -336,15 +336,18 @@ const setCartEventListener = () => {
       if (e.target.id === "addBtn") {
         addToCart(prodID);
         setTotalPriceOrder();
+        updateAmountCartNav();
         showCart();
         return;
       }
       if (e.target.id == "deleteBtn") {
         deleteProduct(prodID);
+        updateAmountCartNav();
         return;
       }
       if (e.target.id === "decreaseBtn") {
         decreaseQuantity(prodID);
+        updateAmountCartNav();
         return;
       }
     })

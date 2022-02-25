@@ -77,22 +77,37 @@ const setCartinLocalStorage = (cart) => {
   localStorage.setItem("cart", stringifyCart);
 }
 
+ cart-nav-amount
+//Udaterar amount i varukorgen i header
+const updateAmountCartNav = () => {
+  const headerCartAmount = document.querySelector("#headerCartAmount");
+  let amountCartNav = 0;
+
+  if (getCart() !== null) {
+    getCart().forEach(product => {
+      amountCartNav += product.quantity;
+    })
+  }
+  headerCartAmount.innerText = amountCartNav;
+}
+
 
 //*------animation function
 
-let loader = document.querySelector(".loading");
-const loadingContainer = document.querySelector(".loading__div");
+//let loader = document.querySelector(".loading");
+//const loadingContainer = document.querySelector(".loading__div");
 
-const displayLoading = () =>{
+//const displayLoading = () =>{
   
-  if (loadingContainer.classList.contains("hidden")){
-    loader.classList.add("display");
+  //if (loadingContainer.classList.contains("hidden")){
+    //loader.classList.add("display");
 
-    setTimeout(() => {
-        loader.classList.remove("display");
-      }, 3000)}
+    //setTimeout(() => {
+      //  loader.classList.remove("display");
+      //}, 3000)}
 
-}
+//}
+
 
 
 
