@@ -16,7 +16,7 @@ const cartContent = document.querySelector("#cartDynamicContent");
 const cartTotal = document.getElementById("cartTotal");
 
 //räknaren i headern (T)
-let cartCounterHeader = document.querySelector(".headercart__showAmount");
+//let cartCounterHeader = document.querySelector(".headercart__showAmount");
 
 //räknare i varukorgens footer (T)
 //let cartCounterFooter = document.querySelector("#cartTotal");

@@ -73,3 +73,16 @@ const setCartinLocalStorage = (cart) => {
   const stringifyCart = JSON.stringify(cart);
   localStorage.setItem("cart", stringifyCart);
 }
+
+//Udaterar amount i varukorgen i header
+const updateAmountCartNav = () => {
+  const headerCartAmount = document.querySelector("#headerCartAmount");
+  let amountCartNav = 0;
+
+  if (getCart() !== null) {
+    getCart().forEach(product => {
+      amountCartNav += product.quantity;
+    })
+  }
+  headerCartAmount.innerText = amountCartNav;
+}
