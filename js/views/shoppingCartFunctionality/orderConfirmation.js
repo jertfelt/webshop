@@ -6,6 +6,7 @@
     const createProductElementOrderConfirmation = (img, name, amount, quantity) => {
     
     const productOrderConfirmation = document.createElement("article");
+    
     const productInformationDivOrderConfirmation = document.createElement("div");
     const imgOrderConfirmation = document.createElement("img");
 
@@ -14,18 +15,28 @@
     const quantityOrderConfirmation = document.createElement("p");
 
     imgOrderConfirmation.src = img;
+   
     productNameOrderConfirmation.innerText = name;
     amountOrderConfirmation.innerText = `${amount}kr`;
     quantityOrderConfirmation.innerText = `${quantity} st`;
+    productInformationDivOrderConfirmation.appendChild( quantityOrderConfirmation);
 
     productInformationDivOrderConfirmation.appendChild(productNameOrderConfirmation);
     productInformationDivOrderConfirmation.appendChild(amountOrderConfirmation);
+   
 
     productOrderConfirmation.appendChild(imgOrderConfirmation);
     productOrderConfirmation.appendChild(productInformationDivOrderConfirmation);
-    productOrderConfirmation.appendChild(quantityOrderConfirmation);
+
 
     document.querySelector("#orderProductsSummation").appendChild(productOrderConfirmation);
+
+    productOrderConfirmation.classList.add("product__img--container");
+    productOrderConfirmation.classList.add("confirmation__div")
+    imgOrderConfirmation.classList.add("product__img");
+    quantityOrderConfirmation.classList.add("confirmation__quantity");
+    productInformationDivOrderConfirmation.classList.add("confirmation__row")
+    amountOrderConfirmation.classList.add("confirmation__amount")
   }
 
 //Go through each product in cart and send it to print

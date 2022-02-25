@@ -62,13 +62,15 @@ const drawProductsinCart = () => {
       <div class="cart__item" data-id=${product.sys.id}>
         <img src=${product.fields.image.fields.file.url} alt="product" />
         <div>
+        
           <h4>${product.fields.title}</h4>
-          <h5>${product.amount} kr</h5>
-          <span class="cart__item--remove" id="deleteBtn">Remove</span>
+          <h5 class="text--green">${product.amount} kr</h5>
+          <span id="deleteBtn">
+          <img src="styles/sass/img/closing.png" alt="Ta bort varan"></span>
         </div>
         <div>
           <i class="fas fa-chevron-up" id="addBtn"></i>
-          <p class="cart__item--quantity">${product.quantity}</p>
+          <p class="text--bold text--green">${product.quantity}</p>
           <i class="fas fa-chevron-down" id="decreaseBtn"></i>
         </div> 
       </div>
