@@ -218,22 +218,23 @@
   }
   &__row{
     @include flexBox(row,center,space-between);
-    margin-top:1rem;
-    padding:1rem;
+    padding-top: 1rem;
+    p{
+      font-weight: bold;
+      font-size:1.5rem;
+    }
   }
   &__amount{
     margin-left:6%;
-    font-size:1.8rem;
     font-weight: bolder;
     color:$color-yellow;
   }
   &__amount:hover{
-    font-size:2rem;
     color:$color-white;
   }
 
   &__quantity{
-    font-size:1.5rem;
+    color:$color-yellow;
     margin-left:6%;
     font-weight: bold;
   }

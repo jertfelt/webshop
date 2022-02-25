@@ -10,7 +10,7 @@
     const productInformationDivOrderConfirmation = document.createElement("div");
     const imgOrderConfirmation = document.createElement("img");
 
-    const productNameOrderConfirmation = document.createElement("h3");
+    const productNameOrderConfirmation = document.createElement("p");
     const amountOrderConfirmation = document.createElement("p");
     const quantityOrderConfirmation = document.createElement("p");
 
@@ -50,9 +50,8 @@
 
 //Adds total price
     const addTotalPriceOrderConfirmation = () => {
-      const totalPriceText = document.createElement("p");
-      totalPriceText.innerText = `Total kostnad: ${getTotalPriceOrder()}kr`;
-      document.querySelector("#orderProductsSummation").appendChild(totalPriceText);
+      const totalPriceText = document.getElementById("orderProductsTotalAmount");
+      totalPriceText.innerText = `Total kostnad: ${getTotalPriceOrder()} kr`;
     }
     addTotalPriceOrderConfirmation();
 

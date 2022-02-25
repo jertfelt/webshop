@@ -670,7 +670,6 @@ h6 {
 .confirmation__container h2 {
   color: #225e39;
   position: relative;
-  left: 20%;
   margin-bottom: 2rem;
 }
 
@@ -695,24 +694,26 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 1rem;
-  padding: 1rem;
+  padding-top: 1rem;
+}
+
+.confirmation__row p {
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .confirmation__amount {
   margin-left: 6%;
-  font-size: 1.8rem;
   font-weight: bolder;
   color: #f2ea03;
 }
 
 .confirmation__amount:hover {
-  font-size: 2rem;
   color: #fbfbfb;
 }
 
 .confirmation__quantity {
-  font-size: 1.5rem;
+  color: #f2ea03;
   margin-left: 6%;
   font-weight: bold;
 }
@@ -1406,6 +1407,64 @@ nav {
 
 .categories img:hover {
   border-radius: 100%;
+}
+
+.confirmation__container {
+  margin-top: 5rem;
+}
+
+.confirmation__container h2 {
+  margin-bottom: 2rem;
+}
+
+.confirmation__div {
+  background-color: #225e39;
+  padding: 2rem;
+  border-radius: 29px;
+  color: #fbfbfb;
+}
+
+.confirmation__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.confirmation__row p {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.confirmation__amount {
+  margin-left: 6%;
+  font-weight: bolder;
+  color: #f2ea03;
+}
+
+.confirmation__amount:hover {
+  color: #fbfbfb;
+}
+
+.confirmation__quantity {
+  color: #f2ea03;
+  margin-left: 6%;
+  font-weight: bold;
+}
+
+.confirmation__totalamount {
+  padding: 3rem;
+  margin: 0 auto;
 }
 
 footer {
