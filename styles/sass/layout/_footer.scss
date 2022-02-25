@@ -1,0 +1,37 @@
+footer{
+  margin: 0;
+  padding:2rem;
+  background-color: $color-green;
+  color: $color-white;
+}
+.footer{
+  &__container{
+    @include flexBox(column,center,center);
+   img{
+     height:70px;
+   }
+  }
+  &__socialmedia{
+    margin-top:1rem;
+    a{
+    color:$color-yellow;
+    letter-spacing: $mainSpacing;
+    text-decoration: none;
+    font-size: 2rem;}
+    
+  }
+
+  &__contact{
+    margin-top:2rem;
+    margin-bottom:2rem;
+    h4{
+      line-height:1.8rem;
+      margin-bottom:1rem;
+    }
+    line-height: 1rem;
+    word-spacing: $mainSpacing;
+    p {
+      margin-left:6px;
+    }
+  }
+}
