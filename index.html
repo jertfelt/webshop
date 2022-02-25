@@ -17,12 +17,14 @@
 
 <body>
 
+
+
   <header>
     <nav class="nav__top">
 
-    <!--menu and search icons-->
+          <!--menu and search icons-->
     <span class="nav__span">
-           <!--ikon dropdown-->
+      <!--ikon dropdown-->
         <span class="nav__mobile-menu">
           <img 
           src="styles\sass\img\Hamburger_icon.svg.png" 
@@ -57,10 +59,10 @@
         </span>
         </div>
     </span>
-   
+
 
 <!--dropdown meny-->
-    <ul id="dropDownMenu"  
+      <ul id="dropDownMenu"  
           class="dropdown">
         <div class="mainmenu__mobile">
           <span class="dropdown--close">
@@ -86,7 +88,9 @@
         </li>
         <li class="list__nested--mother">
           <p class="list__nested--motherhead">Kategorier</p>
+          <!--start of nested category-->
           <ul class="list__nested hidden"> 
+
             <li>
               <span class="outer list__nested--child">
                 <span class="inner nav__categories--imgtxt">
@@ -97,24 +101,23 @@
                   <img src="styles/sass/img/women-clothing-banner.png"
                   alt="Damkläder"
                   class="nav__categories--img">
-                </a> 
+              </a> 
             </span>
             </li>
 
-            <li>
+            <li>  
               <span class="outer list__nested--child">
-                <span class="inner nav__categories--imgtxt">
-                  <p>Herrkläder</p>
-                </span>
-                <a href="index.html"
-                id="herrLinkNav">
-                  <img src="styles/sass/img/men-clothing-banner.png"
-                  alt="Herrkläder"
-                  class="nav__categories--img">
-                </a> 
-            </span>
+              <span class="inner nav__categories--imgtxt">
+                <p>Herrkläder</p>
+              </span>
+              <a href="index.html"
+              id="herrLinkNav">
+                <img src="styles/sass/img/men-clothing-banner.png"
+                alt="Herrkläder"
+                class="nav__categories--img">
+              </a> 
+          </span>
             </li>
-
             <li>
               <span class="outer list__nested--child">
                 <span class="inner nav__categories--imgtxt">
@@ -138,24 +141,25 @@
           </a> 
         </li>
         <li>
-          <span class="search__navigation ">
-            <img src ="styles/sass/img/500px-Search_Icon.svg.png"
-            alt="Leta efter produkt"
+          <span class="search__navigation">
+        <img src ="styles/sass/img/500px-Search_Icon.svg.png"
+        alt="Leta efter produkt"
             class="pointer">
             <label for="searchBar">
             Sök produkt</label>
             <input type="text" 
             placeholder="Sök produkt" 
             class="search"
-            id="searchBar"
-            name="searchbar">
-          </span>
+          id="searchBar"
+          name="searchbar">
+        </span>
         </li>
       </div>
-    </ul>
+      </ul>
         
+      
   <!--logotyp-->
-    <a 
+      <a 
       href="index.html"
       class="event__link"
       id="logoLinkNav">
@@ -182,9 +186,8 @@
             0
             </span>
     </span>   
-
 <!--Användare klickbar-->
-        <span class="nav__span--user ">
+    <span class="nav__span--user">
           <span 
           class="nav__user input-group-addon" 
           id="userNavIcon">
@@ -192,7 +195,7 @@
             class="fa fa-user">
             </i>
           </span>
-          <!--dot that shows when logged in-->
+            <!--dot that shows when logged in-->
           <div class="login__dot hidden" id="navUserOnlineDot">
           </div>
         </span>
@@ -202,9 +205,20 @@
   </header>
   
   <main>
+    <div class="">
+      <button id="test">
+        Test</button>
+    <div class="animation__container"
+    id="loading">
+    <div id="show">
+      <h1>hello</h1>
+    </div>
 
+    </div>
+    </div>
+  
     <!--välkommen-->
-  <section class="homepage section"
+    <section class="homepage section"
     id="homepageSection">
     <div class="hero">
       <div class="hero__transparentBack">
@@ -227,8 +241,8 @@
       </article>
       
       <article class="row">
-         <img class="" src="styles/sass/img/monstrera.png">
-         <img class="" src="styles/sass/img/1024px-Gotlandsk_pelsfaar.jpg">
+         <img src="styles/sass/img/monstrera.png">
+         <img src="styles/sass/img/1024px-Gotlandsk_pelsfaar.jpg">
       </article>
 
       <article>
@@ -239,24 +253,22 @@
       </section>
  
       <section id="categoriesGridSection" 
-      class="products__grid--categories">
+               class="products__grid--categories">
       </section>
-
-  </section>
+ </section>
   <section id="productListSection" 
   class="section hidden">
   </section>
 
   <section id="searchSection">
   </section>
-
   <section id="individualProductSection" 
   class="section hidden">
   </section>
 
 <!--varor + logga in/skriv in på formulär-->
   <section id="orderConfirmationSection"
-  class="section hidden">
+class="section hidden">
 
   <article id="orderProductsSummation">
     <h2>Dina Produkter:</h2>
@@ -452,7 +464,7 @@ class="section hidden">
     </article>
   </aside>
 
-<footer class="footer__section">
+  <footer class="footer__section">
     <div class="footer__container">
       <span class="row">
         <img src="/styles/sass/img/android-chrome-192x192.png" alt="Logga">
@@ -490,6 +502,9 @@ class="section hidden">
   </section>
 </footer>
 
+
+
+
 <!--javascripts-->
 
 
@@ -500,7 +515,6 @@ class="section hidden">
 <!-- buttons and navigation -->
 <script type="text/javascript" src="./js/pageWideNavigationButtons.js"></script>
 <script type="text/javascript" src="./js/views/showProducts/searchBar.js"></script>
-<!-- <script type="text/javascript" src="./js/views/showProducts/navigationCategories.js"></script> -->
   
 <!--product functionality--->
 <script type="text/javascript" src="js/views/showProducts/homepageCategories.js"></script>
