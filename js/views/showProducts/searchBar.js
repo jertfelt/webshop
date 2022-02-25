@@ -3,29 +3,22 @@ const loadSearchResult = async () => {
   const sectionParam = queryParams.get('section');
   //Check if we are on the right URL before showing the products
   if(sectionParam !== "searchSection") return;
+  //getting search value
   const searchValue = localStorage.getItem("search")
-  //getting search input field value
-  const inputHandler = async (e) => {
-    //searchInput = e.target.value;
-    try {
-      allProductsArray = await fetchProducts();
-      //calling the function to get results when the input word is more than 3 letters
-      if (searchValue.length >= 3) {
-        displaySearchResult(allProductsArray, searchValue);
-        setAddToCartClick();
-      }
-      
-    } catch (err) {
-      console.error(err);
-    }
-  };
-  inputHandler();
-  //source.addEventListener("input", inputHandler);
 
-  
+  try {
+    allProductsArray = await fetchProducts();
+    //calling the function to get results when the input word is more than 3 letters
+    if (searchValue.length >= 3) {
+      displaySearchResult(allProductsArray, searchValue);
+      setAddToCartClick();
+    }
+  } catch (err) {
+    console.error(err);
+  };  
 };
 
-const displaySearchResult = (res, source) => {
+const displaySearchResult = (allProductsArray, searchValue) => {
   // Draw title for current category
   const searchResultHeader = document.createElement("h2");
   searchResultHeader.classList.add("text--green", "text--cursive", "centered");
@@ -35,7 +28,7 @@ const displaySearchResult = (res, source) => {
   // Draw feedback message for searched text
   const searchInputFeedback = document.createElement("h3");
   searchInputFeedback.classList.add("text--green", "text--cursive", "centered");
-  searchInputFeedback.innerText = `Du sökte på "${source}"`;
+  searchInputFeedback.innerText = `Du sökte på "${searchValue}"`;
   searchSection.appendChild(searchInputFeedback);
 
   // Creates section element
@@ -44,13 +37,12 @@ const displaySearchResult = (res, source) => {
   searchSection.appendChild(sectionElem);
 
   //mapping all products and checking if the product title and description includes the input word
-  const htmlString = res.products
-  .map((produx) => {
+  allProductsArray.map((produx) => {
     const productTitle = produx.fields.title.toLowerCase();
     const productDescription = produx.fields.description.toLowerCase();
-    const searchInput = source.toLowerCase();
+    const searchValueLowerCase = searchValue.toLowerCase();
 
-    if (productTitle.includes(searchInput) || productDescription.includes(searchInput)) {
+    if (productTitle.includes(searchValueLowerCase) || productDescription.includes(searchValueLowerCase)) {
       createProductCard(produx, sectionElem);}
   });
 };
