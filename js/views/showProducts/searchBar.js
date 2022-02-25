@@ -9,10 +9,8 @@ const loadSearchResult = async () => {
   try {
     allProductsArray = await fetchProducts();
     //calling the function to get results when the input word is more than 3 letters
-    if (searchValue.length >= 3) {
-      displaySearchResult(allProductsArray, searchValue);
-      setAddToCartClick();
-    }
+    displaySearchResult(allProductsArray, searchValue);
+    setAddToCartClick();
   } catch (err) {
     console.error(err);
   };  
