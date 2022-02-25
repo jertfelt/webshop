@@ -19,6 +19,10 @@
 
   <header>
     <nav class="nav__top">
+
+    <!--menu and search icons-->
+    <span class="nav__span">
+           <!--ikon dropdown-->
         <span class="nav__mobile-menu">
           <img 
           src="styles\sass\img\Hamburger_icon.svg.png" 
@@ -27,8 +31,36 @@
           class="nav__button">
         </span>
 
+        <!--search icon-->
+        <div class="search__wrapper">
+          <!--dropdown!-->
+          <span class="search__img pointer"
+          id="searchDropdown">
+            <img src ="styles/sass/img/500px-Search_Icon.svg.png"
+            alt="Leta efter produkt">
+            </span>
+        </div> 
+        <!-- search dropdown-->
+        
+        <div class="search__dropdown hidden"
+        id="searchContent">
+        <span class="row--mobilesame">
+          <img src ="styles/sass/img/500px-Search_Icon.svg.png"
+          alt="Leta efter produkt">
+        <label for="searchBar">
+          Sök produkt</label>
+        <input type="text" 
+        name="searchBar" 
+        class="search"
+        id="searchBarHeader" 
+        placeholder="Search product">
+        </span>
+        </div>
+    </span>
+   
+
 <!--dropdown meny-->
-      <ul id="dropDownMenu"  
+    <ul id="dropDownMenu"  
           class="dropdown">
         <div class="mainmenu__mobile">
           <span class="dropdown--close">
@@ -106,33 +138,24 @@
           </a> 
         </li>
         <li>
-          <span class="search__navigation">
-        <img src ="styles/sass/img/500px-Search_Icon.svg.png"
-        alt="Leta efter produkt">
-      
-        <label for="searchBar">Sök produkt</label>
-          <input type="text" placeholder="Sök produkt" 
-          id="searchBar"
-          name="searchbar">
-        </span>
+          <span class="search__navigation ">
+            <img src ="styles/sass/img/500px-Search_Icon.svg.png"
+            alt="Leta efter produkt"
+            class="pointer">
+            <label for="searchBar">
+            Sök produkt</label>
+            <input type="text" 
+            placeholder="Sök produkt" 
+            class="search"
+            id="searchBar"
+            name="searchbar">
+          </span>
         </li>
       </div>
-      </ul>
+    </ul>
         
-  <!-- <div class="search__wrapper">
-    <span class="search__img"
-    id="searchDropdown">
-        <img src ="styles/sass/img/500px-Search_Icon.svg.png"
-        alt="Leta efter produkt">
-      </span>
-        <label for="searchBar">Sök produkt</label>
-        <input type="text" name="searchBar" id="searchBar" placeholder="Search product">
-  </div> 
-  <div class="search__dropdown"
-  id ="searchContent"> -->
-
   <!--logotyp-->
-      <a 
+    <a 
       href="index.html"
       class="event__link"
       id="logoLinkNav">
@@ -144,7 +167,7 @@
  
 
   <!--varukorg klickbar-->
-  <span class="nav__span">
+  <span class="nav__span nav__span--mobile">
     <span 
     class="nav__cart--icon">
       <img 
@@ -161,7 +184,7 @@
     </span>   
 
 <!--Användare klickbar-->
-        <span class="nav__span--user">
+        <span class="nav__span--user ">
           <span 
           class="nav__user input-group-addon" 
           id="userNavIcon">
@@ -169,7 +192,7 @@
             class="fa fa-user">
             </i>
           </span>
-            <!--dot that shows when logged in (saknas funktion)-->
+          <!--dot that shows when logged in-->
           <div class="login__dot hidden" id="navUserOnlineDot">
           </div>
         </span>
@@ -181,7 +204,7 @@
   <main>
 
     <!--välkommen-->
-    <section class="homepage section"
+  <section class="homepage section"
     id="homepageSection">
     <div class="hero">
       <div class="hero__transparentBack">
@@ -218,8 +241,8 @@
       <section id="categoriesGridSection" 
       class="products__grid--categories">
       </section>
-</section>
-</section>
+
+  </section>
   <section id="productListSection" 
   class="section hidden">
   </section>
@@ -233,7 +256,7 @@
 
 <!--varor + logga in/skriv in på formulär-->
   <section id="orderConfirmationSection"
-class="section hidden">
+  class="section hidden">
 
   <article id="orderProductsSummation">
     <h2>Dina Produkter:</h2>
@@ -429,34 +452,40 @@ class="section hidden">
     </article>
   </aside>
 
-<footer>
-  <section class="footer__section">
+<footer class="footer__section">
     <div class="footer__container">
-      <div class="footer__row">
+      <span class="row">
         <img src="/styles/sass/img/android-chrome-192x192.png" alt="Logga">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-        <div class="footer-social-media">
+        <h3 class=" text--bold text--white">Besök oss på våra sociala medier!</h3>
+      </span>
+      <span class="footer__socialmedia">
+        <a href="www.facebook.com">
           <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="www.twitter.com">
           <i class="fab fa-twitter"></i>
+        </a>
+        <a href="www.instagram.com">
           <i class="fab fa-instagram"></i>
-        </div>
-      </div>
-
-      <div class="footer__row">
-        <h4>Contact Us</h4>
-        <i class="fa fa-map-marker" aria-hidden="true">Loremvägen 33, 333 33 Lorem</i>
-        <br>
-        <i class="fa fa-phone" aria-hidden="true">+46 333 00 33</i>
-        <br>
-        <i class="fa fa-envelope" aria-hidden="true">lorem.ipsum@gmail.com</i>
-      </div>
+        </a>
+      </span>
     </div>
-  </section>
-  <section>
-    <div class="row">
-      <p>
-        &copy; Copyrights <?php echo date('Y') ?>. Reserved by Ecoline. Designed and Developed by Ecoline.
-      </p>
+
+      <div class="footer__contact">
+        <h4>Contact Us</h4>
+        <span class="row--mobilesame">
+        <i class="fa fa-map-marker" aria-hidden="true"></i><p class="text--xxs">Loremvägen 33, 333 33 Lorem</p>
+        </span>
+        <br>
+        <span class="row--mobilesame">
+        <i class="fa fa-phone" aria-hidden="true"></i>
+        <p class="text--xxs">073 33 33 3</p>
+        </span>
+        <br>
+        <span class="row--mobilesame">
+        <i class="fa fa-envelope" aria-hidden="true"></i><p class="text--xxs">lorem.ipsum@gmail.com</p>
+        </span>
+      </div>
     </div>
   </section>
 </footer>

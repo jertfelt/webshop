@@ -3,7 +3,7 @@ header{
 }
 
 nav{
-  position: sticky;
+  position: fixed;
   top: 0;
   height: 60px;
   width: 100%;
@@ -26,6 +26,7 @@ nav{
 
   &__button{
   max-height:40px;
+  margin-top:8px;
 
   &--category{
     max-height:50px;
@@ -50,12 +51,7 @@ nav{
 }
   &__logotype{
   max-height:90px;
-   
-  @include breakpoint(small-max-m){
-    position:relative;
-    right:-60px;
-   };
- 
+  margin-left:-100px;
 }
 
  &__logotype:hover{
@@ -64,16 +60,20 @@ nav{
  }
 
  &__span{
-  @include flexBox(row,center,space-between);
- 
-  @include breakpoint(small-max-m){
-   position:relative;
-   right:-60px;
-  };
 
+  @include flexBox(row,center,space-between);
+
+  @include breakpoint(small-max-m){
+    position:relative;
+    // right:-60px;
+   };
+ 
+  &--mobile{
   @include breakpoint(xxsmall-max){
     visibility:hidden;
   }
+  }
+
   &--user{
     div{
       position:relative;
@@ -82,20 +82,15 @@ nav{
 }
 
  &__user{
-   @include breakpoint(small-max-m){
+   @include breakpoint(xxsmall-max-m){
      visibility:hidden;
    };
-   @include breakpoint(small-max-m){
-    visibility:hidden;
-  };
+   
    background-color: $color-green;
    border-radius: 50%;
-   padding:0.5rem;
-   height:40px;
-   width: 40px;
+   padding:0.4rem;
    text-align: center;
-   align-items: center;
-
+   
    .fa-user {
      color: $color-sand;
    }
