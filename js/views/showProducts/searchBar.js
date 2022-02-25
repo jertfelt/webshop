@@ -3,14 +3,15 @@ const loadSearchResult = async () => {
   const sectionParam = queryParams.get('section');
   //Check if we are on the right URL before showing the products
   if(sectionParam !== "searchSection") return;
+  const searchValue = localStorage.getItem("search")
   //getting search input field value
   const inputHandler = async (e) => {
     //searchInput = e.target.value;
     try {
       allProductsArray = await fetchProducts();
       //calling the function to get results when the input word is more than 3 letters
-      if (source.length >= 3) {
-        displaySearchResult(allProductsArray, source);
+      if (searchValue.length >= 3) {
+        displaySearchResult(allProductsArray, searchValue);
         setAddToCartClick();
       }
       
