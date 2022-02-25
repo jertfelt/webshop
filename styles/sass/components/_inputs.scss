@@ -1,8 +1,11 @@
-//search inputs
+//*----------search inputs
+
 .search{
+
   &__dropdown{
     background-color: $color-yellow;
   };
+
   &__wrapper{
     @include flexBox(row,center,center);
     margin-left:-2rem;
@@ -33,31 +36,23 @@
   }
 
   &__navigation{
+    
     @include flexBox(row,center,center);
 
-    span {
-      background-color: $color-yellow;
-      border-radius: 50%;
-      padding:4px;
-      height:40px;
-      width:40px;
-      position:relative;
-      right:-10%;
-    }
-    
     img {
       height:30px;
+      background-color: $color-yellow;
+      border-radius: 50%;
+      padding:0.4rem;
      
-    
     }
+
     label{
       visibility:hidden;
+      width:1%;
     }
     
-    input{
-     position: relative;
-     right:10%;
-    }
+   
   }
 }
 
