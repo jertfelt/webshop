@@ -2,7 +2,7 @@
 const queryString = new URLSearchParams(location.search);
 const qsCategory = queryString.get('category');
 
-let productList = [];
+let allProductsArray = [];
 
 function drawProducts() {  
   //Draw title for current category.
@@ -15,13 +15,14 @@ function drawProducts() {
   sectionElem.classList.add("products__grid--all")
   productListSection.appendChild(sectionElem);
 
-  productList.forEach(product => {
+  allProductsArray.forEach(product => {
     // Filter products for selected category.
     if(product.category === qsCategory) {
       createProductCard(product, sectionElem);
     }
   })
 }
+
 
 const createProductCard = (product, parent) => {
   const articleElem = document.createElement("article");
@@ -55,8 +56,9 @@ const createProductCard = (product, parent) => {
 
 
 
+
 // Wrapper funktion som kör funktioner/eventListeners efter HTML i produktlistan har ritats
-const setAddToCartClick = (productList) => {
+const setAddToCartClick = () => {
   // Hämtar alla köp-knappar
   const addToCartButtons = document.querySelectorAll(".addToCartBtn");
   // Hämtar ID på klickat produkt och lägger till den i varukorgen
@@ -74,12 +76,9 @@ const setAddToCartClick = (productList) => {
 }
 
 async function getProductList() {
-  const response = await fetch("/js/data/products.json");
-  const data = await response.json();
-  
-  productList = [...data.products];
+  allProductsArray = await fetchProducts();
   drawProducts();  
-  setAddToCartClick(productList);
+  setAddToCartClick(allProductsArray);
 }
 
 getProductList();

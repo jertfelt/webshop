@@ -77,6 +77,44 @@ const setCartinLocalStorage = (cart) => {
   localStorage.setItem("cart", stringifyCart);
 }
 
+
+const fetchProducts = async () => {
+  const response = await fetch("/js/data/products.json");
+  const data = await response.json();
+  return [...data.products];
+}
+
+// Skapar produkt kort komponent som kan användas i t.ex. produktlista, produktsida, sökresultat
+const createProductCard = (product, parent) => {
+  const articleElem = document.createElement("article");
+  // Creates direct link to individual product
+  const productLink = createURL("individualProductSection", `${product.category}` , `${product.sys.id}`);
+
+  articleElem.innerHTML = `
+    <div class="product__img--container product__img--list">
+      <a href="${productLink}">
+          <img alt = Produkt ${product.title}"   
+            class ="product__img" 
+            src="/${product.fields.image.fields.file.url}">
+          </img>
+      </a>
+    </div>
+    <span class="product__box">
+      <span>
+        <h3 class="text--uppercase text--cursive">${product.fields.title}</h3>
+        <h4 class="text--green">${product.fields.price} kr</h4>
+      </span>
+      <button 
+      class="addToCartBtn" 
+      data-id="${product.sys.id}">
+      Köp</button>
+      
+    </span>
+  `
+  parent.appendChild(articleElem);
+}
+
+
 const updateAmountCartNav = () => {
   const headerCartAmount = document.querySelector("#headerCartAmount");
   let amountCartNav = 0;
@@ -116,5 +154,6 @@ document.getElementById("todaysDate").textContent = " " + today;
 // .addEventListener("click", () => {
 // displayLoading();
 // })
+
 
 
