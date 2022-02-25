@@ -1231,6 +1231,11 @@ nav {
   margin-bottom: 1rem;
 }
 
+.cart--empty {
+  margin-top: 2rem;
+  text-align: center;
+}
+
 .fa-chevron-up,
 .fa-chevron-down {
   color: #1b1b1b;

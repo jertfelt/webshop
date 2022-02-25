@@ -15,11 +15,7 @@ const cartFooter = document.querySelector(".cart__footer");
 const cartContent = document.querySelector("#cartDynamicContent");
 const cartTotal = document.getElementById("cartTotal");
 
-//räknaren i headern (T)
-//let cartCounterHeader = document.querySelector(".headercart__showAmount");
 
-//räknare i varukorgens footer (T)
-//let cartCounterFooter = document.querySelector("#cartTotal");
 
 //*------visa/dölja VARUKORG
 
@@ -221,7 +217,8 @@ const clearCart= () => {
 }
 
 const showEmptyCartMessage = () => {
-    const errorElement = document.createElement("p");
+    const errorElement = document.createElement("h3");
+    errorElement.classList.add("cart--empty");
     errorElement.innerText = "Din varukorg är tom."
     cartContent.appendChild(errorElement);
     cartFooter.classList.add("hidden");
