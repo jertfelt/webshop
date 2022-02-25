@@ -264,9 +264,14 @@
 <!--varor + logga in/skriv in på formulär-->
   <section id="orderConfirmationSection"
 class="section hidden">
-
-  <article id="orderProductsSummation">
-    <h2>Dina Produkter:</h2>
+  <article class="confirmation__container">
+    <h2 class="text--green text--centered">Dina Produkter:</h2>
+    <div id="orderProductsSummation"
+    class="products__grid--confirmation">
+    </div>
+    <h3 id="orderProductsTotalAmount"
+    class="confirmation__totalamount text--xl text--centered">
+    </h3>
   </article>
 
   <article id="yourOrderInformation">
@@ -356,12 +361,12 @@ class="section hidden">
       <input type="text" name="townCreateUser" id="townCreateUser" required placeholder="Ort">
       <label for="phoneNumberCreateUser" class="hidden">Telefonnummer</label>
       <input type="text" name="phoneNumberCreateUser" id="phoneNumberCreateUser" placeholder="Telefonnummer">
-      <label
+      <!-- <label
       for="choosePicture"
-      class="text--cursive">Välj en profilbild (max 1 mb)</label>
+      class="text--cursive">Välj en profilbild (max 2 mb)</label>
       <input type="file" 
       name="choosePicture"
-      id="imgfile"/>
+      id="imgfile"/> -->
 
       <span>
         <button type="submit" id="submitBtnCreateUser" class="text--bold text--u">
@@ -435,8 +440,15 @@ class="section hidden">
 
    <!--kvitto dropdown (class hidden ska togglas)--> 
   <aside id="receiptSection" 
-  class="hidden test section">
+  class="hidden section">
     <section class="receipt__container">
+      <span class="receipt--close">
+        <img class=""
+        src="">
+        <span class="">
+          <p id ="dagensDatum"></p>
+        </span>
+      </span>
       <h2 class="text--green text--bold">
         Tack för ditt köp!
       </h2>

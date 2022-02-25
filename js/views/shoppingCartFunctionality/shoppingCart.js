@@ -15,11 +15,7 @@ const cartFooter = document.querySelector(".cart__footer");
 const cartContent = document.querySelector("#cartDynamicContent");
 const cartTotal = document.getElementById("cartTotal");
 
-//räknaren i headern (T)
-//let cartCounterHeader = document.querySelector(".headercart__showAmount");
 
-//räknare i varukorgens footer (T)
-//let cartCounterFooter = document.querySelector("#cartTotal");
 
 //*------visa/dölja VARUKORG
 
@@ -66,13 +62,15 @@ const drawProductsinCart = () => {
       <div class="cart__item" data-id=${product.sys.id}>
         <img src=${product.fields.image.fields.file.url} alt="product" />
         <div>
+        
           <h4>${product.fields.title}</h4>
-          <h5>${product.amount} kr</h5>
-          <span class="cart__item--remove" id="deleteBtn">Remove</span>
+          <h5 class="text--green">${product.amount} kr</h5>
+          <span id="deleteBtn">
+          <img src="styles/sass/img/closing.png" alt="Ta bort varan"></span>
         </div>
         <div>
           <i class="fas fa-chevron-up" id="addBtn"></i>
-          <p class="cart__item--quantity">${product.quantity}</p>
+          <p class="text--bold text--green">${product.quantity}</p>
           <i class="fas fa-chevron-down" id="decreaseBtn"></i>
         </div> 
       </div>
@@ -221,7 +219,8 @@ const clearCart= () => {
 }
 
 const showEmptyCartMessage = () => {
-    const errorElement = document.createElement("p");
+    const errorElement = document.createElement("h3");
+    errorElement.classList.add("cart--empty");
     errorElement.innerText = "Din varukorg är tom."
     cartContent.appendChild(errorElement);
     cartFooter.classList.add("hidden");

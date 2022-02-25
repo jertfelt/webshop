@@ -8,8 +8,8 @@
       text-transform: uppercase;
       font-size: 1rem;
       font-weight: bold;
-      background: $color-blue;
-      color: $color-white;
+      background: $color-yellow;
+      color: $color-black;
       border: none;
       transition: $mainTransition;
       cursor: pointer;
@@ -20,6 +20,7 @@
 
   &__dropdown:hover{
     background: $color-green;
+    color: $color-yellow;
  
   }
 

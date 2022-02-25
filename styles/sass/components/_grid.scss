@@ -34,15 +34,15 @@
   }
 
   &__grid {
-  //for homepage
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(90%, 1fr));
-  grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
-  margin-bottom:8rem;
+  // //for homepage
+  // width: 90vw;
+  // margin: 0 auto;
+  // max-width: 1170px;
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(90%, 1fr));
+  // grid-column-gap: 2rem;
+  // grid-row-gap: 2rem;
+  // margin-bottom:8rem;
 
   //for productList 
   &--all{
@@ -70,14 +70,21 @@
   width: 70vw;
   margin: 0 auto;
   max-width: 1170px;
-  // display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  // grid-column-gap: 3rem;
-  // grid-row-gap: 5rem;
+
 
   img:hover{
     border-radius: 45% 55% 52% 48% / 30% 25% 55% 90%;
   }
+  }
+
+  &--confirmation{
+  width: 70vw;
+  margin: 0 auto;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 2rem;
   }
 
 }
@@ -151,7 +158,7 @@
     }
     
   }
-
+ 
 }
 
 .grid__category--items{
@@ -190,4 +197,47 @@
  span{
    margin-bottom:2rem;
  }
+}
+
+.confirmation{
+  &__container{
+    margin-top:5rem;
+  
+    h2{
+      color:$color-green;
+      position:relative;
+      left: 20%;
+      margin-bottom:2rem;
+    }
+  }
+  &__div{
+    background-color: $color-green;
+    padding:2rem;
+    border-radius: 29px;
+    color: $color-white;
+  }
+  &__row{
+    @include flexBox(row,center,space-between);
+    padding-top: 1rem;
+    p{
+      font-weight: bold;
+      font-size:1.5rem;
+    }
+  }
+  &__amount{
+    margin-left:6%;
+    font-weight: bolder;
+    color:$color-yellow;
+  }
+  &__amount:hover{
+    color:$color-white;
+  }
+
+  &__quantity{
+    color:$color-yellow;
+    margin-left:6%;
+    font-weight: bold;
+  }
+
+
 }
