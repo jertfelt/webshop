@@ -37,6 +37,12 @@ document.getElementById("logoLinkNav").addEventListener("click", (e) => {
 changeActivePage("homepageSection");
 })
 
+document.getElementById("searchBar").addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    changeActivePage("searchSection");
+  }
+})
 
 //-----links for footer
 

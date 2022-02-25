@@ -55,10 +55,3 @@ const displaySearchResult = (res, source) => {
 };
 
 loadSearchResult();
-
-//Dropdown closes on enter
-document.querySelector("#searchBar").addEventListener("keypress", (e) => {
-  if (e.key === "Enter") {
-    closeDropDown();
-  }
-})
