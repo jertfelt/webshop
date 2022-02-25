@@ -73,3 +73,9 @@ const setCartinLocalStorage = (cart) => {
   const stringifyCart = JSON.stringify(cart);
   localStorage.setItem("cart", stringifyCart);
 }
+
+const fetchProducts = async () => {
+  const response = await fetch("/js/data/products.json");
+  const data = await response.json();
+  return [...data.products];
+}
