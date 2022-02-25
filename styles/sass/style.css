@@ -993,13 +993,7 @@ nav {
 
 .nav__logotype {
   max-height: 90px;
-}
-
-@media only screen and (max-width: 768px) {
-  .nav__logotype {
-    position: relative;
-    right: -60px;
-  }
+  margin-left: -100px;
 }
 
 .nav__logotype:hover {
@@ -1028,12 +1022,11 @@ nav {
 @media only screen and (max-width: 768px) {
   .nav__span {
     position: relative;
-    right: -60px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .nav__span {
+  .nav__span--mobile {
     visibility: hidden;
   }
 }
@@ -1045,25 +1038,8 @@ nav {
 .nav__user {
   background-color: #225e39;
   border-radius: 50%;
-  padding: 0.5rem;
-  height: 40px;
-  width: 40px;
+  padding: 0.4rem;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media only screen and (max-width: 768px) {
-  .nav__user {
-    visibility: hidden;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .nav__user {
-    visibility: hidden;
-  }
 }
 
 .nav__user .fa-user {
