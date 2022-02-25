@@ -34,13 +34,15 @@ const displaySearchResult = (allProductsArray, searchValue) => {
   sectionElem.classList.add("products__grid--all");   
   searchSection.appendChild(sectionElem);
 
-  //mapping all products and checking if the product title and description includes the input word
+  //mapping all products and checking if the product title and description includes the search word
   allProductsArray.map((produx) => {
+    // Make it case insensitive
     const productTitle = produx.fields.title.toLowerCase();
     const productDescription = produx.fields.description.toLowerCase();
     const searchValueLowerCase = searchValue.toLowerCase();
 
     if (productTitle.includes(searchValueLowerCase) || productDescription.includes(searchValueLowerCase)) {
+      // Draw each product that matches the search
       createProductCard(produx, sectionElem);}
   });
 };
