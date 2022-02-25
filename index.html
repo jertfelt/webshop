@@ -19,6 +19,10 @@
 
   <header>
     <nav class="nav__top">
+
+    <!--menu and search icons-->
+    <span class="nav__span">
+           <!--ikon dropdown-->
         <span class="nav__mobile-menu">
           <img 
           src="styles\sass\img\Hamburger_icon.svg.png" 
@@ -27,8 +31,31 @@
           class="nav__button">
         </span>
 
+        <!--search icon-->
+        <div class="search__wrapper">
+          <!--dropdown!-->
+          <span class="search__img pointer"
+          id="searchDropdown">
+            <img src ="styles/sass/img/500px-Search_Icon.svg.png"
+            alt="Leta efter produkt">
+            </span>
+            <label for="searchBar">
+              Sök produkt</label>
+            <input type="text" 
+            name="searchBar" 
+            class="search"
+            id="searchBarHeader" 
+            placeholder="Search product">
+        </div> 
+        <!-- search dropdown-->
+        <div class="search__dropdown"
+        id="searchContent">
+        </div>
+    </span>
+   
+
 <!--dropdown meny-->
-      <ul id="dropDownMenu"  
+    <ul id="dropDownMenu"  
           class="dropdown">
         <div class="mainmenu__mobile">
           <span class="dropdown--close">
@@ -106,32 +133,24 @@
           </a> 
         </li>
         <li>
-          <span class="search__navigation">
-        <img src ="styles/sass/img/500px-Search_Icon.svg.png"
-        alt="Leta efter produkt">
-        <label for="searchBar">Sök produkt</label>
-          <input type="text" placeholder="Sök produkt" 
-          id="searchBar"
-          name="searchbar">
-        </span>
+          <span class="search__navigation ">
+            <img src ="styles/sass/img/500px-Search_Icon.svg.png"
+            alt="Leta efter produkt"
+            class="pointer">
+            <label for="searchBar">
+            Sök produkt</label>
+            <input type="text" 
+            placeholder="Sök produkt" 
+            class="search"
+            id="searchBar"
+            name="searchbar">
+          </span>
         </li>
       </div>
-      </ul>
+    </ul>
         
-  <!-- <div class="search__wrapper">
-    <span class="search__img"
-    id="searchDropdown">
-        <img src ="styles/sass/img/500px-Search_Icon.svg.png"
-        alt="Leta efter produkt">
-      </span>
-        <label for="searchBar">Sök produkt</label>
-        <input type="text" name="searchBar" id="searchBar" placeholder="Search product">
-  </div> 
-  <div class="search__dropdown"
-  id ="searchContent"> -->
-
   <!--logotyp-->
-      <a 
+    <a 
       href="index.html"
       class="event__link"
       id="logoLinkNav">

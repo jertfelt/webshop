@@ -247,26 +247,6 @@ h6 {
   font-family: "Nunito", Verdana, sans-serif;
 }
 
-.button__hero {
-  padding: 1rem 2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  font-size: 1rem;
-  font-weight: bold;
-  background: #225e39;
-  color: #fbfbfb;
-  border: none;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  cursor: pointer;
-  margin-top: 2rem;
-}
-
-.button__hero:hover {
-  border-radius: 19px;
-  background-color: #2798d8;
-}
-
 .button__dropdown {
   padding: 1rem 2rem;
   text-transform: uppercase;
@@ -687,19 +667,26 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: -2rem;
 }
 
 .search__wrapper img {
-  height: 30px;
+  height: 32px;
+  background-color: #f2ea03;
+  border-radius: 50%;
+  padding: 0.4rem;
 }
 
 .search__wrapper label {
   visibility: hidden;
+  width: 0%;
 }
 
 .search__wrapper input {
-  margin-left: -80px;
+  padding: 0.4rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  border-color: #225e39;
+  border-radius: 29px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -709,7 +696,6 @@ h6 {
 }
 
 .search__img {
-  background-color: #f2ea03;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -742,6 +728,19 @@ h6 {
 .search__navigation label {
   visibility: hidden;
   width: 1%;
+}
+
+.search__navigation input {
+  border-color: #225e39;
+  border-radius: 29px;
+  font-weight: bold;
+  padding: 0.4rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .search__navigation input {
+    width: 14%;
+  }
 }
 
 .login__dot {
@@ -969,6 +968,7 @@ nav {
 
 .nav__button {
   max-height: 40px;
+  margin-top: 8px;
 }
 
 .nav__button--category {

@@ -8,27 +8,33 @@
 
   &__wrapper{
     @include flexBox(row,center,center);
-    margin-left:-2rem;
-
+ 
     img {
-      height:30px;
+      height:32px;
+      background-color: $color-yellow;
+      border-radius: 50%;
+      padding:0.4rem;
     }
 
     label {
       visibility: hidden;
+      width:0%;
     }
 
     input {
-      margin-left:-80px;
+      padding:0.4rem;
+      text-transform: capitalize;
+      font-weight: bold;
       @include breakpoint(small-max-m){
         visibility:hidden;
       }
+      border-color: $color-green;
+      border-radius: 29px;
     }
     
   }
 
   &__img{
-    background-color: $color-yellow;
     border-radius: 50%;
     width:40px;
     height:40px;
@@ -36,8 +42,9 @@
   }
 
   &__navigation{
-    
     @include flexBox(row,center,center);
+
+   
 
     img {
       height:30px;
@@ -51,8 +58,17 @@
       visibility:hidden;
       width:1%;
     }
-    
+
+    input{
+      border-color: $color-green;
+      border-radius: 29px;
+      font-weight: bold;
+      @include breakpoint(small-max){
+      width:14%;}
+      padding:0.4rem;
+    }
    
   }
+ 
 }
 
