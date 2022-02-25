@@ -62,11 +62,13 @@ const setAddToCartClick = (productList) => {
   // Hämtar ID på klickat produkt och lägger till den i varukorgen
   addToCartButtons.forEach(button => {
     button.addEventListener("click", () => {
+      
       const prodID = button.dataset.id;
       addToCart(prodID);
       setTotalPriceOrder();
       updateAmountCartNav();
       showCart();
+     
     })
   });
 }

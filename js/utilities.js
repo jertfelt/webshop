@@ -10,6 +10,7 @@ const openDropdown = () => {
 }
 else 
 menuMobile.classList.add("dropdown");
+
 }
 menuButton.addEventListener("click", openDropdown);
 document.addEventListener('keydown', function(event){
@@ -40,7 +41,9 @@ document.addEventListener('keydown', function(event){
 //*--------Toggle kategori i dropdown
 
 document.querySelector(".list__nested--mother").addEventListener("click", () =>{
+  
   const categoryMenuNav = document.querySelector(".list__nested");
+  
 
   if(categoryMenuNav.classList.contains("hidden") === true){
     categoryMenuNav.classList.remove("hidden");
@@ -74,6 +77,7 @@ const setCartinLocalStorage = (cart) => {
   localStorage.setItem("cart", stringifyCart);
 }
 
+ cart-nav-amount
 //Udaterar amount i varukorgen i header
 const updateAmountCartNav = () => {
   const headerCartAmount = document.querySelector("#headerCartAmount");
@@ -86,3 +90,24 @@ const updateAmountCartNav = () => {
   }
   headerCartAmount.innerText = amountCartNav;
 }
+
+
+//*------animation function
+
+//let loader = document.querySelector(".loading");
+//const loadingContainer = document.querySelector(".loading__div");
+
+//const displayLoading = () =>{
+  
+  //if (loadingContainer.classList.contains("hidden")){
+    //loader.classList.add("display");
+
+    //setTimeout(() => {
+      //  loader.classList.remove("display");
+      //}, 3000)}
+
+//}
+
+
+
+

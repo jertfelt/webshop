@@ -54,6 +54,17 @@
   grid-column-gap: 3rem;
   grid-row-gap: 2rem;
   }
+  // & search
+  &--search{
+    width: 50vw;
+    margin: 0 auto;
+    max-width: 500px;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-column-gap: 3rem;
+    grid-row-gap: 2rem;
+    }
   
   &--categories{
   width: 70vw;

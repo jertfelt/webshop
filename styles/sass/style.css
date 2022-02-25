@@ -69,6 +69,14 @@
   margin-top: 5rem;
 }
 
+.container__margin --bottom {
+  margin-bottom: 3rem;
+}
+
+.container__margin --top {
+  margin-top: 2rem;
+}
+
 .none {
   display: none;
 }
@@ -91,6 +99,10 @@
   cursor: pointer;
 }
 
+.display {
+  visibility: visible;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -102,6 +114,10 @@ body {
   background: #ece6d2;
   color: #1b1b1b;
   font-family: "Nunito", Verdana, sans-serif;
+}
+
+main {
+  margin-top: 3rem;
 }
 
 .text--primary {
@@ -405,20 +421,6 @@ h6 {
   opacity: 0.5;
 }
 
-.outer {
-  position: relative;
-  width: 100%;
-}
-
-.inner {
-  position: absolute;
-  top: 280%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 2;
-}
-
 .products__individual {
   padding: 3rem;
   width: 90vw;
@@ -473,6 +475,18 @@ h6 {
   width: 90vw;
   margin: 0 auto;
   max-width: 1170px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(280px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 2rem;
+}
+
+.products__grid--search {
+  width: 50vw;
+  margin: 0 auto;
+  max-width: 500px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(280px, 1fr))[auto-fit];
@@ -744,6 +758,46 @@ h6 {
 @media only screen and (min-width: 768px) {
   .search__navigation input {
     width: 14%;
+  }
+}
+
+.loading__div {
+  position: fixed;
+  margin: 0 auto;
+  z-index: 100;
+}
+
+.loading__circle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  border: 5px solid #225e39;
+  border-top: 6px solid #ece6d2;
+  margin: auto;
+  visibility: hidden;
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 

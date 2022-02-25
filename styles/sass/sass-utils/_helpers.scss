@@ -29,6 +29,14 @@
   &--margin{
     margin-top:5rem;
   }
+  &__margin{
+    --bottom{
+      margin-bottom:3rem;
+    }
+    --top{
+      margin-top:2rem;
+    }
+  }
 }
 
 .none{
@@ -53,4 +61,8 @@
 
 .pointer{
   cursor: pointer;
+}
+
+.display{
+  visibility: visible;
 }
