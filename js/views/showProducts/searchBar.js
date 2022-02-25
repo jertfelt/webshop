@@ -1,23 +1,5 @@
-const loadSearchResult = async () => {
-  const queryParams = new URLSearchParams(location.search);
-  const sectionParam = queryParams.get('section');
-  //Check if we are on the right URL before showing the products
-  if(sectionParam !== "searchSection") return;
-  //getting search value
-  const searchValue = localStorage.getItem("search")
-
-  try {
-    allProductsArray = await fetchProducts();
-    //calling the function to get results when the input word is more than 3 letters
-    displaySearchResult(allProductsArray, searchValue);
-    setAddToCartClick();
-  } catch (err) {
-    console.error(err);
-  };  
-};
-
 const displaySearchResult = (allProductsArray, searchValue) => {
-  // Draw title for current category
+  // Draw heading
   const searchResultHeader = document.createElement("h2");
   searchResultHeader.classList.add("text--green", "text--cursive", "centered");
   searchResultHeader.innerText = "Ditt sökresultat";
@@ -29,12 +11,12 @@ const displaySearchResult = (allProductsArray, searchValue) => {
   searchInputFeedback.innerText = `Du sökte på "${searchValue}"`;
   searchSection.appendChild(searchInputFeedback);
 
-  // Creates section element
+  // Creates section element that wraps product cards
   const sectionElem = document.createElement("section");   
   sectionElem.classList.add("products__grid--all");   
   searchSection.appendChild(sectionElem);
 
-  //mapping all products and checking if the product title and description includes the search word
+  // Maps all products and checks if the product title and description includes the search word
   allProductsArray.map((produx) => {
     // Make it case insensitive
     const productTitle = produx.fields.title.toLowerCase();
@@ -45,6 +27,24 @@ const displaySearchResult = (allProductsArray, searchValue) => {
       // Draw each product that matches the search
       createProductCard(produx, sectionElem);}
   });
+};
+
+// Starts search function
+const loadSearchResult = async () => {
+  const queryParams = new URLSearchParams(location.search);
+  const sectionParam = queryParams.get('section');
+  //Check if we are on the right section before showing the products
+  if(sectionParam !== "searchSection") return;
+  //getting search value
+  const searchValue = localStorage.getItem("search")
+
+  try {
+    allProductsArray = await fetchProducts();
+    displaySearchResult(allProductsArray, searchValue);
+    setAddToCartClick();
+  } catch (err) {
+    console.error(err);
+  };  
 };
 
 loadSearchResult();
