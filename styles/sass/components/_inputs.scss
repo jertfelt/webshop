@@ -3,13 +3,35 @@
 .search{
 
   &__dropdown{
-    background-color: $color-yellow;
+    position:fixed;
+    top:70px;
+    left:100px;
+
+
+    img {
+      height:32px;
+      background-color: $color-yellow;
+      border-radius: 50%;
+      padding:0.4rem;
+    }
+
+    label {
+      visibility: hidden;
+      width:3%;
+    }
+
+    input {
+      padding:0.4rem;
+      text-transform: capitalize;
+      font-weight: bold;
+      border-color: $color-green;
+      border-radius: 29px;
+    }
   };
 
   &__wrapper{
     @include flexBox(row,center,center);
  
-  
     img {
       height:32px;
       background-color: $color-yellow;
@@ -19,29 +41,10 @@
         visibility:hidden;
       };
     }
-
-    label {
-      visibility: hidden;
-      width:0%;
-    }
-
-    input {
-      padding:0.4rem;
-      text-transform: capitalize;
-      font-weight: bold;
-      @include breakpoint(small-max-m){
-        visibility:hidden;
-      }
-      border-color: $color-green;
-      border-radius: 29px;
-      @include breakpoint(xxsmall-max-m){
-        visibility:hidden;
-      };
-    }
-    
   }
 
   &__img{
+    margin-left:1rem;
     border-radius: 50%;
     width:40px;
     height:40px;
