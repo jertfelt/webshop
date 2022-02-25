@@ -42,6 +42,8 @@ const loadSearchResult = async () => {
     allProductsArray = await fetchProducts();
     displaySearchResult(allProductsArray, searchValue);
     setAddToCartClick();
+    localStorage.removeItem("search");
+
   } catch (err) {
     console.error(err);
   };  
