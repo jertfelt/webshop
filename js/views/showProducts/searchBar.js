@@ -13,7 +13,6 @@ const loadSearchResult = async () => {
 
       //calling the function to get results when the input word is more than 3 letters
       if (source.length >= 3) {
-        
         displaySearchResult(searchResult, source);
         setAddToCartClick();
       }
@@ -29,7 +28,9 @@ const loadSearchResult = async () => {
 
 const displaySearchResult = (res, source) => {
   const sectionElem = document.createElement("section");   
-  sectionElem.classList.add("products__grid--all");   
+  sectionElem.classList.add("products__grid--search");
+  sectionElem.classList.add("container__margin--bottom");
+  sectionElem.classList.add("container__margin--top")   
   searchSection.appendChild(sectionElem);
 
   //mapping all products and checking if the product title includes the input word

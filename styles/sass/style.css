@@ -69,6 +69,10 @@
   margin-top: 5rem;
 }
 
+.container__margin --bottom {
+  margin-bottom: 3rem;
+}
+
 .none {
   display: none;
 }
@@ -467,6 +471,18 @@ h6 {
   width: 90vw;
   margin: 0 auto;
   max-width: 1170px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(280px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 2rem;
+}
+
+.products__grid--search {
+  width: 50vw;
+  margin: 0 auto;
+  max-width: 500px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(280px, 1fr))[auto-fit];

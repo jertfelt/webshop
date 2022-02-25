@@ -29,6 +29,11 @@
   &--margin{
     margin-top:5rem;
   }
+  &__margin{
+    --bottom{
+      margin-bottom:3rem;
+    }
+  }
 }
 
 .none{
