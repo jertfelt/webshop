@@ -90,7 +90,7 @@ const drawTotalPriceOrderinCart = () => {
 // Lägger till produkter i local storage
 const addToCart = (prodID) => {
   // Hittar rätt produkt och hämtar datan.
-  const selectedProductData = productList.find(product => product.sys.id === prodID);
+  const selectedProductData = allProductsArray.find(product => product.sys.id === prodID);
   // Hämtar produkter från local storage
   const existingProductList = getCart();
   // Kollar om det redan finns produkter i cart
