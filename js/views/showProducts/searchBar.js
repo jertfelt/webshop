@@ -13,6 +13,7 @@ const loadSearchResult = async () => {
 
       //calling the function to get results when the input word is more than 3 letters
       if (source.length >= 3) {
+        
         displaySearchResult(searchResult, source);
         setAddToCartClick();
       }
