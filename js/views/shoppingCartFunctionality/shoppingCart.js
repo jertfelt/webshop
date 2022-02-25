@@ -322,7 +322,10 @@ document.getElementById("toConfirmation").addEventListener("click",
  })
 
  //!bugg: syns inte något tar över  (T)
-cartNavBtn.addEventListener("click", showCart);
+cartNavBtn.addEventListener("click", () => {
+  closeDropDown();
+  showCart();
+});
 
 // Lägg till event listener på varje produkt i varukorg. Kör funktion kopplat till klickat knapp: lägga till, radera produkt och minska antal produkt
 const setCartEventListener = () => {
