@@ -205,11 +205,9 @@
   </header>
   
   <main>
-     
+  
   
     <!--välkommen-->
-   
-
     <section class="homepage section"
     id="homepageSection">
     <div class="hero">
@@ -222,14 +220,12 @@
         </div>
       </div>
     </div>
-  
-    <!--div for a "loading symbol" (redo att läggas in i valfritt element, funktion finns i utilities.js och _animation.scss)
+      <!--div for a "loading symbol" (redo att läggas in i valfritt element, funktion finns i utilities.js och _animation.scss)
        <span class="loading__div">
       <span class="loading__container">
         <span class="loading__circle loading">
       </span>
     </span> -->
-
     <section id="categoriesSection" 
     class="categories">
       <article>
@@ -360,6 +356,12 @@ class="section hidden">
       <input type="text" name="townCreateUser" id="townCreateUser" required placeholder="Ort">
       <label for="phoneNumberCreateUser" class="hidden">Telefonnummer</label>
       <input type="text" name="phoneNumberCreateUser" id="phoneNumberCreateUser" placeholder="Telefonnummer">
+      <label
+      for="choosePicture"
+      class="text--cursive">Välj en profilbild (max 1 mb)</label>
+      <input type="file" 
+      name="choosePicture"
+      id="imgfile"/>
 
       <span>
         <button type="submit" id="submitBtnCreateUser" class="text--bold text--u">

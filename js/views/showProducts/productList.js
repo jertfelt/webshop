@@ -49,11 +49,11 @@ const createProductCard = (product, parent) => {
         Köp</button>
        
       </span>
-    
-    
     `
     parent.appendChild(articleElem);
 }
+
+
 
 // Wrapper funktion som kör funktioner/eventListeners efter HTML i produktlistan har ritats
 const setAddToCartClick = (productList) => {

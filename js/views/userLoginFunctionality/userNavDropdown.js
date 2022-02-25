@@ -12,9 +12,13 @@ const ifUserLoggedIn = document.getElementById("ifUserLoggedIn");
 
 const userNavOnlineDot = document.querySelector("#navUserOnlineDot");
 
+const userIcon = document.querySelector("#userNavIcon")
+
+
+
 //*--------Shows and hides dropdown
 
-document.querySelector("#userNavIcon").addEventListener("click", () => {
+userIcon.addEventListener("click", () => {
   if (!userNavDropdownShowing) {
     userNavDropdown.classList.remove("hidden");
     userNavDropdownShowing = true;
