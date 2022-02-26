@@ -256,18 +256,23 @@ class="section hidden">
     <h2 class="text--green">Dina Produkter:</h2>
     <div id="orderProductsSummation">
     </div>
-    <h3 id="orderProductsTotalAmount"
-    class="confirmation__totalamount text--l">
-    </h3>
-    <span class="securityinput">
-      <label for="securitycode">Ange en kupongkod eller en rabattkod</label><br>
-          <input type="text"
-          name="securitycode" id="securitycode">
-
     
-          
-          <button type="submit" id="securityCodeBtn" class="button__usual">Lägg till kod</button> 
-    </span>
+    <span class="securityinput">
+      <h3>Har du en rabattkod?</h3>
+        <label for="securitycode">
+          Ange rabattkod</label>
+          <br>
+        <input type="text"
+            name="securitycode" id="securitycode">
+            <button type="submit" id="securityCodeBtn" class="button__usual--small">
+              Lägg till kod</button>
+              <p>
+                En rabattkod kan till exempel vara ”SOMMAR2022”</p> 
+      </span>
+      </span>
+    <h3 id="orderProductsTotalAmount"
+    class="confirmation__totalamount text--m">
+    </h3>
 
   </article>
 
@@ -316,21 +321,22 @@ class="section hidden">
         <h3>Logga in</h3>
         <form id="loginForm"
         class="form__all">
-
         <div class="form__login--inputs">
           <span class="input-group-addon">
             <i class="fa fa-user"></i>
           </span>
           <label for="emailLogin">
             E-mail</label><br>
-          <input type="text" class="form-control" id="emailLogin" placeholder="E-mail" required>
+          <input type="text" 
+          name="emailLogin" id="emailLogin" placeholder="E-mail" required>
           </div>
       
           <div class="form__login--inputs">
           <span class="input-group-addon">
             <i class="fa fa-lock"></i></span>
           <label for="password">Lösenord</label><br>
-          <input type="password" class="form-control" id="password" placeholder="Lösenord" required>
+          <input type="password" 
+          name="password" id="password" placeholder="Lösenord" required>
           </div>
           
           <button type="submit" id="loginButton" class="button__usual">Logga in</button> 

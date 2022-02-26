@@ -112,5 +112,20 @@
   margin-bottom:1rem;
 }
 }
-
 }
+
+.securityinput{
+  
+  label{
+    font-weight: bold;
+    margin-bottom:0.4rem;
+  }
+  input {
+    margin-top:0.4rem;
+    margin-bottom:0.4rem;
+    border:none;
+    padding:0.2rem;
+  }
+ 
+}
+

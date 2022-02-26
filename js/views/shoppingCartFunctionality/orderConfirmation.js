@@ -94,6 +94,50 @@
       confirmOrderConfirmationBtn();
       e.preventDefault();
     });
+
+
+  //*--------rabattkod
+
+
+  const getTotalPrice = (rabatt) => {
+   
+    const totalPriceWRabatt = document.getElementById("orderProductsTotalAmount");
+    const priceString =  JSON.parse(localStorage.getItem("totalPriceOrder"));
+
+    const stringToInt = parseInt(priceString);
+    ;
+    const totalPrice = (stringToInt * rabatt); 
+
+    totalPriceWRabatt.innerText = `Total kostnad: ${totalPrice} kr`;
+  }
+
+  //*-----rabatt:
+
+    const saleCode = () => {
+      
+      let inputCode = document.getElementById("securitycode").value;
+      const rabattOrder = document.createElement("p");
+      rabattOrder.classList.add("text--green");
+      document.querySelector(".securityinput").appendChild(rabattOrder);
+
+      if(inputCode == "FEND21"){   
+        let rabatt = 0.75;
+        rabattOrder.innerText= "Du får 25% rea!"
+        getTotalPrice(rabatt);
+        }
+
+      else if(inputCode == "Mars"){
+        let rabatt = 0.90;
+        rabattOrder.innerText= "Du får 10% rea!"
+        getTotalPrice(rabatt);
+      }
+      else {
+        alert("Tyvärr, du skrev fel rabattkod")
+      }
+    }
+
+//eventlistener
+    document.getElementById("securityCodeBtn").addEventListener("click", saleCode);
     
 //Submit button
   /*document.getElementById("orderConfirmationForm").addEventListener("submit", (e) => {
