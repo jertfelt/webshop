@@ -27,21 +27,25 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 60%;
-    height: 30%;
-    overflow: scroll;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 60%;
     z-index: 10;
     background: $color-sand;
     padding: 1.5rem;
     transition: $mainTransition;
+    border-radius: 19px;
 
     @include breakpoint(medium-tablet-min){
-      top:60px;
-      width:30%;
+    width: 50%;
+    height: 60%;
+    max-width:500px;
     }
 
     h2{
-      text-align: center;
+    text-align: center;
     font-size:1.8rem;
     line-height:2rem;
     text-transform: capitalize;
@@ -50,7 +54,6 @@
     h2:nth-of-type(1){
       margin-top:2rem;
     }
-
 
     &--content{
       @include flexBox(column,center,center);

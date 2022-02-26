@@ -1,12 +1,19 @@
 footer{
-  margin: 0;
   padding:2rem;
-  background-color: $color-green;
-  color: $color-white;
+  margin: 0;
+  margin-top:9rem;
 }
+
 .footer{
+  &__section{
+    flex-grow: 1;
+    background-color: $color-green;
+    color: $color-white;
+  }
   &__container{
+  
     @include flexBox(column,center,center);
+ 
    img{
      height:70px;
    }
