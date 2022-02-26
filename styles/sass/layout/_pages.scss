@@ -58,7 +58,7 @@ padding:2rem;
 
 .confirmation{
   &__twocolumns{
-    @include flexBox(row, center,space-between);
+    @include flexBox(row, center,space-around);
     @include breakpoint (small-max-m){
       @include flexBox(column,center,space-between)
     }
@@ -68,15 +68,15 @@ padding:2rem;
 
   &__container{
     background-color: $color-sand;
-    padding:5rem;
+    padding:3rem;
 
     h2{
       margin-top:3rem;
     }
     &--right{
-      @include flexBox(column,center,space-between)
-
+      @include flexBox(column,flex-start,center);
     }
+    
   }
 
   &__productbar{

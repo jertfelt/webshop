@@ -103,6 +103,41 @@
     }
 }
 
+&__confirmation{ 
+  padding-top:1rem;
+  @include flexBox(column, flex-start, space-around);
+  p{
+    padding:0.3rem;
+  }
+
+  input{
+    padding:0.4rem;
+    border-radius: 9px;
+    border:none;
+    background-color: $color-white;
+    margin:0.4rem;
+  }
+  ::placeholder{
+    font-weight: bold;
+  }
+  label {
+    font-weight: bold;
+  }
+  textarea{
+    padding:0.4rem;
+    border-radius: 9px;
+    border:none;
+    background-color: $color-white;
+    margin:0.4rem;
+    
+  }
+  button{
+    padding:1rem;
+    margin:0.3rem;
+    margin-bottom:1rem;
+  }
+}
+
 &__create--buttons{
   margin-top:1rem;
   @include flexBox(column,center,space-between);

@@ -105,7 +105,7 @@ body {
 main {
   margin-top: 3rem;
   padding-bottom: 2rem;
-  min-height: 80vh;
+  min-height: 50vh;
 }
 
 @media only screen and (max-width: 768px) {
@@ -821,6 +821,68 @@ h6 {
 
 .form__all label {
   font-weight: bold;
+}
+
+.form__confirmation {
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.form__confirmation p {
+  padding: 0.3rem;
+}
+
+.form__confirmation input {
+  padding: 0.4rem;
+  border-radius: 9px;
+  border: none;
+  background-color: #fbfbfb;
+  margin: 0.4rem;
+}
+
+.form__confirmation ::-webkit-input-placeholder {
+  font-weight: bold;
+}
+
+.form__confirmation :-ms-input-placeholder {
+  font-weight: bold;
+}
+
+.form__confirmation ::-ms-input-placeholder {
+  font-weight: bold;
+}
+
+.form__confirmation ::placeholder {
+  font-weight: bold;
+}
+
+.form__confirmation label {
+  font-weight: bold;
+}
+
+.form__confirmation textarea {
+  padding: 0.4rem;
+  border-radius: 9px;
+  border: none;
+  background-color: #fbfbfb;
+  margin: 0.4rem;
+}
+
+.form__confirmation button {
+  padding: 1rem;
+  margin: 0.3rem;
+  margin-bottom: 1rem;
 }
 
 .form__create--buttons {
@@ -1540,9 +1602,8 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1565,7 +1626,7 @@ nav {
 
 .confirmation__container {
   background-color: #ece6d2;
-  padding: 5rem;
+  padding: 3rem;
 }
 
 .confirmation__container h2 {
@@ -1580,12 +1641,12 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .confirmation__productbar {
