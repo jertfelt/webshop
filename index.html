@@ -155,9 +155,9 @@
  
 
   <!--varukorg klickbar-->
-  <span class="nav__span nav__span--mobile">
+  <span class="nav__span">
     <span 
-    class="nav__cart--icon">
+    class="nav__cart--icon nav__span--mobile">
       <img 
         src="styles/sass/img/shop-cart.png" 
             alt="Shopping cart" 
@@ -292,23 +292,28 @@ class="section hidden">
 
   <section id="loginSection" 
 class="section hidden">
-    <div class="login__section">
-    <div class="login__box">
-        <h2>Logga in</h2>
-        <form id="loginForm">
+  <div class="login__section">
+    <article class="login__text">
+      <h2>Hej medlem!<br>
+      Alltid bättre pris för dig.</h2>
+      <p class="text--s">Klubbpris för jämnan på kläder som är bra</p>
+      
+    </article>
+    <article class="login__box">
+        <h3>Logga in</h3>
+        <form id="loginForm"
+        class="form__all">
 
-        
-        <div class="login__box--inputs">
+        <div class="form__login--inputs">
           <span class="input-group-addon">
             <i class="fa fa-user"></i>
-            </span>
+          </span>
           <label for="emailLogin">
             E-mail</label><br>
           <input type="text" class="form-control" id="emailLogin" placeholder="E-mail" required>
-
           </div>
       
-          <div class="login__box--inputs">
+          <div class="form__login--inputs">
           <span class="input-group-addon">
             <i class="fa fa-lock"></i></span>
           <label for="password">Lösenord</label><br>
@@ -319,51 +324,109 @@ class="section hidden">
 
           <button id="goToRegisterUserButton" class="text--bold">Bli medlem</button> 
           </form>
-        </div>
+        </article>
+    
+        <article class="login__bonus">
+          <h3>Att vara medlem lönar sig</h3>
+          <p class="text--s">Som medlem får du 10% på ditt första köp och belönas när du shoppar och gör medvetna val.</p>
+          
+  
+        </article>
+        <article class="row login__details">
+        
+          <span class="login__details--item">
+            <h4 class="text--green">Poäng på varje köp</h4>
+            <p class="text--bold">Som medlem får du alltid poäng när du handlar hos oss.</p>
+          </span>
+         
+          <span class="login__details--item">
+            <h4 class="text--green">Medlemskapet är gratis</h4>
+            <p class="text--bold">Men du behöver vara över 16 år gammal så allt går rätt till.</p>
+          </span>
+          <span class="login__details--item">
+            <img src="styles/sass/img/swedish-forest.jpg"
+            alt="En bild snodd från Greenpeace"
+            /> 
+          </span>
+        </article>
+
     </div>
   </section>
 
   <section id="createUserSection"
   class="section hidden">
+    <div class="register__section">
+      <article>
+        <h2 class="text--green">
+        Kul att du vill bli medlem!</h2>
+      </article>
+      <div class="register__content">
+      <article class="register__box">
+          <h3 class="text--green">
+            Fyll i din information här:</h3>
+          <form id="createUserForm"
+        class="form__all">
+          <span class="form--inputs"></span>
+          <label for="emailCreateUser" class="hidden">E-post</label>
+          <input type="email" name="emailCreateUser" id="emailCreateUser" required placeholder="E-post">
+          <label for="passwordCreateUser" class="hidden">Lösenord</label>
+          <input type="password" name="passwordCreateUser" id="passwordCreateUser" required placeholder="Lösenord">
+          <label for="nameCreateUser" class="hidden">Användarnamn</label>
+          <input type="text" name="nameCreateUser" id="nameCreateUser" required placeholder="Användarnamn">
+          <label for="streetCreateUser" class="hidden">Gatuadress</label>
+          <input type="text" name="streetCreateUser" id="streetCreateUser" required placeholder="Gatuadress">
+          <label for="postalCodeCreateUser" class="hidden">Postnummer</label>
+          <input type="number" name="postalCodeCreateUser" id="postalCodeCreateUser" required placeholder="Postnummer">
+          <label for="townCreateUser" class="hidden">Ort</label>
+          <input type="text" name="townCreateUser" id="townCreateUser" required placeholder="Ort">
+          <label for="phoneNumberCreateUser" class="hidden">Telefonnummer</label>
+          <input type="text" name="phoneNumberCreateUser" id="phoneNumberCreateUser" placeholder="Telefonnummer">
+          <!-- <label
+          for="choosePicture"
+          class="text--cursive">Välj en profilbild (max 2 mb)</label>
+          <input type="file" 
+          name="choosePicture"
+          id="imgfile"/> -->
 
-  <div class="register__box">
-    <h2 class="text--centered">Skapa användare</h2>
-    <p>Fyll i din information här:</p>
-    
-    <form id="createUserForm">
+          <span class="form__create--buttons">
+            <button type="submit" id="submitBtnCreateUser" class="text--bold">
+              Bli medlem</button>
+            <button 
+            id="cancelButtonCreateUser"
+            class="text--bold">
+            Avbryt</button>
+          </span>
+          </form>
+        </article>
+      </div>
+    </div>
 
-      <label for="emailCreateUser" class="hidden">E-post</label>
-      <input type="email" name="emailCreateUser" id="emailCreateUser" required placeholder="E-post">
-      <label for="passwordCreateUser" class="hidden">Lösenord</label>
-      <input type="password" name="passwordCreateUser" id="passwordCreateUser" required placeholder="Lösenord">
-      <label for="nameCreateUser" class="hidden">Användarnamn</label>
-      <input type="text" name="nameCreateUser" id="nameCreateUser" required placeholder="Användarnamn">
-      <label for="streetCreateUser" class="hidden">Gatuadress</label>
-      <input type="text" name="streetCreateUser" id="streetCreateUser" required placeholder="Gatuadress">
-      <label for="postalCodeCreateUser" class="hidden">Postnummer</label>
-      <input type="number" name="postalCodeCreateUser" id="postalCodeCreateUser" required placeholder="Postnummer">
-      <label for="townCreateUser" class="hidden">Ort</label>
-      <input type="text" name="townCreateUser" id="townCreateUser" required placeholder="Ort">
-      <label for="phoneNumberCreateUser" class="hidden">Telefonnummer</label>
-      <input type="text" name="phoneNumberCreateUser" id="phoneNumberCreateUser" placeholder="Telefonnummer">
-      <!-- <label
-      for="choosePicture"
-      class="text--cursive">Välj en profilbild (max 2 mb)</label>
-      <input type="file" 
-      name="choosePicture"
-      id="imgfile"/> -->
 
+  <div class="register__info">
+   
+    <article class="register__info--row">
+      <h3 class="text--white">Såhär funkar det</h3>
       <span>
-        <button type="submit" id="submitBtnCreateUser" class="text--bold text--u">
-          Bli medlem</button>
-        <button 
-        id="cancelButtonCreateUser"
-        class="text--bold">
-        Avbryt</button>
+      <h4 class="text--bold text--green">Registrera dig</h4>
+      <p>Medlemskapet är digitalt och gratis!</p>
       </span>
-    </form>
+      <span>
+        <h4 class="text--bold text--green">Samla poäng</h4>
+        <p>Du får poäng på alla dian köp och när du gör medvetna val</p>
+      </span>
+      <span>
+        <h4 class="text--bold text--green">Lös in erbjudanden</h4>
+        <p>Du får 25 kr i bonusrabatt för varje 1000 poäng samt exklusiva erbjudanden.</p>
+      </span>
+      <span>
+        <h4 class="text--bold text--green">Plusmedlem</h4>
+        <p>När du når 5000 poäng blir du plusmedlem och får tillgång till fler förmåner och erbjudanden</p>
+      </span>
+ 
+    </article>
+    </div>
   </div>
-  </section>
+</div>
 
   </main>
 

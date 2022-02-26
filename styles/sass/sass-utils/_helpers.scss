@@ -44,20 +44,20 @@
 }
 
 
-.outer{
-  position: relative;
-  @include breakpoint(small-max-m) {
-  }
-  width:100%;
-}
+// .outer{
+//   position: relative;
+//   @include breakpoint(small-max-m) {
+//   }
+//   width:100%;
+// }
 
-.inner{
-  position: absolute;
-  top:280%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  z-index:2;
-  }
+// .inner{
+//   position: absolute;
+//   top:80%;
+//   left:30%;
+//   transform: translate(-50%, -50%);
+//   z-index:2;
+//   }
 
 .pointer{
   cursor: pointer;
@@ -66,3 +66,4 @@
 .display{
   visibility: visible;
 }
+
