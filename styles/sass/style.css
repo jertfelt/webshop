@@ -408,18 +408,12 @@ h6 {
 
 .list__nested--child p {
   margin-top: 0.5rem;
-  opacity: 0;
+  text-transform: uppercase;
 }
 
-.list__nested--child:hover p {
+.list__nested--child p:hover {
   text-decoration: underline;
   color: #1b1b1b;
-  text-transform: uppercase;
-  opacity: 1;
-}
-
-.list__nested--child:hover img {
-  opacity: 0.5;
 }
 
 .products__individual {
@@ -661,61 +655,6 @@ h6 {
 
 .grid__category--items span {
   margin-bottom: 2rem;
-}
-
-.confirmation__container {
-  margin-top: 5rem;
-}
-
-.confirmation__container h2 {
-  color: #225e39;
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.confirmation__div {
-  background-color: #225e39;
-  padding: 2rem;
-  border-radius: 29px;
-  color: #fbfbfb;
-}
-
-.confirmation__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-top: 1rem;
-}
-
-.confirmation__row p {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-.confirmation__amount {
-  margin-left: 6%;
-  font-weight: bolder;
-  color: #f2ea03;
-}
-
-.confirmation__amount:hover {
-  color: #fbfbfb;
-}
-
-.confirmation__quantity {
-  color: #f2ea03;
-  margin-left: 6%;
-  font-weight: bold;
 }
 
 .search__dropdown {

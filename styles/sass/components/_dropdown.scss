@@ -77,24 +77,19 @@ a:hover{
   }
   &--child{
   width:80%;
-  
 
   p{
     margin-top:0.5rem;
-    opacity:0;
+    text-transform:uppercase;
+    
   }
-  }
-
-  &--child:hover{
-    p{
+    p:hover{
     text-decoration: underline;
     color: $color-black;
-    text-transform:uppercase;
-    opacity:1;
+    
+   
   }
-  img{
-    opacity: 0.5;
-  }
+  
   }
   
 }
