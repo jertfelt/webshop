@@ -66,13 +66,13 @@ const drawProductsinCart = () => {
           <h4>${product.fields.title}</h4>
           <h5 class="text--green">${product.amount} kr</h5>
           <span id="deleteBtn">
-          <img src="styles/sass/img/closing.png" alt="Ta bort varan"></span>
+          <img src="styles/sass/img/icons8-trash-24.png" alt="Ta bort varan"></span>
         </div>
-        <div>
+        <span class="cart--adding">
           <i class="fas fa-chevron-up" id="addBtn"></i>
           <p class="text--bold text--green">${product.quantity}</p>
           <i class="fas fa-chevron-down" id="decreaseBtn"></i>
-        </div> 
+        </span> 
       </div>
       `
       cartContent.appendChild(cartDiv);

@@ -177,12 +177,12 @@
       background-color: $color-white;
       padding:1rem;
       margin:1rem;
+      max-width:300px;
+      
       h4{
         min-width:200px;
       }
-      p{
-        max-width:80%;
-      }
+      
     }
   }
 }

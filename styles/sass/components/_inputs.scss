@@ -101,33 +101,13 @@
     label {
       font-weight: bold;
     }
-
-  button {
-    cursor: pointer;
-    text-transform: uppercase;
-    padding:0.6rem;
-    background-color: $color-yellow;
-    border:none;
-    border-radius:9px;
-    color: $color-black;
-    margin:0.3rem;
-    letter-spacing: 1px;
-  }
-
-  button:hover{
-    background-color: $color-green;
-    color: $color-yellow;
-  }
-
-
- 
 }
+
 &__create--buttons{
   margin-top:1rem;
   @include flexBox(column,center,space-between);
 }
 &__login{
-
   &--inputs{
   margin-bottom:1rem;
 }

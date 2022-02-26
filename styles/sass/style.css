@@ -257,13 +257,13 @@ h6 {
   font-family: "Nunito", Verdana, sans-serif;
 }
 
-.button__dropdown {
+.button__usual {
   padding: 1rem 2rem;
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: bold;
-  background: #f2ea03;
-  color: #1b1b1b;
+  background: #1b1b1b;
+  color: #fbfbfb;
   border: none;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -272,7 +272,28 @@ h6 {
   border-radius: 19px;
 }
 
-.button__dropdown:hover {
+.button__usual--clear {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #fbfbfb;
+  color: #1b1b1b;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  border-radius: 19px;
+}
+
+.button__usual--clear:hover {
+  background: #f2ea03;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.button__usual:hover {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
   background: #225e39;
   color: #f2ea03;
 }
@@ -347,20 +368,21 @@ h6 {
   padding: 0.2rem;
 }
 
-.mainmenu__mobile a {
+.mainmenu__mobile li a {
   font-size: 22px;
   font-weight: bold;
   display: block;
   padding: 0px 0;
   text-align: center;
   text-decoration: none;
-}
-
-.mainmenu__mobile a:visited {
   color: #225e39;
 }
 
-.mainmenu__mobile a:hover {
+.mainmenu__mobile li a:visited {
+  color: #225e39;
+}
+
+.mainmenu__mobile li a:hover {
   color: #1b1b1b;
   text-transform: uppercase;
 }
@@ -794,23 +816,6 @@ h6 {
   font-weight: bold;
 }
 
-.form__all button {
-  cursor: pointer;
-  text-transform: uppercase;
-  padding: 0.6rem;
-  background-color: #f2ea03;
-  border: none;
-  border-radius: 9px;
-  color: #1b1b1b;
-  margin: 0.3rem;
-  letter-spacing: 1px;
-}
-
-.form__all button:hover {
-  background-color: #225e39;
-  color: #f2ea03;
-}
-
 .form__create--buttons {
   margin-top: 1rem;
   display: -webkit-box;
@@ -1139,14 +1144,11 @@ h6 {
   background-color: #fbfbfb;
   padding: 1rem;
   margin: 1rem;
+  max-width: 300px;
 }
 
 .register__info--row span h4 {
   min-width: 200px;
-}
-
-.register__info--row span p {
-  max-width: 80%;
 }
 
 header {
@@ -1324,6 +1326,7 @@ nav {
 }
 
 .cart__item {
+  padding: 3rem;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -1338,6 +1341,7 @@ nav {
 .cart__item img {
   width: 75px;
   height: 75px;
+  border-radius: 19px;
 }
 
 .cart__item h4 {
@@ -1357,8 +1361,13 @@ nav {
 .cart__item span img {
   height: 20px;
   width: 20px;
-  background-color: #f2ea03;
-  border-radius: 50%;
+}
+
+.cart--adding {
+  background-color: #fbfbfb;
+  border-radius: 29px;
+  padding: 0.4rem;
+  text-align: center;
 }
 
 .cart--amount {
