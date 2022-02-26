@@ -276,40 +276,89 @@ class="section hidden">
 
   </article>
 
-  <article id="yourOrderInformation">
-    <h2>Dina Detaljer:</h2>
+  <article id="yourOrderInformation" class="confirmation__container--right">
+    
+    <h2 class="text--green">Dina Detaljer:</h2>
+    <span>
+
+    </span>
+    <div class="confirmation__container--form">
     <form id="orderConfirmationForm">
-      <label for="nameOrderConfirmation" class="hidden">Namn</label>
-      <input type="text" name="nameOrderConfirmation" id="nameOrderConfirmation" required placeholder="Namn">
       
-      <label for="streetOrderConfirmation" class="hidden">Gatuadress</label>
-      <input type="text" name="streetOrderConfirmation" id="streetOrderConfirmation" required placeholder="Gatuadress">
-
-      <label for="postalCodeOrderConfirmation" class="hidden">Postnummer</label>
-      <input type="number" name="postalCodeOrderConfirmation" id="postalCodeOrderConfirmation" required placeholder="Postnummer">
-    
-      <label for="townOrderConfirmation" class="hidden">Ort</label>
-      <input type="text" name="townOrderConfirmation" id="townOrderConfirmation" required placeholder="Ord">
-
-      <label for="emailOrderConfirmation" class="hidden">E-post</label>
-      <input type="email" name="emailOrderConfirmation" id="emailOrderConfirmation" required placeholder="E-post">
+      <label for="nameOrderConfirmation" 
+      class="hidden">
+      Namn</label>
+      <input type="text" 
+      name="nameOrderConfirmation" 
+      id="nameOrderConfirmation" 
+      required placeholder="Namn">
       
-      <label for="phoneNumberOrderConfirmation" class="hidden">Telefonnummer</label>
-      <input type="tel" name="phoneNumberOrderConfirmation" id="phoneNumberOrderConfirmation" placeholder="Telefonnummer">
+      <label for="streetOrderConfirmation" 
+      class="hidden">
+        Gatuadress</label>
+      <input type="text" 
+      name="streetOrderConfirmation" 
+      id="streetOrderConfirmation" 
+      required placeholder="Gatuadress">
+
+      <label for="postalCodeOrderConfirmation" class="hidden">
+        Postnummer</label>
+      <input type="number" 
+      name="postalCodeOrderConfirmation" id="postalCodeOrderConfirmation" 
+      required placeholder="Postnummer">
     
-      <label for="commentsOrderConfirmation" class="hidden">Övriga kommentarer</label>
-      <textarea name="commentsOrderConfirmation" id="commentsOrderConfirmation" cols="30" rows="10" placeholder="Övriga kommentarer"></textarea>
-      <button type="submit" id="submitBtnOrderConfirmation"
-      class="button__usual">Nästa</button>
+      <label for="townOrderConfirmation" 
+      class="hidden">
+        Ort</label>
+      <input type="text" 
+      name="townOrderConfirmation" 
+      id="townOrderConfirmation" 
+      required placeholder="Ord">
+
+      <label for="emailOrderConfirmation" 
+      class="hidden">
+        E-post</label>
+      <input type="email" 
+      name="emailOrderConfirmation" 
+      id="emailOrderConfirmation" 
+      required placeholder="E-post">
+      
+      <label for="phoneNumberOrderConfirmation"
+       class="hidden">
+        Telefonnummer</label>
+      <input type="tel"
+       name="phoneNumberOrderConfirmation" id="phoneNumberOrderConfirmation" placeholder="Telefonnummer">
+    
+      <label for="commentsOrderConfirmation"
+       class="hidden">
+       Övriga kommentarer</label>
+      <textarea name="commentsOrderConfirmation" id="commentsOrderConfirmation" 
+      cols="30" 
+      rows="10"
+      placeholder="Övriga kommentarer">
+      </textarea>
+      
+      <button type="submit" 
+      id="submitBtnOrderConfirmation"
+      class="button__usual">
+      Nästa</button>
       <button id="cancelBtnOrderConfirmation"
-      class="button__usual--clear">Avbryt</button>
-    </form>
-  </article>
-</div>
+      class="button__usual--clear">
+      Avbryt</button>
+
+        </form>
+      </div>
+
+      <p class="text--centered text--cursive">
+        Dagens datum: </p>
+      <p id="dagensDatum"
+      class="text--centered"></p>
+      </article>
+    </div>
   </section>
 
   <section id="loginSection" 
-class="section hidden">
+  class="section hidden">
   <div class="login__section">
     <article class="login__text">
       <h2>Hej medlem!<br>

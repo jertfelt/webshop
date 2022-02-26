@@ -133,6 +133,7 @@ let today = new Date().toJSON().slice(0,10).replace(/-/g, ' ');
 
 document.getElementById("todaysDate").textContent = " " + today;
 
+document.getElementById("dagensDatum").textContent = " " + today;
 
 
 

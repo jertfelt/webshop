@@ -58,12 +58,12 @@ padding:2rem;
 
 .confirmation{
   &__twocolumns{
-    background-color: $color-black;
     @include flexBox(row, center,space-between);
     @include breakpoint (small-max-m){
       @include flexBox(column,center,space-between)
     }
-    margin-bottom:-3rem;
+    
+    
   }
 
   &__container{
@@ -72,6 +72,10 @@ padding:2rem;
 
     h2{
       margin-top:3rem;
+    }
+    &--right{
+      @include flexBox(column,center,space-between)
+
     }
   }
 
@@ -89,4 +93,5 @@ padding:2rem;
     margin-top:2rem;
     width:80%;
   }
+
 }
