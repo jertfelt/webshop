@@ -56,14 +56,33 @@ padding:2rem;
   }
 }
 
-
 .confirmation{
+  &__twocolumns{
+    background-color: $color-black;
+    @include flexBox(row, center,space-between);
+    @include breakpoint (small-max-m){
+      @include flexBox(column,center,space-between)
+    }
+    margin-bottom:-3rem;
+  }
 
   &__container{
-    background-color: $color-green;
+    background-color: $color-sand;
     padding:5rem;
+
     h2{
-      margin-top:5rem;
+      margin-top:3rem;
+    }
+  }
+
+  &__productbar{
+    color:$color-black;
+    line-height:2.2rem;
+
+    p{
+      font-size:1.4rem;
+      font-weight: bold;
+      color:$color-green;
     }
   }
 }

@@ -251,13 +251,24 @@
 <!--varor + logga in/skriv in på formulär-->
   <section id="orderConfirmationSection"
 class="section hidden">
+  <div class="confirmation__twocolumns">
   <article class="confirmation__container">
-    <h2 class="text--white text--centered">Dina Produkter:</h2>
+    <h2 class="text--green">Dina Produkter:</h2>
     <div id="orderProductsSummation">
     </div>
     <h3 id="orderProductsTotalAmount"
-    class="confirmation__totalamount text--xl text--centered">
+    class="confirmation__totalamount text--l">
     </h3>
+    <span class="securityinput">
+      <label for="securitycode">Ange en kupongkod eller en rabattkod</label><br>
+          <input type="text"
+          name="securitycode" id="securitycode">
+
+    
+          
+          <button type="submit" id="securityCodeBtn" class="button__usual">Lägg till kod</button> 
+    </span>
+
   </article>
 
   <article id="yourOrderInformation">
@@ -289,6 +300,7 @@ class="section hidden">
       class="button__usual--clear">Avbryt</button>
     </form>
   </article>
+</div>
   </section>
 
   <section id="loginSection" 

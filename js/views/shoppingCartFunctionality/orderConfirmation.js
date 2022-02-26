@@ -8,35 +8,38 @@
     const productOrderConfirmation = document.createElement("article");
     
     const productInformationDivOrderConfirmation = document.createElement("div");
-    const imgOrderConfirmation = document.createElement("img");
 
-    const productNameOrderConfirmation = document.createElement("p");
+    const imgOrderConfirmation = document.createElement("img");
+    const productNameOrderConfirmation = document.createElement("h3");
     const amountOrderConfirmation = document.createElement("p");
     const quantityOrderConfirmation = document.createElement("p");
 
+    //connecting with localstorage:
+
     imgOrderConfirmation.src = img;
-   
     productNameOrderConfirmation.innerText = name;
     amountOrderConfirmation.innerText = `${amount}kr`;
     quantityOrderConfirmation.innerText = `${quantity} st`;
-    productInformationDivOrderConfirmation.appendChild( quantityOrderConfirmation);
+
+    //appending: 
+    productInformationDivOrderConfirmation.appendChild(quantityOrderConfirmation);
 
     productInformationDivOrderConfirmation.appendChild(productNameOrderConfirmation);
     productInformationDivOrderConfirmation.appendChild(amountOrderConfirmation);
    
 
     productOrderConfirmation.appendChild(imgOrderConfirmation);
-    productOrderConfirmation.appendChild(productInformationDivOrderConfirmation);
 
+    productOrderConfirmation.appendChild(productInformationDivOrderConfirmation);
 
     document.querySelector("#orderProductsSummation").appendChild(productOrderConfirmation);
 
-    productOrderConfirmation.classList.add("product__img--container");
-    productOrderConfirmation.classList.add("confirmation__div")
-    imgOrderConfirmation.classList.add("product__img");
-    quantityOrderConfirmation.classList.add("confirmation__quantity");
-    productInformationDivOrderConfirmation.classList.add("confirmation__row")
-    amountOrderConfirmation.classList.add("confirmation__amount")
+    //adding classes to elements
+  
+    productOrderConfirmation.classList.add("products__grid--confirmation")
+    
+    productInformationDivOrderConfirmation.classList.add("confirmation__productbar");
+
   }
 
 //Go through each product in cart and send it to print
