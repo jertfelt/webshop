@@ -1,23 +1,29 @@
 const queryParams = new URLSearchParams(location.search);
 const productId = queryParams.get('id');
 
+const individualGrid = document.getElementById("individualGrid");
+
 const productCreator = (product)=>{
   const sectionProduct = document.createElement("section");
   sectionProduct.classList.add("products__individual");
-  individualProductSection.appendChild(sectionProduct);
+  individualGrid.appendChild(sectionProduct);
   
   const articleProduct = document.createElement("article");
+  articleProduct.classList.add("product__columns");
 
   articleProduct.innerHTML = `
+    <div class="column">
+    <h2 class="text--green text--cursive">${product.fields.title}</h2>
     <img alt="Produkt"
     src="/${product.fields.image.fields.file.url}">
     </img>
-    <span class="product__box--individual">
-    <span class="row">
+    </div>
+    <span class="product__box--individual column">
+    
       <h3>${product.fields.title}</h3>
       <p class="text--s text--green text--bold">
       ${product.fields.price} kr </p>
-    </span>
+   
     <p class="text--s">${product.fields.description}</p>
     <button class="addToCartBtn " 
     data-id="${product.sys.id}">Köp

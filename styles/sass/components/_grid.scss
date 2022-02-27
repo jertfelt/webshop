@@ -2,19 +2,31 @@
 //grids
 .products{
   &__individual{
-    padding:3rem;
-    width:90vw;
-    margin:3rem;
-    
+    @include flexBox(row,flex-start,space-around);
+    margin: 0 auto;
+    width:80%;
+    max-width:800px;
+    // width:90vw;
+    // margin:3rem;
+    padding-top:8rem;
     @include breakpoint(small-max-m){
-      margin: 0 auto;
-      text-align: center;
-     };
+      @include flexBox(column,flex-start,space-around);
+    }
+    @include breakpoint(small-max){
+    }
+    
+  
 
     img {
-      width:100%;
+      margin-top:1rem;
+      @include breakpoint(small-max-m){
+        width:100%;
+      }
+      width:80%;
       border-radius: 29px;
+    
     }
+
     img:hover{
       border-radius:55% 55% 52% 48% / 30% 25% 55% 30%;
       transition: all 100ms ease-in;
@@ -34,17 +46,7 @@
   }
 
   &__grid {
-  // //for homepage
-  // width: 90vw;
-  // margin: 0 auto;
-  // max-width: 1170px;
-  // display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(90%, 1fr));
-  // grid-column-gap: 2rem;
-  // grid-row-gap: 2rem;
-  // margin-bottom:8rem;
-
-  //for productList 
+ 
   &--all{
   width: 90vw;
   margin: 0 auto;
@@ -70,8 +72,9 @@
   width: 70vw;
   margin: 0 auto;
   max-width: 1170px;
+
   img:hover{
-    border-radius: 45% 55% 52% 48% / 30% 25% 55% 90%;
+    border-radius: 0% 55% 52% 48% / 30% 65% 55% 90%;
   }
   }
 
@@ -132,11 +135,20 @@
       border-radius: 29px;
     }
   }
+
   &--list:hover{
     border-radius:35% 55% 52% 48% / 30% 25% 55% 30%;
     transition: all 100ms ease-in;
   }
 } 
+
+ &__columns{
+  @include flexBox(row,center,space-around);
+  
+  @include breakpoint(small-max-m){
+    @include flexBox(column,center,space-around);
+  }
+}
  
   &__box{
     padding:1rem;
@@ -156,15 +168,16 @@
     }
 
     &--individual{
-      margin-top:1rem;
-      h3 {
-        margin-right:20px;
+      @include flexBox(column,flex-start,center);
+      p{
+        width:80%;
+        @include breakpoint(small-max){
+          margin-top:0.7rem;
+          width:100%;
       }
-      @include flexBox(column,center,center);
-      button{
-        margin-top:1rem;
-      }
+  
     }
+  }
 
     &--search{
       @include flexBox(column,center,center);
@@ -199,28 +212,20 @@
  }
 
  h4{
+  text-align: left;
    font-weight:400;
    @include breakpoint(medium-max){
-    width: 80%;
-    margin-left:2rem; 
-    text-align: center;
+    width: 100%;
    ;
    }
+   
    @include breakpoint(
     small-max-m){
-      text-align: center;
-      font-size:1rem;
-      font-weight: bold;
+      font-size:1.4rem;
+      font-weight:300;
       
     }
-   
    width: 50%;
-   margin-left:2rem; 
-   
-
  }
  
- span{
-   margin-bottom:2rem;
- }
 }

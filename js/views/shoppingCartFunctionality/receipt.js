@@ -49,7 +49,7 @@ if (getCart() !== null) {
     `
 }
 
-//Renders recepit when on the correct page
+//Renders receipt when on the correct page
 
 if (!receiptSection.classList.contains("hidden")) {
     drawReceipt()

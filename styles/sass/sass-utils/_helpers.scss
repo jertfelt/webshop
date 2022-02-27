@@ -39,11 +39,30 @@
   }
 }
 
-// .none{
-//   display:none;
-// }
-
 .pointer{
   cursor: pointer;
 }
 
+.overlaymother{
+  position: relative;
+  
+&--under{
+  position: absolute;
+  width:100%;
+  width:100%;
+  top:0;
+  left: 0;
+}
+
+&--up{
+  z-index: 9;
+  margin: 20px;
+  padding-bottom:1rem;
+  width:70%;
+}
+
+}
+
+.minheight{
+  min-height: 90vh;
+}

@@ -53,13 +53,7 @@ nav{
     // right:-60px;
    };
  
-  &--mobile{
-  @include breakpoint(xxsmall-max){
-    visibility:hidden;
-  }
-  }
-
-  &--user{
+   &--user{
     div{
       position:relative;
     }

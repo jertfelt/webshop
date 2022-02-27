@@ -56,7 +56,8 @@ const userNavLogInRegister = () => {
 
 //------orderconfirmation (beställning)
 
-const confirmOrderConfirmationBtn = () => {
+const confirmOrderConfirmationBtn = (e) => {
+  e.preventDefault();
   changeActivePage("receiptSection");
 }
 
@@ -70,6 +71,10 @@ document.getElementById("buttonBackReceipt").addEventListener("click",(e) => {
   changeActivePage("homepageSection");
 })
 
+document.getElementById("goToRegisterUserBtn").addEventListener("click",(e) => {
+  e.preventDefault();
+  changeActivePage("createUserSection");
+})
 
 //-------register
 const confirmAndExitCreateUser = () => {

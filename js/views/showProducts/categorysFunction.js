@@ -11,9 +11,9 @@ const drawCategorys = (data) => {
         tempArt.innerHTML=`
         <article id="category${x.fields.title}" class="grid__category--items">
         <div class="pointer  product__img--container">
-        <img src="${x.fields.image.fields.file.url}" class="product__img" 
+        <img src="${x.fields.image.fields.file.url}" class="product__img " 
         alt="${x.fields.title}"></img>
-        <span class="row">
+        <span class="overlaymother--under overlaymother--up">
         <h3 class="text--green text--cursive">${x.fields.title}</h3>
         <h4>${x.fields.description}</h4>
         </span>
