@@ -570,18 +570,9 @@ class="section hidden">
    <!--kvitto dropdown (class hidden ska togglas)--> 
   <aside id="receiptSection" 
   class="hidden section">
+  <div class="receipt__background"></div>
     <section class="receipt__container">
-      <span class="receipt--close">
-        <img class=""
-        src="">
-        <span>
-          <p>
-            Dagens datum: </p>
-          <p id="dagensDatum"
-          >
-          </p>  
-        </span>
-      </span>
+      <div class="receipt__box">
       <h2 class="text--green text--bold">
         Tack för ditt köp!
       </h2>
@@ -607,7 +598,18 @@ class="section hidden">
       <span class="receipt__footer--price">
         <!--detta renderas också-->
       </span>
+      <span>
+        <p>
+          Dagens datum: </p>
+        <p id="dagensDatum"
+        >
+        </p>  
+      </span>
+      
     </article>
+  </div>
+  </section>
+
   </aside>
 
   <footer class="footer__section">

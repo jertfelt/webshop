@@ -66,6 +66,7 @@
       @include breakpoint (small-max-m){
        @include flexBox(column,center,space-between)
       }
+    min-height:90vh;
   }
 
   &__container{
@@ -91,4 +92,40 @@
     margin-top:1rem;
   }
  
+}
+
+.receipt{
+  &__background{
+    background-image: url("/styles/sass/img/swedish-forest.jpg");
+    background-color: $color-green;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+    margin:-2rem;
+    @include breakpoint(small-max-m){
+      min-height:50vh;
+    }
+  }
+  
+  &__container{
+    min-height:90vh;
+    @include breakpoint(small-max-m){
+      min-height:50vh;
+    }
+    @include flexBox(column,center,center);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(34, 94, 57 ,0.7);
+    z-index: 9;
+  }
+
+  &__box{
+    @include flexBox(column,center,center);
+    background-color: $color-white;
+    padding:2rem;
+    border-radius: 29px;
+  }
 }
