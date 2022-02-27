@@ -2,6 +2,12 @@
 
 .search{
 
+  &__container{
+    padding-top:2rem;
+    min-height: 60vh;
+    padding-bottom:3rem;
+  }
+
   &__dropdown{
     position:fixed;
     top:70px;

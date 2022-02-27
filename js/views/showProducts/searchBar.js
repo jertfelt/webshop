@@ -1,22 +1,27 @@
 
+const searchContainer = document.getElementById("searchDiv");
+const searchInHeader = document.getElementById("searchDropdown");
+const searchDropDown = document.getElementById("searchContent");
+const searchBarHeader = document.getElementById("searchBarHeader");
+
 const displaySearchResult = (allProductsArray, searchValue) => {
 
   // Draw heading
   const searchResultHeader = document.createElement("h2");
   searchResultHeader.classList.add("text--green", "text--cursive", "centered");
   searchResultHeader.innerText = "Ditt sökresultat";
-  searchSection.appendChild(searchResultHeader);
+  searchContainer.appendChild(searchResultHeader);
 
   // Draw feedback message for searched text
   const searchInputFeedback = document.createElement("h3");
   searchInputFeedback.classList.add("text--green", "text--cursive", "centered");
   searchInputFeedback.innerText = `Du sökte på "${searchValue}"`;
-  searchSection.appendChild(searchInputFeedback);
+  searchContainer.appendChild(searchInputFeedback);
 
   // Creates section element that wraps product cards
   const sectionElem = document.createElement("section");   
   sectionElem.classList.add("products__grid--all");   
-  searchSection.appendChild(sectionElem);
+  searchContainer.appendChild(sectionElem);
 
   // Maps all products and checks if the product title and description includes the search word
   allProductsArray.map((produx) => {
@@ -28,6 +33,10 @@ const displaySearchResult = (allProductsArray, searchValue) => {
     if (productTitle.includes(searchValueLowerCase) || productDescription.includes(searchValueLowerCase)) {
       // Draw each product that matches the search
       createProductCard(produx, sectionElem);}
+    else {
+      searchInputFeedback.innerHTML = `Du sökte på "${searchValue}." <br>Tyvärr hittade vi inget!<br>
+      `;
+    }
   });
 };
 
@@ -60,5 +69,17 @@ document.querySelector("#searchBar").addEventListener("keypress", (e) => {
   }
 })
 
-//Dropdown closes when mouseevent
 
+
+//*-------header button
+searchInHeader.addEventListener("click", () => {
+  searchDropDown.classList.remove("hidden");
+ 
+})
+
+searchDropDown.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    loadSearchResult();
+    searchDropDown.classList.add("hidden");
+  }
+})
