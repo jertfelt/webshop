@@ -16,52 +16,38 @@ $font-secondary: "Roboto", Arial, sans-serif;
   &--second{
     font-family: $font-secondary;
   }
-
   &--white{
     color: $color-white;
   }
-  
   &--green{
     color:$color-green;
   }
   &--uppercase{
     text-transform: uppercase;
   }
-  
   &--centered{
     text-align: center;
   }
-
   &--bold{
     font-weight:bold;
   }
-
   &--cursive {
     font-style: italic;
   }
-
-  &--xl {
-    @include font-size(72);
-  }
-
   &--l {
     @include font-size(50);
-
   }
   &--m {
     @include font-size(42);
   }
-
   &--s {
     @include font-size(28);
     line-height: 36px;
     @include breakpoint(small-max-m) {
       @include font-size(18);
       line-height: 28px;
-
     }
   }
-
   &--xs {
     @include font-size(24);
     line-height: 30px;
@@ -70,7 +56,6 @@ $font-secondary: "Roboto", Arial, sans-serif;
       line-height: 22px;
     }
   }
-
   &--xxs {
     @include font-size(16);
     line-height: 25px;
@@ -81,7 +66,6 @@ $font-secondary: "Roboto", Arial, sans-serif;
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-secondary;
   }
-
   h1 {
       @include font-size(50);
       line-height: 55px;
@@ -90,7 +74,6 @@ h1, h2, h3, h4, h5, h6 {
       line-height: 72px;
       }
   }
-  
   h2 {
       @include font-size(40);
     line-height: 48px;
@@ -99,20 +82,16 @@ h1, h2, h3, h4, h5, h6 {
       line-height: 74px;
       }
   }
-  
   h3 {
       @include font-size(30);
   }
-  
   h4 {
       @include font-size(22);
       line-height: 28px;
   }
-  
   h5 {
        @include font-size(24);
   }
-  
   h6 {
       @include font-size(16);
   }
@@ -122,7 +101,6 @@ h1, h2, h3, h4, h5, h6 {
       color: $color-white;
       font-weight:bold;
     }
-
     &--alt{
       font-family:$font-primary;
     }

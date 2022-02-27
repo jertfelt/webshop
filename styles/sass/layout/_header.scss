@@ -16,68 +16,66 @@ nav{
 .nav{
   position: relative;
   cursor: pointer;  
+
   &__top{
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2.5rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
   }
 
   &__button{
-  max-height:40px;
-  margin-top:8px;
+    max-height:40px;
+    margin-top:8px;
 
-  &--category{
-    max-height:50px;
-    }
+    &--category{
+      max-height:50px;
+      }
   }
 
   
   &__logotype{
   max-height:90px;
+  }
 
-}
+  &__logotype:hover{
+    transform: rotate(-50deg);
+    transition: $mainTransition;
+  }
 
- &__logotype:hover{
-  transform: rotate(-50deg);
-  transition: $mainTransition;
- }
+  &__span{
+    @include flexBox(row,center,space-between);
 
- &__span{
-
-  @include flexBox(row,center,space-between);
-
-  @include breakpoint(small-max-m){
-    position:relative;
-    // right:-60px;
-   };
- 
-   &--user{
-    div{
+    @include breakpoint(small-max-m){
       position:relative;
+    };
+  
+    &--user{
+      div{
+        position:relative;
+      }
     }
   }
-}
 
- &__user{
-   background-color: $color-green;
-   border-radius: 50%;
-   padding:0.4rem;
-   text-align: center;
-   
-   .fa-user {
-     color: $color-sand;
-   }
- }
-
- &__user:hover{
-  background-color: $color-black;
-
-  .fa-user {
-    color: $color-white;
+  &__user{
+    background-color: $color-green;
+    border-radius: 50%;
+    padding:0.4rem;
+    text-align: center;
+    
+    .fa-user {
+      color: $color-sand;
+    }
   }
- }
+
+  &__user:hover{
+    background-color: $color-black;
+
+    .fa-user {
+      color: $color-white;
+    }
+  }
 }
 
 .headercart{
@@ -87,13 +85,13 @@ nav{
   }
 
   &__showAmount{
-   background-color: $color-green;
-   padding:0.3rem;
-   font-weight: bold;
-   color:$color-white;
-   border-radius: 50%;
-   position:relative;
-   top:-10px;
-   right:60px;
+    background-color: $color-green;
+    padding:0.3rem;
+    font-weight: bold;
+    color:$color-white;
+    border-radius: 50%;
+    position:relative;
+    top:-10px;
+    right:60px;
   }
 }

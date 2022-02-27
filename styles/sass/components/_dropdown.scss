@@ -20,32 +20,28 @@
   top: 0;
   padding: 30px 20px;    
 
-li {
-  display: block;
-  margin-bottom: 10px;
-  padding:0.2rem;
-  a {
-    font-size: 22px;
-    font-weight:bold;
+  li {
     display: block;
-    padding: 0px 0;
-    text-align: center;
-    text-decoration: none;
-    color: $color-green;
-  }
-  
-  a:visited{
-    color:$color-green;
-  }
-  
-  a:hover{
-    color: $color-black;
-    text-transform: uppercase;
-  }
-}
+    margin-bottom: 10px;
+    padding:0.2rem;
 
-
-
+    a {
+      font-size: 22px;
+      font-weight:bold;
+      display: block;
+      padding: 0px 0;
+      text-align: center;
+      text-decoration: none;
+      color: $color-green;
+    }
+    a:visited{
+      color:$color-green;
+    }
+    a:hover{
+      color: $color-black;
+      text-transform: uppercase;
+    }
+  }
 }
 
 .list__nested{
@@ -77,24 +73,18 @@ li {
   &--mother:visited{
     color:$color-green;
   }
+
   &--child{
   width:80%;
 
-  p{
-    margin-top:0.5rem;
-    text-transform:uppercase;
-    
-  }
+    p{
+      margin-top:0.5rem;
+      text-transform:uppercase;
+    }
+
     p:hover{
     text-decoration: underline;
     color: $color-black;
-    
-   
+    }
   }
-  
-  }
-  
 }
-
-
-//*------------

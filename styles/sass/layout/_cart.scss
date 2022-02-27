@@ -1,14 +1,12 @@
 .cart{
 //*visa och dölja
 
-&__transparentBack{
-  visibility: visible;
-  
-}
+  &__transparentBack{
+    visibility: visible;
+  }
   &__show{
   transform: translateX(0);
   }
-
   &__hidden{
     visibility:hidden;
   }
@@ -27,29 +25,27 @@
   } 
 
   &__content{
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  overflow: scroll;
-  z-index: 10;
-  background: $color-sand;
-  padding: 1.5rem;
-  transition: $mainTransition;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    z-index: 10;
+    background: $color-sand;
+    padding: 1.5rem;
+    transition: $mainTransition;
 
-  @include breakpoint(medium-tablet-min){
-    width:60%;
-  }
-  
-  h2{
-    text-align: center;
-    color:$color-green;
-  }
+    @include breakpoint(medium-tablet-min){width:60%;
+    }
+    
+    h2{
+      text-align: center;
+      color:$color-green;
+    }
   }
 
   &__item{
-  
       padding:1rem;
       display: grid;
       align-items: center;
@@ -57,7 +53,6 @@
       grid-column-gap: 1.5rem;
       margin: 1.5rem 0;
    
-     
       img {
         width: 75px;
         height: 75px;
@@ -79,17 +74,16 @@
          img{
            height:20px;
            width:20px;
-           
          }
       }
   }
+
   &--adding{
     background-color: $color-white;
     border-radius: 29px;
     padding:0.4rem;
     text-align: center;
   }
-
   &--amount{
     text-align: center;
   }
@@ -98,8 +92,6 @@
     cursor: pointer;
     background-color: $color-yellow;
   }
-
-
   &--close{
     cursor: pointer;
     img {
@@ -110,7 +102,6 @@
   &__footer{
     margin-top: 2rem;
     text-align: center;
-
     h3{
       text-transform: capitalize;
       margin-bottom: 1rem;
@@ -120,7 +111,6 @@
   &--empty{
     margin-top:2rem;
     text-align: center;
-  
   }
 }
 

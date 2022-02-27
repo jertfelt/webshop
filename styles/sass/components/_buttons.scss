@@ -1,8 +1,6 @@
 //buttons (except for navigation bar in header)
-
 .button{
   
-
   &__usual{
       padding: 1rem 2rem;
       text-transform: uppercase;
@@ -16,7 +14,7 @@
       margin-top:1rem;
       border-radius: 19px;
 
-      &--small{
+    &--small{
         padding: 0.3rem 0.3rem;
         text-transform: uppercase;
         font-size: 1rem;
@@ -24,9 +22,9 @@
         background:  $color-yellow;
         color: $color-black;
         border: none;
-      }
+    }
 
-      &--clear{
+    &--clear{
         padding: 1rem 2rem;
         text-transform: uppercase;
         font-size: 1rem;
@@ -34,15 +32,15 @@
         background:  $color-white;
         color: $color-black;
         border: none;
-      
         cursor: pointer;
         margin-top:1rem;
         border-radius: 19px;
-      }
-      &--clear:hover{
+    }
+
+    &--clear:hover{
         background: $color-yellow;
         transition: $mainTransition;
-      }
+    }
   }
 
 
@@ -59,7 +57,7 @@
 
 .dropdown--close{
   cursor: pointer;
-    height: 30px;
+  height: 30px;
 }
 
 
@@ -68,15 +66,15 @@
   background-color: $color-black;
   color: $color-white;
   text-transform: uppercase;
-      font-size: 1rem;
-      font-weight: bold;
-      border: none;
-      transition: $mainTransition;
-      cursor: pointer;
-      margin-top:1rem;
-      border-radius: 19px;
-  
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  transition: $mainTransition;
+  cursor: pointer;
+  margin-top:1rem;
+  border-radius: 19px;
 }
+
 .addToCartBtn:hover{
   background-color: $color-green;
   font-size: 1.3rem;

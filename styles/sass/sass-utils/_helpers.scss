@@ -9,15 +9,12 @@
 
 .row{
   @include breakpoint(medium-tablet-min)
-  { 
-    @include flexBox(row,center,center);
+  { @include flexBox(row,center,center);
   }
   @include flexBox(column,center,space-between);
 
   &--mobilesame{
-    @include flexBox(row,center,flex-start)
-  }
-
+    @include flexBox(row,center,flex-start)}
  }
 
 .centered{
@@ -26,9 +23,11 @@
 }
 
 .container{
+
   &--margin{
     margin-top:5rem;
   }
+
   &__margin{
     --bottom{
       margin-bottom:3rem;
@@ -46,21 +45,20 @@
 .overlaymother{
   position: relative;
   
-&--under{
-  position: absolute;
-  width:100%;
-  width:100%;
-  top:0;
-  left: 0;
-}
+  &--under{
+    position: absolute;
+    width:100%;
+    width:100%;
+    top:0;
+    left: 0;
+  }
 
-&--up{
-  z-index: 9;
-  margin: 20px;
-  padding-bottom:1rem;
-  width:70%;
-}
-
+  &--up{
+    z-index: 9;
+    margin: 20px;
+    padding-bottom:1rem;
+    width:70%;
+  }
 }
 
 .minheight{
