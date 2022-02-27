@@ -1,7 +1,7 @@
-
+//*---needed for css reasons:
 const searchContainer = document.getElementById("searchDiv");
 
-
+//*functions
 const displaySearchResult = 
 (allProductsArray, searchValue) => {
   //*---animation for setTimeout
