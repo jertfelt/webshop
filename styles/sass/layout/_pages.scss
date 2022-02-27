@@ -47,10 +47,12 @@ padding:2rem;
   border-radius:45% 55% 52% 48% / 30% 25% 55% 10%;
   height:400px;
   margin:0px 30px;
+
   @include breakpoint(small-max-m){
     width:90%;
   };
   }
+
   img:hover{
     border-radius:100%;
   }
@@ -58,12 +60,12 @@ padding:2rem;
 
 .confirmation{
   &__twocolumns{
+    
     @include flexBox(row, center,space-around);
+
     @include breakpoint (small-max-m){
       @include flexBox(column,center,space-between)
     }
-    
-    
   }
 
   &__container{
@@ -73,10 +75,10 @@ padding:2rem;
     h2{
       margin-top:3rem;
     }
+
     &--right{
       @include flexBox(column,flex-start,center);
-    }
-    
+    }   
   }
 
   &__productbar{
@@ -89,9 +91,8 @@ padding:2rem;
       color:$color-green;
     }
   }
-  &__totalamount{
+    &__totalamount{
     margin-top:2rem;
     width:80%;
   }
-
 }

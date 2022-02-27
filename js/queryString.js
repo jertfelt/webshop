@@ -10,7 +10,7 @@ const receiptSection = document.getElementById("receiptSection");
 const loginSection = document.getElementById("loginSection");
 const createUserSection = document.getElementById("createUserSection");
 const searchSection = document.getElementById("searchSection");
-
+console.log(searchSection)
 //nodelist
 const sections = document.querySelectorAll(".section");
 

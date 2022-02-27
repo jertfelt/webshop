@@ -1,5 +1,6 @@
 
 const displaySearchResult = (allProductsArray, searchValue) => {
+
   // Draw heading
   const searchResultHeader = document.createElement("h2");
   searchResultHeader.classList.add("text--green", "text--cursive", "centered");
