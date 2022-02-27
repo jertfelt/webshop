@@ -137,24 +137,3 @@ document.getElementById("dagensDatum").textContent = " " + today;
 
 
 
-// //*------animation function
-
-// let loader = document.querySelector(".loading");
-// const loadingContainer = document.querySelector(".loading__div");
-
-// const displayLoading = () =>{
-  
-//   if (loadingContainer.classList.contains("hidden")){
-//     loader.classList.add("display");
-
-//     setTimeout(() => {
-//         loader.classList.remove("display");
-//       }, 3000)}
-
-// }
-// .addEventListener("click", () => {
-// displayLoading();
-// })
-
-
-
