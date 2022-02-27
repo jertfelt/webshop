@@ -2027,6 +2027,12 @@ nav {
   margin-top: 2rem;
 }
 
+.individual__text {
+  padding: 3rem;
+  margin-bottom: -2rem;
+  padding-bottom: 1rem;
+}
+
 .individual__footer {
   background-color: #1b1b1b;
   margin-bottom: -3rem;

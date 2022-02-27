@@ -180,6 +180,12 @@
 }
 
 .individual{
+
+  &__text{
+    padding:3rem;
+    margin-bottom:-2rem;
+    padding-bottom:1rem;
+  }
   &__footer{
     background-color: $color-black;
     margin-bottom:-3rem;
