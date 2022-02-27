@@ -1,9 +1,4 @@
 
-const searchContainer = document.getElementById("searchDiv");
-const searchInHeader = document.getElementById("searchDropdown");
-const searchDropDown = document.getElementById("searchContent");
-const searchBarHeader = document.getElementById("searchBarHeader");
-
 const displaySearchResult = (allProductsArray, searchValue) => {
   //*---animation for setTimeout
   const loadingSearch = document.getElementById("loadingSearch");
@@ -84,16 +79,3 @@ document.querySelector("#searchBar").addEventListener("keypress", (e) => {
 })
 
 
-
-//*-------header button
-searchInHeader.addEventListener("click", () => {
-  searchDropDown.classList.remove("hidden");
- 
-})
-
-searchDropDown.addEventListener("keypress", (e) => {
-  if (e.key === "Enter") {
-    loadSearchResult();
-    searchDropDown.classList.add("hidden");
-  }
-})

@@ -10,7 +10,7 @@
     background-color: rgba(236, 230, 210, .6);
 
     @include breakpoint(small-max-m){
-      background-color: rgba(236, 230, 210, .2);
+      background-color: rgba(236, 230, 210, .1);
     };
   }
 
@@ -29,11 +29,12 @@
   @include flexBox(column,center,center);
 
   article {
-    padding:2rem;
+    padding:4rem;
 
-    @include breakpoint(small-max-m){
-      text-align: center;
-    };
+
+    // @include breakpoint(small-max-m){
+    //   text-align: center;
+    // };
 
     h2 {
         margin-top:2rem;

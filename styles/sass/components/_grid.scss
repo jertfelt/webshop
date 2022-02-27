@@ -34,17 +34,7 @@
   }
 
   &__grid {
-  // //for homepage
-  // width: 90vw;
-  // margin: 0 auto;
-  // max-width: 1170px;
-  // display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(90%, 1fr));
-  // grid-column-gap: 2rem;
-  // grid-row-gap: 2rem;
-  // margin-bottom:8rem;
-
-  //for productList 
+ 
   &--all{
   width: 90vw;
   margin: 0 auto;
@@ -70,8 +60,9 @@
   width: 70vw;
   margin: 0 auto;
   max-width: 1170px;
+
   img:hover{
-    border-radius: 45% 55% 52% 48% / 30% 25% 55% 90%;
+    border-radius: 0% 55% 52% 48% / 30% 65% 55% 90%;
   }
   }
 
@@ -199,28 +190,20 @@
  }
 
  h4{
+  text-align: left;
    font-weight:400;
    @include breakpoint(medium-max){
-    width: 80%;
-    margin-left:2rem; 
-    text-align: center;
+    width: 100%;
    ;
    }
+   
    @include breakpoint(
     small-max-m){
-      text-align: center;
-      font-size:1rem;
-      font-weight: bold;
+      font-size:1.4rem;
+      font-weight:300;
       
     }
-   
    width: 50%;
-   margin-left:2rem; 
-   
-
  }
  
- span{
-   margin-bottom:2rem;
- }
 }

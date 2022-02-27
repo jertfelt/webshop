@@ -18,9 +18,7 @@
 <body>
   <header>
     <nav class="nav__top">
-
-    <!--menu and search icons-->
-    <span class="nav__span">
+    <!--menu-->
       <!--ikon dropdown-->
         <span class="nav__mobile-menu">
           <img 
@@ -29,37 +27,6 @@
           id="menuToggle"
           class="nav__button">
         </span>
-
-        <!--search icon-->
-        <div class="search__wrapper">
-          <!--dropdown!-->
-          <span class="search__img pointer"
-          id="searchDropdown">
-            <img src ="styles/sass/img/500px-Search_Icon.svg.png"
-            alt="Leta efter produkt">
-            </span>
-        </div> 
-        <!-- search dropdown-->
-        
-        <div class="search__dropdown hidden"
-        id="searchContent">
-
-        <span class="row--mobilesame">
-          <img src ="styles/sass/img/500px-Search_Icon.svg.png"
-          alt="Leta efter produkt">
-          <label for="searchBar">
-          Sök produkt</label>
-          <input type="text" 
-          name="searchBar" 
-          class="search"
-          id="searchBarHeader" 
-          placeholder="Sök produkt">
-        </span>
-        
-        </div>
-    </span>
-
-
 <!--dropdown meny-->
       <ul id="dropDownMenu"  
           class="dropdown">
@@ -125,22 +92,22 @@
         </li>
         <li>
           <span class="search__navigation">
-        <img src ="styles/sass/img/500px-Search_Icon.svg.png"
-        alt="Leta efter produkt"
-            class="pointer">
+            <img src ="styles/sass/img/500px-Search_Icon.svg.png"
+            alt="Leta efter produkt"
+            >
             <label for="searchBar">
             Sök produkt</label>
             <input type="text" 
             placeholder="Sök produkt" 
             class="search"
-          id="searchBar"
-          name="searchbar">
+            id="searchBar"
+            name="searchbar">
         </span>
         </li>
+
       </div>
       </ul>
         
-      
   <!--logotyp-->
       <a 
       href="index.html"
@@ -151,12 +118,11 @@
         alt="logotype Ekoline" 
         class="nav__logotype"/>
       </a>
- 
 
   <!--varukorg klickbar-->
   <span class="nav__span">
     <span 
-    class="nav__cart--icon nav__span--mobile">
+    class="nav__cart--icon ">
       <img 
         src="styles/sass/img/shop-cart.png" 
             alt="Shopping cart" 
