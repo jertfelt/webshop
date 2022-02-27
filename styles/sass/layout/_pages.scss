@@ -178,3 +178,44 @@
     margin-top:2rem;
   }
 }
+
+.individual{
+  &__footer{
+    background-color: $color-black;
+    margin-bottom:-3rem;
+    margin-top:8rem;
+    padding:3rem;
+    padding-bottom:5rem;
+    h4{
+      color:$color-yellow;
+      margin-bottom:0.7rem;
+    }
+
+    &--grid{
+    width:100%;
+    max-width:70%;
+    padding-top:2rem;
+    display: grid;
+    align-items: center;
+    grid-template-rows: 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
+
+    @include breakpoint(medium-tablet-max){
+      grid-template-columns: 2fr;
+      grid-row-gap: 1rem;
+    }
+    }
+    &--moreinfo{
+      width:70%;
+      padding-top:3rem;
+
+      img{
+        width:100%;
+        border-radius:29px;
+        margin-bottom:2rem;
+      }
+    }
+  }
+}

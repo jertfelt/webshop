@@ -451,21 +451,51 @@ h6 {
 }
 
 .products__individual {
-  padding: 3rem;
-  width: 90vw;
-  margin: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 800px;
+  padding-top: 8rem;
 }
 
 @media only screen and (max-width: 768px) {
   .products__individual {
-    margin: 0 auto;
-    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
 .products__individual img {
-  width: 100%;
+  margin-top: 1rem;
+  width: 80%;
   border-radius: 29px;
+}
+
+@media only screen and (max-width: 768px) {
+  .products__individual img {
+    width: 100%;
+  }
 }
 
 .products__individual img:hover {
@@ -606,6 +636,38 @@ h6 {
   transition: all 100ms ease-in;
 }
 
+.product__columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media only screen and (max-width: 768px) {
+  .product__columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 .product__box {
   padding: 1rem;
   display: -webkit-box;
@@ -637,7 +699,6 @@ h6 {
 }
 
 .product__box--individual {
-  margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -645,20 +706,23 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.product__box--individual h3 {
-  margin-right: 20px;
+.product__box--individual p {
+  width: 80%;
 }
 
-.product__box--individual button {
-  margin-top: 1rem;
+@media only screen and (min-width: 768px) {
+  .product__box--individual p {
+    margin-top: 0.7rem;
+    width: 100%;
+  }
 }
 
 .product__box--search {
@@ -1961,6 +2025,55 @@ nav {
   color: #ece6d2;
   text-align: center;
   margin-top: 2rem;
+}
+
+.individual__footer {
+  background-color: #1b1b1b;
+  margin-bottom: -3rem;
+  margin-top: 8rem;
+  padding: 3rem;
+  padding-bottom: 5rem;
+}
+
+.individual__footer h4 {
+  color: #f2ea03;
+  margin-bottom: 0.7rem;
+}
+
+.individual__footer--grid {
+  width: 100%;
+  max-width: 70%;
+  padding-top: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-rows: 2fr;
+      grid-template-rows: 2fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+}
+
+@media only screen and (max-width: 991px) {
+  .individual__footer--grid {
+    -ms-grid-columns: 2fr;
+        grid-template-columns: 2fr;
+    grid-row-gap: 1rem;
+  }
+}
+
+.individual__footer--moreinfo {
+  width: 70%;
+  padding-top: 3rem;
+}
+
+.individual__footer--moreinfo img {
+  width: 100%;
+  border-radius: 29px;
+  margin-bottom: 2rem;
 }
 
 footer {
