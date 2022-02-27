@@ -29,24 +29,24 @@
   @include flexBox(column,center,center);
 
   article {
-padding:2rem;
-@include breakpoint(small-max-m){
-  text-align: center;
- };
+    padding:2rem;
+
+    @include breakpoint(small-max-m){
+      text-align: center;
+    };
 
     h2 {
-      margin-top:2rem;
-      margin-bottom:2rem;
-   
+        margin-top:2rem;
+        margin-bottom:2rem;
     }
   }
 
   img {
     width:100%;
     padding-bottom: 2rem;
-  border-radius:45% 55% 52% 48% / 30% 25% 55% 10%;
-  height:400px;
-  margin:0px 30px;
+    border-radius:45% 55% 52% 48% / 30% 25% 55% 10%;
+    height:400px;
+    margin:0px 30px;
 
   @include breakpoint(small-max-m){
     width:90%;
@@ -58,7 +58,9 @@ padding:2rem;
   }
 }
 
+
 .confirmation{
+
   &__twocolumns{
     
     @include flexBox(row, center,space-around);
@@ -72,15 +74,15 @@ padding:2rem;
     background-color: $color-sand;
     padding:3rem;
 
+
     h2{
-      margin-top:3rem;
+    margin-top:3rem;
     }
 
     &--right{
       @include flexBox(column,flex-start,center);
     }   
   }
-
   &__productbar{
     color:$color-black;
     line-height:2.2rem;
@@ -90,9 +92,12 @@ padding:2rem;
       font-weight: bold;
       color:$color-green;
     }
+
+
   }
     &__totalamount{
     margin-top:2rem;
     width:80%;
   }
+ 
 }
