@@ -22,7 +22,6 @@ Homepage:
 ---- Hero med välkomnande text <br>
 ---- Dynamiskt renderad lista på kategorier med kläder<br>
 
- 
 
 
 Productlist:<br>
