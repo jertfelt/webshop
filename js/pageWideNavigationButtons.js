@@ -60,8 +60,14 @@ const confirmOrderConfirmationBtn = () => {
   changeActivePage("receiptSection");
 }
 
-document.getElementById("cancelBtnOrderConfirmation").addEventListener("click", () => {
+document.getElementById("cancelBtnOrderConfirmation").addEventListener("click", (e) => {
+  e.preventDefault();
 changeActivePage("homepageSection");
+})
+
+document.getElementById("buttonBackReceipt").addEventListener("click",(e) => {
+  e.preventDefault();
+  changeActivePage("homepageSection");
 })
 
 
@@ -79,6 +85,7 @@ document.getElementById("goToRegisterUserButton").addEventListener("click", (e) 
   e.preventDefault();
 changeActivePage("createUserSection");
 })
+
 const confirmAndLogin = () => {
   changeActivePage("homepageSection")
 }

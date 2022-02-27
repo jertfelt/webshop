@@ -54,3 +54,4 @@ if (getCart() !== null) {
 if (!receiptSection.classList.contains("hidden")) {
     drawReceipt()
 }
+
