@@ -289,54 +289,74 @@ class="section hidden">
     
       <form id="orderConfirmationForm"
       class="form__confirmation">
-        
-        <label for="nameOrderConfirmation" 
-        class="hidden">
-        Namn</label>
+
+        <span class="form__confirmation--row">
+        <label 
+        for="nameOrderConfirmation"
+        >
+        Namn:
+        </label>
         <input type="text" 
         name="nameOrderConfirmation" 
         id="nameOrderConfirmation" 
         required placeholder="Namn">
-        
-        <label for="streetOrderConfirmation" 
-        class="hidden">
-          Gatuadress</label>
+        </span>
+
+        <span class="form__confirmation--row">
+        <label for="streetOrderConfirmation"
+        >
+          Gatuadress: 
+        </label>
         <input type="text" 
         name="streetOrderConfirmation" 
         id="streetOrderConfirmation" 
         required placeholder="Gatuadress">
+        </span>
 
-        <label for="postalCodeOrderConfirmation" class="hidden">
-          Postnummer</label>
+        <span class="form__confirmation--row">
+        <label for="postalCodeOrderConfirmation"
+        >
+          Postnummer:
+        </label>
         <input type="number" 
         name="postalCodeOrderConfirmation" id="postalCodeOrderConfirmation" 
         required placeholder="Postnummer">
-      
+        </span>
+
+        <span class="form__confirmation--row">
         <label for="townOrderConfirmation" 
-        class="hidden">
-          Ort</label>
+        >
+          Stad:
+        </label>
         <input type="text" 
         name="townOrderConfirmation" 
         id="townOrderConfirmation" 
         required placeholder="Ord">
+        </span>
 
+        <span class="form__confirmation--row">
         <label for="emailOrderConfirmation" 
-        class="hidden">
-          E-post</label>
+        >
+          Email:
+        </label>
         <input type="email" 
         name="emailOrderConfirmation" 
         id="emailOrderConfirmation" 
         required placeholder="E-post">
+        </span>
         
+        <span class="form__confirmation--row">
         <label for="phoneNumberOrderConfirmation"
-        class="hidden">
-          Telefonnummer</label>
+        >
+          Telefonnummer:</label>
         <input type="tel"
         name="phoneNumberOrderConfirmation" id="phoneNumberOrderConfirmation" placeholder="Telefonnummer">
-      
+        </span>
+
         <label for="commentsOrderConfirmation"
-        class="hidden">
-        Övriga kommentarer</label>
+        class="form__confirmation--txtlabel"
+        >
+        Övriga kommentarer:</label>
         <textarea name="commentsOrderConfirmation" id="commentsOrderConfirmation" 
         cols="30" 
         rows="10"

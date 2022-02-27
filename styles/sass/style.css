@@ -887,12 +887,31 @@ h6 {
   padding: 0.3rem;
 }
 
+.form__confirmation--row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
 .form__confirmation input {
+  margin-left: 30rem;
   padding: 0.4rem;
   border-radius: 9px;
   border: none;
   background-color: #fbfbfb;
   margin: 0.4rem;
+  width: 50%;
 }
 
 .form__confirmation ::-webkit-input-placeholder {
@@ -920,7 +939,12 @@ h6 {
   border-radius: 9px;
   border: none;
   background-color: #fbfbfb;
-  margin: 0.4rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.form__confirmation--txtlabel {
+  margin-top: 1rem;
 }
 
 .form__confirmation button {
