@@ -91,10 +91,12 @@
 
     document.getElementById("orderConfirmationForm").addEventListener("submit", (e) => {
       saveOrderDetails();
+      //*eventuell setTimer funktion här
       confirmOrderConfirmationBtn();
       e.preventDefault();
     });
 
+ 
 
   //*--------rabattkod
 
@@ -121,7 +123,7 @@
       let inputCode = securityInput.value;
       const rabattOrder = document.getElementById("saleCodeMsg");
         
-// //*------animation function    
+ 
       const loadingContainer = document.querySelector(".loading__div");
 
       let inputRight = inputCode.toUpperCase();
@@ -252,3 +254,21 @@ const tester2 = [{
 localStorage.setItem("cart", JSON.stringify(tester2));
 localStorage.setItem("totalPriceOrder", JSON.stringify(100));
 */
+
+
+
+//*----set Timeout för"nästa knapp", någon bugg med css fixar i mån av tid:
+
+
+// const loadingReceiptSpinner = document.getElementById("loadingReceiptSpinner");
+// loadingSpinner = document.g
+// loadingReceiptSpinner.classList.remove("hidden");
+
+// const receiptSpinner = document.getElementById("receiptSpinner");
+
+
+// setTimeout(() => {
+//   loadingReceiptSpinner.classList.add("hidden");
+//   loadingReceiptSpinner.children.classList.add("hidden");
+//   confirmOrderConfirmationBtn();
+// }, 2000);
