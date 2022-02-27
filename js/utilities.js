@@ -127,7 +127,7 @@ const updateAmountCartNav = () => {
   headerCartAmount.innerText = amountCartNav;
 };
 
-//*-------showing today's date (bonus)
+//*-------showing today's date 
 
 let today = new Date().toJSON().slice(0,10).replace(/-/g, ' ');
 

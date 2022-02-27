@@ -44,8 +44,12 @@ if (getCart() !== null) {
 
   const receiptFooterPrice = document.getElementsByClassName("receipt__footer--price")[0];
 
+  const priceWithSale = JSON.parse(localStorage.getItem("sale"));
+  
+  const roundingPrice = Math.trunc(priceWithSale);
+
   receiptFooterPrice.innerHTML=`
-   <h4> Totalt: ${getTotalPriceOrder()} SEK</h4>
+   <h4> Totalt: ${roundingPrice} SEK</h4>
     `
 }
 

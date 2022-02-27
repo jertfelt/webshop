@@ -104,6 +104,9 @@
   const securityInput = document.getElementById("securitycode");
 
 
+    
+
+
   const getTotalPrice = (rabatt) => {
    
     const totalPriceWRabatt = document.getElementById("orderProductsTotalAmount");
@@ -111,9 +114,14 @@
 
     const stringToInt = parseInt(priceString);
     ;
-    const totalPrice = (stringToInt * rabatt); 
+    const mathPrice = (stringToInt * rabatt); 
+
+    const totalPrice = Math.trunc(mathPrice);
 
     totalPriceWRabatt.innerHTML = `Total kostnad: <br> ${totalPrice} kr`;
+
+    return JSON.parse(localStorage.setItem("sale", JSON.stringify(totalPrice)));
+
   }
 
   //*-----rabatt:
@@ -127,7 +135,8 @@
       const rabattOrder = document.getElementById("saleCodeMsg");
     
 
-      if(inputRight == "FEND21"){   
+      if(inputRight == "FEND21"){
+           
         let rabatt = 0.75;
         securityButton.classList.add("hidden")
         rabattOrder.innerText="Laddar..";
@@ -187,9 +196,6 @@ securityInput.addEventListener('keydown', function(event){
 
 
 
-
-
-
     
 //Submit button
   /*document.getElementById("orderConfirmationForm").addEventListener("submit", (e) => {
@@ -202,61 +208,6 @@ securityInput.addEventListener('keydown', function(event){
 
 
 
-
-// //test code
-// const tester2 = [{
-//   "sys": { "id": "4" },
-//   "category": "Dam",
-//   "fields": {
-//     "title": "Pants",
-//     "price": 219,
-//     "description": "Byxor gjord på återvunnen bomull, perfekt för myset hemma i covidtider",
-//     "image": { "fields": { "file": { "url": "styles/sass/img/womens-traveller-pants.png" } } }
-//   }
-// },
-// {
-//   "sys": { "id": "5" },
-//   "category": "Dam",
-//   "fields": {
-//     "title": "I am hat",
-//     "price": 500,
-//     "description": "En varm och mysig handgjord virkad mössa, gjord av hantverkare på Gotland.",
-//     "image": { "fields": { "file": { "url": "styles/sass/img/women-hat.png" } } }
-//   }
-// }];
-// localStorage.setItem("cart", JSON.stringify(tester2));
-// localStorage.setItem("totalPriceOrder", JSON.stringify(100));
-
-
-//Get cart from local storage
-//Remove later
-    //const productsOrder = JSON.parse(localStorage.getItem("cart"));
-
-
-/*//test code
-const tester2 = [{
-  "sys": { "id": "4" },
-  "category": "Dam",
-  "fields": {
-    "title": "Pants",
-    "price": 219,
-    "description": "Byxor gjord på återvunnen bomull, perfekt för myset hemma i covidtider",
-    "image": { "fields": { "file": { "url": "styles/sass/img/womens-traveller-pants.png" } } }
-  }
-},
-{
-  "sys": { "id": "5" },
-  "category": "Dam",
-  "fields": {
-    "title": "I am hat",
-    "price": 500,
-    "description": "En varm och mysig handgjord virkad mössa, gjord av hantverkare på Gotland.",
-    "image": { "fields": { "file": { "url": "styles/sass/img/women-hat.png" } } }
-  }
-}];
-localStorage.setItem("cart", JSON.stringify(tester2));
-localStorage.setItem("totalPriceOrder", JSON.stringify(100));
-*/
 
 
 

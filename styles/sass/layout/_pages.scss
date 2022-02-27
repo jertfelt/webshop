@@ -186,12 +186,14 @@
     margin-bottom:-2rem;
     padding-bottom:1rem;
   }
+
   &__footer{
     background-color: $color-black;
     margin-bottom:-3rem;
     margin-top:8rem;
     padding:3rem;
     padding-bottom:5rem;
+
     h4{
       color:$color-yellow;
       margin-bottom:0.7rem;
@@ -213,6 +215,7 @@
       grid-row-gap: 1rem;
     }
     }
+    
     &--moreinfo{
       width:70%;
       padding-top:3rem;
