@@ -103,14 +103,14 @@
     min-height: 90vh;
     margin:-2rem;
     @include breakpoint(small-max-m){
-      min-height:50vh;
+      min-height:80vh;
     }
   }
   
   &__container{
     min-height:90vh;
     @include breakpoint(small-max-m){
-      min-height:50vh;
+      min-height:90vh;
     }
     @include flexBox(column,center,center);
     position: fixed;
@@ -123,9 +123,60 @@
   }
 
   &__box{
-    @include flexBox(column,center,center);
+    @include flexBox(column,flex-start,center);
     background-color: $color-white;
     padding:2rem;
     border-radius: 29px;
+    @include breakpoint(small-max-m){
+      width:90%;
+
+      h2{
+        margin-top:1rem;
+      }
+    }
+  }
+  &__content{
+    @include flexBox(column,flex-start,center);
+    padding-top:2rem;
+    padding-bottom:2rem;
+
+    h3{
+      line-height:2em;
+    }
+  }
+
+  &__footer{
+    align-self: center;
+    width:80%;
+    padding:1rem;
+    border-radius: 19px;
+    background-color: $color-sand;
+    text-align: center;
+  } 
+
+  &__text{
+    margin-bottom:-2rem;
+  }
+
+  // &__list{
+  //   ul{
+  //    background-color: $color-green;
+  //    @include flexBox(row,center,center);
+  //     li{
+  //       list-style-type: none;
+  //     }
+  //   }
+  //   margin-bottom:1rem;
+  // }
+
+  &__img{
+    height:80px;
+    border-radius: 19px;
+  }
+
+  &__date{
+    color: $color-sand;
+    text-align: center;
+    margin-top:2rem;
   }
 }

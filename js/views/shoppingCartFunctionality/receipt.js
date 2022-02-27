@@ -8,17 +8,17 @@ const receiptContainer = document.getElementById("receiptSection");
 //*-----------creating the receipt
 const drawReceipt = () => {
     const orderInformationReceipt = JSON.parse(localStorage.getItem("orderInformation"));
-    console.log(orderInformationReceipt);
+
 
 const receiptText = document.getElementsByClassName("receipt__text")[0];
 
 if (orderInformationReceipt !== null) {
 receiptText.innerHTML = `
-        <p>${orderInformationReceipt.name}</p>
-        <p>${orderInformationReceipt.street}</p>
-        <p>${orderInformationReceipt.postalCode} ${orderInformationReceipt.town}</p>
-        <p>${orderInformationReceipt.tel}</p>
-        <p>${orderInformationReceipt.email}</p>
+        <p>Namn: ${orderInformationReceipt.name}</p>
+        <p>Gata: ${orderInformationReceipt.street}</p>
+        <p>Stad: ${orderInformationReceipt.postalCode} ${orderInformationReceipt.town}</p>
+        <p>Telefon: ${orderInformationReceipt.tel}</p>
+        <p>Email: ${orderInformationReceipt.email}</p>
         <p>${orderInformationReceipt.comment}</p>
 `;
 }
@@ -34,11 +34,17 @@ receiptProductListContainer.appendChild(receiptProductList);
 
 if (getCart() !== null) {
     getCart().forEach(product => {
-        let productName = document.createElement("li");
+        console.log(product);
+        let productName = document.createElement("ul");
         productName.classList.add("receipt__list--item")
-        productName.innerHTML = `${product.quantity} x ${product.fields.title}`;
+        productName.innerHTML = `
+        <li class="receipt__list--row">
+        <img src="${product.fields.image.fields.file.url}"
+        class="receipt__img">
+        <p>${product.quantity} st ${product.fields.title}</p>
+        <p>${product.fields.price}kr</p>
+        <li>`;
         receiptProductList.appendChild(productName);
-        console.log("testar den här")
     });
   }
 
