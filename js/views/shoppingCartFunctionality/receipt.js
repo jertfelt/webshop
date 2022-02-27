@@ -24,26 +24,20 @@ receiptText.innerHTML = `
 }
 //ul list for products
 
-const receiptProductList = document.createElement("ul");
-receiptProductList.classList.
-add("receipt__list--ul");
-const receiptProductListContainer = document.getElementsByClassName("receipt__list")[0];
-receiptProductListContainer.appendChild(receiptProductList);
+const receiptProductList = document.getElementsByClassName("products__grid--receipt")[0];
 
 //Användarens köpta produkter
 
 if (getCart() !== null) {
     getCart().forEach(product => {
-        console.log(product);
-        let productName = document.createElement("ul");
+        let productName = document.createElement("article");
         productName.classList.add("receipt__list--item")
         productName.innerHTML = `
-        <li class="receipt__list--row">
         <img src="${product.fields.image.fields.file.url}"
         class="receipt__img">
-        <p>${product.quantity} st ${product.fields.title}</p>
-        <p>${product.fields.price}kr</p>
-        <li>`;
+        <p>${product.quantity} st <br>${product.fields.title}<br>
+        ${product.fields.price}kr</p>
+        `;
         receiptProductList.appendChild(productName);
     });
   }

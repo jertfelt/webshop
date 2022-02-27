@@ -134,13 +134,17 @@
         margin-top:1rem;
       }
     }
+    button{
+      align-self: center;
+    }
   }
   &__content{
     @include flexBox(column,flex-start,center);
-    padding-top:2rem;
-    padding-bottom:2rem;
+    
+    padding-bottom:3rem;
 
     h3{
+      
       line-height:2em;
     }
   }
@@ -157,17 +161,6 @@
   &__text{
     margin-bottom:-2rem;
   }
-
-  // &__list{
-  //   ul{
-  //    background-color: $color-green;
-  //    @include flexBox(row,center,center);
-  //     li{
-  //       list-style-type: none;
-  //     }
-  //   }
-  //   margin-bottom:1rem;
-  // }
 
   &__img{
     height:80px;
