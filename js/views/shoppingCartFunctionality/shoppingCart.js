@@ -66,7 +66,10 @@ const drawProductsinCart = () => {
           <h4>${product.fields.title}</h4>
           <h5 class="text--green">${product.amount} kr</h5>
           <span id="deleteBtn">
-          <img src="styles/sass/img/icons8-trash-24.png" alt="Ta bort varan"></span>
+          <img src="styles/sass/img/icons8-trash-24.png" 
+          alt="Ta bort varan"
+          id="deleteIcon"/>
+          </span>
         </div>
         <span class="cart--adding">
           <i class="fas fa-chevron-up" id="addBtn"></i>
@@ -342,7 +345,8 @@ const setCartEventListener = () => {
         showCart();
         return;
       }
-      if (e.target.id == "deleteBtn") {
+      if (e.target.id == "deleteBtn" || e.target.id =="deleteIcon") {
+       
         deleteProduct(prodID);
         updateAmountCartNav();
         return;
