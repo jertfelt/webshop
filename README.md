@@ -13,20 +13,22 @@ https://www.figma.com/file/bIcYUoAzHiwllVAUTerVmw/Ekoline?node-id=0%3A1
 Se kravlistan här:
 https://github.com/jertfelt/webshop/blob/main/kravlista.txt
 
-Homepage:
-- Navigation bar <br>
----- Länkar med querystrings <br>
----- Klickbar kundvagn som leder till varukorg (dropdown) <br>
----- Är du inloggad? Ska synas här uppe 
-<br><br>
----- Hero med välkomnande text <br>
----- Dynamiskt renderad lista på kategorier med kläder<br>
+![image](https://user-images.githubusercontent.com/30622818/155895907-8355aece-4f7f-40bd-9fb3-47173ec07e26.png)
+![image](https://user-images.githubusercontent.com/30622818/155895934-56b7734d-8e1a-4c8c-997e-58a814da94bd.png)
+![image](https://user-images.githubusercontent.com/30622818/155897271-1b3c524e-a8a4-496e-a970-e404d8c7dd48.png)
+![image](https://user-images.githubusercontent.com/30622818/155897280-c769e480-2133-4b7a-a085-f39740d98448.png)
 
+![image](https://user-images.githubusercontent.com/30622818/155897285-b0f86258-2f07-49d5-87b9-ae8ea8a64627.png)
+![image](https://user-images.githubusercontent.com/30622818/155897298-20845b4d-7224-4654-bab8-0649a83a7852.png)
 
+![image](https://user-images.githubusercontent.com/30622818/155897313-3370b229-df2d-4cbc-92c1-3ca3b8e4ebdd.png)
+![image](https://user-images.githubusercontent.com/30622818/155897321-a1ae38e5-519d-48d0-ba7d-f3a690d59378.png)
+![image](https://user-images.githubusercontent.com/30622818/155897335-0206b6d3-b870-42d5-aa9c-0a53860518d8.png)
+![image](https://user-images.githubusercontent.com/30622818/155897432-727bd8eb-6a3a-4ef5-aa41-bbab07381d7d.png)
+![image](https://user-images.githubusercontent.com/30622818/155897464-b7d1264c-d2bb-409d-80de-bf83355bb8e9.png)
 
-Productlist:<br>
-Här ser man en kategori av klädesmärken, och produkter som går in under den kategorin.<br>
---- Klickbar bild som leder till en individuell produktbeskrivning<br>
---- Klickbar knapp "KÖP" som lägger till varan i kundvagnen<br>
+![image](https://user-images.githubusercontent.com/30622818/155897469-75264aac-b868-4161-86d0-661175a860dd.png)
+![image](https://user-images.githubusercontent.com/30622818/155897475-d3e22e03-e88c-4fea-bd47-574763a1568c.png)
+![image](https://user-images.githubusercontent.com/30622818/155897484-24b6c7f0-af4a-4603-8932-80eb92363cd2.png)
 
-
+![image](https://user-images.githubusercontent.com/30622818/155897556-62ce9cda-4be8-4594-ad80-adce87a1ee4c.png)
