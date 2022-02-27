@@ -3,25 +3,53 @@
 .button{
   
 
-  &__dropdown{
+  &__usual{
       padding: 1rem 2rem;
       text-transform: uppercase;
       font-size: 1rem;
       font-weight: bold;
-      background: $color-yellow;
-      color: $color-black;
+      background: $color-black;
+      color: $color-white;
       border: none;
       transition: $mainTransition;
       cursor: pointer;
       margin-top:1rem;
       border-radius: 19px;
+
+      &--small{
+        padding: 0.3rem 0.3rem;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: bold;
+        background:  $color-yellow;
+        color: $color-black;
+        border: none;
+      }
+
+      &--clear{
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: bold;
+        background:  $color-white;
+        color: $color-black;
+        border: none;
       
+        cursor: pointer;
+        margin-top:1rem;
+        border-radius: 19px;
+      }
+      &--clear:hover{
+        background: $color-yellow;
+        transition: $mainTransition;
+      }
   }
 
-  &__dropdown:hover{
+
+  &__usual:hover{
+    transition: $mainTransition;
     background: $color-green;
     color: $color-yellow;
- 
   }
 
   &__span{

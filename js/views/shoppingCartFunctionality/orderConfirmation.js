@@ -8,35 +8,38 @@
     const productOrderConfirmation = document.createElement("article");
     
     const productInformationDivOrderConfirmation = document.createElement("div");
-    const imgOrderConfirmation = document.createElement("img");
 
-    const productNameOrderConfirmation = document.createElement("p");
+    const imgOrderConfirmation = document.createElement("img");
+    const productNameOrderConfirmation = document.createElement("h3");
     const amountOrderConfirmation = document.createElement("p");
     const quantityOrderConfirmation = document.createElement("p");
 
+    //connecting with localstorage:
+
     imgOrderConfirmation.src = img;
-   
     productNameOrderConfirmation.innerText = name;
     amountOrderConfirmation.innerText = `${amount}kr`;
     quantityOrderConfirmation.innerText = `${quantity} st`;
-    productInformationDivOrderConfirmation.appendChild( quantityOrderConfirmation);
+
+    //appending: 
+    productInformationDivOrderConfirmation.appendChild(quantityOrderConfirmation);
 
     productInformationDivOrderConfirmation.appendChild(productNameOrderConfirmation);
     productInformationDivOrderConfirmation.appendChild(amountOrderConfirmation);
    
 
     productOrderConfirmation.appendChild(imgOrderConfirmation);
-    productOrderConfirmation.appendChild(productInformationDivOrderConfirmation);
 
+    productOrderConfirmation.appendChild(productInformationDivOrderConfirmation);
 
     document.querySelector("#orderProductsSummation").appendChild(productOrderConfirmation);
 
-    productOrderConfirmation.classList.add("product__img--container");
-    productOrderConfirmation.classList.add("confirmation__div")
-    imgOrderConfirmation.classList.add("product__img");
-    quantityOrderConfirmation.classList.add("confirmation__quantity");
-    productInformationDivOrderConfirmation.classList.add("confirmation__row")
-    amountOrderConfirmation.classList.add("confirmation__amount")
+    //adding classes to elements
+  
+    productOrderConfirmation.classList.add("products__grid--confirmation")
+    
+    productInformationDivOrderConfirmation.classList.add("confirmation__productbar");
+
   }
 
 //Go through each product in cart and send it to print
@@ -51,7 +54,7 @@
 //Adds total price
     const addTotalPriceOrderConfirmation = () => {
       const totalPriceText = document.getElementById("orderProductsTotalAmount");
-      totalPriceText.innerText = `Total kostnad: ${getTotalPriceOrder()} kr`;
+      totalPriceText.innerHTML = `Total kostnad: <br>  ${getTotalPriceOrder()} kr`;
     }
     addTotalPriceOrderConfirmation();
 
@@ -91,6 +94,97 @@
       confirmOrderConfirmationBtn();
       e.preventDefault();
     });
+
+
+  //*--------rabattkod
+
+  const securityButton = document.getElementById("securityCodeBtn");
+  const securityInput = document.getElementById("securitycode");
+
+
+  const getTotalPrice = (rabatt) => {
+   
+    const totalPriceWRabatt = document.getElementById("orderProductsTotalAmount");
+    const priceString =  JSON.parse(localStorage.getItem("totalPriceOrder"));
+
+    const stringToInt = parseInt(priceString);
+    ;
+    const totalPrice = (stringToInt * rabatt); 
+
+    totalPriceWRabatt.innerHTML = `Total kostnad: <br> ${totalPrice} kr`;
+  }
+
+  //*-----rabatt:
+
+    const saleCode = () => {
+      
+      let inputCode = securityInput.value;
+      const rabattOrder = document.getElementById("saleCodeMsg");
+        
+// //*------animation function    
+      const loadingContainer = document.querySelector(".loading__div");
+
+      let inputRight = inputCode.toUpperCase();
+
+      if(inputRight == "FEND21"){   
+        let rabatt = 0.75;
+        loadingContainer.classList.remove("hidden");
+        securityButton.classList.add("hidden")
+        setTimeout(() => {
+          loadingContainer.classList.add("hidden");
+          securityButton.classList.remove("hidden")
+          rabattOrder.innerText= "Du får 25% rea!";
+          getTotalPrice(rabatt);
+        }, 2000);
+        
+ 
+        }
+
+      else if(inputRight == "MARS"){
+        let rabatt = 0.90;
+        loadingContainer.classList.remove("hidden");
+        securityButton.classList.add("hidden")
+        setTimeout(() => {
+          loadingContainer.classList.add("hidden");
+          securityButton.classList.remove("hidden")
+          rabattOrder.innerText= "Du får 10% rea!";
+          getTotalPrice(rabatt);
+        }, 2000);
+   
+      }
+
+      else {
+        loadingContainer.classList.remove("hidden");
+        securityButton.classList.add("hidden")
+        setTimeout(() => {
+          loadingContainer.classList.add("hidden");
+          securityButton.classList.remove("hidden")
+          rabattOrder.classList.remove("text--green");
+        rabattOrder.innerText = "Fel kod! Prova igen!";
+        
+      }, 2000);
+      }
+    }
+
+//eventlisteners
+securityButton.addEventListener("click", () =>{
+      saleCode();
+    }
+        );
+        
+securityInput.addEventListener('keydown', function(event){
+
+  if(event.key == "Enter"){
+    saleCode();
+  }
+})
+
+
+
+
+
+
+
     
 //Submit button
   /*document.getElementById("orderConfirmationForm").addEventListener("submit", (e) => {

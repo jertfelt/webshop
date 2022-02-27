@@ -24,25 +24,27 @@ li {
   display: block;
   margin-bottom: 10px;
   padding:0.2rem;
+  a {
+    font-size: 22px;
+    font-weight:bold;
+    display: block;
+    padding: 0px 0;
+    text-align: center;
+    text-decoration: none;
+    color: $color-green;
+  }
+  
+  a:visited{
+    color:$color-green;
+  }
+  
+  a:hover{
+    color: $color-black;
+    text-transform: uppercase;
+  }
 }
 
-a {
-  font-size: 22px;
-  font-weight:bold;
-  display: block;
-  padding: 0px 0;
-  text-align: center;
-  text-decoration: none;
-}
 
-a:visited{
-  color:$color-green;
-}
-
-a:hover{
-  color: $color-black;
-  text-transform: uppercase;
-}
 
 }
 
@@ -77,24 +79,19 @@ a:hover{
   }
   &--child{
   width:80%;
-  
 
   p{
     margin-top:0.5rem;
-    opacity:0;
+    text-transform:uppercase;
+    
   }
-  }
-
-  &--child:hover{
-    p{
+    p:hover{
     text-decoration: underline;
     color: $color-black;
-    text-transform:uppercase;
-    opacity:1;
+    
+   
   }
-  img{
-    opacity: 0.5;
-  }
+  
   }
   
 }

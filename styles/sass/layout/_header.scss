@@ -33,25 +33,10 @@ nav{
     }
   }
 
-  &__categories{
-    &--imgtxt{
-      border-radius: 19px;
-      padding:0.6rem;
-      p{
-        margin: 0 auto;
-      }
-    }
-    
-  &--img{
-    position: relative;
-    overflow: hidden;
-    width:100%;
-    border-radius: 29px;
-  }
-}
+  
   &__logotype{
   max-height:90px;
-  margin-left:-100px;
+
 }
 
  &__logotype:hover{
@@ -82,10 +67,6 @@ nav{
 }
 
  &__user{
-   @include breakpoint(xxsmall-max-m){
-     visibility:hidden;
-   };
-   
    background-color: $color-green;
    border-radius: 50%;
    padding:0.4rem;

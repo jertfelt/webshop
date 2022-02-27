@@ -66,13 +66,16 @@ const drawProductsinCart = () => {
           <h4>${product.fields.title}</h4>
           <h5 class="text--green">${product.amount} kr</h5>
           <span id="deleteBtn">
-          <img src="styles/sass/img/closing.png" alt="Ta bort varan"></span>
+          <img src="styles/sass/img/icons8-trash-24.png" 
+          alt="Ta bort varan"
+          id="deleteIcon"/>
+          </span>
         </div>
-        <div>
+        <span class="cart--adding">
           <i class="fas fa-chevron-up" id="addBtn"></i>
           <p class="text--bold text--green">${product.quantity}</p>
           <i class="fas fa-chevron-down" id="decreaseBtn"></i>
-        </div> 
+        </span> 
       </div>
       `
       cartContent.appendChild(cartDiv);
@@ -90,7 +93,7 @@ const drawTotalPriceOrderinCart = () => {
 // Lägger till produkter i local storage
 const addToCart = (prodID) => {
   // Hittar rätt produkt och hämtar datan.
-  const selectedProductData = productList.find(product => product.sys.id === prodID);
+  const selectedProductData = allProductsArray.find(product => product.sys.id === prodID);
   // Hämtar produkter från local storage
   const existingProductList = getCart();
   // Kollar om det redan finns produkter i cart
@@ -322,7 +325,10 @@ document.getElementById("toConfirmation").addEventListener("click",
  })
 
  //!bugg: syns inte något tar över  (T)
-cartNavBtn.addEventListener("click", showCart);
+cartNavBtn.addEventListener("click", () => {
+  closeDropDown();
+  showCart();
+});
 
 // Lägg till event listener på varje produkt i varukorg. Kör funktion kopplat till klickat knapp: lägga till, radera produkt och minska antal produkt
 const setCartEventListener = () => {
@@ -339,7 +345,8 @@ const setCartEventListener = () => {
         showCart();
         return;
       }
-      if (e.target.id == "deleteBtn") {
+      if (e.target.id == "deleteBtn" || e.target.id =="deleteIcon") {
+       
         deleteProduct(prodID);
         updateAmountCartNav();
         return;

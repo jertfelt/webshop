@@ -29,76 +29,66 @@
   @include flexBox(column,center,center);
 
   article {
-padding:2rem;
-@include breakpoint(small-max-m){
-  text-align: center;
- };
+    padding:2rem;
+
+    @include breakpoint(small-max-m){
+      text-align: center;
+    };
 
     h2 {
-      margin-top:2rem;
-      margin-bottom:2rem;
-   
+        margin-top:2rem;
+        margin-bottom:2rem;
     }
   }
 
   img {
     width:100%;
     padding-bottom: 2rem;
-  border-radius:45% 55% 52% 48% / 30% 25% 55% 10%;
-  height:400px;
-  margin:0px 30px;
+    border-radius:45% 55% 52% 48% / 30% 25% 55% 10%;
+    height:400px;
+    margin:0px 30px;
+
   @include breakpoint(small-max-m){
     width:90%;
   };
   }
+
   img:hover{
     border-radius:100%;
   }
 }
 
-
 .confirmation{
+
+  &__twocolumns{
+    padding-top:1rem;
+    @include flexBox(row, flex-start,space-around);
+      @include breakpoint (small-max-m){
+       @include flexBox(column,center,space-between)
+      }
+  }
+
   &__container{
-    margin-top:5rem;
-  
-    h2{
-    margin-bottom:2rem;
-    }
-  }
-  &__div{
-    background-color: $color-green;
     padding:2rem;
-    border-radius: 29px;
-    color: $color-white;
-  }
 
-  &__row{
-    @include flexBox(row,center,space-between);
-    padding-top: 1rem;
+    &--right{
+      @include flexBox(column,flex-start,center);
+      padding:2rem;
+    }   
+  }
+  &__productbar{
+    color:$color-black;
+    line-height:2.2rem;
+
     p{
+      font-size:1.4rem;
       font-weight: bold;
-      font-size:1.5rem;
+      color:$color-green;
     }
-  }
 
-  &__amount{
-    margin-left:6%;
-    font-weight: bolder;
-    color:$color-yellow;
   }
-  &__amount:hover{
-    color:$color-white;
+    &__totalamount{
+    margin-top:1rem;
   }
-
-  &__quantity{
-    color:$color-yellow;
-    margin-left:6%;
-    font-weight: bold;
-  }
-
-  &__totalamount{
-    padding:3rem;
-    margin: 0 auto;
-  }
-
+ 
 }

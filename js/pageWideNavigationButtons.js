@@ -45,9 +45,7 @@ document.getElementById("searchBar").addEventListener("keypress", (e) => {
   }
 })
 
-//-----links for footer
 
-//------homepage
 
 //------user nav
 
@@ -55,11 +53,6 @@ const userNavLogInRegister = () => {
   changeActivePage("loginSection");
 }
 
-//------cart (go to product shown in cart)
-
-//------categories
-
-//-----product individual site
 
 //------orderconfirmation (beställning)
 
@@ -70,7 +63,7 @@ const confirmOrderConfirmationBtn = () => {
 document.getElementById("cancelBtnOrderConfirmation").addEventListener("click", () => {
 changeActivePage("homepageSection");
 })
-//-------receipt section
+
 
 //-------register
 const confirmAndExitCreateUser = () => {

@@ -16,13 +16,10 @@
 </head>
 
 <body>
-
-
-
   <header>
     <nav class="nav__top">
 
-          <!--menu and search icons-->
+    <!--menu and search icons-->
     <span class="nav__span">
       <!--ikon dropdown-->
         <span class="nav__mobile-menu">
@@ -46,17 +43,19 @@
         
         <div class="search__dropdown hidden"
         id="searchContent">
+
         <span class="row--mobilesame">
           <img src ="styles/sass/img/500px-Search_Icon.svg.png"
           alt="Leta efter produkt">
-        <label for="searchBar">
+          <label for="searchBar">
           Sök produkt</label>
-        <input type="text" 
-        name="searchBar" 
-        class="search"
-        id="searchBarHeader" 
-        placeholder="Search product">
+          <input type="text" 
+          name="searchBar" 
+          class="search"
+          id="searchBarHeader" 
+          placeholder="Sök produkt">
         </span>
+        
         </div>
     </span>
 
@@ -81,7 +80,6 @@
         </li>
         <li>
           <a 
-          href="index.html"
           id="cartLinkNav">
           Varukorg
           </a> 
@@ -91,43 +89,28 @@
           <!--start of nested category-->
           <ul class="list__nested hidden"> 
 
-            <li>
-              <span class="outer list__nested--child">
-                <span class="inner nav__categories--imgtxt">
-                <p>Damkläder</p></span>
-                <a 
-                href="index.html"
-                id="damLinkNav">
-                  <img src="styles/sass/img/women-clothing-banner.png"
-                  alt="Damkläder"
-                  class="nav__categories--img">
+            <li> 
+              <span class="list__nested--child">
+              <a 
+              href="index.html"
+              id="damLinkNav">
+                <p>Dam</p>
               </a> 
             </span>
             </li>
-
             <li>  
-              <span class="outer list__nested--child">
-              <span class="inner nav__categories--imgtxt">
-                <p>Herrkläder</p>
+              <span class="list__nested--child">
+                <a href="index.html"
+                id="herrLinkNav">
+                  <p>Herr</p>
+                </a> 
               </span>
-              <a href="index.html"
-              id="herrLinkNav">
-                <img src="styles/sass/img/men-clothing-banner.png"
-                alt="Herrkläder"
-                class="nav__categories--img">
-              </a> 
-          </span>
             </li>
             <li>
-              <span class="outer list__nested--child">
-                <span class="inner nav__categories--imgtxt">
-                 <p>Babykläder</p>
-                </span>
-                <a href="index.html"
-                id="babyLinkNav">
-                  <img src="styles/sass/img/baby-clothing.png"
-                  alt="Babykläder"
-                  class="nav__categories--img">
+              <a href="index.html"
+              id="babyLinkNav">
+              <span class=" list__nested--child">
+                 <p>Baby</p>
                 </a> 
             </span>
             </li>
@@ -137,7 +120,7 @@
           <a 
           href="index.html"
           id="loginLinkNav"
-          >Logga in/ Registrera dig
+          >Logga in/ Bli medlem
           </a> 
         </li>
         <li>
@@ -171,9 +154,9 @@
  
 
   <!--varukorg klickbar-->
-  <span class="nav__span nav__span--mobile">
+  <span class="nav__span">
     <span 
-    class="nav__cart--icon">
+    class="nav__cart--icon nav__span--mobile">
       <img 
         src="styles/sass/img/shop-cart.png" 
             alt="Shopping cart" 
@@ -207,8 +190,8 @@
   <main>
   
   
-    <!--välkommen-->
-    <section class="homepage section"
+  <!--välkommen-->
+  <section class="homepage section"
     id="homepageSection">
     <div class="hero">
       <div class="hero__transparentBack">
@@ -220,12 +203,7 @@
         </div>
       </div>
     </div>
-      <!--div for a "loading symbol" (redo att läggas in i valfritt element, funktion finns i utilities.js och _animation.scss)
-       <span class="loading__div">
-      <span class="loading__container">
-        <span class="loading__circle loading">
-      </span>
-    </span> -->
+    
     <section id="categoriesSection" 
     class="categories">
       <article>
@@ -245,19 +223,29 @@
          Våra produkter är lokalt producerade i Sverige, med återvunna eller lokalproducerat material.
         </p>
       </article>
-      </section>
+    </section>
  
-      <section id="categoriesGridSection" 
-               class="products__grid--categories">
-      </section>
- </section>
+    <section id="categoriesGridSection" 
+              class="products__grid--categories">
+    </section>
+  </section>
+
   <section id="productListSection" 
   class="section hidden">
   </section>
 
-
   <section id="searchSection" 
   class="section hidden">
+    <div class="search__container"
+    id="searchDiv">
+      <div id="loadingSearch" class="loading__search hidden">
+        <span class="search__loader"
+        id="searchSpinner">
+              Laddar.. 
+        </span>
+      </div>
+    </div>
+  </section>
 
   <section id="individualProductSection" 
   class="section hidden">
@@ -266,121 +254,256 @@
 <!--varor + logga in/skriv in på formulär-->
   <section id="orderConfirmationSection"
 class="section hidden">
+  <div class="confirmation__twocolumns">
   <article class="confirmation__container">
-    <h2 class="text--green text--centered">Dina Produkter:</h2>
-    <div id="orderProductsSummation"
-    class="products__grid--confirmation">
+    <h2 class="text--green">Dina Produkter:</h2>
+    <div id="orderProductsSummation">
     </div>
+    
+    <span class="securityinput">
+      <h3>Har du en rabattkod?</h3>
+      <br>
+      <label for="securitycode">
+          Ange rabattkod</label>
+      <br>
+      <input type="text"
+            name="securitycode" id="securitycode">
+      <span>
+        <button type="submit" id="securityCodeBtn" class="button__usual--small">
+        Lägg till </button>
+        <div class="loading__div hidden">
+          <span class="loader">
+                  <!-- Laddar.. -->
+            </span>
+        </div>
+      </span>
+         
+      <p>
+      En rabattkod kan till exempel vara ”SOMMAR2022”</p>
+      <p id="saleCodeMsg" class="text--green"></p>
+             
+  
+    </span>
     <h3 id="orderProductsTotalAmount"
-    class="confirmation__totalamount text--xl text--centered">
+    class="confirmation__totalamount text--m">
     </h3>
+
   </article>
 
-  <article id="yourOrderInformation">
-    <h2>Dina Detaljer:</h2>
-    <form id="orderConfirmationForm">
-      <label for="nameOrderConfirmation" class="hidden">Namn</label>
-      <input type="text" name="nameOrderConfirmation" id="nameOrderConfirmation" required placeholder="Namn">
-      
-      <label for="streetOrderConfirmation" class="hidden">Gatuadress</label>
-      <input type="text" name="streetOrderConfirmation" id="streetOrderConfirmation" required placeholder="Gatuadress">
-
-      <label for="postalCodeOrderConfirmation" class="hidden">Postnummer</label>
-      <input type="number" name="postalCodeOrderConfirmation" id="postalCodeOrderConfirmation" required placeholder="Postnummer">
+  <article id="yourOrderInformation" class="confirmation__container--right">
     
-      <label for="townOrderConfirmation" class="hidden">Ort</label>
-      <input type="text" name="townOrderConfirmation" id="townOrderConfirmation" required placeholder="Ord">
-
-      <label for="emailOrderConfirmation" class="hidden">E-post</label>
-      <input type="email" name="emailOrderConfirmation" id="emailOrderConfirmation" required placeholder="E-post">
-      
-      <label for="phoneNumberOrderConfirmation" class="hidden">Telefonnummer</label>
-      <input type="tel" name="phoneNumberOrderConfirmation" id="phoneNumberOrderConfirmation" placeholder="Telefonnummer">
+    <h2 class="text--green">
+      Dina Detaljer:</h2>
     
-      <label for="commentsOrderConfirmation" class="hidden">Övriga kommentarer</label>
-      <textarea name="commentsOrderConfirmation" id="commentsOrderConfirmation" cols="30" rows="10" placeholder="Övriga kommentarer"></textarea>
-      <button type="submit" id="submitBtnOrderConfirmation">Nästa</button>
-      <button id="cancelBtnOrderConfirmation">Avbryt</button>
-    </form>
-  </article>
+      <form id="orderConfirmationForm"
+      class="form__confirmation">
+        
+        <label for="nameOrderConfirmation" 
+        class="hidden">
+        Namn</label>
+        <input type="text" 
+        name="nameOrderConfirmation" 
+        id="nameOrderConfirmation" 
+        required placeholder="Namn">
+        
+        <label for="streetOrderConfirmation" 
+        class="hidden">
+          Gatuadress</label>
+        <input type="text" 
+        name="streetOrderConfirmation" 
+        id="streetOrderConfirmation" 
+        required placeholder="Gatuadress">
+
+        <label for="postalCodeOrderConfirmation" class="hidden">
+          Postnummer</label>
+        <input type="number" 
+        name="postalCodeOrderConfirmation" id="postalCodeOrderConfirmation" 
+        required placeholder="Postnummer">
+      
+        <label for="townOrderConfirmation" 
+        class="hidden">
+          Ort</label>
+        <input type="text" 
+        name="townOrderConfirmation" 
+        id="townOrderConfirmation" 
+        required placeholder="Ord">
+
+        <label for="emailOrderConfirmation" 
+        class="hidden">
+          E-post</label>
+        <input type="email" 
+        name="emailOrderConfirmation" 
+        id="emailOrderConfirmation" 
+        required placeholder="E-post">
+        
+        <label for="phoneNumberOrderConfirmation"
+        class="hidden">
+          Telefonnummer</label>
+        <input type="tel"
+        name="phoneNumberOrderConfirmation" id="phoneNumberOrderConfirmation" placeholder="Telefonnummer">
+      
+        <label for="commentsOrderConfirmation"
+        class="hidden">
+        Övriga kommentarer</label>
+        <textarea name="commentsOrderConfirmation" id="commentsOrderConfirmation" 
+        cols="30" 
+        rows="10"
+        placeholder="Övriga kommentarer">
+        </textarea>
+        <p>Glöm inte att logga in om du är medlem.</p>
+        
+        <span class="row--mobilesame">
+        <button type="submit" 
+        id="submitBtnOrderConfirmation"
+        class="button__usual">
+        Nästa</button>
+        <button id="cancelBtnOrderConfirmation"
+        class="button__usual--clear">
+        Avbryt</button>
+        </span>
+      </form>
+    
+      </article>
+    </div>
   </section>
 
-
-
-<section id="loginSection" 
-class="section hidden">
-<div class="login__section">
-  <div class="login__box">
-      <h2>Logga in</h2>
-      <form id="loginForm">
-
-       
-       <div class="login__box--inputs">
-         <span class="input-group-addon">
-           <i class="fa fa-user"></i>
+  <section id="loginSection" 
+  class="section hidden">
+  <div class="login__section">
+    <article class="login__text">
+      <h2>Hej medlem!<br>
+      Alltid bättre pris för dig.</h2>
+      <p class="text--s">Klubbpris för jämnan på kläder som är bra</p>
+      
+    </article>
+    <article class="login__box">
+        <h3>Logga in</h3>
+        <form id="loginForm"
+        class="form__all">
+        <div class="form__login--inputs">
+          <span class="input-group-addon">
+            <i class="fa fa-user"></i>
           </span>
-         <label for="emailLogin">
-           E-mail</label><br>
-         <input type="text" class="form-control" id="emailLogin" placeholder="E-mail" required>
+          <label for="emailLogin">
+            E-mail</label><br>
+          <input type="text" 
+          name="emailLogin" id="emailLogin" placeholder="E-mail" required>
+          </div>
+      
+          <div class="form__login--inputs">
+          <span class="input-group-addon">
+            <i class="fa fa-lock"></i></span>
+          <label for="password">Lösenord</label><br>
+          <input type="password" 
+          name="password" id="password" placeholder="Lösenord" required>
+          </div>
+          
+          <button type="submit" id="loginButton" class="button__usual">Logga in</button> 
 
-        </div>
+          <button id="goToRegisterUserButton" class="button__usual">Bli medlem</button> 
+          </form>
+        </article>
     
-        <div class="login__box--inputs">
-         <span class="input-group-addon">
-           <i class="fa fa-lock"></i></span>
-         <label for="password">Lösenord</label><br>
-         <input type="password" class="form-control" id="password" placeholder="Lösenord" required>
-         </div>
+        <article class="login__bonus">
+          <h3>Att vara medlem lönar sig</h3>
+          <p class="text--s">Som medlem får du 10% på ditt första köp och belönas när du shoppar och gör medvetna val.</p>
+          
+  
+        </article>
+        <article class="row login__details">
+        
+          <span class="login__details--item">
+            <h4 class="text--green">Poäng på varje köp</h4>
+            <p class="text--bold">Som medlem får du alltid poäng när du handlar hos oss.</p>
+          </span>
          
-         <button type="submit" id="loginButton" class="text--bold">Logga in</button> 
+          <span class="login__details--item">
+            <h4 class="text--green">Medlemskapet är gratis</h4>
+            <p class="text--bold">Men du behöver vara över 16 år gammal så allt går rätt till.</p>
+          </span>
+          <span class="login__details--item">
+            <img src="styles/sass/img/swedish-forest.jpg"
+            alt="En bild snodd från Greenpeace"
+            /> 
+          </span>
+        </article>
 
-         <button id="goToRegisterUserButton" class="text--bold">Registrera</button> 
-        </form>
-      </div>
     </div>
   </section>
 
   <section id="createUserSection"
   class="section hidden">
+    <div class="register__section">
+      <article>
+        <h2 class="text--green">
+        Kul att du vill bli medlem!</h2>
+      </article>
+      <div class="register__content">
+      <article class="register__box">
+          <h3 class="text--green">
+            Fyll i din information här:</h3>
+          <form id="createUserForm"
+        class="form__all">
+          <span class="form--inputs"></span>
+          <label for="emailCreateUser" class="hidden">E-post</label>
+          <input type="email" name="emailCreateUser" id="emailCreateUser" required placeholder="E-post">
+          <label for="passwordCreateUser" class="hidden">Lösenord</label>
+          <input type="password" name="passwordCreateUser" id="passwordCreateUser" required placeholder="Lösenord">
+          <label for="nameCreateUser" class="hidden">Användarnamn</label>
+          <input type="text" name="nameCreateUser" id="nameCreateUser" required placeholder="Användarnamn">
+          <label for="streetCreateUser" class="hidden">Gatuadress</label>
+          <input type="text" name="streetCreateUser" id="streetCreateUser" required placeholder="Gatuadress">
+          <label for="postalCodeCreateUser" class="hidden">Postnummer</label>
+          <input type="number" name="postalCodeCreateUser" id="postalCodeCreateUser" required placeholder="Postnummer">
+          <label for="townCreateUser" class="hidden">Ort</label>
+          <input type="text" name="townCreateUser" id="townCreateUser" required placeholder="Ort">
+          <label for="phoneNumberCreateUser" class="hidden">Telefonnummer</label>
+          <input type="text" name="phoneNumberCreateUser" id="phoneNumberCreateUser" placeholder="Telefonnummer">
+          <!-- <label
+          for="choosePicture"
+          class="text--cursive">Välj en profilbild (max 2 mb)</label>
+          <input type="file" 
+          name="choosePicture"
+          id="imgfile"/> -->
 
-  <div class="register__box">
-    <h2 class="text--centered">Skapa användare</h2>
-    <p>Fyll i din information här:</p>
-    
-    <form id="createUserForm">
+          <span class="form__create--buttons">
+            <button type="submit" id="submitBtnCreateUser" class="button__usual">
+              Bli medlem</button>
+            <button 
+            id="cancelButtonCreateUser"
+            class="button__usual">
+            Avbryt</button>
+          </span>
+          </form>
+        </article>
+      </div>
+    </div>
 
-      <label for="emailCreateUser" class="hidden">E-post</label>
-      <input type="email" name="emailCreateUser" id="emailCreateUser" required placeholder="E-post">
-      <label for="passwordCreateUser" class="hidden">Lösenord</label>
-      <input type="password" name="passwordCreateUser" id="passwordCreateUser" required placeholder="Lösenord">
-      <label for="nameCreateUser" class="hidden">Användarnamn</label>
-      <input type="text" name="nameCreateUser" id="nameCreateUser" required placeholder="Användarnamn">
-      <label for="streetCreateUser" class="hidden">Gatuadress</label>
-      <input type="text" name="streetCreateUser" id="streetCreateUser" required placeholder="Gatuadress">
-      <label for="postalCodeCreateUser" class="hidden">Postnummer</label>
-      <input type="number" name="postalCodeCreateUser" id="postalCodeCreateUser" required placeholder="Postnummer">
-      <label for="townCreateUser" class="hidden">Ort</label>
-      <input type="text" name="townCreateUser" id="townCreateUser" required placeholder="Ort">
-      <label for="phoneNumberCreateUser" class="hidden">Telefonnummer</label>
-      <input type="text" name="phoneNumberCreateUser" id="phoneNumberCreateUser" placeholder="Telefonnummer">
-      <!-- <label
-      for="choosePicture"
-      class="text--cursive">Välj en profilbild (max 2 mb)</label>
-      <input type="file" 
-      name="choosePicture"
-      id="imgfile"/> -->
-
+  <div class="register__info">
+   
+    <article class="register__info--row">
+      <h3 class="text--white">Såhär funkar det</h3>
       <span>
-        <button type="submit" id="submitBtnCreateUser" class="text--bold text--u">
-          Registrera</button>
-        <button 
-        id="cancelButtonCreateUser"
-        class="text--bold">
-        Avbryt</button>
+      <h4 class="text--bold text--green">Registrera dig</h4>
+      <p>Medlemskapet är digitalt och gratis!</p>
       </span>
-    </form>
+      <span>
+        <h4 class="text--bold text--green">Samla poäng</h4>
+        <p>Du får poäng på alla dian köp och när du gör medvetna val</p>
+      </span>
+      <span>
+        <h4 class="text--bold text--green">Lös in erbjudanden</h4>
+        <p>Du får 25 kr i bonusrabatt för varje 1000 poäng samt exklusiva erbjudanden.</p>
+      </span>
+      <span>
+        <h4 class="text--bold text--green">Plusmedlem</h4>
+        <p>När du når 5000 poäng blir du plusmedlem och får tillgång till fler förmåner och erbjudanden</p>
+      </span>
+    </article>
+
+    </div>
   </div>
-  </section>
+</div>
 
   </main>
 
@@ -404,10 +527,10 @@ class="section hidden">
             </h3>
           <span class="button__span">
             <button id="clearCart" 
-            class="button__dropdown">
-            Rensa kundvagn</button>
-            <button id="toConfirmation" class="button__dropdown">
-              Bekräfta ditt köp</button>
+            class="button__usual--clear">
+             Rensa kundvagn</button>
+            <button id="toConfirmation" class="button__usual">
+              Gå till kassan</button>
         </span>   
         </article>
     </section>
@@ -418,23 +541,23 @@ class="section hidden">
       <div class="login__dropdown">
         <img src="styles/sass/img/closing.png" 
           id="closeUserNavDropdown"
-          alt="Stäng varukorg"
+          alt="Stäng"
           class="dropdown--close"/> 
           <span class="login__dropdown--content">
            <span id="ifUserLoggedIn" class="hidden ">
-             <h2 class="text--green">Välkommen  
+             <h2 class="text--green">Välkommen
              </h2>
              <h2 id="userNavName"></h2>
            </span>
            <span>
-            <p class="text--centered">
+            <p class="text--centered text--cursive">
               Dagens datum: </p>
             <p id="todaysDate"
             class="text--centered"></p>
           </span>
-          <button id="userNavLogInRegisterBtn" class="button__dropdown">
-          Logga in || Registrera</button>
-          <button id="userNavLogOutBtn" class="hidden button__dropdown">
+          <button id="userNavLogInRegisterBtn" class="button__usual">
+          Logga in || Bli medlem</button>
+          <button id="userNavLogOutBtn" class="hidden button__usual--clear">
           Logga ut</button>
         </span>
       </div>
@@ -447,8 +570,12 @@ class="section hidden">
       <span class="receipt--close">
         <img class=""
         src="">
-        <span class="">
-          <p id ="dagensDatum"></p>
+        <span>
+          <p>
+            Dagens datum: </p>
+          <p id="dagensDatum"
+          >
+          </p>  
         </span>
       </span>
       <h2 class="text--green text--bold">

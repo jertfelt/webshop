@@ -22,11 +22,11 @@ Homepage:
 ---- Hero med välkomnande text <br>
 ---- Dynamiskt renderad lista på kategorier med kläder<br>
 
-![image](https://user-images.githubusercontent.com/30622818/154916340-ea72b61f-03c5-4e5f-b7d9-868c45239920.png)
+
 
 Productlist:<br>
 Här ser man en kategori av klädesmärken, och produkter som går in under den kategorin.<br>
 --- Klickbar bild som leder till en individuell produktbeskrivning<br>
 --- Klickbar knapp "KÖP" som lägger till varan i kundvagnen<br>
-![image](https://user-images.githubusercontent.com/30622818/154916586-14f642bd-92c0-4ac7-a507-0c445cc13724.png)
+
 

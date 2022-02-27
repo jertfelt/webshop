@@ -2,6 +2,12 @@
 
 .search{
 
+  &__container{
+    padding-top:2rem;
+    min-height: 60vh;
+    padding-bottom:3rem;
+  }
+
   &__dropdown{
     position:fixed;
     top:70px;
@@ -80,5 +86,101 @@
    
   }
  
+}
+
+.form{
+
+  &__all{
+    margin-top:2rem;
+    @include flexBox(column,center,center);
+
+    input{
+      padding:0.4rem;
+      border-radius: 9px;
+      border:none;
+      background-color: $color-sand;
+      margin:0.4rem;
+    }
+    ::placeholder{
+      font-weight: bold;
+    }
+    label {
+      font-weight: bold;
+    }
+}
+
+&__confirmation{ 
+  padding-top:1rem;
+  @include flexBox(column, flex-start, space-around);
+  p{
+    padding:0.3rem;
+  }
+
+  input{
+    padding:0.4rem;
+    border-radius: 9px;
+    border:none;
+    background-color: $color-white;
+    margin:0.4rem;
+  }
+  ::placeholder{
+    font-weight: bold;
+  }
+  label {
+    font-weight: bold;
+  }
+  textarea{
+    padding:0.4rem;
+    border-radius: 9px;
+    border:none;
+    background-color: $color-white;
+    margin:0.4rem;
+    
+  }
+  button{
+    padding:1rem;
+    margin:0.3rem;
+    margin-bottom:1rem;
+  }
+}
+
+&__create--buttons{
+  margin-top:1rem;
+  @include flexBox(column,center,space-between);
+}
+&__login{
+  &--inputs{
+  margin-bottom:1rem;
+}
+}
+}
+
+.securityinput{
+
+    p{
+      margin-top:0.3rem;
+    }
+
+    label{
+      font-weight: bold;
+      margin-bottom:0.4rem;
+    }
+
+    input {
+      margin-top:0.4rem;
+      margin-bottom:0.4rem;
+      border:none;
+      padding:0.2rem;
+    }
+    span {
+      @include flexBox(row, flex-start, flex-start);
+      .loading__div{
+        
+        width:50%;
+        align-items: flex-start;
+        padding:1rem;
+      }
+    }
+  
 }
 
