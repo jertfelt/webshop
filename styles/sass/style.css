@@ -689,19 +689,6 @@ h6 {
           justify-content: space-between;
 }
 
-.product__box button {
-  border-radius: 19px;
-  border-style: none;
-  padding: 1rem 2rem;
-  font-weight: bold;
-  margin-top: 1rem;
-  text-transform: uppercase;
-}
-
-.product__box button:hover {
-  color: #f2ea03;
-}
-
 .product__box--individual {
   display: -webkit-box;
   display: -ms-flexbox;

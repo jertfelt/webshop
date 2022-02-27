@@ -1,12 +1,16 @@
 
-const displaySearchResult = (allProductsArray, searchValue) => {
+const searchContainer = document.getElementById("searchDiv");
+
+
+const displaySearchResult = 
+(allProductsArray, searchValue) => {
   //*---animation for setTimeout
   const loadingSearch = document.getElementById("loadingSearch");
   loadingSearch.classList.remove("hidden");
 
   //setting timer for loading:
   setTimeout(() => {
-  
+    loadingSearch.classList.add("hidden");
   // Draw heading
   const searchResultHeader = document.createElement("h2");
   searchResultHeader.classList.add("text--green", "text--cursive", "centered");
@@ -44,7 +48,7 @@ const displaySearchResult = (allProductsArray, searchValue) => {
 
  
 
-}, 3000);
+}, 2000);
 };
 
 // Starts search function
