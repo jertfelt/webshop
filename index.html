@@ -204,12 +204,7 @@
         </div>
       </div>
     </div>
-      <!--div for a "loading symbol" (redo att läggas in i valfritt element, funktion finns i utilities.js och _animation.scss)
-       <span class="loading__div">
-      <span class="loading__container">
-        <span class="loading__circle loading">
-      </span>
-    </span> -->
+    
     <section id="categoriesSection" 
     class="categories">
       <article>
@@ -259,17 +254,28 @@ class="section hidden">
     
     <span class="securityinput">
       <h3>Har du en rabattkod?</h3>
-        <label for="securitycode">
+      <br>
+      <label for="securitycode">
           Ange rabattkod</label>
-          <br>
-        <input type="text"
+      <br>
+      <input type="text"
             name="securitycode" id="securitycode">
-            <button type="submit" id="securityCodeBtn" class="button__usual--small">
-              Lägg till kod</button>
-              <p>
-                En rabattkod kan till exempel vara ”SOMMAR2022”</p> 
+      <span>
+        <button type="submit" id="securityCodeBtn" class="button__usual--small">
+        Lägg till </button>
+        <div class="loading__div hidden">
+          <span class="loader">
+                  <!-- Laddar.. -->
+            </span>
+        </div>
       </span>
-      </span>
+         
+      <p>
+      En rabattkod kan till exempel vara ”SOMMAR2022”</p>
+      <p id="saleCodeMsg" class="text--green"></p>
+             
+  
+    </span>
     <h3 id="orderProductsTotalAmount"
     class="confirmation__totalamount text--m">
     </h3>

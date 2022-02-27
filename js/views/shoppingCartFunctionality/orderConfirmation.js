@@ -54,7 +54,7 @@
 //Adds total price
     const addTotalPriceOrderConfirmation = () => {
       const totalPriceText = document.getElementById("orderProductsTotalAmount");
-      totalPriceText.innerText = `Total kostnad: ${getTotalPriceOrder()} kr`;
+      totalPriceText.innerHTML = `Total kostnad: <br>  ${getTotalPriceOrder()} kr`;
     }
     addTotalPriceOrderConfirmation();
 
@@ -98,6 +98,9 @@
 
   //*--------rabattkod
 
+  const securityButton = document.getElementById("securityCodeBtn");
+  const securityInput = document.getElementById("securitycode");
+
 
   const getTotalPrice = (rabatt) => {
    
@@ -108,36 +111,80 @@
     ;
     const totalPrice = (stringToInt * rabatt); 
 
-    totalPriceWRabatt.innerText = `Total kostnad: ${totalPrice} kr`;
+    totalPriceWRabatt.innerHTML = `Total kostnad: <br> ${totalPrice} kr`;
   }
 
   //*-----rabatt:
 
     const saleCode = () => {
       
-      let inputCode = document.getElementById("securitycode").value;
-      const rabattOrder = document.createElement("p");
-      rabattOrder.classList.add("text--green");
-      document.querySelector(".securityinput").appendChild(rabattOrder);
+      let inputCode = securityInput.value;
+      const rabattOrder = document.getElementById("saleCodeMsg");
+        
+// //*------animation function    
+      const loadingContainer = document.querySelector(".loading__div");
 
-      if(inputCode == "FEND21"){   
+      let inputRight = inputCode.toUpperCase();
+
+      if(inputRight == "FEND21"){   
         let rabatt = 0.75;
-        rabattOrder.innerText= "Du får 25% rea!"
-        getTotalPrice(rabatt);
+        loadingContainer.classList.remove("hidden");
+        securityButton.classList.add("hidden")
+        setTimeout(() => {
+          loadingContainer.classList.add("hidden");
+          securityButton.classList.remove("hidden")
+          rabattOrder.innerText= "Du får 25% rea!";
+          getTotalPrice(rabatt);
+        }, 2000);
+        
+ 
         }
 
-      else if(inputCode == "Mars"){
+      else if(inputRight == "MARS"){
         let rabatt = 0.90;
-        rabattOrder.innerText= "Du får 10% rea!"
-        getTotalPrice(rabatt);
+        loadingContainer.classList.remove("hidden");
+        securityButton.classList.add("hidden")
+        setTimeout(() => {
+          loadingContainer.classList.add("hidden");
+          securityButton.classList.remove("hidden")
+          rabattOrder.innerText= "Du får 10% rea!";
+          getTotalPrice(rabatt);
+        }, 2000);
+   
       }
+
       else {
-        alert("Tyvärr, du skrev fel rabattkod")
+        loadingContainer.classList.remove("hidden");
+        securityButton.classList.add("hidden")
+        setTimeout(() => {
+          loadingContainer.classList.add("hidden");
+          securityButton.classList.remove("hidden")
+          rabattOrder.classList.remove("text--green");
+        rabattOrder.innerText = "Fel kod! Prova igen!";
+        
+      }, 2000);
       }
     }
 
-//eventlistener
-    document.getElementById("securityCodeBtn").addEventListener("click", saleCode);
+//eventlisteners
+securityButton.addEventListener("click", () =>{
+      saleCode();
+    }
+        );
+        
+securityInput.addEventListener('keydown', function(event){
+
+  if(event.key == "Enter"){
+    saleCode();
+  }
+})
+
+
+
+
+
+
+
     
 //Submit button
   /*document.getElementById("orderConfirmationForm").addEventListener("submit", (e) => {

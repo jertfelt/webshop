@@ -39,31 +39,11 @@
   }
 }
 
-.none{
-  display:none;
-}
-
-
-// .outer{
-//   position: relative;
-//   @include breakpoint(small-max-m) {
-//   }
-//   width:100%;
+// .none{
+//   display:none;
 // }
-
-// .inner{
-//   position: absolute;
-//   top:80%;
-//   left:30%;
-//   transform: translate(-50%, -50%);
-//   z-index:2;
-//   }
 
 .pointer{
   cursor: pointer;
-}
-
-.display{
-  visibility: visible;
 }
 
