@@ -61,6 +61,11 @@ const confirmOrderConfirmationBtn = (e) => {
   changeActivePage("receiptSection");
 }
 
+document.getElementById("submitBtnOrderConfirmation").addEventListener("click", (e) => {
+  e.preventDefault();
+  changeActivePage("receiptSection"); 
+})
+
 document.getElementById("cancelBtnOrderConfirmation").addEventListener("click", (e) => {
   e.preventDefault();
 changeActivePage("homepageSection");
