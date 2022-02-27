@@ -682,6 +682,12 @@ h6 {
   margin-bottom: 2rem;
 }
 
+.search__container {
+  padding-top: 2rem;
+  min-height: 60vh;
+  padding-bottom: 3rem;
+}
+
 .search__dropdown {
   position: fixed;
   top: 70px;
