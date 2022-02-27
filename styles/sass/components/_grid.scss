@@ -1,6 +1,7 @@
 
 //grids
 .products{
+
   &__individual{
     @include flexBox(row,flex-start,space-around);
     margin: 0 auto;
@@ -12,11 +13,8 @@
     @include breakpoint(small-max-m){
       @include flexBox(column,flex-start,space-around);
     }
-    @include breakpoint(small-max){
-    }
+   
     
-  
-
     img {
       margin-top:1rem;
       @include breakpoint(small-max-m){
@@ -76,6 +74,12 @@
   img:hover{
     border-radius: 0% 55% 52% 48% / 30% 65% 55% 90%;
   }
+  @include breakpoint(small-max-m){
+    img{
+      opacity: 0.4;
+    }
+  }
+ 
   }
 
   &--confirmation{
@@ -122,18 +126,17 @@
 .product{
 
   &__img {
-  border-radius: 29px;
   width: 100%;
+  height:100%;
   min-height: 12rem;
   transition: $mainTransition;
 
   &--container{
     position: relative;
     overflow: hidden;
-
-    img{
-      border-radius: 29px;
-    }
+    background-color: $color-white;
+    border-radius: 29px;
+   
   }
 
   &--list:hover{
@@ -218,11 +221,12 @@
     width: 100%;
    ;
    }
+
    
    @include breakpoint(
     small-max-m){
       font-size:1.4rem;
-      font-weight:300;
+      font-weight:500;
       
     }
    width: 50%;
