@@ -8,37 +8,37 @@ const receiptContainer = document.getElementById("receiptSection");
 //*-----------creating the receipt
 const drawReceipt = () => {
     const orderInformationReceipt = JSON.parse(localStorage.getItem("orderInformation"));
-    console.log(orderInformationReceipt);
+
 
 const receiptText = document.getElementsByClassName("receipt__text")[0];
 
 if (orderInformationReceipt !== null) {
 receiptText.innerHTML = `
-        <p>${orderInformationReceipt.name}</p>
-        <p>${orderInformationReceipt.street}</p>
-        <p>${orderInformationReceipt.postalCode} ${orderInformationReceipt.town}</p>
-        <p>${orderInformationReceipt.tel}</p>
-        <p>${orderInformationReceipt.email}</p>
+        <p>Namn: ${orderInformationReceipt.name}</p>
+        <p>Gata: ${orderInformationReceipt.street}</p>
+        <p>Stad: ${orderInformationReceipt.postalCode} ${orderInformationReceipt.town}</p>
+        <p>Telefon: ${orderInformationReceipt.tel}</p>
+        <p>Email: ${orderInformationReceipt.email}</p>
         <p>${orderInformationReceipt.comment}</p>
 `;
 }
 //ul list for products
 
-const receiptProductList = document.createElement("ul");
-receiptProductList.classList.
-add("receipt__list--ul");
-const receiptProductListContainer = document.getElementsByClassName("receipt__list")[0];
-receiptProductListContainer.appendChild(receiptProductList);
+const receiptProductList = document.getElementsByClassName("products__grid--receipt")[0];
 
 //Användarens köpta produkter
 
 if (getCart() !== null) {
     getCart().forEach(product => {
-        let productName = document.createElement("li");
+        let productName = document.createElement("article");
         productName.classList.add("receipt__list--item")
-        productName.innerHTML = `${product.quantity} x ${product.fields.title}`;
+        productName.innerHTML = `
+        <img src="${product.fields.image.fields.file.url}"
+        class="receipt__img">
+        <p>${product.quantity} st <br>${product.fields.title}<br>
+        ${product.fields.price}kr</p>
+        `;
         receiptProductList.appendChild(productName);
-        console.log("testar den här")
     });
   }
 

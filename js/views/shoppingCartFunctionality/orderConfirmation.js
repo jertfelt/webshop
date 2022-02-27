@@ -91,10 +91,12 @@
 
     document.getElementById("orderConfirmationForm").addEventListener("submit", (e) => {
       saveOrderDetails();
+      //*eventuell setTimer funktion här
       confirmOrderConfirmationBtn();
       e.preventDefault();
     });
 
+ 
 
   //*--------rabattkod
 
@@ -119,33 +121,37 @@
     const saleCode = () => {
       
       let inputCode = securityInput.value;
-      const rabattOrder = document.getElementById("saleCodeMsg");
-        
-// //*------animation function    
-      const loadingContainer = document.querySelector(".loading__div");
-
+    
       let inputRight = inputCode.toUpperCase();
+
+      const rabattOrder = document.getElementById("saleCodeMsg");
+    
 
       if(inputRight == "FEND21"){   
         let rabatt = 0.75;
-        loadingContainer.classList.remove("hidden");
         securityButton.classList.add("hidden")
+        rabattOrder.innerText="Laddar..";
         setTimeout(() => {
-          loadingContainer.classList.add("hidden");
-          securityButton.classList.remove("hidden")
           rabattOrder.innerText= "Du får 25% rea!";
           getTotalPrice(rabatt);
         }, 2000);
-        
- 
         }
+
+      else if(inputRight == "J0NAS"){
+        let rabatt = 0.5;
+        securityButton.classList.add("hidden")
+        rabattOrder.innerText="Laddar..";
+        setTimeout(() => {
+          rabattOrder.innerText= "Du får 50% rea!";
+          getTotalPrice(rabatt);
+        }, 2000);
+      }
 
       else if(inputRight == "MARS"){
         let rabatt = 0.90;
-        loadingContainer.classList.remove("hidden");
         securityButton.classList.add("hidden")
+        rabattOrder.innerText="Laddar..";
         setTimeout(() => {
-          loadingContainer.classList.add("hidden");
           securityButton.classList.remove("hidden")
           rabattOrder.innerText= "Du får 10% rea!";
           getTotalPrice(rabatt);
@@ -154,10 +160,9 @@
       }
 
       else {
-        loadingContainer.classList.remove("hidden");
         securityButton.classList.add("hidden")
+        rabattOrder.innerText="Laddar..";
         setTimeout(() => {
-          loadingContainer.classList.add("hidden");
           securityButton.classList.remove("hidden")
           rabattOrder.classList.remove("text--green");
         rabattOrder.innerText = "Fel kod! Prova igen!";
@@ -252,3 +257,21 @@ const tester2 = [{
 localStorage.setItem("cart", JSON.stringify(tester2));
 localStorage.setItem("totalPriceOrder", JSON.stringify(100));
 */
+
+
+
+//*----set Timeout för"nästa knapp", någon bugg med css fixar i mån av tid:
+
+
+// const loadingReceiptSpinner = document.getElementById("loadingReceiptSpinner");
+// loadingSpinner = document.g
+// loadingReceiptSpinner.classList.remove("hidden");
+
+// const receiptSpinner = document.getElementById("receiptSpinner");
+
+
+// setTimeout(() => {
+//   loadingReceiptSpinner.classList.add("hidden");
+//   loadingReceiptSpinner.children.classList.add("hidden");
+//   confirmOrderConfirmationBtn();
+// }, 2000);

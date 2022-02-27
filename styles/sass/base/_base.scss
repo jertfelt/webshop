@@ -13,8 +13,4 @@ body {
 main{
   margin-top:3rem;
   padding-bottom:2rem;
-  min-height:50vh;
-  @include breakpoint(small-max-m){
-    min-height:50vh;
-  }
 }

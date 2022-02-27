@@ -268,22 +268,14 @@ class="section hidden">
       <br>
       <input type="text"
             name="securitycode" id="securitycode">
-      <span>
+      
         <button type="submit" id="securityCodeBtn" class="button__usual--small">
         Lägg till </button>
-        <div class="loading__div hidden">
-          <span class="loader">
-                  <!-- Laddar.. -->
-            </span>
-        </div>
-      </span>
-         
       <p>
       En rabattkod kan till exempel vara ”SOMMAR2022”</p>
-      <p id="saleCodeMsg" class="text--green"></p>
-             
-  
+      <p id="saleCodeMsg" class="text--green text--bold"></p>
     </span>
+
     <h3 id="orderProductsTotalAmount"
     class="confirmation__totalamount text--m">
     </h3>
@@ -362,9 +354,15 @@ class="section hidden">
         Avbryt</button>
         </span>
       </form>
-    
       </article>
     </div>
+    <!-- <div id="loadingReceiptSpinner"
+    class="loading__receipt hidden">
+      <span class="loading__receipt--spinner hidden"
+      id="receiptSpinner">
+        Laddar..
+      </span>
+    </div> -->
   </section>
 
   <section id="loginSection" 
@@ -566,44 +564,53 @@ class="section hidden">
    <!--kvitto dropdown (class hidden ska togglas)--> 
   <aside id="receiptSection" 
   class="hidden section">
+  <div class="receipt__background"></div>
     <section class="receipt__container">
-      <span class="receipt--close">
-        <img class=""
-        src="">
-        <span>
-          <p>
-            Dagens datum: </p>
-          <p id="dagensDatum"
-          >
-          </p>  
-        </span>
-      </span>
-      <h2 class="text--green text--bold">
-        Tack för ditt köp!
-      </h2>
-    <article class="receipt__content">
-      <h3 class="text--green text--cursive"> Dina detaljer:
-      </h3>
-      <span class="receipt__text">
-        <!--detta ska renderas-->
-      </span>
-    </article>
-    <article class="receipt__content">
-      <h3 class="text--green text--cursive">
-      Dina produkter:
-      </h3>
-      <span class="receipt__list">
-        <!--detta ska också renderas-->
-      </span>
-    </article>
-    <article class="receipt__footer">
-      <h3 class="text--green text--cursive">
-       Totalt:
-      </h3>
-      <span class="receipt__footer--price">
-        <!--detta renderas också-->
-      </span>
-    </article>
+      
+      <div class="receipt__box">
+        <h2 class="text--green text--bold">
+          Tack för ditt köp!
+        </h2>
+
+        <article class="receipt__content">
+          <h3 class="text--green text--cursive"> Dina detaljer:
+          </h3>
+          <span class="receipt__text">
+            <!--detta ska renderas-->
+          </span>
+        </article>
+
+        <article class="receipt__content">
+          <h3 class="text--green text--cursive">
+          Dina produkter:
+          </h3>
+          <div class="receipt__list">
+            <div class="products__grid--receipt">
+            </div>
+          </div>
+         
+        </article>
+        <article class="receipt__footer">
+          <span class="receipt__footer--price text--green text--cursive">
+            <!--detta renderas också-->
+          </span>
+         
+        </article>
+        <button class="button__usual"
+        id="buttonBackReceipt">
+        Avsluta
+        </button>
+        
+      </div>
+      <article class="receipt__date">
+        <p>
+          Dagens datum: </p>
+        <p id="dagensDatum"
+        >
+        </p>  
+      </article> 
+  </section>
+
   </aside>
 
   <footer class="footer__section">

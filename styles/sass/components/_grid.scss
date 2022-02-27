@@ -70,8 +70,6 @@
   width: 70vw;
   margin: 0 auto;
   max-width: 1170px;
-
-
   img:hover{
     border-radius: 45% 55% 52% 48% / 30% 25% 55% 90%;
   }
@@ -85,7 +83,6 @@
     grid-column-gap: 1.5rem;
     margin: 1.5rem 0;
  
-   
     img {
       width: 100px;
       height: 100px;
@@ -93,6 +90,29 @@
     }
   }
 
+  &--receipt{
+   
+    display: grid;
+    align-items: center;
+    grid-template-rows: 2fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 3rem;
+
+    @include breakpoint(medium-tablet-max){
+      grid-template-columns: 2fr 2fr;
+    }
+    
+    article{
+      padding:0.1rem;
+      justify-self: left;
+      @include flexBox(row,center,center);
+
+      p{
+       padding-left:6px;
+      }
+    }
+  }
 }
 }
 
