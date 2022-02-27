@@ -18,9 +18,7 @@
 <body>
   <header>
     <nav class="nav__top">
-
-    <!--menu and search icons-->
-    <span class="nav__span">
+    <!--menu-->
       <!--ikon dropdown-->
         <span class="nav__mobile-menu">
           <img 
@@ -29,37 +27,6 @@
           id="menuToggle"
           class="nav__button">
         </span>
-
-        <!--search icon-->
-        <div class="search__wrapper">
-          <!--dropdown!-->
-          <span class="search__img pointer"
-          id="searchDropdown">
-            <img src ="styles/sass/img/500px-Search_Icon.svg.png"
-            alt="Leta efter produkt">
-            </span>
-        </div> 
-        <!-- search dropdown-->
-        
-        <div class="search__dropdown hidden"
-        id="searchContent">
-
-        <span class="row--mobilesame">
-          <img src ="styles/sass/img/500px-Search_Icon.svg.png"
-          alt="Leta efter produkt">
-          <label for="searchBar">
-          Sök produkt</label>
-          <input type="text" 
-          name="searchBar" 
-          class="search"
-          id="searchBarHeader" 
-          placeholder="Sök produkt">
-        </span>
-        
-        </div>
-    </span>
-
-
 <!--dropdown meny-->
       <ul id="dropDownMenu"  
           class="dropdown">
@@ -125,22 +92,22 @@
         </li>
         <li>
           <span class="search__navigation">
-        <img src ="styles/sass/img/500px-Search_Icon.svg.png"
-        alt="Leta efter produkt"
-            class="pointer">
+            <img src ="styles/sass/img/500px-Search_Icon.svg.png"
+            alt="Leta efter produkt"
+            >
             <label for="searchBar">
             Sök produkt</label>
             <input type="text" 
             placeholder="Sök produkt" 
             class="search"
-          id="searchBar"
-          name="searchbar">
+            id="searchBar"
+            name="searchbar">
         </span>
         </li>
+
       </div>
       </ul>
         
-      
   <!--logotyp-->
       <a 
       href="index.html"
@@ -151,12 +118,11 @@
         alt="logotype Ekoline" 
         class="nav__logotype"/>
       </a>
- 
 
   <!--varukorg klickbar-->
   <span class="nav__span">
     <span 
-    class="nav__cart--icon nav__span--mobile">
+    class="nav__cart--icon ">
       <img 
         src="styles/sass/img/shop-cart.png" 
             alt="Shopping cart" 
@@ -232,6 +198,15 @@
 
   <section id="productListSection" 
   class="section hidden">
+    <div class="minheight">
+      <article class="productlist__header">
+        <h2 id="categoryHeader" class="centered text--cursive text--green">
+        </h2>
+      </article>
+      <article id="productListGrid">
+
+      </article>
+    </div>
   </section>
 
   <section id="searchSection" 
@@ -249,6 +224,42 @@
 
   <section id="individualProductSection" 
   class="section hidden">
+  <div class="minheight">
+    <article id="individualGrid">
+
+    </article>
+    <article class="individual__footer">
+      <h3 class="text--white">Är du medlem?</h3>
+      <p class="text--s text--white">Som medlem får du 10% på ditt första köp och belönas när du shoppar och gör medvetna val.</p>
+      <article class="individual__footer--grid">
+        
+        <span>
+          <h4>Poäng på varje köp</h4>
+          <p class="text--bold text--white">Som medlem får du alltid poäng när du handlar hos oss.</p>
+        </span>
+       
+        <span>
+          <h4>Medlemskapet är gratis</h4>
+          <p class="text--bold text--white">Men du behöver vara över 16 år gammal så allt går rätt till.</p>
+        </span>
+        <span>
+          <button id="goToRegisterUserBtn"
+          class="button__usual--clear">
+          Bli medlem
+          </button>
+        </span>
+      </article>
+      <article class="individual__footer--moreinfo">
+        <img src="styles\sass\img\recyclekla-der.jpg">
+     
+        <h4>Miljövänlig frakt</h4>
+        <p class="text--s text--white">
+        Vi vill vara ett föredöme inom branschen för hållbara klädmärken och vi satsar därför på miljövänliga lösningar i alla led. Utöver att kollektionerna tagits fram i miljövänliga material så tar vi även hänsyn till sättet som plaggen fraktas på. Vi satsar även helhjärtat på klimatkompenserade returlösningar. Ta en titt i vårt utbud och hitta snygga, hållbara plagg som ligger rätt i tiden!
+        </p>
+      </article>
+      
+    </article>
+  </div>
   </section>
 
 <!--varor + logga in/skriv in på formulär-->
@@ -686,7 +697,7 @@ class="section hidden">
 <script type="text/javascript" src="./js/views/showProducts/searchBar.js"></script>
   
 <!--product functionality--->
-<!-- <script type="text/javascript" src="js/views/showProducts/homepageCategories.js"></script> -->
+
 <script type="text/javascript" src="js/views/showProducts/categorysFunction.js"></script>
 <script type="text/javascript" src="./js/views/showProducts/productList.js"></script>
 <script type="text/javascript" src="./js/views/showProducts/individualProduct.js"></script>
