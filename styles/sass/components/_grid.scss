@@ -67,6 +67,9 @@
 
       img:hover{
         border-radius: 0% 55% 52% 48% / 30% 65% 55% 90%;
+        @include breakpoint(small-max-m){
+          border-radius: 0;
+        }
       }
 
       @include breakpoint(small-max-m){

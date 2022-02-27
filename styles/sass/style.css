@@ -547,6 +547,12 @@ h6 {
 }
 
 @media only screen and (max-width: 768px) {
+  .products__grid--categories img:hover {
+    border-radius: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   .products__grid--categories img {
     opacity: 0.4;
   }
