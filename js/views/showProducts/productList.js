@@ -1,19 +1,19 @@
 // URL: http://127.0.0.1:5500/index.html?section=productListSection&category=Dam
 const queryString = new URLSearchParams(location.search);
 const qsCategory = queryString.get('category');
+const productGrid = document.getElementById("productListGrid");
 
 let allProductsArray = [];
 
 function drawProducts() {  
   //Draw title for current category.
-  const categoryHeader = document.createElement("h2");
-  categoryHeader.classList.add("text--green", "text--cursive", "centered");
-  categoryHeader.innerText = qsCategory + "kläder";
-  productListSection.appendChild(categoryHeader);
+  const categoryHeader = document.getElementById("categoryHeader");
 
+  categoryHeader.innerText = qsCategory + "kläder";
+  
   const sectionElem = document.createElement("section");
   sectionElem.classList.add("products__grid--all")
-  productListSection.appendChild(sectionElem);
+  productGrid.appendChild(sectionElem);
 
   allProductsArray.forEach(product => {
     // Filter products for selected category.

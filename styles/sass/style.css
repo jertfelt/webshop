@@ -100,6 +100,10 @@
   width: 70%;
 }
 
+.minheight {
+  min-height: 90vh;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1713,6 +1717,10 @@ nav {
 
 .hero__heading {
   margin-bottom: 2rem;
+}
+
+.productlist__header {
+  padding-top: 5rem;
 }
 
 .categories {

@@ -25,6 +25,10 @@
 }
 }
 
+.productlist__header{
+  padding-top:5rem;
+}
+
 .categories{
   @include flexBox(column,center,center);
 
