@@ -58,29 +58,22 @@
   }
 }
 
-
 .confirmation{
 
   &__twocolumns{
-    
-    @include flexBox(row, center,space-around);
-
-    @include breakpoint (small-max-m){
-      @include flexBox(column,center,space-between)
-    }
+    padding-top:1rem;
+    @include flexBox(row, flex-start,space-around);
+      @include breakpoint (small-max-m){
+       @include flexBox(column,center,space-between)
+      }
   }
 
   &__container{
-    background-color: $color-sand;
-    padding:3rem;
-
-
-    h2{
-    margin-top:3rem;
-    }
+    padding:2rem;
 
     &--right{
       @include flexBox(column,flex-start,center);
+      padding:2rem;
     }   
   }
   &__productbar{
@@ -92,7 +85,6 @@
       font-weight: bold;
       color:$color-green;
     }
-
 
   }
     &__totalamount{

@@ -54,7 +54,7 @@
 //Adds total price
     const addTotalPriceOrderConfirmation = () => {
       const totalPriceText = document.getElementById("orderProductsTotalAmount");
-      totalPriceText.innerText = `Total kostnad: ${getTotalPriceOrder()} kr`;
+      totalPriceText.innerHTML = `Total kostnad: <br>  ${getTotalPriceOrder()} kr`;
     }
     addTotalPriceOrderConfirmation();
 
@@ -108,7 +108,7 @@
     ;
     const totalPrice = (stringToInt * rabatt); 
 
-    totalPriceWRabatt.innerText = `Total kostnad: ${totalPrice} kr`;
+    totalPriceWRabatt.innerHTML = `Total kostnad: <br> ${totalPrice} kr`;
   }
 
   //*-----rabatt:
