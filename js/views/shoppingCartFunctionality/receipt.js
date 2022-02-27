@@ -46,10 +46,8 @@ if (getCart() !== null) {
 
   const priceWithSale = JSON.parse(localStorage.getItem("sale"));
   
-  const roundingPrice = Math.trunc(priceWithSale);
-
   receiptFooterPrice.innerHTML=`
-   <h4> Totalt: ${roundingPrice} SEK</h4>
+   <h4> Totalt: ${priceWithSale} SEK</h4>
     `
 }
 

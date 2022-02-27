@@ -625,8 +625,13 @@ h6 {
 .product__img--container {
   position: relative;
   overflow: hidden;
-  background-color: #fbfbfb;
   border-radius: 29px;
+}
+
+@media only screen and (max-width: 768px) {
+  .product__img--container {
+    background-color: #fbfbfb;
+  }
 }
 
 .product__img--list:hover {
