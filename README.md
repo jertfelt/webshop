@@ -13,6 +13,22 @@ https://www.figma.com/file/bIcYUoAzHiwllVAUTerVmw/Ekoline?node-id=0%3A1
 Se kravlistan här:
 https://github.com/jertfelt/webshop/blob/main/kravlista.txt
 
+Vi har jobbat med localStorage och JSON, samt med asynkronisrad exkvikvering av kod. 
+Två JSON-filer har skapats där material har hämtats, sedan har vi mappat valen med local storage.
+
+Sidan består av:
+1. Hompegae - här ska kategorier av produkter visas, samt en hero. 
+2. Header med varukorg och sökfunktion, samt en "inloggad"-funktion som gör att användaren ser om hen är inloggad.
+3. Varukorg (dropdown)
+4. En grid med alla varor i en kategori, med köpknapp
+5. En detaljsida för en produkt, med köpknapp
+6. Bli medlem - sida
+7. Logga in som medlem - sida
+8. Bekräftelse på beställning, bonus är att man kan mata in en rabattkod. 
+Vidare ska man fylla i ens uppgifter/ det laddas automatiskt om man är inloggad medlem.
+9. Kvitto när man bekräftat sitt köp
+
+
 ![image](https://user-images.githubusercontent.com/30622818/155895907-8355aece-4f7f-40bd-9fb3-47173ec07e26.png)
 ![image](https://user-images.githubusercontent.com/30622818/155895934-56b7734d-8e1a-4c8c-997e-58a814da94bd.png)
 ![image](https://user-images.githubusercontent.com/30622818/155897271-1b3c524e-a8a4-496e-a970-e404d8c7dd48.png)
