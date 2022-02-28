@@ -24,6 +24,7 @@ Sidan består av:
 
  Header med varukorg och sökfunktion, samt en "inloggad"-funktion som gör att användaren ser om hen är inloggad.
 
+![image](https://user-images.githubusercontent.com/30622818/155897556-62ce9cda-4be8-4594-ad80-adce87a1ee4c.png)
 
 ![image](https://user-images.githubusercontent.com/30622818/155897335-0206b6d3-b870-42d5-aa9c-0a53860518d8.png)
 
@@ -40,9 +41,10 @@ Sidan består av:
  Logga in som medlem - sida
  Bekräftelse på beställning, bonus är att man kan mata in en rabattkod. 
 Vidare ska man fylla i ens uppgifter/ det laddas automatiskt om man är inloggad medlem.
+
  Kvitto när man bekräftat sitt köp
 
-
+![image](https://user-images.githubusercontent.com/30622818/156028766-fcf25760-f310-4cd4-8c45-acd2530e6eea.png)
 
 
 
@@ -53,9 +55,6 @@ Vidare ska man fylla i ens uppgifter/ det laddas automatiskt om man är inloggad
 ![image](https://user-images.githubusercontent.com/30622818/155897464-b7d1264c-d2bb-409d-80de-bf83355bb8e9.png)
 
 ![image](https://user-images.githubusercontent.com/30622818/155897469-75264aac-b868-4161-86d0-661175a860dd.png)
-![image](https://user-images.githubusercontent.com/30622818/155897475-d3e22e03-e88c-4fea-bd47-574763a1568c.png)
-![image](https://user-images.githubusercontent.com/30622818/155897484-24b6c7f0-af4a-4603-8932-80eb92363cd2.png)
 
-![image](https://user-images.githubusercontent.com/30622818/155897556-62ce9cda-4be8-4594-ad80-adce87a1ee4c.png)
-![image](https://user-images.githubusercontent.com/30622818/156028766-fcf25760-f310-4cd4-8c45-acd2530e6eea.png)
+
 
