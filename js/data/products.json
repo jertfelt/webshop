@@ -9,7 +9,7 @@
         "description": "Byxor gjord på återvunnen bomull, perfekt för myset hemma i covidtider",
         "image": {
           "fields": {
-            "file": { "url": "./styles/sass/img/womens-traveller-pants.png" }
+            "file": { "url": "styles/sass/img/womens-traveller-pants.png" }
           }
         }
       }
@@ -22,7 +22,7 @@
         "price": 500,
         "description": "En varm och mysig handgjord virkad mössa, gjord av hantverkare på Gotland.",
         "image": {
-          "fields": { "file": { "url": "./styles/sass/img/women-hat.png" } }
+          "fields": { "file": { "url": "styles/sass/img/women-hat.png" } }
         }
       }
     },
@@ -35,7 +35,7 @@
         "description": "Virkad tröja med återvunnet material",
         "image": {
           "fields": {
-            "file": { "url": "./styles/sass/img/women-sweater--knit.png" }
+            "file": { "url": "styles/sass/img/women-sweater--knit.png" }
           }
         }
       }
@@ -48,7 +48,7 @@
         "price": 700,
         "description": "En pyjamas i mjuk satäng, handvävd i Luleå.",
         "image": {
-          "fields": { "file": { "url": "./styles/sass/img/men-pyjamas.png" } }
+          "fields": { "file": { "url": "styles/sass/img/men-pyjamas.png" } }
         }
       }
     },
@@ -60,7 +60,7 @@
         "price": 700,
         "description": "En handvävd skjorta i ull, ullen är från Gotland.",
         "image": {
-          "fields": { "file": { "url": "./styles/sass/img/man-shirt.png" } }
+          "fields": { "file": { "url": "styles/sass/img/man-shirt.png" } }
         }
       }
     },
@@ -72,7 +72,7 @@
         "price": 300,
         "description": "En hyllning till jordens största lungor. Ekologisk bomull.",
         "image": {
-          "fields": { "file": { "url": "./styles/sass/img/man-tshirt.png" } }
+          "fields": { "file": { "url": "styles/sass/img/man-tshirt.png" } }
         }
       }
     },
@@ -84,7 +84,7 @@
         "price": 600,
         "description": "Skön ylle, virkad för hand av lokala Gävlebor med ull från Gotland.",
         "image": {
-          "fields": { "file": { "url": "./styles/sass/img/women-sweater.png" } }
+          "fields": { "file": { "url": "styles/sass/img/women-sweater.png" } }
         }
       }
     },
@@ -96,7 +96,7 @@
         "price": 600,
         "description": "Skön ylle, virkad för hand av lokala Gävlebor med ull från Gotland.",
         "image": {
-          "fields": { "file": { "url": "./styles/sass/img/baby-leggings.png" } }
+          "fields": { "file": { "url": "styles/sass/img/baby-leggings.png" } }
         }
       }
     },
@@ -109,7 +109,7 @@
         "description": "Gjord med återvunnen bomull och färgad med naturliga färgmedel.",
         "image": {
           "fields": {
-            "file": { "url": "./styles/sass/img/baby-rainbow-shirt.png" }
+            "file": { "url": "styles/sass/img/baby-rainbow-shirt.png" }
           }
         }
       }
@@ -122,7 +122,7 @@
         "price": 250,
         "description": "Återvunnen polyester och handritat motiv med inspiration från en barnbok.",
         "image": {
-          "fields": { "file": { "url": "./styles/sass/img/baby-shirt.png" } }
+          "fields": { "file": { "url": "styles/sass/img/baby-shirt.png" } }
         }
       }
     }
