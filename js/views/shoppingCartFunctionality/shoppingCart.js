@@ -180,7 +180,7 @@ const decreaseQuantity = (prodID) => {
   // Får lista med uppdaterat data
   const updatedProductList = existingProductList.map(product => {
     // Minska antal och uppdatera priset av vald produkt
-    if (selectedProduct) {
+    if (selectedProduct === product) {
     product.quantity--; 
     product.amount = product.fields.price * product.quantity;
     }
