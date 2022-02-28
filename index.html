@@ -227,8 +227,8 @@
             <p class="text--bold text--white">Men du behöver vara över 16 år gammal så allt går rätt till.</p>
           </span>
           <span>
-            <button id="goToRegisterUserBtn"
-            class="button__usual--clear">
+            <button
+            class="goToRegisterUserBtn button__usual--clear">
             Bli medlem
             </button>
           </span>
@@ -263,8 +263,8 @@
           <p class="text--bold text--white">Men du behöver vara över 16 år gammal så allt går rätt till.</p>
         </span>
         <span>
-          <button id="goToRegisterUserBtn"
-          class="button__usual--clear">
+          <button
+          class="goToRegisterUserBtn button__usual--clear">
           Bli medlem
           </button>
         </span>
@@ -300,8 +300,9 @@
           <p class="text--bold text--white">Men du behöver vara över 16 år gammal så allt går rätt till.</p>
         </span>
         <span>
-          <button id="goToRegisterUserBtn"
-          class="button__usual--clear">
+          <button
+          class="goToRegisterUserBtn
+          button__usual--clear">
           Bli medlem
           </button>
         </span>
@@ -324,7 +325,8 @@
 class="section hidden">
   <div class="confirmation__twocolumns">
   <article class="confirmation__container">
-    <h2 class="text--green">Dina Produkter:</h2>
+    <h2 class="text--green">
+      Dina Produkter:</h2>
     <div id="orderProductsSummation">
     </div>
     
@@ -336,7 +338,6 @@ class="section hidden">
       <br>
       <input type="text"
             name="securitycode" id="securitycode">
-      
         <button type="submit" id="securityCodeBtn" class="button__usual--small">
         Lägg till </button>
       <p>
@@ -364,10 +365,12 @@ class="section hidden">
         >
         Namn:
         </label>
+        
         <input type="text" 
         name="nameOrderConfirmation" 
         id="nameOrderConfirmation" 
-        required placeholder="Namn">
+        required 
+        placeholder="Namn*">
         </span>
 
         <span class="form__confirmation--row">
@@ -375,10 +378,12 @@ class="section hidden">
         >
           Gatuadress: 
         </label>
+
         <input type="text" 
         name="streetOrderConfirmation" 
         id="streetOrderConfirmation" 
-        required placeholder="Gatuadress">
+        required 
+        placeholder="Gatuadress*">
         </span>
 
         <span class="form__confirmation--row">
@@ -386,9 +391,11 @@ class="section hidden">
         >
           Postnummer:
         </label>
+
         <input type="number" 
         name="postalCodeOrderConfirmation" id="postalCodeOrderConfirmation" 
-        required placeholder="Postnummer">
+        required 
+        placeholder="Postnummer*">
         </span>
 
         <span class="form__confirmation--row">
@@ -399,7 +406,8 @@ class="section hidden">
         <input type="text" 
         name="townOrderConfirmation" 
         id="townOrderConfirmation" 
-        required placeholder="Ord">
+        required 
+        placeholder="Ort*">
         </span>
 
         <span class="form__confirmation--row">
@@ -410,7 +418,7 @@ class="section hidden">
         <input type="email" 
         name="emailOrderConfirmation" 
         id="emailOrderConfirmation" 
-        required placeholder="E-post">
+        required placeholder="Email*">
         </span>
         
         <span class="form__confirmation--row">
@@ -486,7 +494,8 @@ class="section hidden">
           
           <button type="submit" id="loginButton" class="button__usual">Logga in</button> 
 
-          <button id="goToRegisterUserButton" class="button__usual">Bli medlem</button> 
+          <button 
+           class=" goToRegisterUserBtn button__usual">Bli medlem</button> 
           </form>
         </article>
     
@@ -528,8 +537,9 @@ class="section hidden">
       <article class="register__box">
           <h3 class="text--green">
             Fyll i din information här:</h3>
+
           <form id="createUserForm"
-        class="form__all">
+          class="form__all">
           <span class="form--inputs"></span>
           <label for="emailCreateUser" class="hidden">E-post</label>
           <input type="email" name="emailCreateUser" id="emailCreateUser" required placeholder="E-post">
@@ -545,6 +555,7 @@ class="section hidden">
           <input type="text" name="townCreateUser" id="townCreateUser" required placeholder="Ort">
           <label for="phoneNumberCreateUser" class="hidden">Telefonnummer</label>
           <input type="text" name="phoneNumberCreateUser" id="phoneNumberCreateUser" placeholder="Telefonnummer">
+
           <!-- <label
           for="choosePicture"
           class="text--cursive">Välj en profilbild (max 2 mb)</label>

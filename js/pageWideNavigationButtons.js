@@ -61,10 +61,16 @@ const confirmOrderConfirmationBtn = (e) => {
   changeActivePage("receiptSection");
 }
 
-document.getElementById("submitBtnOrderConfirmation").addEventListener("click", (e) => {
+// document.getElementById("submitBtnOrderConfirmation").addEventListener("click", (e) => {
+//   e.preventDefault();
+//   changeActivePage("receiptSection"); 
+// })
+
+document.getElementById("orderConfirmationForm").addEventListener("submit", (e) => {
   e.preventDefault();
   changeActivePage("receiptSection"); 
 })
+
 
 document.getElementById("cancelBtnOrderConfirmation").addEventListener("click", (e) => {
   e.preventDefault();
@@ -76,10 +82,15 @@ document.getElementById("buttonBackReceipt").addEventListener("click",(e) => {
   changeActivePage("homepageSection");
 })
 
-document.getElementById("goToRegisterUserBtn").addEventListener("click",(e) => {
-  e.preventDefault();
-  changeActivePage("createUserSection");
+//*pga flera knappar som ser exakt likadana ut och har samma funktion så har jag gett dem samma klass och sen kör en foreach:
+document.querySelectorAll('.goToRegisterUserBtn').forEach(item => {
+  item.addEventListener('click', event => {
+    console.log("hej")
+    event.preventDefault();
+    changeActivePage("createUserSection");
+  })
 })
+
 
 //-------register
 const confirmAndExitCreateUser = () => {
@@ -90,11 +101,11 @@ document.getElementById("cancelButtonCreateUser").addEventListener("click", () =
   changeActivePage("homepageSection");
   })
 
-//-------login 
-document.getElementById("goToRegisterUserButton").addEventListener("click", (e) => {
-  e.preventDefault();
-changeActivePage("createUserSection");
-})
+// //-------login 
+// document.getElementById("goToRegisterUserButton").addEventListener("click", (e) => {
+//   e.preventDefault();
+// changeActivePage("createUserSection");
+// })
 
 const confirmAndLogin = () => {
   changeActivePage("homepageSection")
