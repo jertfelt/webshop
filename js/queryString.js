@@ -73,3 +73,5 @@ const setActivePage = () => {
   }
  
 setActivePage();
+// Update the amount when user changes between pages or comes back to our page and still has products in the cart.
+updateAmountCartNav();
