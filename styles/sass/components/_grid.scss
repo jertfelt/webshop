@@ -129,8 +129,6 @@
     &--container{
       position: relative;
       overflow: hidden;
-      @include breakpoint(small-max-m){
-        background-color: $color-white;}
       border-radius: 29px;
     }
 
