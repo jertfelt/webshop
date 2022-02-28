@@ -52,7 +52,7 @@ const drawCategorys = (data) => {
 
 async function getCategories() {
 
-    const catResponse = await fetch("./js/data/categories.json");
+    const catResponse = await fetch("https://jertfelt.github.io/js/data/categories.json");
 
     const data = await catResponse.json();
 
