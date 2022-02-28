@@ -198,6 +198,7 @@ const decreaseQuantity = (prodID) => {
   setCartinLocalStorage(updatedProductList);
   setTotalPriceOrder();
   showCart();
+  localStorage.removeItem("sale");
 }
 
 // Tar bort hela produkten. Funktionen körs när man klickar på "Remove"-knappen i varukorgen
@@ -227,6 +228,7 @@ const clearCart= () => {
   localStorage.removeItem("cart");
   localStorage.removeItem("totalPriceOrder");
   drawProductsinCart();
+  localStorage.removeItem("sale");
 }
 
 const showEmptyCartMessage = () => {

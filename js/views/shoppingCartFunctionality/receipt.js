@@ -66,3 +66,5 @@ if (!receiptSection.classList.contains("hidden")) {
     drawReceipt()
 }
 
+receiptSection.addEventListener("click", () => {
+localStorage.removeItem("sale")})
