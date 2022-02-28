@@ -97,7 +97,7 @@
       <div class="product__img--container product__img--list">
         <a href="${productLink}">
           <img alt = 
-          Produkt ${product.title}"   
+          "Produkt ${product.title}"   
           class ="product__img" 
           src="${product.fields.image.fields.file.url}">
           </img>
