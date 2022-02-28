@@ -99,7 +99,7 @@
           <img alt = 
           Produkt ${product.title}"   
           class ="product__img" 
-          src="/${product.fields.image.fields.file.url}">
+          src="${product.fields.image.fields.file.url}">
           </img>
         </a>
       </div>
