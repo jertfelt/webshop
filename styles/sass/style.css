@@ -1231,10 +1231,11 @@ h6 {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 80%;
-  height: 60%;
+  max-height: 400px;
   z-index: 10;
   background: #ece6d2;
   padding: 1.5rem;
+  padding-bottom: 2rem;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   border-radius: 19px;
