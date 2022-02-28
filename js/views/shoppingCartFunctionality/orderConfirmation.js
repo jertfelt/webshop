@@ -1,7 +1,7 @@
 
 
 //Product information
-
+const orderProductsSummation = document.querySelector("#orderProductsSummation");
 //Creates product element
     const createProductElementOrderConfirmation = (img, name, amount, quantity) => {
     
@@ -32,7 +32,7 @@
 
     productOrderConfirmation.appendChild(productInformationDivOrderConfirmation);
 
-    document.querySelector("#orderProductsSummation").appendChild(productOrderConfirmation);
+    orderProductsSummation.appendChild(productOrderConfirmation);
 
     //adding classes to elements
   
@@ -43,20 +43,32 @@
   }
 
 //Go through each product in cart and send it to print
-    if (getCart() !== null) {
-      getCart().forEach(product => {
-        createProductElementOrderConfirmation(
-          product.fields.image.fields.file.url, product.fields.title, 
-          product.amount, product.quantity);
-      });
+const printProducts = () => { 
+  // Ta bort ritade produkter
+  while(orderProductsSummation.lastElementChild) {
+    orderProductsSummation.removeChild(orderProductsSummation.lastElementChild);
+  }  
+  if (getCart() !== null) {
+    getCart().forEach(product => {
+      createProductElementOrderConfirmation(
+        product.fields.image.fields.file.url, product.fields.title, 
+        product.amount, product.quantity);
+    });
     }
+}
 
 //Adds total price
-    const addTotalPriceOrderConfirmation = () => {
-      const totalPriceText = document.getElementById("orderProductsTotalAmount");
-      totalPriceText.innerHTML = `Total kostnad: <br>  ${getTotalPriceOrder()} kr`;
-    }
-    addTotalPriceOrderConfirmation();
+const addTotalPriceOrderConfirmation = () => {
+  const totalPriceText = document.getElementById("orderProductsTotalAmount");
+  totalPriceText.innerHTML = `Total kostnad: <br>  ${getTotalPriceOrder()} kr`;
+}
+
+const printOrderConfirmation = () => {
+  printProducts();
+  addTotalPriceOrderConfirmation();
+}
+
+printOrderConfirmation();
 
 
 //User information
