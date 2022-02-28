@@ -20,11 +20,13 @@ const displaySearchResult =
   // Draw feedback message for searched text
   const searchInputFeedback = document.createElement("h3");
   searchInputFeedback.classList.add("text--green", "text--cursive", "centered");
+
   searchInputFeedback.innerText = `Du sökte på "${searchValue}"`;
+  
   searchContainer.appendChild(searchInputFeedback);
 
-  loadingSearch.classList.add("hidden");
-  document.getElementById("searchSpinner").classList.add("hidden");
+ 
+
   // Creates section element that wraps product cards
   const sectionElem = document.createElement("section");   
   sectionElem.classList.add("products__grid--all");   
@@ -41,9 +43,11 @@ const displaySearchResult =
       // Draw each product that matches the search
       createProductCard(produx, sectionElem);}
     else {
-      searchInputFeedback.innerHTML = `Du sökte på "${searchValue}." <br>Tyvärr hittade vi inget!<br>
+      searchInputFeedback.innerHTML = `Du sökte på "${searchValue}." 
       `;
     }
+    loadingSearch.classList.add("hidden");
+    document.getElementById("searchSpinner").classList.add("hidden");
   });
 
  
