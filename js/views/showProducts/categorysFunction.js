@@ -1,3 +1,5 @@
+//*---variables 
+
 const categoriesSection = document.querySelector(".products__grid--categories");
 
 const queryParams1 = new URLSearchParams(location.search);
@@ -6,6 +8,7 @@ const categoryId = queryParams1.get('id');
 
 let categoryArray = []; 
 
+//*---create categories
 const drawCategorys = (data) => {
     data.forEach(x =>{
 
@@ -28,6 +31,7 @@ const drawCategorys = (data) => {
         categoriesSection.appendChild(tempArt);
     })
 
+    //*---event listeners on buttons
     const categoryDamClick = document.getElementById("categoryDamkläder");
 
     categoryDamClick.onclick=()=>{
@@ -48,11 +52,15 @@ const drawCategorys = (data) => {
     }
 }
 
-//---------fetch from JSON and render:
+//*---------fetch from JSON and render:
 
 async function getCategories() {
 
-    const catResponse = await fetch("https://jertfelt.github.io/js/data/categories.json");
+    //!--vår lokala server
+    const catResponse = await fetch("./js/data/categories.json");
+
+    // //!--till för publicering avkommenteras inför tisdag 1/3
+    // const catResponse = await fetch("https://jertfelt.github.io/js/data/categories.json");
 
     const data = await catResponse.json();
 

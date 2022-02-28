@@ -6,11 +6,12 @@
 //*---open dropdown (by click or pushing enter)
 
   const openDropdown = () => {
-  if (menuMobile.classList.contains("dropdown"))
-  {menuMobile.classList.remove("dropdown");
-  }
-  else 
-  menuMobile.classList.add("dropdown");
+
+    if (menuMobile.classList.contains("dropdown"))
+    {menuMobile.classList.remove("dropdown");
+    }
+    else 
+    menuMobile.classList.add("dropdown");
   }
 
   menuButton.addEventListener("click", openDropdown);
@@ -24,7 +25,7 @@
 
 //*----close dropdown (by click or keydown)
   const closeDropDown = () => {
-  menuMobile.classList.add("dropdown");
+   menuMobile.classList.add("dropdown");
   }
 
   document.getElementById("closeDropDown").addEventListener("click", closeDropDown);
@@ -74,10 +75,11 @@
     const stringifyCart = JSON.stringify(cart);
     localStorage.setItem("cart", stringifyCart);
   }
-
-
+//*----fetch from JSON 
   const fetchProducts = async () => {
     const response = await fetch("/js/data/products.json");
+    //*---public server mod: (avkommentera 1/3) 
+    // const response = await fetch("https://jertfelt.github.io/js/data/products.json");
     const data = await response.json();
     return [...data.products];
   }
@@ -90,17 +92,23 @@
     articleElem.innerHTML = `
       <div class="product__img--container product__img--list">
         <a href="${productLink}">
-            <img alt = Produkt ${product.title}"   
-              class ="product__img" 
-              src="/${product.fields.image.fields.file.url}">
-            </img>
+          <img alt = 
+          Produkt ${product.title}"   
+          class ="product__img" 
+          src="/${product.fields.image.fields.file.url}">
+          </img>
         </a>
       </div>
+
       <span class="product__box">
+      
         <span>
-          <h3 class="text--uppercase text--cursive">${product.fields.title}</h3>
-          <h4 class="text--green">${product.fields.price} kr</h4>
+          <h3 class="text--uppercase text--cursive">
+          ${product.fields.title}</h3>
+          <h4 class="text--green">
+          ${product.fields.price} kr</h4>
         </span>
+
         <button 
         class="addToCartBtn" 
         data-id="${product.sys.id}">
