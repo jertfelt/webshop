@@ -33,6 +33,14 @@ const showCart = () => {
 const hideCart = () => {
   cartContainer.classList.add("cart__hidden");
   cartMenu.classList.remove("cart__show");
+
+  const url = new URL(window.location.href);
+  const search_params = url.searchParams;
+  const currentSection = search_params.get("section");
+  // Uppdatera order confirmation när man stänger varukorgen
+  if(currentSection === "orderConfirmationSection") {
+    printOrderConfirmation();
+  }
 }
 
 
