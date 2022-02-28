@@ -59,6 +59,9 @@ async function getCategories() {
     //!--vår lokala server
     const catResponse = await fetch("./js/data/categories.json");
 
+    // //!--till för publicering avkommenteras inför tisdag 1/3
+    // const catResponse = await fetch("https://jertfelt.github.io/js/data/categories.json");
+
     const data = await catResponse.json();
 
     categoryArray = [...data.categories];

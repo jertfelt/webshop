@@ -78,8 +78,12 @@
   
 //*----fetch from JSON 
   const fetchProducts = async () => {
+<<<<<<< HEAD
     
     const response = await fetch("./js/data/products.json");
+=======
+    const response = await fetch("/js/data/products.json");
+>>>>>>> parent of 078505e (put dots)
     
     const data = await response.json();
     return [...data.products];
