@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ekoline Clothing</title>
-  <link rel="shortcut icon" type="image/jpg" href="styles\img\favicon-32x32.png"/>
-  <link rel="stylesheet" href="styles\sass\style.css">
+  <link rel="shortcut icon" type="image/jpg" href=".styles\img\favicon-32x32.png"/>
+  <link rel="stylesheet" href=".\styles\sass\style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
       <!--ikon dropdown-->
         <span class="nav__mobile-menu">
           <img 
-          src="styles\sass\img\Hamburger_icon.svg.png" 
+          src=".styles\sass\img\Hamburger_icon.svg.png" 
           alt="Mobile menu" 
           id="menuToggle"
           class="nav__button">
@@ -32,7 +32,7 @@
         <div class="mainmenu__mobile">
           <span class="dropdown--close">
             <img 
-            src="styles/sass/img/closing.png" 
+            src=".styles/sass/img/closing.png" 
             alt="Stäng meny"
             class="dropdown--close"
             id="closeDropDown"/>
@@ -91,7 +91,7 @@
         </li>
         <li>
           <span class="search__navigation">
-            <img src ="styles/sass/img/500px-Search_Icon.svg.png"
+            <img src =".styles/sass/img/500px-Search_Icon.svg.png"
             alt="Leta efter produkt"
             >
             <label for="searchBar">
@@ -113,7 +113,7 @@
       class="event__link"
       id="logoLinkNav">
         <img 
-        src="styles/sass/img/Logga.png" 
+        src=".styles/sass/img/Logga.png" 
         alt="logotype Ekoline" 
         class="nav__logotype"/>
       </a>
@@ -123,7 +123,7 @@
     <span 
     class="nav__cart--icon ">
       <img 
-        src="styles/sass/img/shop-cart.png" 
+        src=".styles/sass/img/shop-cart.png" 
             alt="Shopping cart" 
             class="headercart headercart__imgfix">
 
@@ -144,7 +144,8 @@
             </i>
           </span>
             <!--dot that shows when logged in-->
-          <div class="login__dot hidden" id="navUserOnlineDot">
+          <div class="login__dot hidden" 
+          id="navUserOnlineDot">
           </div>
         </span>
   </span>
@@ -172,15 +173,16 @@
     <section id="categoriesSection" 
     class="categories">
       <article>
-        <h2 class="text--primary text--cursive"> Vårt motto:</h2>
+        <h2 class="text--primary text--cursive">
+          Vårt motto:</h2>
         <p class="text--m">
           Vi är en ekologisk, hållbar butik som fokuserar på det handgjorda, naturvänliga och unika.
         </p>
       </article>
       
       <article class="row">
-         <img src="styles/sass/img/monstrera.png">
-         <img src="styles/sass/img/1024px-Gotlandsk_pelsfaar.jpg">
+         <img src=".styles/sass/img/monstrera.png">
+         <img src=".styles/sass/img/1024px-Gotlandsk_pelsfaar.jpg">
       </article>
 
       <article>
@@ -199,7 +201,8 @@
   class="section hidden">
     <div class="minheight">
       <article class="productlist__header">
-        <h2 id="categoryHeader" class="centered text--cursive text--green">
+        <h2 id="categoryHeader" 
+        class="centered text--cursive text--green">
         </h2>
       </article>
       <article id="productListGrid">
@@ -238,29 +241,36 @@
 
   <section id="searchSection" 
   class="section hidden">
+
     <div class="search__container"
     id="searchDiv">
-      <div id="loadingSearch" class="loading__search hidden">
+      <div id="loadingSearch" 
+      class="loading__search hidden">
         <span class="search__loader"
         id="searchSpinner">
               Laddar.. 
         </span>
       </div>
     </div>
+
     <article class="individual__footer">
-      <h3 class="text--white">Är du medlem?</h3>
-      <p class="text--s text--white">Som medlem får du 10% på ditt första köp och belönas när du shoppar och gör medvetna val.</p>
+      <h3 class="text--white">
+        Är du medlem?</h3>
+      <p class="text--s text--white">
+        Som medlem får du 10% på ditt första köp och belönas när du shoppar och gör medvetna val.</p>
 
       <article class="individual__footer--grid">
         
         <span>
           <h4>Poäng på varje köp</h4>
-          <p class="text--bold text--white">Som medlem får du alltid poäng när du handlar hos oss.</p>
+          <p class="text--bold text--white">
+            Som medlem får du alltid poäng när du handlar hos oss.</p>
         </span>
        
         <span>
           <h4>Medlemskapet är gratis</h4>
-          <p class="text--bold text--white">Men du behöver vara över 16 år gammal så allt går rätt till.</p>
+          <p class="text--bold text--white">
+            Men du behöver vara över 16 år gammal så allt går rätt till.</p>
         </span>
         <span>
           <button
@@ -285,19 +295,23 @@
     </article>
 
     <article class="individual__footer">
-      <h3 class="text--white">Är du medlem?</h3>
-      <p class="text--s text--white">Som medlem får du 10% på ditt första köp och belönas när du shoppar och gör medvetna val.</p>
+      <h3 class="text--white">
+        Är du medlem?</h3>
+      <p class="text--s text--white">
+        Som medlem får du 10% på ditt första köp och belönas när du shoppar och gör medvetna val.</p>
 
       <article class="individual__footer--grid">
         
         <span>
           <h4>Poäng på varje köp</h4>
-          <p class="text--bold text--white">Som medlem får du alltid poäng när du handlar hos oss.</p>
+          <p class="text--bold text--white"
+          >Som medlem får du alltid poäng när du handlar hos oss.</p>
         </span>
        
         <span>
           <h4>Medlemskapet är gratis</h4>
-          <p class="text--bold text--white">Men du behöver vara över 16 år gammal så allt går rätt till.</p>
+          <p class="text--bold text--white">
+            Men du behöver vara över 16 år gammal så allt går rätt till.</p>
         </span>
         <span>
           <button
@@ -308,7 +322,7 @@
         </span>
       </article>
       <article class="individual__footer--moreinfo">
-        <img src="styles\sass\img\recyclekla-der.jpg">
+        <img src=".styles\sass\img\recyclekla-der.jpg">
      
         <h4>Miljövänlig frakt</h4>
         <p class="text--s text--white">
@@ -337,12 +351,16 @@ class="section hidden">
           Ange rabattkod</label>
       <br>
       <input type="text"
-            name="securitycode" id="securitycode">
-        <button type="submit" id="securityCodeBtn" class="button__usual--small">
+            name="securitycode" 
+            id="securitycode">
+        <button type="submit" 
+        id="securityCodeBtn" 
+        class="button__usual--small">
         Lägg till </button>
       <p>
       En rabattkod kan till exempel vara ”SOMMAR2022”</p>
-      <p id="saleCodeMsg" class="text--green text--bold"></p>
+      <p id="saleCodeMsg" 
+      class="text--green text--bold"></p>
     </span>
 
     <h3 id="orderProductsTotalAmount"
@@ -351,7 +369,8 @@ class="section hidden">
 
   </article>
 
-  <article id="yourOrderInformation" class="confirmation__container--right">
+  <article id="yourOrderInformation" 
+  class="confirmation__container--right">
     
     <h2 class="text--green">
       Dina Detaljer:</h2>
@@ -426,14 +445,17 @@ class="section hidden">
         >
           Telefonnummer:</label>
         <input type="tel"
-        name="phoneNumberOrderConfirmation" id="phoneNumberOrderConfirmation" placeholder="Telefonnummer">
+        name="phoneNumberOrderConfirmation" 
+        id="phoneNumberOrderConfirmation" 
+        placeholder="Telefonnummer">
         </span>
 
         <label for="commentsOrderConfirmation"
         class="form__confirmation--txtlabel"
         >
         Övriga kommentarer:</label>
-        <textarea name="commentsOrderConfirmation" id="commentsOrderConfirmation" 
+        <textarea name="commentsOrderConfirmation" 
+        id="commentsOrderConfirmation" 
         cols="30" 
         rows="10"
         placeholder="Övriga kommentarer">
@@ -467,7 +489,8 @@ class="section hidden">
     <article class="login__text">
       <h2>Hej medlem!<br>
       Alltid bättre pris för dig.</h2>
-      <p class="text--s">Klubbpris för jämnan på kläder som är bra</p>
+      <p class="text--s">
+        Klubbpris för jämnan på kläder som är bra</p>
       
     </article>
     <article class="login__box">
@@ -481,43 +504,57 @@ class="section hidden">
           <label for="emailLogin">
             E-mail</label><br>
           <input type="text" 
-          name="emailLogin" id="emailLogin" placeholder="E-mail" required>
+          name="emailLogin" 
+          id="emailLogin" 
+          placeholder="E-mail*" required>
           </div>
       
           <div class="form__login--inputs">
           <span class="input-group-addon">
             <i class="fa fa-lock"></i></span>
-          <label for="password">Lösenord</label><br>
+          <label for="password">
+            Lösenord</label><br>
           <input type="password" 
-          name="password" id="password" placeholder="Lösenord" required>
+          name="password" 
+          id="password" 
+          placeholder="Lösenord*" required>
           </div>
           
-          <button type="submit" id="loginButton" class="button__usual">Logga in</button> 
+          <button type="submit" 
+          id="loginButton" 
+          class="button__usual">
+          Logga in</button> 
 
           <button 
-           class=" goToRegisterUserBtn button__usual">Bli medlem</button> 
+           class=" goToRegisterUserBtn button__usual">
+           Bli medlem</button> 
           </form>
         </article>
     
         <article class="login__bonus">
           <h3>Att vara medlem lönar sig</h3>
-          <p class="text--s">Som medlem får du 10% på ditt första köp och belönas när du shoppar och gör medvetna val.</p>
-          
-  
+          <p class="text--s">
+            Som medlem får du 10% på ditt första köp och belönas när du shoppar och gör medvetna val.
+          </p>
         </article>
         <article class="row login__details">
-        
           <span class="login__details--item">
-            <h4 class="text--green">Poäng på varje köp</h4>
-            <p class="text--bold">Som medlem får du alltid poäng när du handlar hos oss.</p>
+            <h4 class="text--green">
+              Poäng på varje köp</h4>
+            <p class="text--bold">
+              Som medlem får du alltid poäng när du handlar hos oss.
+            </p>
           </span>
          
           <span class="login__details--item">
-            <h4 class="text--green">Medlemskapet är gratis</h4>
-            <p class="text--bold">Men du behöver vara över 16 år gammal så allt går rätt till.</p>
+            <h4 class="text--green">
+              Medlemskapet är gratis</h4>
+            <p class="text--bold">
+              Men du behöver vara över 16 år gammal så allt går rätt till.
+            </p>
           </span>
           <span class="login__details--item">
-            <img src="styles/sass/img/swedish-forest.jpg"
+            <img src=".styles/sass/img/swedish-forest.jpg"
             alt="En bild snodd från Greenpeace"
             /> 
           </span>
@@ -541,20 +578,59 @@ class="section hidden">
           <form id="createUserForm"
           class="form__all">
           <span class="form--inputs"></span>
-          <label for="emailCreateUser" class="hidden">E-post</label>
-          <input type="email" name="emailCreateUser" id="emailCreateUser" required placeholder="E-post">
-          <label for="passwordCreateUser" class="hidden">Lösenord</label>
-          <input type="password" name="passwordCreateUser" id="passwordCreateUser" required placeholder="Lösenord">
-          <label for="nameCreateUser" class="hidden">Användarnamn</label>
-          <input type="text" name="nameCreateUser" id="nameCreateUser" required placeholder="Användarnamn">
-          <label for="streetCreateUser" class="hidden">Gatuadress</label>
-          <input type="text" name="streetCreateUser" id="streetCreateUser" required placeholder="Gatuadress">
-          <label for="postalCodeCreateUser" class="hidden">Postnummer</label>
-          <input type="number" name="postalCodeCreateUser" id="postalCodeCreateUser" required placeholder="Postnummer">
-          <label for="townCreateUser" class="hidden">Ort</label>
-          <input type="text" name="townCreateUser" id="townCreateUser" required placeholder="Ort">
-          <label for="phoneNumberCreateUser" class="hidden">Telefonnummer</label>
-          <input type="text" name="phoneNumberCreateUser" id="phoneNumberCreateUser" placeholder="Telefonnummer">
+          <label for="emailCreateUser" 
+          class="hidden">
+          Email</label>
+          <input type="email" 
+          name="emailCreateUser" 
+          id="emailCreateUser" 
+          required placeholder="Email*">
+          <label for="passwordCreateUser" 
+          class="hidden">
+          Lösenord</label>
+          <input type="password" 
+          name="passwordCreateUser" 
+          id="passwordCreateUser" 
+          required 
+          placeholder="Lösenord*">
+          <label for="nameCreateUser" 
+          class="hidden">
+          Användarnamn</label>
+          <input type="text" 
+          name="nameCreateUser" 
+          id="nameCreateUser" 
+          required 
+          placeholder="Användarnamn*">
+          <label for="streetCreateUser" 
+          class="hidden">
+          Gatuadress</label>
+          <input type="text" 
+          name="streetCreateUser" 
+          id="streetCreateUser" 
+          required 
+          placeholder="Gatuadress*">
+          <label for="postalCodeCreateUser" 
+          class="hidden">
+          Postnummer</label>
+          <input type="number" 
+          name="postalCodeCreateUser" 
+          id="postalCodeCreateUser"
+          required 
+          placeholder="Postnummer*">
+          <label for="townCreateUser" 
+          class="hidden">
+          Ort</label>
+          <input type="text" 
+          name="townCreateUser" 
+          id="townCreateUser" 
+          required placeholder="Ort*">
+          <label for="phoneNumberCreateUser" 
+          class="hidden">
+          Telefonnummer</label>
+          <input type="text" 
+          name="phoneNumberCreateUser" 
+          id="phoneNumberCreateUser" 
+          placeholder="Telefonnummer">
 
           <!-- <label
           for="choosePicture"
@@ -564,12 +640,16 @@ class="section hidden">
           id="imgfile"/> -->
 
           <span class="form__create--buttons">
-            <button type="submit" id="submitBtnCreateUser" class="button__usual">
-              Bli medlem</button>
+            <button type="submit" 
+            id="submitBtnCreateUser" 
+            class="button__usual">
+            Bli medlem</button>
+
             <button 
             id="cancelButtonCreateUser"
             class="button__usual">
             Avbryt</button>
+
           </span>
           </form>
         </article>
@@ -579,42 +659,49 @@ class="section hidden">
   <div class="register__info">
    
     <article class="register__info--row">
-      <h3 class="text--white">Såhär funkar det</h3>
+      <h3 class="text--white">
+        Såhär funkar det</h3>
       <span>
-      <h4 class="text--bold text--green">Registrera dig</h4>
-      <p>Medlemskapet är digitalt och gratis!</p>
+      <h4 class="text--bold text--green">
+        Registrera dig</h4>
+      <p>Medlemskapet är digitalt och gratis!
+      </p>
       </span>
       <span>
-        <h4 class="text--bold text--green">Samla poäng</h4>
-        <p>Du får poäng på alla dian köp och när du gör medvetna val</p>
+        <h4 class="text--bold text--green">
+          Samla poäng</h4>
+        <p>Du får poäng på alla dian köp och när du gör medvetna val
+        </p>
       </span>
       <span>
-        <h4 class="text--bold text--green">Lös in erbjudanden</h4>
+        <h4 class="text--bold text--green">
+          Lös in erbjudanden</h4>
         <p>Du får 25 kr i bonusrabatt för varje 1000 poäng samt exklusiva erbjudanden.</p>
       </span>
       <span>
-        <h4 class="text--bold text--green">Plusmedlem</h4>
-        <p>När du når 5000 poäng blir du plusmedlem och får tillgång till fler förmåner och erbjudanden</p>
+        <h4 class="text--bold text--green">
+          Plusmedlem</h4>
+        <p>När du når 5000 poäng blir du plusmedlem och får tillgång till fler förmåner och erbjudanden
+        </p>
       </span>
+      
     </article>
-
     </div>
   </div>
 </div>
-
   </main>
 
 <!--varukorgen-->
   <aside class="cart__container cart__hidden">  
       <section class="cart__content">
           <img 
-          src="styles/sass/img/closing.png" 
+          src=".styles/sass/img/closing.png" 
           alt="Stäng varukorg"
           class="cart--close dropdown--close"/>
        
         <h2>Din kundvagn:</h2>
         <article id="cartDynamicContent">
-      
+
         </article>
 
         <article class="cart__footer">
@@ -626,7 +713,8 @@ class="section hidden">
             <button id="clearCart" 
             class="button__usual--clear">
              Rensa kundvagn</button>
-            <button id="toConfirmation" class="button__usual">
+            <button id="toConfirmation" 
+            class="button__usual">
               Gå till kassan</button>
         </span>   
         </article>
@@ -634,7 +722,8 @@ class="section hidden">
   </aside>
 
      <!--kolla om inloggad --> 
-     <aside id="userNavDropdown" class="hidden login__container" >
+     <aside id="userNavDropdown" 
+     class="hidden login__container" >
       <div class="login__dropdown">
         <img src="./styles/sass/img/closing.png" 
           id="closeUserNavDropdown"
@@ -652,9 +741,11 @@ class="section hidden">
             <p id="todaysDate"
             class="text--centered"></p>
           </span>
-          <button id="userNavLogInRegisterBtn" class="button__usual">
+          <button id="userNavLogInRegisterBtn" 
+          class="button__usual">
           Logga in || Bli medlem</button>
-          <button id="userNavLogOutBtn" class="hidden button__usual--clear">
+          <button id="userNavLogOutBtn" 
+          class="hidden button__usual--clear">
           Logga ut</button>
         </span>
       </div>
@@ -671,7 +762,8 @@ class="section hidden">
         </h2>
 
         <article class="receipt__content">
-          <h3 class="text--green text--cursive"> Dina detaljer:
+          <h3 class="text--green text--cursive"> 
+            Dina detaljer:
           </h3>
           <span class="receipt__text">
             <!--detta ska renderas-->
