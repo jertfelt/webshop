@@ -122,6 +122,8 @@
   }
 
   &__box{
+  
+    margin: 0 auto;
     @include flexBox(column,flex-start,center);
     background-color: $color-white;
     padding:2rem;

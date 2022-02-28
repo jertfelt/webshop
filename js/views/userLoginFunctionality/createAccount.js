@@ -8,8 +8,6 @@ if (usersArr === null) {
 
 
 //Creates user and saves it in local storage
-
-
 const createUser = (email, password, name, street, postalCode, town, tel ) => {
 
   const userObj = {
@@ -25,10 +23,7 @@ const createUser = (email, password, name, street, postalCode, town, tel ) => {
 
   //loggar in användaren
   localStorage.setItem("loggedInUser", JSON.stringify(userObj))
-
 }
-
-
 
 //Retrives data from form and sends it to createUser();
 
