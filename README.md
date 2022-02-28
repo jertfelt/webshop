@@ -32,3 +32,5 @@ https://github.com/jertfelt/webshop/blob/main/kravlista.txt
 ![image](https://user-images.githubusercontent.com/30622818/155897484-24b6c7f0-af4a-4603-8932-80eb92363cd2.png)
 
 ![image](https://user-images.githubusercontent.com/30622818/155897556-62ce9cda-4be8-4594-ad80-adce87a1ee4c.png)
+![image](https://user-images.githubusercontent.com/30622818/156028766-fcf25760-f310-4cd4-8c45-acd2530e6eea.png)
+
