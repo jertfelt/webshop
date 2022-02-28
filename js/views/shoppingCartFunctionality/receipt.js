@@ -45,10 +45,19 @@ if (getCart() !== null) {
   const receiptFooterPrice = document.getElementsByClassName("receipt__footer--price")[0];
 
   const priceWithSale = JSON.parse(localStorage.getItem("sale"));
-  
+
+  if (priceWithSale == null){
+    getTotalPriceOrder();
+    receiptFooterPrice.innerHTML=`
+    <h4> Totalt: ${getTotalPriceOrder()} SEK</h4>
+     `
+ }
+
+ else {
   receiptFooterPrice.innerHTML=`
    <h4> Totalt: ${priceWithSale} SEK</h4>
     `
+}  
 }
 
 //Renders receipt when on the correct page

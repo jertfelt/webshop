@@ -30,20 +30,23 @@ const changeActivePage = (sectionName, categoryName, prodID) => {
 const createURL  = (sectionName, categoryName, prodID) => {
   const url = new URL(window.location.href);
   const search_params = url.searchParams;
-
+  //återställer
   search_params.delete("id");
   search_params.delete("category");
   
   // Lägger till section parameter
   search_params.set('section', sectionName);
+
   // Lägger till kategori om angiven
   if (categoryName) {
     search_params.set('category', categoryName);
   }
+
   // Lägger till produkt ID om angiven
   if (prodID) {
     search_params.set('id', prodID);
   }
+
   // Ger en sträng med komplett URL
   return url.toString();
 }
@@ -57,9 +60,10 @@ const setActivePage = () => {
   const currentSection = search_params.get("section");
   // console.log(currentSection) // blir null vid start (första gången)
 
- // ändrat funktion och for loop - default är att allt utom homepageSection är dolt i början (så om man öppnar fönstret första gången så syns bara homepage)
+  // ändrat funktion och for loop - default är att allt utom homepageSection är dolt i början (så om man öppnar fönstret första gången så syns bara homepage)
  
  if (currentSection) {
+   
   sections.forEach(section => {
     
     if (section.id === currentSection){
@@ -69,7 +73,9 @@ const setActivePage = () => {
       }
       section.classList.remove("hidden");
     }
+
   })}
+
   }
  
 setActivePage();
