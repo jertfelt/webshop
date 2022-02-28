@@ -78,16 +78,7 @@
   
 //*----fetch from JSON 
   const fetchProducts = async () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-    const response = await fetch("./js/data/products.json");
-=======
     const response = await fetch("/js/data/products.json");
->>>>>>> parent of 078505e (put dots)
-=======
-    const response = await fetch("/js/data/products.json");
->>>>>>> parent of 078505e (put dots)
     
     const data = await response.json();
     return [...data.products];
@@ -106,7 +97,7 @@
         <a href="${productLink}">
           <img alt = "Produkt ${product.title}"   
           class ="product__img" 
-          src="${product.imagetest.url}">
+          src="/${product.imagetest.url}">
           </img>
         </a>
       </div>
