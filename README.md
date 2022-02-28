@@ -21,8 +21,11 @@ Sidan består av:
 ![image](https://user-images.githubusercontent.com/30622818/155895907-8355aece-4f7f-40bd-9fb3-47173ec07e26.png)
 
 2. Header med varukorg och sökfunktion, samt en "inloggad"-funktion som gör att användaren ser om hen är inloggad.
-4. Varukorg (dropdown)
-5. 
+3. Varukorg (dropdown)
+
+
+![image](https://user-images.githubusercontent.com/30622818/155897280-c769e480-2133-4b7a-a085-f39740d98448.png)
+ 
 6. En grid med alla varor i en kategori, med köpknapp
 7. En detaljsida för en produkt, med köpknapp
 8. Bli medlem - sida
@@ -34,9 +37,7 @@ Vidare ska man fylla i ens uppgifter/ det laddas automatiskt om man är inloggad
 
 
 
-![image](https://user-images.githubusercontent.com/30622818/155897280-c769e480-2133-4b7a-a085-f39740d98448.png)
 
-![image](https://user-images.githubusercontent.com/30622818/155897285-b0f86258-2f07-49d5-87b9-ae8ea8a64627.png)
 ![image](https://user-images.githubusercontent.com/30622818/155897298-20845b4d-7224-4654-bab8-0649a83a7852.png)
 
 ![image](https://user-images.githubusercontent.com/30622818/155897313-3370b229-df2d-4cbc-92c1-3ca3b8e4ebdd.png)
