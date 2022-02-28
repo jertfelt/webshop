@@ -75,13 +75,16 @@
     const stringifyCart = JSON.stringify(cart);
     localStorage.setItem("cart", stringifyCart);
   }
+  
 //*----fetch from JSON 
   const fetchProducts = async () => {
     const response = await fetch("/js/data/products.json");
-    //*---public server mod: (avkommentera 1/3) 
-    // const response = await fetch("https://jertfelt.github.io/js/data/products.json");
+    
     const data = await response.json();
     return [...data.products];
+    //*---public server mod: (avkommentera 1/3) 
+    // const response = await fetch("https://jertfelt.github.io/js/data/products.json");
+   
   }
 
 // Skapar produkt kort komponent som kan användas i t.ex. produktlista, produktsida, sökresultat
