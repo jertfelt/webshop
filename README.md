@@ -17,15 +17,19 @@ Vi har jobbat med localStorage och JSON, samt med asynkronisrad exkvikvering av 
 Två JSON-filer har skapats där material har hämtats, sedan har vi mappat valen med local storage.
 
 Sidan består av:
-1. Hompage - här ska kategorier av produkter visas, samt en hero. 
+1. Homepage - här ska kategorier av produkter visas, samt en hero. <br>
 ![image](https://user-images.githubusercontent.com/30622818/155895907-8355aece-4f7f-40bd-9fb3-47173ec07e26.png)
-
-2. Header med varukorg och sökfunktion, samt en "inloggad"-funktion som gör att användaren ser om hen är inloggad.
-3. Varukorg (dropdown)
-
-
 ![image](https://user-images.githubusercontent.com/30622818/155897280-c769e480-2133-4b7a-a085-f39740d98448.png)
  
+
+2. Header med varukorg och sökfunktion, samt en "inloggad"-funktion som gör att användaren ser om hen är inloggad.
+
+
+
+3. Varukorg (dropdown)
+![image](https://user-images.githubusercontent.com/30622818/155897298-20845b4d-7224-4654-bab8-0649a83a7852.png)
+
+
 6. En grid med alla varor i en kategori, med köpknapp
 7. En detaljsida för en produkt, med köpknapp
 8. Bli medlem - sida
@@ -38,7 +42,7 @@ Vidare ska man fylla i ens uppgifter/ det laddas automatiskt om man är inloggad
 
 
 
-![image](https://user-images.githubusercontent.com/30622818/155897298-20845b4d-7224-4654-bab8-0649a83a7852.png)
+
 
 ![image](https://user-images.githubusercontent.com/30622818/155897313-3370b229-df2d-4cbc-92c1-3ca3b8e4ebdd.png)
 ![image](https://user-images.githubusercontent.com/30622818/155897321-a1ae38e5-519d-48d0-ba7d-f3a690d59378.png)
