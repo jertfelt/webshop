@@ -56,21 +56,16 @@ const userNavLogInRegister = () => {
 
 //------orderconfirmation (beställning)
 
-const confirmOrderConfirmationBtn = (e) => {
-  e.preventDefault();
-  changeActivePage("receiptSection");
-}
+// const confirmOrderConfirmationBtn = (e) => {
+
+//   e.preventDefault();
+//   changeActivePage("receiptSection");
+// }
 
 // document.getElementById("submitBtnOrderConfirmation").addEventListener("click", (e) => {
 //   e.preventDefault();
 //   changeActivePage("receiptSection"); 
 // })
-
-document.getElementById("orderConfirmationForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  changeActivePage("receiptSection"); 
-})
-
 
 document.getElementById("cancelBtnOrderConfirmation").addEventListener("click", (e) => {
   e.preventDefault();
@@ -80,12 +75,12 @@ changeActivePage("homepageSection");
 document.getElementById("buttonBackReceipt").addEventListener("click",(e) => {
   e.preventDefault();
   changeActivePage("homepageSection");
+  localStorage.removeItem("sale");
 })
 
 //*pga flera knappar som ser exakt likadana ut och har samma funktion så har jag gett dem samma klass och sen kör en foreach:
 document.querySelectorAll('.goToRegisterUserBtn').forEach(item => {
   item.addEventListener('click', event => {
-    console.log("hej")
     event.preventDefault();
     changeActivePage("createUserSection");
   })

@@ -90,10 +90,9 @@
     }
 
     document.getElementById("orderConfirmationForm").addEventListener("submit", (e) => {
-      saveOrderDetails();
-      //*eventuell setTimer funktion här
-      confirmOrderConfirmationBtn();
+      saveOrderDetails(); 
       e.preventDefault();
+      changeActivePage("receiptSection"); 
     });
 
  
@@ -107,7 +106,7 @@
     
 
 
-  const getTotalPrice = (rabatt) => {
+  const getTotalPriceWRabatt = (rabatt) => {
    
     const totalPriceWRabatt = document.getElementById("orderProductsTotalAmount");
     const priceString =  JSON.parse(localStorage.getItem("totalPriceOrder"));
@@ -116,11 +115,12 @@
     ;
     const mathPrice = (stringToInt * rabatt); 
 
-    const totalPrice = Math.trunc(mathPrice);
+    const totalPriceWSale = Math.trunc(mathPrice);
+    console.log(totalPriceWSale);
 
-    totalPriceWRabatt.innerHTML = `Total kostnad: <br> ${totalPrice} kr`;
+    totalPriceWRabatt.innerHTML = `Total kostnad: <br> ${totalPriceWSale} kr`;
 
-    return JSON.parse(localStorage.setItem("sale", JSON.stringify(totalPrice)));
+    return JSON.parse(localStorage.setItem("sale", JSON.stringify(totalPriceWSale)));
 
   }
 
@@ -142,7 +142,7 @@
         rabattOrder.innerText="Laddar..";
         setTimeout(() => {
           rabattOrder.innerText= "Du får 25% rea!";
-          getTotalPrice(rabatt);
+          getTotalPriceWRabatt(rabatt);
         }, 2000);
         }
 
@@ -152,7 +152,7 @@
         rabattOrder.innerText="Laddar..";
         setTimeout(() => {
           rabattOrder.innerText= "Du får 50% rea!";
-          getTotalPrice(rabatt);
+          getTotalPriceWRabatt(rabatt);
         }, 2000);
       }
 
@@ -163,7 +163,7 @@
         setTimeout(() => {
           securityButton.classList.remove("hidden")
           rabattOrder.innerText= "Du får 10% rea!";
-          getTotalPrice(rabatt);
+          getTotalPriceWRabatt(rabatt);
         }, 2000);
    
       }
