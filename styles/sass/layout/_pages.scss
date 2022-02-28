@@ -120,7 +120,6 @@
   &__box{
     height:100%;
     width:100%;
-  
     margin: auto;
     @include flexBox(column,flex-start,center);
     background-color: $color-white;

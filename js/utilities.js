@@ -78,7 +78,7 @@
   
 //*----fetch from JSON 
   const fetchProducts = async () => {
-    const response = await fetch("/js/data/products.json");
+    const response = await fetch("./js/data/products.json");
     
     const data = await response.json();
     return [...data.products];
