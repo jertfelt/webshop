@@ -104,6 +104,11 @@
       @include breakpoint(medium-tablet-max){
         grid-template-columns: 2fr 2fr;
       }
+      @include breakpoint(small-max-m){
+      
+        grid-template-columns: 2fr;
+        align-items: center;
+      }
     
       article{
         padding:0.1rem;

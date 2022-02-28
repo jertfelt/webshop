@@ -94,43 +94,40 @@
 
 .receipt{
 
-  &__background{
+  &__container{
     background-image: url("/styles/sass/img/swedish-forest.jpg");
     background-color: $color-green;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 90vh;
     margin:-2rem;
+    padding: 2rem;
     @include breakpoint(small-max-m){
-      min-height:80vh;
-    }
-  }
-  
-  &__container{
-    min-height:90vh;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 9;
-    background: rgba(34, 94, 57 ,0.7);
-    @include breakpoint(small-max-m){
-      min-height:90vh;
+      min-height:80vh;  
     }
     @include flexBox(column,center,center);
+    
   }
+  &__wrapper{
+    margin-top:8rem;
+    padding:5rem;
+    flex-grow: 2;
+    @include breakpoint(small-max-m){
+      margin-top:1rem;
+      padding:rem;
+  }}
 
   &__box{
-  
-    margin: 0 auto;
+    height:100%;
+    width:100%;
+    overflow: scroll;
+    margin: auto;
     @include flexBox(column,flex-start,center);
     background-color: $color-white;
     padding:2rem;
     border-radius: 29px;
 
     @include breakpoint(small-max-m){
-      width:90%;
       h2{
         margin-top:1rem;
       }
@@ -145,7 +142,6 @@
     @include flexBox(column,flex-start,center);
     padding-bottom:3rem;
     h3{
-      
       line-height:2em;
     }
   }
