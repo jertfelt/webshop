@@ -25,8 +25,6 @@ const displaySearchResult =
   
   searchContainer.appendChild(searchInputFeedback);
 
- 
-
   // Creates section element that wraps product cards
   const sectionElem = document.createElement("section");   
   sectionElem.classList.add("products__grid--all");   
@@ -41,10 +39,12 @@ const displaySearchResult =
 
     if (productTitle.includes(searchValueLowerCase) || productDescription.includes(searchValueLowerCase)) {
       // Draw each product that matches the search
+      
       createProductCard(produx, sectionElem);}
     else {
       searchInputFeedback.innerHTML = `Du sökte på "${searchValue}." 
       `;
+      
     }
     loadingSearch.classList.add("hidden");
     document.getElementById("searchSpinner").classList.add("hidden");
