@@ -1950,7 +1950,6 @@ nav {
 .receipt__box {
   height: 100%;
   width: 100%;
-  overflow: scroll;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
