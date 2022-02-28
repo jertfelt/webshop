@@ -83,8 +83,7 @@
     
     const data = await response.json();
     return [...data.products];
-    //*---public server mod: (avkommentera 1/3) 
-    // const response = await fetch("https://jertfelt.github.io/js/data/products.json");
+
    
   }
 
@@ -93,13 +92,13 @@
     const articleElem = document.createElement("article");
     // Creates direct link to individual product
     const productLink = createURL("individualProductSection", `${product.category}` , `${product.sys.id}`);
+
     articleElem.innerHTML = `
       <div class="product__img--container product__img--list">
         <a href="${productLink}">
-          <img alt = 
-          "Produkt ${product.title}"   
+          <img alt = "Produkt ${product.title}"   
           class ="product__img" 
-          src="${product.fields.image.fields.file.url}">
+          src="${product.imagetest.url}">
           </img>
         </a>
       </div>

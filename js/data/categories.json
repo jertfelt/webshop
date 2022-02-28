@@ -8,7 +8,7 @@
         "image": { 
           "fields": { 
             "file": { 
-              "url": "styles/sass/img/women-clothing-banner.png" } } },
+              "url": "./styles/sass/img/women-clothing-banner.png" } } },
         "description": "Ekologiska och handgjorda damkläder för dig som vill vara hållbart modemedveten."
       }
     },
@@ -21,7 +21,7 @@
         "image": { 
           "fields": { 
             "file": { 
-              "url": "styles/sass/img/men-clothing-banner.png" } } }
+              "url": "./styles/sass/img/men-clothing-banner.png" } } }
       }
     },
     {
@@ -33,7 +33,7 @@
         "image": { 
           "fields": { 
             "file": { 
-              "url": "styles/sass/img/baby-clothing.png" } } }
+              "url": "./styles/sass/img/baby-clothing.png" } } }
       }
     }
   ]
