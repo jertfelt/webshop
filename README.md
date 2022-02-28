@@ -34,16 +34,23 @@ Sidan består av:
 
  En grid med alla varor i en kategori, med köpknapp
  En detaljsida för en produkt, med köpknapp
+ 
+![image](https://user-images.githubusercontent.com/30622818/155897432-727bd8eb-6a3a-4ef5-aa41-bbab07381d7d.png)
+
 
  Bli medlem - sida
+ 
  ![image](https://user-images.githubusercontent.com/30622818/155897464-b7d1264c-d2bb-409d-80de-bf83355bb8e9.png)
  
   Logga in som medlem - sida
+  
 ![image](https://user-images.githubusercontent.com/30622818/155897321-a1ae38e5-519d-48d0-ba7d-f3a690d59378.png)
 
 
  Bekräftelse på beställning, bonus är att man kan mata in en rabattkod. 
 Vidare ska man fylla i ens uppgifter/ det laddas automatiskt om man är inloggad medlem.
+
+![image](https://user-images.githubusercontent.com/30622818/155897469-75264aac-b868-4161-86d0-661175a860dd.png)
 
  Kvitto när man bekräftat sitt köp
 
@@ -54,10 +61,8 @@ Vidare ska man fylla i ens uppgifter/ det laddas automatiskt om man är inloggad
 
 
 
-![image](https://user-images.githubusercontent.com/30622818/155897432-727bd8eb-6a3a-4ef5-aa41-bbab07381d7d.png)
 
 
-![image](https://user-images.githubusercontent.com/30622818/155897469-75264aac-b868-4161-86d0-661175a860dd.png)
 
 
 
