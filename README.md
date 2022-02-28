@@ -25,10 +25,10 @@ Sidan består av:
  Header med varukorg och sökfunktion, samt en "inloggad"-funktion som gör att användaren ser om hen är inloggad.
 
 
+![image](https://user-images.githubusercontent.com/30622818/155897335-0206b6d3-b870-42d5-aa9c-0a53860518d8.png)
 
  Varukorg (dropdown)
 ![image](https://user-images.githubusercontent.com/30622818/155897298-20845b4d-7224-4654-bab8-0649a83a7852.png)
-![image](https://user-images.githubusercontent.com/30622818/155897313-3370b229-df2d-4cbc-92c1-3ca3b8e4ebdd.png)
 
 
  En grid med alla varor i en kategori, med köpknapp
@@ -49,7 +49,6 @@ Vidare ska man fylla i ens uppgifter/ det laddas automatiskt om man är inloggad
 
 
 
-![image](https://user-images.githubusercontent.com/30622818/155897335-0206b6d3-b870-42d5-aa9c-0a53860518d8.png)
 ![image](https://user-images.githubusercontent.com/30622818/155897432-727bd8eb-6a3a-4ef5-aa41-bbab07381d7d.png)
 ![image](https://user-images.githubusercontent.com/30622818/155897464-b7d1264c-d2bb-409d-80de-bf83355bb8e9.png)
 
