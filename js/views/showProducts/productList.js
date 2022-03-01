@@ -24,7 +24,7 @@ function drawProducts() {
 // Repeat for each product in category
 
   allProductsArray.forEach(product => {
-  
+    console.log(product.category);
     if(product.category === qsCategory) {
       createProductCard(product, sectionElem);
     }
