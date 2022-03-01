@@ -125,6 +125,116 @@
           "fields": { "file": { "url": "./styles/sass/img/baby-shirt.png" } }
         }
       }
+    },
+    {
+      "sys": { "id": "14" },
+      "category": "Baby",
+      "fields": {
+        "title": "Grön tröja",
+        "price": 330,
+        "description": "Grönt är skönt även för de minsta",
+        "image": {
+          "fields": { "file": { "url": "./styles/sass/img/baby-greenshirt.png" } }
+        }
+      }
+    },
+    {
+      "sys": { "id": "15" },
+      "category": "Baby",
+      "fields": {
+        "title": "Baby batik",
+        "price": 330,
+        "description": "Batik är inte bara något för häxor! Även barn kan få ha en hållbar look.",
+        "image": {
+          "fields": { "file": { "url": "./styles/sass/img/babybatik.png" } }
+        }
+      }
+    },
+    {
+      "sys": { "id": "16" },
+      "category": "Baby",
+      "fields": {
+        "title": "Shibori",
+        "price": 730,
+        "description": "Vi älskar shibori, det är så fräscht sätt att färga vita kläder på.",
+        "image": {
+          "fields": { "file": { "url": "./styles/sass/img/shiboribaby.png" } }
+        }
+      }
+    },
+    {
+      "sys": { "id": "17" },
+      "category": "Baby",
+      "fields": {
+        "title": "Shibori",
+        "price": 560,
+        "description": "I samarbete med WWF, 5% av priset går till att rädda regnskogens djur",
+        "image": {
+          "fields": { "file": { "url": "./styles/sass/img/savethepandas.png" } }
+        }
+      }
+    },
+    {
+      "sys": { "id": "18" },
+      "category": "Herr",
+      "fields": {
+        "title": "Haglöfs byxor",
+        "price": 1345,
+        "description": "Vi brukar säga att Haglöfsmannen är bättre än de flesta! ",
+        "image": {
+          "fields": { "file": { "url": "./styles/sass/img/haglofsmannen.png" } }
+        }
+      }
+    },
+    {
+      "sys": { "id": "19" },
+      "category": "Herr",
+      "fields": {
+        "title": "Ullig tröja",
+        "price": 1245,
+        "description": "Lokalt producerad av fiskare i nordNorge ",
+        "image": {
+          "fields": { "file": { "url": "./styles/sass/img/man-ull.png" } }
+        }
+      }
+    },
+    {
+      "sys": { "id": "20" },
+      "category": "Herr",
+      "fields": {
+        "title": "Skogsmullen",
+        "price": 800,
+        "description": "Såhär efter coronatider så är det nya svarta att vara skogsmulle. Ha på dig de här miljömedvetna fullpoängarna på nästa utflykt!",
+        "image": {
+          "fields": { "file": { "url": "./styles/sass/img/skogsmulle-pants.png" } }
+        }
+      }
+    },
+    {
+      "sys": { "id": "21" },
+      "category": "Dam",
+      "fields": {
+        "title": "Skönt underställ",
+        "price": 800,
+        "description": "Handgjort underställ i ull håller dig varm i alla väder.",
+        "image": {
+          "fields": { "file": { "url": "./styles/sass/img/undersetwoman.png" } }
+        }
+      }
+    },
+    {
+      "sys": { "id": "22" },
+      "category": "Dam",
+      "fields": {
+        "title": "Vardagsklänning",
+        "price": 439,
+        "description": "En tjusig sak att ha på sig en solig dag.",
+        "image": {
+          "fields": { "file": { "url": "./styles/sass/img/women-lila.png" } }
+        }
+      }
     }
+
+
   ]
 }
