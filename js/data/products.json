@@ -230,11 +230,11 @@
         "price": 439,
         "description": "En tjusig sak att ha på sig en solig dag.",
         "image": {
-          "fields": { "file": { "url": "./styles/img/women-lila.png" } }
+          "fields": {
+             "file": { 
+               "url": "./styles/sass/img/women-lila.png" } }
         }
       }
     }
-
-
   ]
 }
