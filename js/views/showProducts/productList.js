@@ -24,7 +24,7 @@ function drawProducts() {
 // Repeat for each product in category
 
   allProductsArray.forEach(product => {
-    console.log(product.category);
+   
     if(product.category === qsCategory) {
       createProductCard(product, sectionElem);
     }
@@ -52,13 +52,13 @@ const setAddToCartClick = () => {
 }
 
 async function getProductsJSON() {
-  
+
   const response = await fetch ("./js/data/products.json");
 
   const data = await response.json();
 
   allProductsArray =[...data.products];
-  
+  console.log(allProductsArray);
   const productTitle = allProductsArray.map(x => { 
     return x;
   })
