@@ -77,15 +77,19 @@
   }
   
 // //*----fetch from JSON 
-  const fetchProducts = async () => {
-    const response = await fetch("https://jertfelt.github.io/webshop/jertfelt.github.io/js/data/products.json");
-    console.log("testar2"); 
+  async function fetchProducts () {
+    const response = await fetch("./js/data/products.json");
+    const data = await response.json();
 
+    console.log(productsAll);
+    console.log("testar2"); 
+  
     const data = await response.json();
     return [...data.products];
-    
-   
   }
+  fetchProducts().then( data => {
+    data;
+  })
 
 // Skapar produkt kort komponent som kan användas i t.ex. produktlista, produktsida, sökresultat
   const createProductCard = (product, parent) => {
