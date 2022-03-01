@@ -5,31 +5,85 @@ const queryString = new URLSearchParams(location.search);
 const qsCategory = queryString.get('category');
 const productGrid = document.getElementById("productListGrid");
 
+
 let allProductsArray = [];
 
 //*------create 
-function drawProducts() {  
+
+const drawProductsAll = (data) => {
+
+  const categoryHeader = document.getElementById("categoryHeader");
+    categoryHeader.innerText = qsCategory + "kläder";
+
+    const sectionElem = document.createElement("section");
+    
+    sectionElem.classList.add("products__grid--all")
+
+    productGrid.appendChild(sectionElem);
+
+  data.forEarch(product => { 
+
+    const articleElem = document.createElement("article");
+
+    // Creates direct link to individual product
+    const productLink = createURL("individualProductSection", `${product.category}` , `${product.sys.id}`);
+
+    articleElem.innerHTML = `
+      <div class="product__img--container product__img--list">
+        <a href="${productLink}">
+          <img alt = "Produkt ${product.title}"   
+          class ="product__img" 
+          src="/${product.fields.image.fields.file.url}">
+          </img>
+        </a>
+      </div>
+
+      <span class="product__box">
+      
+        <span>
+          <h3 class="text--uppercase text--cursive">
+          ${product.fields.title}</h3>
+          <h4 class="text--green">
+          ${product.fields.price} kr</h4>
+        </span>
+
+        <button 
+        class="addToCartBtn" 
+        data-id="${product.sys.id}">
+        Köp</button>
+        
+      </span>
+    `
+    sectionElem.appendChild(articleElem);
+    
+  })
+}
+  
+
+
+// function drawProducts() {  
   
 //creating elements and styling:
-  const categoryHeader = document.getElementById("categoryHeader");
+  // const categoryHeader = document.getElementById("categoryHeader");
 
-  categoryHeader.innerText = qsCategory + "kläder";
+  // categoryHeader.innerText = qsCategory + "kläder";
   
-  const sectionElem = document.createElement("section");
+  // const sectionElem = document.createElement("section");
 
-  sectionElem.classList.add("products__grid--all")
+  // sectionElem.classList.add("products__grid--all")
 
-  productGrid.appendChild(sectionElem);
+  // productGrid.appendChild(sectionElem);
 
 // Repeat for each product in category
 
-  allProductsArray.forEach(product => {
+  // allProductsArray.forEach(product => {
    
-    if(product.category === qsCategory) {
-      createProductCard(product, sectionElem);
-    }
-  })
-}
+  //   if(product.category === qsCategory) {
+  //     createProductCard(product, sectionElem);
+  //   }
+  // }
+  // )
+// }
 
 // Wrapper funktion som kör funktioner/eventListeners efter HTML i produktlistan har ritats
 
@@ -51,31 +105,6 @@ const setAddToCartClick = () => {
   });
 }
 
-<<<<<<< HEAD
-async function getProductsJSON() {
-
-  const response = await fetch ("./js/data/products.json");
-
-  const data = await response.json();
-
-  allProductsArray =[...data.products];
-  console.log(allProductsArray);
-  const productTitle = allProductsArray.map(x => { 
-    return x;
-  })
-  drawProducts(productTitle);
-=======
-//*-----asyncfunktion
-async function getProductList() {
-
-  allProductsArray = await fetchProducts();
-  drawProducts();  
->>>>>>> parent of 4ff4ac7 (changing the code, trying)
-  setAddToCartClick(allProductsArray);
-}
-<<<<<<< HEAD
-getProductsJSON();
-
 // //*-----asyncfunktion
 // async function getProductList() {
 
@@ -85,7 +114,15 @@ getProductsJSON();
 // }
 
 // getProductList();
-=======
 
+async function getProductList() {
+  const response = await fetch("/js/data/products.json");
+
+  const data = await response.json();
+
+  allProductsArray = [...data.products];
+  drawProductsAll(); 
+  setAddToCartClick(allProductsArray);
+
+}
 getProductList();
->>>>>>> parent of 4ff4ac7 (changing the code, trying)
