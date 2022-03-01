@@ -109,7 +109,7 @@
         "description": "Gjord med återvunnen bomull och färgad med naturliga färgmedel.",
         "image": {
           "fields": {
-            "file": { "url":"https://jertfelt.github.io/webshop/styles/sass/img/baby-rainbow-shirt.png" }
+            "file": { "url":"./img/baby-rainbow-shirt.png" }
           }
         }
       }

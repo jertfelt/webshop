@@ -84,8 +84,7 @@
 
     console.log(data);
     console.log("testar5"); 
-  
-    
+
     return [...data.products];
   }
   catch (error) { console.log("fel") }
