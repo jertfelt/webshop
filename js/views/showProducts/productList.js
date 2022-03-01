@@ -51,12 +51,29 @@ const setAddToCartClick = () => {
   });
 }
 
-//*-----asyncfunktion
-async function getProductList() {
+async function getProductsJSON() {
+  
+  const response = await fetch ("./js/data/products.json");
 
-  allProductsArray = await fetchProducts();
-  drawProducts();  
+  const data = await response.json();
+
+  allProductsArray =[...data.products];
+  
+  const productTitle = allProductsArray.map(x => { 
+    return x;
+  })
+  drawProducts();
   setAddToCartClick(allProductsArray);
+
 }
 
-getProductList();
+
+// //*-----asyncfunktion
+// async function getProductList() {
+
+//   allProductsArray = await fetchProducts();
+//   drawProducts();  
+//   setAddToCartClick(allProductsArray);
+// }
+
+// getProductList();
