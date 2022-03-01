@@ -66,7 +66,7 @@ async function getProductsJSON() {
   setAddToCartClick(allProductsArray);
 
 }
-
+getProductsJSON();
 
 // //*-----asyncfunktion
 // async function getProductList() {
