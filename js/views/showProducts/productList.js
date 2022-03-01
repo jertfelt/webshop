@@ -62,7 +62,7 @@ async function getProductsJSON() {
   const productTitle = allProductsArray.map(x => { 
     return x;
   })
-  drawProducts();
+  drawProducts(productTitle);
   setAddToCartClick(allProductsArray);
 
 }
