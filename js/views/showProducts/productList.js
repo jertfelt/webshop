@@ -107,10 +107,9 @@ const setAddToCartClick = () => {
 
 // //*-----asyncfunktion
 async function getProductList() {
-  const response = await fetch("./js/data/products.json");
-  const productData = await response.json();
-  allProductsArray = [...productData.products];
-  // allProductsArray = await fetchProducts();
+ 
+  allProductsArray = await fetchProducts();
+  fetchProducts();
   drawProducts();  
   setAddToCartClick(allProductsArray);
 
