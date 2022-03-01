@@ -83,8 +83,7 @@
     const data = await response.json();
 
     console.log(data);
-    console.log("testar5"); 
-
+    console.log("test ut");
     return [...data.products];
   }
   catch (error) { console.log("fel") }
@@ -97,12 +96,15 @@
     // Creates direct link to individual product
     const productLink = createURL("individualProductSection", `${product.category}` , `${product.sys.id}`);
 
+    const testElem = document.createElement("div");
+    testElem.innerHHTML = `<img src="${product.fields.image.fields.file.url}"`;
+
     articleElem.innerHTML = `
       <div class="product__img--container product__img--list">
         <a href="${productLink}">
-          <img alt = "Produkt ${product.title}"   
+          <img alt = "Produkt ${product.fields.title}"   
           class ="product__img" 
-          src="/${product.fields.image.fields.file.url}">
+          src="${product.fields.image.fields.file.url}">
           </img>
         </a>
       </div>
