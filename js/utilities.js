@@ -76,7 +76,7 @@
     localStorage.setItem("cart", stringifyCart);
   }
   
-//*----fetch from JSON 
+// //*----fetch from JSON 
   const fetchProducts = async () => {
     const response = await fetch("/js/data/products.json");
     

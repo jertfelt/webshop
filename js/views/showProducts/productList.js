@@ -51,6 +51,7 @@ const setAddToCartClick = () => {
   });
 }
 
+<<<<<<< HEAD
 async function getProductsJSON() {
 
   const response = await fetch ("./js/data/products.json");
@@ -63,9 +64,16 @@ async function getProductsJSON() {
     return x;
   })
   drawProducts(productTitle);
-  setAddToCartClick(allProductsArray);
+=======
+//*-----asyncfunktion
+async function getProductList() {
 
+  allProductsArray = await fetchProducts();
+  drawProducts();  
+>>>>>>> parent of 4ff4ac7 (changing the code, trying)
+  setAddToCartClick(allProductsArray);
 }
+<<<<<<< HEAD
 getProductsJSON();
 
 // //*-----asyncfunktion
@@ -77,3 +85,7 @@ getProductsJSON();
 // }
 
 // getProductList();
+=======
+
+getProductList();
+>>>>>>> parent of 4ff4ac7 (changing the code, trying)
