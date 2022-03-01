@@ -82,10 +82,10 @@
     const response = await fetch("./js/data/products.json");
     const data = await response.json();
 
-    console.log(productsAll);
+    console.log(data);
     console.log("testar5"); 
   
-    const data = await response.json();
+    
     return [...data.products];
   }
   catch (error) { console.log("fel") }
