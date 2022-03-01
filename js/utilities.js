@@ -81,12 +81,9 @@
     try{
     const response = await fetch("./js/data/products.json");
     const data = await response.json();
-
-    console.log(data);
-    console.log("test ut");
     return [...data.products];
   }
-  catch (error) { console.log("fel") }
+  catch (error) { console.log("fetch fungerar ej"); }
   }
 
 
@@ -95,6 +92,8 @@
     const articleElem = document.createElement("article");
     // Creates direct link to individual product
     const productLink = createURL("individualProductSection", `${product.category}` , `${product.sys.id}`);
+
+    console.log(product);
 
     const testElem = document.createElement("div");
     testElem.innerHHTML = `<img src="${product.fields.image.fields.file.url}"`;

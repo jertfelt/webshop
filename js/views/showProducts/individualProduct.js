@@ -11,11 +11,13 @@ const productCreator = (product)=>{
   const articleProduct = document.createElement("article");
   articleProduct.classList.add("product__columns");
 
+  console.log(product.fields.image.fields.file.url);
+  
   articleProduct.innerHTML = `
     <div class="column">
     <h2 class="text--green text--cursive">${product.fields.title}</h2>
-    <img alt="Produkt"
-    src="/${product.fields.image.fields.file.url}">
+    <img alt="Produkt ${product.fields.title}"
+    src="${product.fields.image.fields.file.url}">
     </img>
     </div>
     <span class="product__box--individual column">

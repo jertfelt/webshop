@@ -166,7 +166,7 @@
       "sys": { "id": "17" },
       "category": "Baby",
       "fields": {
-        "title": "Shibori",
+        "title": "Panda",
         "price": 560,
         "description": "I samarbete med WWF, 5% av priset går till att rädda regnskogens djur",
         "image": {
@@ -226,11 +226,11 @@
       "sys": { "id": "22" },
       "category": "Dam",
       "fields": {
-        "title": "Vardagsklänning",
+        "title": "Klänning",
         "price": 439,
         "description": "En tjusig sak att ha på sig en solig dag.",
         "image": {
-          "fields": { "file": { "url": "./styles/sass/img/women-lila.png" } }
+          "fields": { "file": { "url": "./styles/img/women-lila.png" } }
         }
       }
     }
