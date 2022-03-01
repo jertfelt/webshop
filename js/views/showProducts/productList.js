@@ -109,6 +109,7 @@ const setAddToCartClick = () => {
 async function getProductList() {
  
   allProductsArray = await fetchProducts();
+  console.log("testar");
   fetchProducts();
   drawProducts();  
   setAddToCartClick(allProductsArray);

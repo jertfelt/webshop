@@ -93,11 +93,6 @@
     // Creates direct link to individual product
     const productLink = createURL("individualProductSection", `${product.category}` , `${product.sys.id}`);
 
-    console.log(product);
-
-    const testElem = document.createElement("div");
-    testElem.innerHHTML = `<img src="${product.fields.image.fields.file.url}"`;
-
     articleElem.innerHTML = `
       <div class="product__img--container product__img--list">
         <a href="${productLink}">
