@@ -1,0 +1,4 @@
+main är ändrad och identisk nu med public-page. 
+Detta innebär att den är lite ändrad sedan vi gjorde klart den, och att den inte kommer fungera helt i VSC:s live server funktion.  
+Använd branchen "for-development" om du vill fortsätta jobba på branchen utan ändringarna som syns på hemsidan i dagsläget.
+/Tova 
