@@ -78,18 +78,19 @@
   
 // //*----fetch from JSON 
   async function fetchProducts () {
+    try{
     const response = await fetch("./js/data/products.json");
     const data = await response.json();
 
     console.log(productsAll);
-    console.log("testar2"); 
+    console.log("testar5"); 
   
     const data = await response.json();
     return [...data.products];
   }
-  fetchProducts().then( data => {
-    data;
-  })
+  catch (error) { console.log("fel") }
+  }
+
 
 // Skapar produkt kort komponent som kan användas i t.ex. produktlista, produktsida, sökresultat
   const createProductCard = (product, parent) => {
