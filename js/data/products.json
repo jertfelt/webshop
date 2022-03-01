@@ -109,7 +109,7 @@
         "description": "Gjord med återvunnen bomull och färgad med naturliga färgmedel.",
         "image": {
           "fields": {
-            "file": { "url":"./img/baby-rainbow-shirt.png" }
+            "file": { "url":"./styles/sass/img/baby-rainbow-shirt.png" }
           }
         }
       }
