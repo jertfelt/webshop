@@ -51,8 +51,10 @@ const setAddToCartClickProduct = (productList) => {
 
 async function getProduct() {  
   allProductsArray = await fetchProducts();
-  allProductsArray = [...data.products];
+  //testar: 
+
   console.log(allProductsArray);
+  //
   allProductsArray.map((product) => {
     if (product.sys.id === productId){
         productCreator(product)
