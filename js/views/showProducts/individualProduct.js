@@ -12,7 +12,7 @@ const productCreator = (product)=>{
   articleProduct.classList.add("product__columns");
 
   console.log(product.fields.image.fields.file.url);
-  
+
   articleProduct.innerHTML = `
     <div class="column">
     <h2 class="text--green text--cursive">${product.fields.title}</h2>
@@ -55,7 +55,7 @@ async function getProduct() {
   allProductsArray = await fetchProducts();
   //testar: 
 
-  console.log(allProductsArray);
+ 
   //
   allProductsArray.map((product) => {
     if (product.sys.id === productId){
