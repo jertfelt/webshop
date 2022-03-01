@@ -111,7 +111,7 @@ async function getProductList() {
   allProductsArray = await fetchProducts();
   drawProducts();  
   setAddToCartClick(allProductsArray);
-  console.log("fetching")
+  console.log(allProductsArray);
 }
 
 getProductList();
