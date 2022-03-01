@@ -79,7 +79,7 @@
 // //*----fetch from JSON 
   const fetchProducts = async () => {
     const response = await fetch("https://jertfelt.github.io/webshop/jertfelt.github.io/js/data/products.json");
-    console.log("testar"); 
+    console.log("testar2"); 
 
     const data = await response.json();
     return [...data.products];
